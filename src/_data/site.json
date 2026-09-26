@@ -7,9 +7,10 @@
   "phone": "",
   "instagram": "",
   "avis": {
-    "nombre": 10,
+    "nombre": 1,
     "note": 5.0,
-    "lien": "https://maps.app.goo.gl/kBRec8DW11M3wWih8"
+    "lien": "https://maps.app.goo.gl/kBRec8DW11M3wWih8",
+    "seuilAffichage": 5
   },
   "delaiReponse": "24h",
   "tallyId": "",

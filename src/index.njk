@@ -18,7 +18,7 @@ faqHome:
 {% set heroIntro = "Vos invités décrochent un téléphone vintage et vous laissent un message. Avec la vidéo, vous gardez aussi leurs visages. Nous le livrons et l'installons chez vous, à Paris et en Île-de-France." %}
 {% set heroAside %}
 <div class="price-box"><strong>Dès 200 €</strong><span>livraison et installation comprises</span></div>
-<div class="trust"><a href="{{ site.avis.lien }}" rel="noopener" target="_blank" style="text-decoration:none;"><span class="stars">★★★★★</span> <strong>{{ site.avis.nombre }} avis</strong> Google</a><span><strong>Devis sous {{ site.delaiReponse }}</strong></span></div>
+<div class="trust">{% if site.avis.nombre >= site.avis.seuilAffichage %}<a href="{{ site.avis.lien }}" rel="noopener" target="_blank" style="text-decoration:none;"><span class="stars">★★★★★</span> <strong>{{ site.avis.nombre }} avis</strong> Google</a>{% endif %}<span><strong>Devis sous {{ site.delaiReponse }}</strong></span></div>
 <div class="btns"><a class="btn primary" href="/devis/?service=livre-dor-audio-video" data-track="devis">Vérifier ma date</a><a class="btn ghost" href="{{ livre.url }}">Découvrir</a></div>
 {% endset %}
 {% include "partials/hero-full.njk" %}

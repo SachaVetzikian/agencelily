@@ -18,6 +18,7 @@ Tout le contenu est dans des fichiers texte. Tu les modifies sur GitHub, Vercel 
 | Le téléphone, WhatsApp, Instagram | `src/_data/site.json` | `"phone"`, `"whatsapp"`, `"instagram"` |
 | Le formulaire Tally | `src/_data/site.json` | `"tallyId"` |
 | Ajouter un avis client | `src/_data/avis.json` | voir modèle ci-dessous |
+| Mettre à jour le nombre d'avis Google | `src/_data/site.json` | `"avis"` > `"nombre"` (le compteur s'affiche à partir de 5 avis) |
 | Ajouter une réalisation | `src/_data/realisations.json` | voir modèle ci-dessous |
 
 ## Règles pour ne rien casser

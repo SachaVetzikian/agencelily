@@ -42,7 +42,8 @@ meta: "Demandez votre devis gratuit pour un bar gourmand, un livre d'or audio, u
 <div class="step"><p><strong>Un acompte</strong> bloque votre date.</p></div>
 <div class="step"><p><strong>Le jour J</strong>, on installe, on anime, on range.</p></div>
 </div>
-<p style="margin-top:20px;color:var(--muted);font-size:15px;"><span class="stars">★★★★★</span> {{ site.avis.nombre }} avis Google</p>
+{# Le nombre d'avis ne s'affiche qu'à partir du seuil défini dans site.json #}
+{% if site.avis.nombre >= site.avis.seuilAffichage %}<p style="margin-top:20px;color:var(--muted);font-size:15px;"><span class="stars">★★★★★</span> {{ site.avis.nombre }} avis Google</p>{% elif site.avis.lien %}<p style="margin-top:20px;font-size:15px;"><a href="{{ site.avis.lien }}" rel="noopener" target="_blank">Voir notre fiche Google</a></p>{% endif %}
 </div>
 </div>
 </div></section>
