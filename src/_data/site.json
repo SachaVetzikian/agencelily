@@ -6,6 +6,11 @@
   "email": "contact@agencelily.fr",
   "phone": "",
   "instagram": "",
-  "avis": { "nombre": 10, "note": 5.0, "lien": "" },
-  "delaiReponse": "24h"
+  "avis": {
+    "nombre": 10,
+    "note": 5.0,
+    "lien": ""
+  },
+  "delaiReponse": "24h",
+  "tallyId": ""
 }
