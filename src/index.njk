@@ -12,43 +12,63 @@ faqHome:
   - q: "Comment se passe le paiement ?"
     a: "Un acompte confirme la réservation de votre date, le solde est réglé avant l'événement. Tout est précisé dans le devis."
 ---
-<section class="hero">
-<div class="wrap grid">
-<div>
-<span class="eyebrow">{{ site.zone }}</span>
-<h1>Les bars gourmands et animations qui font parler de votre fête</h1>
-<p class="lede">Bar à crêpes, pancakes, tiramisu ou gaufres préparés devant vos invités. Livre d'or audio, photobooth et mur cascade livrés et installés. Pour votre mariage, baptême, baby shower ou anniversaire.</p>
-<div class="btns"><a class="btn" href="/devis/">Demander un devis gratuit</a><a class="btn ghost" href="/tarifs/">Voir les tarifs</a></div>
-<div class="trust">
-<span><span class="stars">★★★★★</span> <strong>{{ site.avis.nombre }} avis</strong> Google</span>
-<span><strong>Devis sous {{ site.delaiReponse }}</strong></span>
-<span><strong>Un seul interlocuteur</strong> pour tout</span>
-</div>
-</div>
-{% set label = "Mariage en extérieur" %}{% set img = (evenements | findBySlug("mariage")).image %}{% set tall = true %}{% include "partials/visual.njk" %}
+{% set mariage = evenements | findBySlug("mariage") %}
+{% set heroImg = mariage.image %}{% set heroAlt = "Réception de mariage" %}{% set heroEyebrow = site.zone %}
+{% set heroTitle = "Bars gourmands et animations pour vos événements" %}
+{% set heroIntro = "Bar à crêpes, pancakes, tiramisu ou gaufres préparés devant vos invités. Livre d'or audio, photobooth et mur cascade livrés et installés. Pour votre mariage, baptême, baby shower ou anniversaire." %}
+{% set heroAside %}
+<div class="trust"><span><span class="stars">★★★★★</span> <strong>{{ site.avis.nombre }} avis</strong> Google</span><span><strong>Devis sous {{ site.delaiReponse }}</strong></span></div>
+<a href="mailto:{{ site.email }}">{{ site.email }}</a>
+<div class="btns"><a class="btn sage" href="/devis/" data-track="devis">Demander un devis</a><a class="btn ghost" href="/configurateur/">Simuler mon budget</a></div>
+{% endset %}
+{% include "partials/hero-full.njk" %}
+
+<section class="section">
+<div class="wrap">
+<div class="section-head"><h2>Types d'événements</h2><a class="link" href="/evenements/">Tous les événements</a></div>
+{% include "partials/tiles-evenements.njk" %}
 </div>
 </section>
 
 <section class="section alt">
 <div class="wrap">
-<span class="eyebrow">Par où commencer</span>
-<h2>Vous organisez quoi ?</h2>
-<p class="lede">Chaque événement a ses moments forts. On vous montre ce qui marche vraiment pour le vôtre.</p>
-<div style="margin-top:32px;">{% include "partials/tiles-evenements.njk" %}</div>
+<div class="section-head"><h2>Nos prestations</h2><a class="link" href="/tarifs/">Voir les tarifs</a></div>
+<div class="rail">{% for c in services %}{% include "partials/card-service.njk" %}{% endfor %}</div>
 </div>
 </section>
 
 <section class="section">
 <div class="wrap">
-<div class="center" style="margin-bottom:40px;"><span class="eyebrow">Deux façons de vous aider</span><h2>Une animation ou du matériel, c'est vous qui voyez</h2></div>
+<div class="section-head"><h2>Galerie</h2></div>
+<div class="gallery">
+{% for x in services %}{% if x.image %}<img src="{{ x.image }}" alt="{{ x.nom }}" loading="lazy" onerror="this.remove()">{% endif %}{% endfor %}
+{% for x in evenements %}{% if x.image %}<img src="{{ x.image }}" alt="{{ x.nom }}" loading="lazy" onerror="this.remove()">{% endif %}{% endfor %}
+</div>
+</div>
+</section>
+
+{# Bandeau : promesse de marque (jamais un faux témoignage). Remplacer par un vrai avis quand avis.json est rempli. #}
+<section class="quote-band">
+{% set qa = avis[0] %}
+{% set bandImg = (services | findBySlug("mur-cascade")).image %}{% if bandImg %}<img src="{{ bandImg }}" alt="" loading="lazy" onerror="this.remove()">{% endif %}
+<div class="wrap">
+{% if qa %}<p>« {{ qa.texte }} »</p><span class="eyebrow" style="color:#fff;margin-top:16px;">{{ qa.prenom }}{% if qa.evenement %} · {{ qa.evenement }}{% endif %}</span>
+{% else %}<p>Un seul interlocuteur pour les saveurs et les souvenirs de votre fête.</p>{% endif %}
+<div><a class="btn sage" href="/devis/" data-track="devis">Demander un devis</a></div>
+</div>
+</section>
+
+<section class="section">
+<div class="wrap">
+<div class="section-head"><h2>Deux façons de vous aider</h2></div>
 <div class="split">
 <a class="card" href="/animations/">
 {% set label = "Bar gourmand" %}{% set img = (services | findBySlug("bar-a-crepes")).image %}{% set tall = false %}{% include "partials/visual.njk" %}
-<div class="body"><span class="tag">Avec animateur</span><h3>Bars gourmands</h3><p>Un animateur prépare crêpes, pancakes, tiramisu ou gaufres devant vos invités. Vous n'avez rien à gérer.</p><div class="price">Dès 280 € <small>pour 40 invités</small></div></div>
+<div class="body"><span class="tag">Avec animateur</span><h3>Bars gourmands</h3><p>Un animateur prépare crêpes, pancakes, tiramisu ou gaufres devant vos invités. Vous n'avez rien à gérer.</p><div class="card-foot"><span class="price">Dès 280 € <small>pour 40 invités</small></span><span class="btn small">Découvrir</span></div></div>
 </a>
 <a class="card" href="/location/">
 {% set label = "Livre d'or audio" %}{% set img = (services | findBySlug("livre-dor-audio-video")).image %}{% include "partials/visual.njk" %}
-<div class="body"><span class="tag">Livré et installé</span><h3>Location de matériel</h3><p>Livre d'or audio et vidéo, photobooth, mur cascade personnalisé : on livre, on installe, on reprend.</p><div class="price">Dès 150 €</div></div>
+<div class="body"><span class="tag">Livré et installé</span><h3>Location de matériel</h3><p>Livre d'or audio et vidéo, photobooth, mur cascade personnalisé : on livre, on installe, on reprend.</p><div class="card-foot"><span class="price">Dès 150 €</span><span class="btn small">Découvrir</span></div></div>
 </a>
 </div>
 </div>
@@ -56,58 +76,32 @@ faqHome:
 
 <section class="section alt">
 <div class="wrap">
-<h2>Toutes nos prestations</h2>
-<div class="cards" style="margin-top:28px;">{% for c in services %}{% include "partials/card-service.njk" %}{% endfor %}</div>
-</div>
-</section>
-
-<section class="section">
-<div class="wrap">
-<span class="eyebrow">Plus simple, moins cher</span>
-<h2>Les packs par événement</h2>
-<p class="lede">Un bar gourmand et un souvenir, réunis dans une seule prestation. Jusqu'à 100 € d'économie par rapport aux prestations séparées.</p>
-<div class="cards" style="margin-top:28px;">
-{% for e in evenements %}<a class="card" href="/evenements/{{ e.slug }}/#pack"><div class="body">
+<div class="section-head"><h2>Les packs par événement</h2><a class="link" href="/configurateur/">Composer le mien</a></div>
+<div class="rail">
+{% for e in evenements %}<a class="card" href="/evenements/{{ e.slug }}/#pack">
+{% set label = e.nom %}{% set img = e.image %}{% set tall = false %}{% include "partials/visual.njk" %}
+<div class="body">
 <span class="tag">{{ e.nom }}</span><h3>{{ e.pack.nom }}</h3>
 <p>{{ e.pack.contenu | join(" + ") }}</p>
-<div class="price">{{ e.pack.prix | euros }} <small><s>{{ e.pack.valeur | euros }}</s></small></div>
+<div class="card-foot"><span class="price">{{ e.pack.prix | euros }} <small><s>{{ e.pack.valeur | euros }}</s></small></span><span class="btn small">Réserver</span></div>
 </div></a>{% endfor %}
 </div>
 </div>
 </section>
 
-<section class="section alt">
+<section class="section">
 <div class="wrap">
-<h2>Comment ça se passe</h2>
-<div class="steps" style="margin-top:28px;">
+<div class="section-head"><h2>Comment ça se passe</h2></div>
+<div class="steps">
 <div class="step"><h3>Vous demandez un devis</h3><p>Événement, date, lieu, nombre d'invités. Deux minutes suffisent.</p></div>
-<div class="step"><h3>On vous répond sous 24h</h3><p>Un devis clair, frais de déplacement compris, et nos conseils pour votre événement.</p></div>
+<div class="step"><h3>Réponse sous 24h</h3><p>Un devis clair, frais de déplacement compris, et nos conseils pour votre événement.</p></div>
 <div class="step"><h3>Un acompte bloque la date</h3><p>On cale les détails avec vous, votre lieu et votre traiteur.</p></div>
 <div class="step"><h3>Le jour J, vous profitez</h3><p>On installe, on anime, on range. Vous, vous êtes avec vos invités.</p></div>
 </div>
 </div>
 </section>
 
-{% if avis.length %}{% include "partials/avis.njk" %}{% else %}
-<section class="section">
-<div class="wrap center">
-<span class="eyebrow">Ils nous ont fait confiance</span>
-<h2><span class="stars">★★★★★</span> {{ site.avis.nombre }} avis Google</h2>
-<p class="lede">Nos clients racontent leur événement mieux que nous.</p>
-{% if site.avis.lien %}<div class="btns" style="justify-content:center;"><a class="btn ghost" href="{{ site.avis.lien }}" rel="noopener" target="_blank">Lire les avis sur Google</a></div>{% endif %}
-</div>
-</section>{% endif %}
-
-<section class="section alt">
-<div class="wrap two-cols" style="align-items:center;">
-<div>
-<span class="eyebrow">Nouveau</span>
-<h2>Combien va coûter votre événement ?</h2>
-<p class="lede">Cochez vos envies, indiquez le nombre d'invités : l'estimation s'affiche en direct.</p>
-</div>
-<div><a class="btn" href="/configurateur/" data-track="configurateur">Simuler mon budget</a></div>
-</div>
-</section>
+{% include "partials/avis.njk" %}
 
 <section class="section alt">
 <div class="wrap" style="max-width:820px;">

@@ -13,7 +13,7 @@ npm start      # http://localhost:8080
 npm run build  # sortie dans _site/
 ```
 
-Hébergement : Vercel (`vercel.json`).
+Hébergement : Vercel (`vercel.json`). Design system : `DESIGN.md` (tokens dans `src/assets/style.css`).
 
 ## Formulaire de devis (Tally)
 1. Créer le formulaire sur tally.so

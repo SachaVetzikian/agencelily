@@ -4,6 +4,6 @@
 <span class="tag">{% if c.categorie == 'animations' %}Bar gourmand{% else %}Location{% endif %}</span>
 <h3>{{ c.nom }}</h3>
 <p>{{ c.court }}</p>
-<div class="price">Dès {{ c.prix | euros }}</div>
+<div class="card-foot"><span class="price">Dès {{ c.prix | euros }}</span><span class="btn small">Découvrir</span></div>
 </div>
 </a>

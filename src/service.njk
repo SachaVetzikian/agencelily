@@ -8,23 +8,18 @@ permalink: "/{{ s.categorie }}/{{ s.slug }}/"
 ---
 {% set hubNom = "Bars gourmands" if s.categorie == "animations" else "Location" %}
 {% set crumbs = [{ nom: hubNom, url: "/" + s.categorie + "/" }, { nom: s.nom }] %}
+
+{% set heroImg = s.image %}{% set heroAlt = s.nom %}{% set heroEyebrow = ("Bar gourmand avec animateur" if s.categorie == "animations" else "Location livrée et installée") %}
+{% set heroTitle = s.h1 %}{% set heroIntro = s.accroche %}
+{% set heroAside %}
+<div class="price-box"><strong>Dès {{ s.prix | euros }}</strong><span>{{ s.prixDetail }}</span></div>
+<div class="btns"><a class="btn sage" href="/devis/?service={{ s.slug }}" data-track="devis">Vérifier ma date</a><a class="btn ghost" href="/configurateur/">Simuler mon budget</a></div>
+{% endset %}
+{% include "partials/hero-full.njk" %}
 {% include "partials/crumbs.njk" %}
 
-<section class="hero service-hero">
-<div class="wrap grid">
-<div>
-<span class="eyebrow">{% if s.categorie == 'animations' %}Bar gourmand avec animateur{% else %}Location livrée et installée{% endif %}</span>
-<h1>{{ s.h1 }}</h1>
-<p class="lede">{{ s.accroche }}</p>
-<div class="price-box"><strong>Dès {{ s.prix | euros }}</strong><span>{{ s.prixDetail }}</span></div>
-<div class="btns"><a class="btn" href="/devis/?service={{ s.slug }}">Vérifier ma date</a></div>
-</div>
-{% set label = s.nom %}{% set img = s.image %}{% set tall = true %}{% include "partials/visual.njk" %}
-</div>
-</section>
-
 {% if s.formules %}
-<section class="section alt">
+<section class="section">
 <div class="wrap">
 <h2>Nos formules</h2>
 <div class="formules" style="margin-top:28px;">

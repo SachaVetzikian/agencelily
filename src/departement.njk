@@ -8,21 +8,16 @@ permalink: "/mariage/{{ d.slug }}/"
 ---
 {% set mariage = evenements | findBySlug("mariage") %}
 {% set crumbs = [{ nom: "Mariage", url: "/evenements/mariage/" }, { nom: d.nom + " (" + d.code + ")" }] %}
+
+{% set heroImg = mariage.image %}{% set heroAlt = ("Mariage " + d.nom) %}{% set heroEyebrow = ("Mariage · " + d.nom + " (" + d.code + ")") %}
+{% set heroTitle = ("Animation mariage " + d.nom + " (" + d.code + ")") %}{% set heroIntro = d.intro %}
+{% set heroAside %}
+<div class="btns"><a class="btn sage" href="/devis/?evenement=mariage" data-track="devis">Vérifier ma date</a><a class="btn ghost" href="/configurateur/">Simuler mon budget</a></div>
+{% endset %}
+{% include "partials/hero-full.njk" %}
 {% include "partials/crumbs.njk" %}
 
-<section class="hero service-hero">
-<div class="wrap grid">
-<div>
-<span class="eyebrow">Mariage · {{ d.nom }} ({{ d.code }})</span>
-<h1>Animation mariage {{ d.nom }} ({{ d.code }})</h1>
-<p class="lede">{{ d.intro }}</p>
-<div class="btns"><a class="btn" href="/devis/?evenement=mariage">Vérifier ma date</a><a class="btn ghost" href="/configurateur/">Simuler mon budget</a></div>
-</div>
-{% set label = "Mariage " + d.nom %}{% set img = mariage.image %}{% set tall = true %}{% include "partials/visual.njk" %}
-</div>
-</section>
-
-<section class="section alt"><div class="wrap two-cols">
+<section class="section"><div class="wrap two-cols">
 <div>
 <h2>Les lieux de mariage {{ d.en }}</h2>
 <p>{{ d.lieux }}</p>
@@ -31,11 +26,11 @@ permalink: "/mariage/{{ d.slug }}/"
 <div class="box">
 <h3>Nous intervenons notamment à</h3>
 <ul class="check">{% for v in d.villes %}<li>{{ v }}</li>{% endfor %}</ul>
-<p style="margin:16px 0 0;color:var(--muted-foreground);font-size:15px;">Et dans toutes les communes du département. Frais de déplacement indiqués dans le devis.</p>
+<p style="margin:16px 0 0;color:var(--muted);font-size:15px;">Et dans toutes les communes du département. Frais de déplacement indiqués dans le devis.</p>
 </div>
 </div></section>
 
-<section class="section"><div class="wrap">
+<section class="section alt"><div class="wrap">
 <h2>Nos animations pour votre mariage</h2>
 <div class="reco" style="margin-top:24px;">
 {% for r in mariage.services %}{% set x = services | findBySlug(r.slug) %}<a href="/{{ x.categorie }}/{{ x.slug }}/"><div><span class="tag">{% if x.categorie == 'animations' %}Bar gourmand{% else %}Location{% endif %}</span><h3 style="margin:4px 0 0;">{{ x.nom }}</h3><p>{{ r.pourquoi }}</p></div><span class="price" style="padding:0;white-space:nowrap;">Dès {{ x.prix | euros }}</span></a>
@@ -43,7 +38,7 @@ permalink: "/mariage/{{ d.slug }}/"
 </div>
 </div></section>
 
-<section class="section" style="padding-top:0;"><div class="wrap">
+<section class="section"><div class="wrap">
 <div class="pack">
 <div><span class="eyebrow">Le plus simple</span><h2>{{ mariage.pack.nom }}</h2>
 <ul class="check">{% for c in mariage.pack.contenu %}<li>{{ c }}</li>{% endfor %}</ul></div>

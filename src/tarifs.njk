@@ -33,7 +33,7 @@ meta: "Tous nos prix en clair : bar à crêpes dès 400 €, bar à tiramisu dè
 <h2 style="margin-top:56px;">Packs par événement</h2>
 <div class="table-wrap" style="margin-top:20px;"><table class="table">
 <thead><tr><th>Pack</th><th>Contenu</th><th>Prix</th></tr></thead>
-<tbody>{% for e in evenements %}<tr><td><a href="/evenements/{{ e.slug }}/#pack"><strong>{{ e.pack.nom }}</strong></a></td><td>{{ e.pack.contenu | join(" + ") }}</td><td>{{ e.pack.prix | euros }} <small style="color:var(--muted-foreground);font-weight:400;"><s>{{ e.pack.valeur | euros }}</s></small></td></tr>{% endfor %}</tbody>
+<tbody>{% for e in evenements %}<tr><td><a href="/evenements/{{ e.slug }}/#pack"><strong>{{ e.pack.nom }}</strong></a></td><td>{{ e.pack.contenu | join(" + ") }}</td><td>{{ e.pack.prix | euros }} <small style="color:var(--muted);font-weight:400;"><s>{{ e.pack.valeur | euros }}</s></small></td></tr>{% endfor %}</tbody>
 </table></div>
 </div></section>
 
