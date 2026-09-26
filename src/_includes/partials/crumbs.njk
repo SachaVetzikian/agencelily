@@ -1,0 +1,1 @@
+<nav class="crumbs wrap" aria-label="Fil d'Ariane"><a href="/">Accueil</a>{% for c in crumbs %} / {% if c.url %}<a href="{{ c.url }}">{{ c.nom }}</a>{% else %}<span>{{ c.nom }}</span>{% endif %}{% endfor %}</nav>

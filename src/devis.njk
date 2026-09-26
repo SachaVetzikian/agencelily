@@ -1,0 +1,74 @@
+---
+layout: layouts/base.njk
+title: "Devis gratuit sous 24h | Agence Lily"
+meta: "Demandez votre devis gratuit pour un bar gourmand, un livre d'or audio, un photobooth ou un pack événement à Paris et en Île-de-France. Réponse sous 24h."
+---
+{% set crumbs = [{ nom: "Devis" }] %}
+{% include "partials/crumbs.njk" %}
+<section class="hero"><div class="wrap two-cols">
+<div>
+<span class="eyebrow">Gratuit et sans engagement</span>
+<h1>Votre devis sous {{ site.delaiReponse }}</h1>
+<p class="lede">Deux minutes pour nous décrire votre événement. On vérifie la disponibilité de votre date et on vous envoie un devis précis, frais de déplacement compris.</p>
+
+<form class="form" name="devis" method="POST" action="/merci/" data-netlify="true" netlify-honeypot="bot-field" style="margin-top:32px;">
+<input type="hidden" name="form-name" value="devis">
+<p hidden><label>Ne pas remplir <input name="bot-field"></label></p>
+
+<fieldset><legend>Vous êtes</legend><div class="choices">
+<label><input type="radio" name="profil" value="Particulier" checked> Un particulier</label>
+<label><input type="radio" name="profil" value="Professionnel"> Une entreprise</label>
+</div></fieldset>
+
+<div class="row">
+<label>Type d'événement *
+<select name="evenement" id="f-evenement" required>
+<option value="">Choisir…</option>
+{% for e in evenements %}<option value="{{ e.slug }}">{{ e.nom }}</option>{% endfor %}
+<option value="autre">Autre</option>
+</select></label>
+<label>Date *<input type="date" name="date" required></label>
+</div>
+<div class="row">
+<label>Ville du lieu *<input type="text" name="ville" required placeholder="Ex : Versailles"></label>
+<label>Nombre d'invités *<input type="number" name="invites" min="1" required placeholder="Ex : 80"></label>
+</div>
+
+<fieldset><legend>Prestations qui vous intéressent</legend><div class="choices">
+{% for s in services %}<label><input type="checkbox" name="prestations[]" value="{{ s.nom }}" data-slug="{{ s.slug }}"> {{ s.nom }}</label>{% endfor %}
+<label><input type="checkbox" name="prestations[]" value="Pack" id="f-pack"> Le pack de mon événement</label>
+</div></fieldset>
+
+<div class="row">
+<label>Prénom et nom *<input type="text" name="nom" required autocomplete="name"></label>
+<label>Téléphone *<input type="tel" name="telephone" required autocomplete="tel"></label>
+</div>
+<label>E-mail *<input type="email" name="email" required autocomplete="email"></label>
+<label>Un mot sur votre événement<textarea name="message" rows="4" placeholder="Le lieu, l'ambiance, vos envies…"></textarea></label>
+<div><button class="btn" type="submit">Recevoir mon devis</button></div>
+</form>
+</div>
+<div>
+<div class="box" style="position:sticky;top:96px;">
+<h3>Ce qui se passe ensuite</h3>
+<div class="steps" style="grid-template-columns:1fr;gap:12px;margin-top:16px;">
+<div class="step"><p><strong>Sous {{ site.delaiReponse }}</strong>, on vous confirme la disponibilité et on vous envoie le devis.</p></div>
+<div class="step"><p><strong>Un acompte</strong> bloque votre date.</p></div>
+<div class="step"><p><strong>Le jour J</strong>, on installe, on anime, on range.</p></div>
+</div>
+<p style="margin-top:20px;color:var(--muted-foreground);font-size:15px;"><span class="stars">★★★★★</span> {{ site.avis.nombre }} avis Google</p>
+</div>
+</div>
+</div></section>
+
+<script>
+// Pré-remplit le formulaire depuis les liens des pages (?service=… ou ?evenement=…&pack=1)
+(function () {
+  var q = new URLSearchParams(location.search);
+  var evt = q.get("evenement");
+  if (evt) { var sel = document.getElementById("f-evenement"); if (sel) sel.value = evt; }
+  var svc = q.get("service");
+  if (svc) { var box = document.querySelector('input[data-slug="' + svc + '"]'); if (box) box.checked = true; }
+  if (q.get("pack")) { var p = document.getElementById("f-pack"); if (p) p.checked = true; }
+})();
+</script>

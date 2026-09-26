@@ -1,0 +1,6 @@
+<div class="tiles">
+{% for e in evenements %}<a class="tile" href="/evenements/{{ e.slug }}/">
+{% if e.image %}<img src="{{ e.image }}" alt="{{ e.nom }}" loading="lazy" onerror="this.remove()">{% endif %}
+<span class="tile-title">{{ e.nom }}</span>
+</a>{% endfor %}
+</div>

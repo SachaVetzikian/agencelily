@@ -1,0 +1,9 @@
+<a class="card" href="/{{ c.categorie }}/{{ c.slug }}/">
+{% set label = c.nom %}{% set img = c.image %}{% set tall = false %}{% include "partials/visual.njk" %}
+<div class="body">
+<span class="tag">{% if c.categorie == 'animations' %}Bar gourmand{% else %}Location{% endif %}</span>
+<h3>{{ c.nom }}</h3>
+<p>{{ c.court }}</p>
+<div class="price">Dès {{ c.prix | euros }}</div>
+</div>
+</a>

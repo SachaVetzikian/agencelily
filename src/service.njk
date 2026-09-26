@@ -1,0 +1,103 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: services
+  size: 1
+  alias: s
+permalink: "/{{ s.categorie }}/{{ s.slug }}/"
+---
+{% set hubNom = "Bars gourmands" if s.categorie == "animations" else "Location" %}
+{% set crumbs = [{ nom: hubNom, url: "/" + s.categorie + "/" }, { nom: s.nom }] %}
+{% include "partials/crumbs.njk" %}
+
+<section class="hero service-hero">
+<div class="wrap grid">
+<div>
+<span class="eyebrow">{% if s.categorie == 'animations' %}Bar gourmand avec animateur{% else %}Location livrée et installée{% endif %}</span>
+<h1>{{ s.h1 }}</h1>
+<p class="lede">{{ s.accroche }}</p>
+<div class="price-box"><strong>Dès {{ s.prix | euros }}</strong><span>{{ s.prixDetail }}</span></div>
+<div class="btns"><a class="btn" href="/devis/?service={{ s.slug }}">Vérifier ma date</a></div>
+</div>
+{% set label = s.nom %}{% set img = s.image %}{% set tall = true %}{% include "partials/visual.njk" %}
+</div>
+</section>
+
+{% if s.formules %}
+<section class="section alt">
+<div class="wrap">
+<h2>Nos formules</h2>
+<div class="formules" style="margin-top:28px;">
+{% for f in s.formules %}<div class="formule{% if f.populaire %} pop{% endif %}">
+{% if f.populaire %}<span class="badge">La plus choisie</span>{% endif %}
+<h3>{{ f.nom }}</h3>
+<div class="amount">{{ f.prix | euros }}</div>
+<ul class="check">{% for d in f.detail %}<li>{{ d }}</li>{% endfor %}</ul>
+</div>{% endfor %}
+</div>
+</div>
+</section>
+{% endif %}
+
+<section class="section">
+<div class="wrap two-cols">
+<div>
+<h2>Comment ça marche</h2>
+{% for p in s.description %}<p>{{ p }}</p>{% endfor %}
+</div>
+<div class="box">
+{% if s.inclus %}<h3>Ce qui est inclus</h3>
+<ul class="check">{% for i in s.inclus %}<li>{{ i }}</li>{% endfor %}</ul>{% endif %}
+{% if s.options %}<h3 style="margin-top:{% if s.inclus %}28px{% else %}0{% endif %};">Options</h3>
+<ul class="options">{% for o in s.options %}<li><span>{{ o.nom }}</span><b>{{ o.prix }}</b></li>{% endfor %}</ul>{% endif %}
+</div>
+</div>
+</section>
+
+{% set evts = evenements | eventsFor(s.slug) %}
+{% if evts.length %}
+<section class="section alt">
+<div class="wrap">
+<h2>Idéal pour</h2>
+<div class="reco" style="margin-top:24px;">
+{% for e in evts %}{% for r in e.services %}{% if r.slug == s.slug %}<a href="/evenements/{{ e.slug }}/"><div><h3 style="margin:0;">{{ e.nom }}</h3><p>{{ r.pourquoi }}</p></div><span class="tag">Voir →</span></a>{% endif %}{% endfor %}{% endfor %}
+</div>
+</div>
+</section>
+{% endif %}
+
+<section class="section">
+<div class="wrap" style="max-width:820px;">
+<h2>Vos questions sur le {{ s.nom | lower }}</h2>
+{% set faq = s.faq %}{% include "partials/faq.njk" %}
+</div>
+</section>
+
+<section class="section alt">
+<div class="wrap">
+<h2>À combiner avec</h2>
+<div class="cards" style="margin-top:28px;">{% for x in services %}{% if x.slug != s.slug and x.categorie != s.categorie %}{% set c = x %}{% include "partials/card-service.njk" %}{% endif %}{% endfor %}</div>
+</div>
+</section>
+
+{% set devisParam = "service=" + s.slug %}
+{% include "partials/cta.njk" %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": {{ s.nom | json | safe }},
+  "description": {{ s.meta | json | safe }},
+  "url": "{{ site.url }}{{ page.url }}",
+  "areaServed": {"@type": "AdministrativeArea", "name": "Île-de-France"},
+  "provider": {"@type": "LocalBusiness", "name": "{{ site.name }}", "url": "{{ site.url }}/"},
+  "offers": {% if s.formules %}[{% for f in s.formules %}{"@type": "Offer", "name": {{ f.nom | json | safe }}, "price": "{{ f.prix }}", "priceCurrency": "EUR"}{% if not loop.last %},{% endif %}{% endfor %}]{% else %}{"@type": "Offer", "price": "{{ s.prix }}", "priceCurrency": "EUR", "description": {{ s.prixDetail | json | safe }}}{% endif %}
+}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{% for f in s.faq %}{"@type":"Question","name":{{ f.q | json | safe }},"acceptedAnswer":{"@type":"Answer","text":{{ f.a | json | safe }}}}{% if not loop.last %},{% endif %}{% endfor %}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"{{ site.url }}/"},{"@type":"ListItem","position":2,"name":"{{ hubNom }}","item":"{{ site.url }}/{{ s.categorie }}/"},{"@type":"ListItem","position":3,"name":{{ s.nom | json | safe }}}]}
+</script>

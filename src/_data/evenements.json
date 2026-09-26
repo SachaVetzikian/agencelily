@@ -1,0 +1,266 @@
+[
+  {
+    "slug": "mariage",
+    "nom": "Mariage",
+    "unNom": "un mariage",
+    "title": "Animation mariage Paris & IDF | Agence Lily",
+    "meta": "Animations et location pour votre mariage à Paris et en Île-de-France : bar à crêpes, livre d'or audio et vidéo, mur cascade, photobooth. Pack mariage dès 750 €.",
+    "h1": "Animations et location pour votre mariage en Île-de-France",
+    "accroche": "Vin d'honneur, dessert, fin de soirée : on s'occupe des moments où vos invités ont besoin d'autre chose qu'une chaise et un verre.",
+    "enjeu": "Un mariage, c'est une longue journée avec des temps morts : entre la cérémonie et le dîner, pendant les photos de couple, après le gâteau. Ce sont ces moments que vos invités retiennent si vous les remplissez, et qu'ils subissent si vous ne faites rien.",
+    "services": [
+      {
+        "slug": "livre-dor-audio-video",
+        "pourquoi": "Le souvenir que vous réécouterez dans 20 ans. Avec l'animateur, même les timides laissent un message."
+      },
+      {
+        "slug": "mur-cascade",
+        "pourquoi": "L'entrée qui accueille vos invités à vos prénoms, et la première photo de la journée."
+      },
+      {
+        "slug": "bar-a-crepes",
+        "pourquoi": "Le dessert qui crée l'attroupement, ou le coup de fourchette de 1h du matin."
+      },
+      {
+        "slug": "photobooth",
+        "pourquoi": "Vos invités s'amusent, vous récupérez des centaines de photos que votre photographe n'aura pas."
+      },
+      {
+        "slug": "bar-a-tiramisu",
+        "pourquoi": "Une alternative élégante au wedding cake, ou un complément au buffet de desserts."
+      }
+    ],
+    "pack": {
+      "nom": "Pack Mariage",
+      "prix": 750,
+      "valeur": 850,
+      "contenu": [
+        "Bar à crêpes (50 invités)",
+        "Livre d'or audio + vidéo",
+        "Mur cascade"
+      ]
+    },
+    "faq": [
+      {
+        "q": "Combien de temps à l'avance faut-il réserver ?",
+        "a": "Pour un samedi de mai à septembre, comptez 6 à 12 mois. Pour le reste de l'année, 2 à 3 mois suffisent souvent."
+      },
+      {
+        "q": "Travaillez-vous avec notre traiteur ?",
+        "a": "Oui, nous nous coordonnons avec votre traiteur et votre lieu pour caler les horaires et l'emplacement des stands."
+      },
+      {
+        "q": "Peut-on combiner plusieurs animations ?",
+        "a": "C'est même ce que nous conseillons : un seul interlocuteur, une seule livraison, et un tarif pack plus avantageux."
+      }
+    ],
+    "image": "https://unsplash.com/photos/uIHchSu0h88/download?w=1600"
+  },
+  {
+    "slug": "bapteme",
+    "nom": "Baptême",
+    "unNom": "un baptême",
+    "title": "Animation baptême Paris & IDF | Agence Lily",
+    "meta": "Animations pour baptême à Paris et en Île-de-France : bar à tiramisu sans alcool, livre d'or audio pour les messages à l'enfant, bar à crêpes. Pack baptême dès 450 €.",
+    "h1": "Animations pour un baptême à Paris et en Île-de-France",
+    "accroche": "Une fête de famille où toutes les générations se retrouvent. On vous aide à en faire un souvenir pour l'enfant, pas seulement un déjeuner.",
+    "enjeu": "Au baptême, il y a des grands-parents, des cousins de 3 ans et des parrains qui ne se connaissent pas toujours. Il faut des animations simples, accessibles à tous les âges, et un souvenir que l'enfant pourra découvrir plus tard.",
+    "services": [
+      {
+        "slug": "livre-dor-audio-video",
+        "pourquoi": "Les messages de la famille à l'enfant, qu'il écoutera quand il sera grand."
+      },
+      {
+        "slug": "bar-a-tiramisu",
+        "pourquoi": "Sans alcool par défaut, il peut remplacer le gâteau et plaît à tous les âges."
+      },
+      {
+        "slug": "bar-a-crepes",
+        "pourquoi": "L'animation que les enfants et les grands-parents partagent."
+      }
+    ],
+    "pack": {
+      "nom": "Pack Baptême",
+      "prix": 450,
+      "valeur": 480,
+      "contenu": [
+        "Bar à tiramisu (40 invités)",
+        "Livre d'or audio"
+      ]
+    },
+    "faq": [
+      {
+        "q": "Le tiramisu est-il adapté aux enfants ?",
+        "a": "Oui, il est sans alcool par défaut."
+      },
+      {
+        "q": "Intervenez-vous à domicile ?",
+        "a": "Oui, chez vous, dans une salle ou au restaurant, partout à Paris et en Île-de-France."
+      },
+      {
+        "q": "Et pour moins de 40 invités ?",
+        "a": "Demandez-nous un devis, nous adaptons le forfait."
+      }
+    ],
+    "image": "https://unsplash.com/photos/tSvUXxXSrh8/download?w=1600"
+  },
+  {
+    "slug": "baby-shower",
+    "nom": "Baby shower",
+    "unNom": "une baby shower",
+    "title": "Animation baby shower Paris & IDF | Agence Lily",
+    "meta": "Animations pour baby shower à Paris et en Île-de-France : bar à mini pancakes, livre d'or audio pour les messages au bébé. Pack baby shower dès 500 €.",
+    "h1": "Animations pour une baby shower à Paris et en Île-de-France",
+    "accroche": "Un brunch gourmand et des messages pour bébé : tout ce qu'il faut pour une baby shower réussie, sans que la future maman ait à s'en occuper.",
+    "enjeu": "Une baby shower se passe souvent en journée, autour d'un brunch ou d'un goûter. L'organisatrice veut que ce soit beau, gourmand et mémorable, sans passer la journée en cuisine.",
+    "services": [
+      {
+        "slug": "bar-a-mini-pancakes",
+        "pourquoi": "Le format brunch par excellence, joli sur les photos et facile à manger debout."
+      },
+      {
+        "slug": "livre-dor-audio-video",
+        "pourquoi": "Les messages des proches au bébé, à lui faire écouter plus tard."
+      },
+      {
+        "slug": "bar-a-gaufres",
+        "pourquoi": "Une alternative gourmande pour un goûter d'après-midi."
+      },
+      {
+        "slug": "mur-cascade",
+        "pourquoi": "« Bienvenue bébé » à l'entrée : le fond photo parfait pour la future maman."
+      }
+    ],
+    "pack": {
+      "nom": "Pack Baby shower",
+      "prix": 500,
+      "valeur": 550,
+      "contenu": [
+        "Bar à mini pancakes (50 invités)",
+        "Livre d'or audio"
+      ]
+    },
+    "faq": [
+      {
+        "q": "On est moins de 50 invités, c'est possible ?",
+        "a": "Oui, beaucoup de baby showers réunissent 20 à 30 personnes. Demandez un devis, nous adaptons le forfait."
+      },
+      {
+        "q": "Pouvez-vous venir à domicile ?",
+        "a": "Oui, il suffit d'une table et d'une prise électrique."
+      },
+      {
+        "q": "Peut-on garder la surprise pour la future maman ?",
+        "a": "Bien sûr, nous organisons tout avec vous en toute discrétion."
+      }
+    ],
+    "image": "https://unsplash.com/photos/aqsKrX5UQ1M/download?w=1600"
+  },
+  {
+    "slug": "anniversaire",
+    "nom": "Anniversaire",
+    "unNom": "un anniversaire",
+    "title": "Animation anniversaire Paris & IDF | Agence Lily",
+    "meta": "Animations pour anniversaire à Paris et en Île-de-France : bar à gaufres, bar à crêpes, photobooth avec impressions illimitées. Pack anniversaire dès 600 €.",
+    "h1": "Animations pour un anniversaire à Paris et en Île-de-France",
+    "accroche": "18 ans, 30 ans, 50 ans ou goûter d'enfants : une animation gourmande et un photobooth, et la fête démarre toute seule.",
+    "enjeu": "Pour un anniversaire, on cherche à faire la fête sans passer la soirée derrière le buffet. Il faut des animations qui occupent les invités et qui laissent des souvenirs.",
+    "services": [
+      {
+        "slug": "photobooth",
+        "pourquoi": "Le moteur de la soirée : vos invités s'y relaient et repartent avec leurs photos."
+      },
+      {
+        "slug": "bar-a-gaufres",
+        "pourquoi": "Gourmand, généreux, parfait en fin de soirée."
+      },
+      {
+        "slug": "bar-a-crepes",
+        "pourquoi": "Le classique qui met tout le monde d'accord."
+      },
+      {
+        "slug": "bar-a-mini-pancakes",
+        "pourquoi": "Idéal pour un goûter d'anniversaire d'enfants."
+      },
+      {
+        "slug": "mur-cascade",
+        "pourquoi": "« Les 30 ans de Sarah » en grand à l'entrée : le décor et le fond photo de la soirée."
+      }
+    ],
+    "pack": {
+      "nom": "Pack Anniversaire",
+      "prix": 600,
+      "valeur": 640,
+      "contenu": [
+        "Bar à gaufres (50 invités)",
+        "Photobooth impressions illimitées"
+      ]
+    },
+    "faq": [
+      {
+        "q": "Proposez-vous des animations pour les anniversaires d'enfants ?",
+        "a": "Oui, le bar à mini pancakes et le bar à gaufres sont nos favoris pour les goûters d'enfants."
+      },
+      {
+        "q": "Le photobooth peut-il être personnalisé à l'âge fêté ?",
+        "a": "Oui, le cadre photo reprend le prénom, l'âge et la date."
+      },
+      {
+        "q": "Intervenez-vous en soirée ?",
+        "a": "Oui, en journée comme en soirée, 7 jours sur 7."
+      }
+    ],
+    "image": "https://unsplash.com/photos/juq4uxulFM4/download?w=1600"
+  },
+  {
+    "slug": "entreprise",
+    "nom": "Soirée d'entreprise",
+    "unNom": "un événement d'entreprise",
+    "title": "Animation soirée d'entreprise Paris | Agence Lily",
+    "meta": "Animations pour vos événements d'entreprise à Paris et en Île-de-France : bar à crêpes, bar à gaufres, photobooth personnalisé à votre marque. Devis sous 24h.",
+    "h1": "Animations pour vos événements d'entreprise à Paris",
+    "accroche": "Soirée de fin d'année, séminaire, inauguration, afterwork : des animations qui rassemblent vos équipes et se voient sur LinkedIn.",
+    "enjeu": "En entreprise, une animation doit créer du lien entre des gens qui ne se parlent pas toujours, être impeccable devant vos clients et s'intégrer à votre image. Et la facture doit être simple à faire valider.",
+    "services": [
+      {
+        "slug": "photobooth",
+        "pourquoi": "Personnalisé à votre logo : vos équipes partagent les photos, votre marque circule."
+      },
+      {
+        "slug": "bar-a-crepes",
+        "pourquoi": "Un point de rencontre naturel, parfait pour un afterwork ou une soirée de fin d'année."
+      },
+      {
+        "slug": "bar-a-gaufres",
+        "pourquoi": "Idéal pour les pauses d'un séminaire ou un événement en extérieur."
+      },
+      {
+        "slug": "mur-cascade",
+        "pourquoi": "Un mur d'accueil à votre logo pour un cocktail client ou une inauguration."
+      }
+    ],
+    "pack": {
+      "nom": "Pack Entreprise",
+      "prix": 650,
+      "valeur": 690,
+      "contenu": [
+        "Bar à crêpes (50 personnes)",
+        "Photobooth à votre logo"
+      ]
+    },
+    "faq": [
+      {
+        "q": "Établissez-vous des factures pour les entreprises ?",
+        "a": "Oui, devis et facture à l'entreprise, avec les mentions nécessaires pour votre comptabilité."
+      },
+      {
+        "q": "Pouvez-vous intervenir dans nos locaux ?",
+        "a": "Oui, dans vos bureaux, un lieu de réception ou en extérieur, partout à Paris et en Île-de-France."
+      },
+      {
+        "q": "Gérez-vous les événements de plus de 200 personnes ?",
+        "a": "Oui, nous dimensionnons le nombre de stands et d'animateurs selon votre effectif."
+      }
+    ]
+  }
+]

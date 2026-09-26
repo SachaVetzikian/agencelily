@@ -1,0 +1,353 @@
+[
+  {
+    "slug": "bar-a-crepes",
+    "categorie": "animations",
+    "nom": "Bar à crêpes",
+    "court": "Crêpes minute préparées devant vos invités",
+    "title": "Bar à crêpes mariage & événement Paris IDF | Agence Lily",
+    "meta": "Animation bar à crêpes avec crêpier sur place à Paris et en Île-de-France. Mariage, anniversaire, baptême, soirée d'entreprise. Dès 400 € pour 50 invités, devis sous 24h.",
+    "h1": "Bar à crêpes pour votre événement à Paris et en Île-de-France",
+    "accroche": "Un crêpier sur place, des crêpes minute servies chaudes, et vos invités qui choisissent leur garniture. L'odeur suffit à créer l'attroupement.",
+    "prix": 400,
+    "prixDetail": "pour 50 invités, soit 8 € par personne",
+    "minInvites": 50,
+    "description": [
+      "Notre crêpier installe son stand là où vous le souhaitez : en extérieur pour le vin d'honneur, en salle pour le dessert ou en fin de soirée quand la faim revient. Les crêpes sont préparées à la minute, jamais réchauffées.",
+      "Vos invités composent la leur : sucre, beurre salé, chocolat, confiture maison, caramel au beurre salé, fruits frais. Pour les grands événements, nous proposons aussi des galettes salées."
+    ],
+    "inclus": [
+      "Un crêpier pendant 2h de service",
+      "Le stand, les billigs et tout le matériel",
+      "Pâte maison et 5 garnitures au choix",
+      "Vaisselle jetable écoresponsable",
+      "Installation et nettoyage"
+    ],
+    "options": [
+      {
+        "nom": "Heure de service supplémentaire",
+        "prix": "sur devis"
+      },
+      {
+        "nom": "Galettes salées",
+        "prix": "sur devis"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Combien de crêpes prévoir par invité ?",
+        "a": "Comptez 2 crêpes par personne pour un dessert, 1 pour une animation en fin de soirée. Nous ajustons la quantité selon le moment de la journée."
+      },
+      {
+        "q": "Avez-vous besoin d'électricité ?",
+        "a": "Oui, une prise standard à proximité du stand suffit. Si votre lieu n'en a pas, dites-le-nous au moment du devis."
+      },
+      {
+        "q": "Y a-t-il un minimum d'invités ?",
+        "a": "Le bar à crêpes démarre à 50 invités. En dessous, nous vous proposons un forfait adapté."
+      }
+    ],
+    "image": "https://unsplash.com/photos/1ZTccDpF71k/download?w=1600"
+  },
+  {
+    "slug": "bar-a-mini-pancakes",
+    "categorie": "animations",
+    "nom": "Bar à mini pancakes",
+    "court": "Mini pancakes moelleux cuits en direct",
+    "title": "Bar à mini pancakes Paris & IDF | Agence Lily",
+    "meta": "Animation bar à mini pancakes cuits en direct à Paris et en Île-de-France. Idéal pour baby shower, brunch de mariage et anniversaire. Dès 350 € pour 50 invités.",
+    "h1": "Bar à mini pancakes à Paris et en Île-de-France",
+    "accroche": "Des mini pancakes dorés qui sortent de la machine sous les yeux de vos invités, à garnir de sirop d'érable, de fruits ou de chocolat. Les enfants adorent, les adultes aussi.",
+    "prix": 350,
+    "prixDetail": "pour 50 invités, soit 7 € par personne",
+    "minInvites": 50,
+    "description": [
+      "Le format parfait pour un brunch, un baby shower ou un goûter d'anniversaire. Les pancakes sont petits, faciles à manger debout et se partagent sans assiette.",
+      "Notre animateur cuit en continu et sert en cornet ou en barquette, avec les toppings que vous avez choisis : sirop d'érable, chocolat, chantilly, fruits frais, noisettes."
+    ],
+    "inclus": [
+      "Un animateur pendant 2h de service",
+      "La machine à mini pancakes et le stand",
+      "Pâte maison et 5 toppings au choix",
+      "Cornets et barquettes écoresponsables",
+      "Installation et nettoyage"
+    ],
+    "options": [
+      {
+        "nom": "Heure de service supplémentaire",
+        "prix": "sur devis"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Combien de mini pancakes par personne ?",
+        "a": "Une portion compte environ 8 à 10 mini pancakes. C'est largement suffisant pour un goûter ou un brunch."
+      },
+      {
+        "q": "Est-ce adapté aux enfants ?",
+        "a": "C'est même l'animation qu'ils préfèrent. Nous pouvons prévoir des toppings sans fruits à coque sur demande."
+      },
+      {
+        "q": "Y a-t-il un minimum d'invités ?",
+        "a": "Le bar à mini pancakes démarre à 50 invités. En dessous, demandez-nous un forfait adapté."
+      }
+    ],
+    "image": "https://unsplash.com/photos/TkzdkVn1AyA/download?w=1600"
+  },
+  {
+    "slug": "bar-a-tiramisu",
+    "categorie": "animations",
+    "nom": "Bar à tiramisu",
+    "court": "Tiramisu monté à la minute et personnalisé",
+    "title": "Bar à tiramisu mariage & baptême IDF | Agence Lily",
+    "meta": "Animation bar à tiramisu à Paris et en Île-de-France : verrines montées devant vos invités, parfums au choix. Mariage, baptême, anniversaire. Dès 280 € pour 40 invités.",
+    "h1": "Bar à tiramisu à Paris et en Île-de-France",
+    "accroche": "Le dessert italien préféré des Français, monté en verrine devant vos invités. Chacun choisit son parfum et son topping : c'est gourmand, élégant et ça change du wedding cake.",
+    "prix": 280,
+    "prixDetail": "pour 40 invités, soit 7 € par personne",
+    "minInvites": 40,
+    "description": [
+      "Crème mascarpone maison, biscuits imbibés à la minute et toppings au choix : café classique, spéculoos, fruits rouges, Nutella. Chaque verrine est montée à la demande.",
+      "Le bar à tiramisu s'intègre parfaitement à un buffet de desserts ou remplace le gâteau pour un baptême ou un anniversaire."
+    ],
+    "inclus": [
+      "Un animateur pendant 2h de service",
+      "Le stand et la présentation",
+      "Crème maison et 3 parfums au choix",
+      "Verrines écoresponsables",
+      "Installation et nettoyage"
+    ],
+    "options": [
+      {
+        "nom": "Parfum supplémentaire",
+        "prix": "sur devis"
+      },
+      {
+        "nom": "Version sans alcool (baptême, enfants)",
+        "prix": "inclus"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Le tiramisu contient-il de l'alcool ?",
+        "a": "Par défaut, non. Nous pouvons en ajouter pour les adultes sur demande, et garder une version sans alcool pour les enfants."
+      },
+      {
+        "q": "Peut-il remplacer le gâteau ?",
+        "a": "Oui, c'est de plus en plus fréquent pour les baptêmes et les anniversaires. Nous pouvons prévoir une verrine spéciale pour le moment des bougies."
+      },
+      {
+        "q": "Y a-t-il un minimum d'invités ?",
+        "a": "Le bar à tiramisu démarre à 40 invités."
+      }
+    ],
+    "image": "https://unsplash.com/photos/-gCl5waFE5U/download?w=1600"
+  },
+  {
+    "slug": "bar-a-gaufres",
+    "categorie": "animations",
+    "nom": "Bar à gaufres",
+    "court": "Gaufres croustillantes cuites sur place",
+    "title": "Bar à gaufres anniversaire & événement IDF | Agence Lily",
+    "meta": "Animation bar à gaufres avec cuisson sur place à Paris et en Île-de-France. Anniversaire, mariage, soirée d'entreprise. Dès 350 € pour 50 invités, devis sous 24h.",
+    "h1": "Bar à gaufres à Paris et en Île-de-France",
+    "accroche": "Des gaufres croustillantes dehors, moelleuses dedans, cuites devant vos invités. Une animation généreuse qui marche aussi bien à un anniversaire qu'à une soirée d'entreprise.",
+    "prix": 350,
+    "prixDetail": "pour 50 invités, soit 7 € par personne",
+    "minInvites": 50,
+    "description": [
+      "Nos gaufres sont cuites à la demande et servies chaudes, sur bâtonnet ou en barquette pour se manger debout.",
+      "Côté garnitures : sucre glace, chocolat, chantilly, caramel au beurre salé, fruits frais. Vos invités composent la leur."
+    ],
+    "inclus": [
+      "Un animateur pendant 2h de service",
+      "Les gaufriers et le stand",
+      "Pâte maison et 5 garnitures au choix",
+      "Barquettes écoresponsables",
+      "Installation et nettoyage"
+    ],
+    "options": [
+      {
+        "nom": "Heure de service supplémentaire",
+        "prix": "sur devis"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Peut-on combiner gaufres et crêpes ?",
+        "a": "Oui, sur les événements de plus de 80 invités nous pouvons installer les deux stands. Demandez un devis combiné."
+      },
+      {
+        "q": "Avez-vous besoin d'électricité ?",
+        "a": "Oui, une prise standard à proximité du stand. Prévenez-nous si votre lieu n'en a pas."
+      },
+      {
+        "q": "Y a-t-il un minimum d'invités ?",
+        "a": "Le bar à gaufres démarre à 50 invités."
+      }
+    ],
+    "image": "https://unsplash.com/photos/dEUyLofZe5o/download?w=1600"
+  },
+  {
+    "slug": "livre-dor-audio-video",
+    "categorie": "location",
+    "nom": "Livre d'or audio & vidéo",
+    "court": "Les messages de vos proches, à réécouter pour toujours",
+    "title": "Livre d'or audio et vidéo Paris & IDF | Agence Lily",
+    "meta": "Location de livre d'or audio (téléphone vintage) et vidéo pour mariage, baptême, baby shower à Paris et en Île-de-France. Formules de 200 € à 400 € avec animateur.",
+    "h1": "Livre d'or audio et vidéo à Paris et en Île-de-France",
+    "accroche": "Vos invités décrochent un téléphone vintage et vous laissent un message. Avec la vidéo, vous gardez aussi leurs visages. Dans dix ans, c'est ce que vous réécouterez.",
+    "prix": 200,
+    "prixDetail": "formule audio, livraison et installation comprises",
+    "description": [
+      "Le principe est simple : un téléphone rétro trône sur une table, vos invités décrochent, écoutent votre message d'accueil personnalisé et laissent le leur après le bip. Aucun smartphone, aucune appli : même les grands-parents s'en servent.",
+      "Avec la formule vidéo, un espace filmé capte aussi les messages face caméra. Avec la formule animateur, quelqu'un de notre équipe va chercher vos invités tout au long de la soirée : c'est la différence entre 15 messages et 80."
+    ],
+    "formules": [
+      {
+        "nom": "Audio",
+        "prix": 200,
+        "detail": [
+          "Téléphone vintage",
+          "Message d'accueil personnalisé",
+          "Messages illimités",
+          "Fichiers envoyés en ligne",
+          "Livraison et installation"
+        ]
+      },
+      {
+        "nom": "Audio + vidéo",
+        "prix": 300,
+        "detail": [
+          "Tout le pack Audio",
+          "Espace vidéo pour les messages face caméra",
+          "Vidéos envoyées en ligne"
+        ],
+        "populaire": true
+      },
+      {
+        "nom": "Audio + vidéo avec animateur",
+        "prix": 400,
+        "detail": [
+          "Tout le pack Audio + vidéo",
+          "Un animateur qui va chercher vos invités",
+          "Jusqu'à 5 fois plus de messages"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "nom": "Clé USB souvenir avec tous les messages",
+        "prix": "25 €"
+      },
+      {
+        "nom": "Décoration florale du téléphone",
+        "prix": "50 €"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Combien de messages peut-on enregistrer ?",
+        "a": "Autant que vous voulez, il n'y a pas de limite."
+      },
+      {
+        "q": "Comment récupère-t-on les messages ?",
+        "a": "Vous les recevez en ligne sous quelques jours. Avec l'option clé USB, vous avez aussi un souvenir physique à garder ou à offrir."
+      },
+      {
+        "q": "Pourquoi prendre un animateur ?",
+        "a": "Sans animateur, seuls les invités les plus à l'aise se lancent. Avec quelqu'un qui les accompagne, la plupart des invités laissent un message, y compris les plus timides."
+      }
+    ],
+    "image": "https://unsplash.com/photos/8gWEAAXJjtI/download?w=1600"
+  },
+  {
+    "slug": "photobooth",
+    "categorie": "location",
+    "nom": "Photobooth",
+    "court": "Photos imprimées sur place, souvenirs garantis",
+    "title": "Location photobooth mariage Paris & IDF | Agence Lily",
+    "meta": "Location de photobooth avec impressions illimitées à Paris et en Île-de-France. Mariage, anniversaire, soirée d'entreprise. Dès 290 €, livré et installé.",
+    "h1": "Location de photobooth à Paris et en Île-de-France",
+    "accroche": "Une borne photo, des accessoires, des impressions en quelques secondes. Vos invités repartent avec un souvenir, et vous récupérez toutes les photos de la soirée.",
+    "prix": 290,
+    "prixDetail": "impressions illimitées, livré et installé",
+    "description": [
+      "Nous livrons, installons et réglons la borne avant l'arrivée de vos invités. L'interface est tactile et intuitive : personne n'a besoin d'aide pour s'en servir.",
+      "Le cadre des photos est personnalisé à vos prénoms, à la date ou au logo de votre entreprise. Toutes les photos vous sont envoyées en ligne après l'événement."
+    ],
+    "inclus": [
+      "La borne photo et son fond",
+      "Impressions illimitées",
+      "Cadre photo personnalisé",
+      "Kit d'accessoires",
+      "Galerie en ligne de toutes les photos",
+      "Livraison, installation et reprise"
+    ],
+    "options": [
+      {
+        "nom": "Animateur photobooth",
+        "prix": "sur devis"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Combien de temps dure la location ?",
+        "a": "La borne reste toute la soirée. Nous la livrons avant l'événement et la reprenons le lendemain ou en fin de soirée selon votre lieu."
+      },
+      {
+        "q": "Les impressions sont-elles vraiment illimitées ?",
+        "a": "Oui, vos invités impriment autant qu'ils veulent pendant toute la durée de la location."
+      },
+      {
+        "q": "Peut-on personnaliser le cadre des photos ?",
+        "a": "Oui, avec vos prénoms, la date, un logo ou les couleurs de votre événement. Nous vous envoyons une maquette avant."
+      }
+    ]
+  },
+  {
+    "slug": "mur-cascade",
+    "categorie": "location",
+    "nom": "Mur cascade",
+    "court": "Le mur d'entrée personnalisé à vos noms",
+    "title": "Location mur cascade personnalisé Paris & IDF | Agence Lily",
+    "meta": "Location de mur cascade d'entrée personnalisé avec stickers à vos noms pour mariage, anniversaire, baby shower à Paris et en Île-de-France. 150 €, livré et installé.",
+    "h1": "Mur cascade personnalisé à vos noms, à Paris et en Île-de-France",
+    "accroche": "Le premier décor que vos invités voient en arrivant : un mur d'entrée habillé de stickers à vos prénoms et à votre événement. C'est aussi la première photo de la journée.",
+    "prix": 150,
+    "prixDetail": "stickers personnalisés inclus",
+    "description": [
+      "Le mur cascade se place à l'entrée de votre salle ou de votre jardin. Nous le personnalisons avec des stickers à vos prénoms, à la date ou au thème de votre événement : « Julie & Thomas », « Les 30 ans de Sarah », « Bienvenue bébé Léo ».",
+      "Il donne le ton dès l'arrivée, sert de fond photo toute la journée et s'accorde à tous les styles, du champêtre au plus chic."
+    ],
+    "inclus": [
+      "Le mur cascade",
+      "Stickers personnalisés à vos noms",
+      "Maquette envoyée avant l'événement"
+    ],
+    "options": [
+      {
+        "nom": "Livraison et installation",
+        "prix": "sur devis"
+      },
+      {
+        "nom": "Décoration florale",
+        "prix": "50 €"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Qu'est-ce qu'on peut écrire sur le mur ?",
+        "a": "Vos prénoms, la date, le nom de l'événement ou une phrase d'accueil. Nous vous envoyons une maquette à valider avant l'impression des stickers."
+      },
+      {
+        "q": "Combien de temps à l'avance faut-il valider le texte ?",
+        "a": "Idéalement deux semaines avant l'événement, pour le temps de fabrication des stickers."
+      },
+      {
+        "q": "Peut-on le personnaliser au logo d'une entreprise ?",
+        "a": "Oui, avec votre logo et vos couleurs pour un salon, une inauguration ou une soirée d'entreprise."
+      }
+    ],
+    "image": "https://unsplash.com/photos/CQEunDe3im0/download?w=1600"
+  }
+]
