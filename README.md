@@ -18,7 +18,7 @@ Hébergement : Vercel (`vercel.json`).
 ## Formulaire de devis (Tally)
 1. Créer le formulaire sur tally.so
 2. Ajouter les champs cachés `evenement`, `service` et `pack` (ils récupèrent la page d'origine du visiteur)
-3. Régler la fin du formulaire sur une redirection vers `https://agencelily.fr/merci/`
+3. Régler la fin du formulaire sur une redirection vers `https://www.agencelily.fr/merci/`
 4. Copier l'ID du formulaire (`tally.so/r/XXXXXX`) dans `src/_data/site.json`, champ `tallyId`
 
 ## À compléter avant la mise en ligne
