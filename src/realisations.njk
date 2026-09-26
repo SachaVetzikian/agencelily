@@ -1,0 +1,26 @@
+---
+layout: layouts/base.njk
+title: "Nos réalisations : mariages, baptêmes, anniversaires en IDF | Agence Lily"
+meta: "Découvrez nos bars gourmands, livres d'or audio et photobooths en situation lors de mariages, baptêmes et anniversaires à Paris et en Île-de-France."
+---
+{% set crumbs = [{ nom: "Réalisations" }] %}
+{% include "partials/crumbs.njk" %}
+<section class="hero"><div class="wrap">
+<span class="eyebrow">En situation</span>
+<h1>Nos réalisations</h1>
+<p class="lede">Des vrais événements, de vrais invités. Voici à quoi ressemblent nos prestations le jour J.</p>
+</div></section>
+<section class="section alt"><div class="wrap">
+<div class="cards">
+{% for r in realisations %}<article class="card">
+{% set label = r.titre %}{% set img = r.photos[0] if r.photos else "" %}{% set tall = false %}{% include "partials/visual.njk" %}
+<div class="body">
+<span class="tag">{{ r.evenement }}{% if r.ville %} · {{ r.ville }}{% endif %}{% if r.date %} · {{ r.date }}{% endif %}</span>
+<h3>{{ r.titre }}</h3>
+{% if r.texte %}<p>{{ r.texte }}</p>{% endif %}
+{% if r.prestations %}<p class="price">{% for slug in r.prestations %}{% set x = services | findBySlug(slug) %}{% if x %}<a href="/{{ x.categorie }}/{{ x.slug }}/">{{ x.nom }}</a>{% if not loop.last %} · {% endif %}{% endif %}{% endfor %}</p>{% endif %}
+</div>
+</article>{% endfor %}
+</div>
+</div></section>
+{% include "partials/cta.njk" %}

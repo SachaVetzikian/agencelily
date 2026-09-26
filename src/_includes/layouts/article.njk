@@ -1,0 +1,17 @@
+---
+layout: layouts/base.njk
+---
+{% set crumbs = [{ nom: "Guides", url: "/blog/" }, { nom: h1 }] %}
+{% include "partials/crumbs.njk" %}
+<article class="section" style="padding-top:40px;"><div class="wrap article">
+<span class="eyebrow">Guide · {{ page.date | dateFr }}</span>
+<h1>{{ h1 }}</h1>
+<p class="lede">{{ extrait }}</p>
+<div class="prose">
+{{ content | safe }}
+</div>
+</div></article>
+{% include "partials/cta.njk" %}
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":{{ h1 | json | safe }},"description":{{ meta | json | safe }},"datePublished":"{{ page.date | isoDate }}","dateModified":"{{ page.date | isoDate }}","mainEntityOfPage":"{{ site.url }}{{ page.url }}","author":{"@type":"Organization","name":"{{ site.name }}","url":"{{ site.url }}/"},"publisher":{"@type":"Organization","name":"{{ site.name }}","logo":{"@type":"ImageObject","url":"{{ site.url }}/assets/logo.png"}}}
+</script>

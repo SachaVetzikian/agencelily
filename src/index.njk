@@ -88,13 +88,24 @@ faqHome:
 </div>
 </section>
 
-{# TODO : intégrer les avis Google réels (widget ou copie des avis avec prénom). Ne jamais inventer d'avis. #}
+{% if avis.length %}{% include "partials/avis.njk" %}{% else %}
 <section class="section">
 <div class="wrap center">
 <span class="eyebrow">Ils nous ont fait confiance</span>
 <h2><span class="stars">★★★★★</span> {{ site.avis.nombre }} avis Google</h2>
 <p class="lede">Nos clients racontent leur événement mieux que nous.</p>
 {% if site.avis.lien %}<div class="btns" style="justify-content:center;"><a class="btn ghost" href="{{ site.avis.lien }}" rel="noopener" target="_blank">Lire les avis sur Google</a></div>{% endif %}
+</div>
+</section>{% endif %}
+
+<section class="section alt">
+<div class="wrap two-cols" style="align-items:center;">
+<div>
+<span class="eyebrow">Nouveau</span>
+<h2>Combien va coûter votre événement ?</h2>
+<p class="lede">Cochez vos envies, indiquez le nombre d'invités : l'estimation s'affiche en direct.</p>
+</div>
+<div><a class="btn" href="/configurateur/" data-track="configurateur">Simuler mon budget</a></div>
 </div>
 </section>
 
@@ -117,6 +128,10 @@ faqHome:
   "description": "{{ site.baseline }}",
   "areaServed": [{"@type": "City", "name": "Paris"}, {"@type": "AdministrativeArea", "name": "Île-de-France"}],
   "priceRange": "€€",
+  "logo": "{{ site.url }}/assets/logo.png",
+  "image": "{{ site.url }}/assets/og/og-default.png",{% if site.phone %}
+  "telephone": "{{ site.phone }}",{% endif %}{% set same = [] %}{% if site.instagram %}{% set same = (same.push(site.instagram), same) %}{% endif %}{% if site.googleBusiness %}{% set same = (same.push(site.googleBusiness), same) %}{% endif %}{% if same.length %}
+  "sameAs": {{ same | json | safe }},{% endif %}
   "makesOffer": [{% for s in services %}{"@type": "Offer", "itemOffered": {"@type": "Service", "name": "{{ s.nom }}", "url": "{{ site.url }}/{{ s.categorie }}/{{ s.slug }}/"}, "price": "{{ s.prix }}", "priceCurrency": "EUR"}{% if not loop.last %},{% endif %}{% endfor %}]
 }
 </script>

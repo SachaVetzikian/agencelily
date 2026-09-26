@@ -13,4 +13,7 @@ eleventyExcludeFromCollections: true
 {%- for e in evenements %}
 <url><loc>{{ site.url }}/evenements/{{ e.slug }}/</loc></url>
 {%- endfor %}
+{%- for d in departements %}
+<url><loc>{{ site.url }}/mariage/{{ d.slug }}/</loc></url>
+{%- endfor %}
 </urlset>

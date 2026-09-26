@@ -62,6 +62,13 @@ permalink: "/evenements/{{ e.slug }}/"
 </div>
 </section>
 
+{% if e.slug == "mariage" %}<section class="section alt">
+<div class="wrap">
+<h2>Votre mariage par département</h2>
+<div class="pills" style="margin-top:20px;">{% for d in departements %}<a class="pill" href="/mariage/{{ d.slug }}/">{{ d.nom }} ({{ d.code }})</a>{% endfor %}</div>
+</div>
+</section>{% endif %}
+
 <section class="section">
 <div class="wrap">
 <h2>Autres événements</h2>

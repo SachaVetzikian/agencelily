@@ -12,5 +12,13 @@
     "lien": ""
   },
   "delaiReponse": "24h",
-  "tallyId": ""
+  "tallyId": "",
+  "whatsapp": "",
+  "whatsappMessage": "Bonjour, je souhaite un devis pour mon événement.",
+  "googleBusiness": "",
+  "fondateur": {
+    "prenom": "",
+    "photo": "",
+    "bio": ""
+  }
 }

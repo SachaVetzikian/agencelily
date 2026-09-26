@@ -30,6 +30,7 @@ permalink: "/{{ s.categorie }}/{{ s.slug }}/"
 <div class="formules" style="margin-top:28px;">
 {% for f in s.formules %}<div class="formule{% if f.populaire %} pop{% endif %}">
 {% if f.populaire %}<span class="badge">La plus choisie</span>{% endif %}
+{% set label = "Formule " + f.nom %}{% set img = f.image %}{% set tall = false %}<div class="formule-visual">{% include "partials/visual.njk" %}</div>
 <h3>{{ f.nom }}</h3>
 <div class="amount">{{ f.prix | euros }}</div>
 <ul class="check">{% for d in f.detail %}<li>{{ d }}</li>{% endfor %}</ul>
@@ -65,6 +66,8 @@ permalink: "/{{ s.categorie }}/{{ s.slug }}/"
 </div>
 </section>
 {% endif %}
+
+{% set avisService = s.slug %}{% include "partials/avis.njk" %}
 
 <section class="section">
 <div class="wrap" style="max-width:820px;">

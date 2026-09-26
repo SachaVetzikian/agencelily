@@ -1,0 +1,123 @@
+---
+layout: layouts/base.njk
+title: "Simulateur de budget animation événement | Agence Lily"
+meta: "Composez votre événement en 1 minute : bar à crêpes, pancakes, tiramisu, gaufres, livre d'or audio, photobooth, mur cascade. Estimation immédiate, devis sous 24h."
+---
+{% set crumbs = [{ nom: "Simuler mon budget" }] %}
+{% include "partials/crumbs.njk" %}
+<section class="hero" style="padding-bottom:32px;"><div class="wrap">
+<span class="eyebrow">1 minute, sans engagement</span>
+<h1>Composez votre événement</h1>
+<p class="lede">Cochez ce qui vous fait envie, indiquez votre nombre d'invités : l'estimation se calcule en direct. On vous confirme le prix exact sous {{ site.delaiReponse }}.</p>
+</div></section>
+
+<section class="section" style="padding-top:0;"><div class="wrap config">
+<form class="config-form" id="config" onsubmit="return false;">
+<div class="box">
+<label class="config-guests">Nombre d'invités
+<input type="number" id="c-invites" min="10" max="1000" step="5" value="50" inputmode="numeric">
+</label>
+</div>
+
+<h2 class="config-title">Bars gourmands <small>avec animateur</small></h2>
+<div class="config-grid">
+{% for s in services | byCategorie('animations') %}
+<label class="config-item">
+<input type="checkbox" name="bar" value="{{ s.slug }}">
+<span class="ci-body"><strong>{{ s.nom }}</strong><span>{{ s.parPersonne }} € / invité, dès {{ s.prix }} € ({{ s.minInvites }} invités min.)</span></span>
+</label>
+{% endfor %}
+</div>
+
+<h2 class="config-title">Livre d'or <small>audio &amp; vidéo</small></h2>
+{% set livre = services | findBySlug("livre-dor-audio-video") %}
+<div class="config-grid">
+<label class="config-item"><input type="radio" name="livre" value="" checked><span class="ci-body"><strong>Pas de livre d'or</strong><span>&nbsp;</span></span></label>
+{% for f in livre.formules %}
+<label class="config-item"><input type="radio" name="livre" value="{{ loop.index0 }}"><span class="ci-body"><strong>{{ f.nom }}</strong><span>{{ f.prix }} €</span></span></label>
+{% endfor %}
+</div>
+<div class="config-grid config-options" id="c-livre-options" hidden>
+{% for o in livre.options %}
+<label class="config-item small"><input type="checkbox" name="livre-option" value="{{ loop.index0 }}"><span class="ci-body"><strong>{{ o.nom }}</strong><span>+ {{ o.prix }}</span></span></label>
+{% endfor %}
+</div>
+
+<h2 class="config-title">Location</h2>
+<div class="config-grid">
+{% for s in services | byCategorie('location') %}{% if not s.formules %}
+<label class="config-item">
+<input type="checkbox" name="location" value="{{ s.slug }}">
+<span class="ci-body"><strong>{{ s.nom }}</strong><span>dès {{ s.prix }} €</span></span>
+</label>
+{% endif %}{% endfor %}
+</div>
+</form>
+
+<aside class="config-summary" aria-live="polite">
+<div class="box">
+<span class="eyebrow">Votre estimation</span>
+<ul class="options" id="c-lines"><li><span>Rien de sélectionné pour l'instant</span><b></b></li></ul>
+<div class="config-total"><span>Total estimé</span><strong id="c-total">0 €</strong></div>
+<p class="config-note" id="c-pack" hidden>Bar gourmand + location : demandez le tarif pack, il est souvent plus avantageux.</p>
+<p class="config-note">Estimation hors frais de déplacement, confirmée dans votre devis.</p>
+<a class="btn" id="c-cta" href="/devis/" data-track="configurateur">Recevoir mon devis</a>
+</div>
+</aside>
+</div></section>
+
+<script>
+(function () {
+  var services = {{ services | json | safe }};
+  var bySlug = {};
+  services.forEach(function (s) { bySlug[s.slug] = s; });
+  var livre = bySlug["livre-dor-audio-video"];
+  var form = document.getElementById("config");
+  var guests = document.getElementById("c-invites");
+  var linesEl = document.getElementById("c-lines");
+  var totalEl = document.getElementById("c-total");
+  var cta = document.getElementById("c-cta");
+  var optionsBox = document.getElementById("c-livre-options");
+  var packNote = document.getElementById("c-pack");
+  var fmt = function (n) { return Math.round(n).toLocaleString("fr-FR") + " €"; };
+  var toNumber = function (txt) { var m = String(txt).match(/\d+/); return m ? parseInt(m[0], 10) : 0; };
+
+  function update() {
+    var n = Math.max(parseInt(guests.value, 10) || 0, 0);
+    var lines = [], total = 0, hasBar = false, hasLoc = false;
+    form.querySelectorAll('input[name="bar"]:checked').forEach(function (i) {
+      var s = bySlug[i.value];
+      var price = Math.max(s.prix, s.parPersonne * n);
+      lines.push([s.nom, price]); total += price; hasBar = true;
+    });
+    var lv = form.querySelector('input[name="livre"]:checked').value;
+    optionsBox.hidden = lv === "";
+    if (lv !== "") {
+      var f = livre.formules[parseInt(lv, 10)];
+      lines.push(["Livre d'or : " + f.nom, f.prix]); total += f.prix; hasLoc = true;
+      form.querySelectorAll('input[name="livre-option"]:checked').forEach(function (i) {
+        var o = livre.options[parseInt(i.value, 10)];
+        var p = toNumber(o.prix);
+        lines.push([o.nom, p]); total += p;
+      });
+    }
+    form.querySelectorAll('input[name="location"]:checked').forEach(function (i) {
+      var s = bySlug[i.value];
+      lines.push([s.nom, s.prix]); total += s.prix; hasLoc = true;
+    });
+    linesEl.innerHTML = lines.length
+      ? lines.map(function (l) { return "<li><span>" + l[0] + "</span><b>" + fmt(l[1]) + "</b></li>"; }).join("")
+      : "<li><span>Rien de sélectionné pour l'instant</span><b></b></li>";
+    totalEl.textContent = fmt(total);
+    packNote.hidden = !(hasBar && hasLoc);
+    var summary = lines.map(function (l) { return l[0]; }).join(" + ");
+    var q = new URLSearchParams();
+    q.set("invites", n);
+    if (summary) { q.set("config", summary); q.set("estimation", Math.round(total)); }
+    cta.href = "/devis/?" + q.toString();
+  }
+  form.addEventListener("input", update);
+  form.addEventListener("change", update);
+  update();
+})();
+</script>

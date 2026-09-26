@@ -243,3 +243,56 @@ h1, h2 { font-family: var(--display); font-weight: 500; letter-spacing: -0.02em;
   .tile, .tile:first-child { grid-column: auto; aspect-ratio: 16 / 9; }
   .tile-title { padding: 0 20px 18px; }
 }
+
+/* Barre de contact fixe (mobile) */
+.contact-bar { display: none; }
+@media (max-width: 760px) {
+  .contact-bar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; display: flex; gap: 8px; padding: 10px 12px calc(10px + env(safe-area-inset-bottom)); background: color-mix(in oklch, var(--background) 92%, transparent); backdrop-filter: blur(12px); border-top: 1px solid var(--border); }
+  .cb-btn { flex: 1; text-align: center; padding: 12px 10px; border-radius: 999px; border: 1px solid var(--border); background: var(--card); color: var(--foreground); font-weight: 500; font-size: 15px; text-decoration: none; }
+  .cb-btn.cb-main { background: var(--primary); color: var(--primary-foreground); border-color: var(--primary); }
+  body { padding-bottom: 76px; }
+}
+.wa-float { position: fixed; right: 20px; bottom: 20px; z-index: 60; width: 56px; height: 56px; border-radius: 50%; display: grid; place-items: center; background: var(--primary); color: var(--primary-foreground); box-shadow: var(--shadow-lg); }
+@media (max-width: 760px) { .wa-float { display: none; } }
+
+/* Configurateur */
+.config { display: grid; grid-template-columns: 1.6fr 1fr; gap: 32px; align-items: start; }
+.config-summary { position: sticky; top: 96px; }
+.config-title { font-size: 26px; margin: 36px 0 14px; }
+.config-title small { font-family: var(--mono); font-size: 12px; color: var(--muted-foreground); text-transform: uppercase; letter-spacing: .04em; margin-left: 8px; }
+.config-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; }
+.config-options { margin-top: 12px; }
+.config-item { position: relative; display: flex; gap: 12px; align-items: flex-start; padding: 16px; border: 1px solid var(--border); border-radius: 14px; background: var(--card); cursor: pointer; transition: border-color .15s, box-shadow .15s; }
+.config-item:has(input:checked) { border-color: var(--foreground); box-shadow: var(--shadow-lg); }
+.config-item input { margin-top: 3px; accent-color: var(--primary); width: 18px; height: 18px; flex: none; }
+.ci-body { display: grid; gap: 4px; }
+.ci-body span { font-size: 14px; color: var(--muted-foreground); }
+.config-item.small { padding: 12px 14px; }
+.config-guests { display: flex; align-items: center; justify-content: space-between; gap: 16px; font-weight: 500; }
+.config-guests input { width: 120px; font: inherit; font-family: var(--mono); font-size: 20px; padding: 10px 12px; border-radius: 12px; border: 1px solid var(--border); background: var(--input); color: var(--foreground); text-align: right; }
+.config-total { display: flex; justify-content: space-between; align-items: baseline; border-top: 1px solid var(--border); margin-top: 8px; padding-top: 16px; }
+.config-total strong { font-family: var(--mono); font-weight: 500; font-size: 32px; letter-spacing: -0.03em; }
+.config-note { font-size: 14px; color: var(--muted-foreground); margin: 12px 0 0; }
+.config-summary .btn { width: 100%; justify-content: center; margin-top: 18px; }
+@media (max-width: 900px) { .config { grid-template-columns: 1fr; } .config-summary { position: static; } }
+
+/* Avis */
+.avis-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+.avis { margin: 0; padding: 24px; background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); display: grid; gap: 12px; }
+.avis blockquote { margin: 0; font-size: 16px; }
+.avis figcaption { font-size: 14px; color: var(--muted-foreground); }
+
+/* Articles */
+.article { max-width: 760px; }
+.prose { margin-top: 32px; font-size: 17px; line-height: 1.75; }
+.prose h2 { font-size: clamp(24px, 3vw, 32px); margin: 44px 0 14px; }
+.prose h3 { margin: 28px 0 10px; }
+.prose ul, .prose ol { padding-left: 22px; margin: 0 0 16px; }
+.prose li { margin-bottom: 6px; }
+.prose a { text-decoration: underline; text-underline-offset: 3px; }
+.prose table { width: 100%; border-collapse: collapse; margin: 16px 0 24px; font-size: 15px; }
+.prose th, .prose td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); }
+.prose th { font-family: var(--mono); font-size: 12px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted-foreground); }
+.prose blockquote { margin: 20px 0; padding: 16px 20px; border-left: 3px solid var(--foreground); background: var(--muted); border-radius: 0 12px 12px 0; }
+.formule-visual { margin: -8px -8px 20px; }
+.formule-visual .ph { aspect-ratio: 1 / 1; border-radius: 12px; }

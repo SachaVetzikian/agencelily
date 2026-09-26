@@ -1,0 +1,29 @@
+---
+layout: layouts/base.njk
+title: "À propos d'Agence Lily : animations d'événements en IDF"
+meta: "Agence Lily, c'est un seul interlocuteur pour les bars gourmands et la location de votre mariage, baptême ou anniversaire à Paris et en Île-de-France."
+---
+{% set crumbs = [{ nom: "À propos" }] %}
+{% include "partials/crumbs.njk" %}
+<section class="hero"><div class="wrap{% if site.fondateur.bio %} two-cols{% endif %}" style="align-items:center;">
+<div>
+<span class="eyebrow">À propos</span>
+<h1>{% if site.fondateur.prenom %}Bonjour, moi c'est {{ site.fondateur.prenom }}{% else %}Un seul interlocuteur pour votre fête{% endif %}</h1>
+{% if site.fondateur.bio %}{% for p in site.fondateur.bio.split("\n\n") %}<p class="lede">{{ p }}</p>{% endfor %}
+{% else %}<p class="lede">Agence Lily réunit ce qui rend une fête mémorable : des bars gourmands préparés devant vos invités et le matériel qui garde les souvenirs. Une seule équipe, un seul devis, une seule personne à appeler.</p>{% endif %}
+</div>
+{% if site.fondateur.bio %}{% set label = site.fondateur.prenom %}{% set img = site.fondateur.photo %}{% set tall = true %}{% include "partials/visual.njk" %}{% endif %}
+</div></section>
+
+<section class="section alt"><div class="wrap">
+<h2>Nos engagements</h2>
+<div class="steps" style="margin-top:28px;">
+<div class="step"><h3>Des prix affichés</h3><p>Nos tarifs de départ sont publics. Les frais de déplacement sont indiqués dans le devis, avant toute réservation.</p></div>
+<div class="step"><h3>Une réponse sous {{ site.delaiReponse }}</h3><p>Chaque demande reçoit un devis précis et nos conseils pour votre événement.</p></div>
+<div class="step"><h3>Du fait maison</h3><p>Pâtes, crèmes et garnitures sont préparées par nos soins, jamais industrielles.</p></div>
+<div class="step"><h3>On installe, on range</h3><p>Le jour J, vous profitez de vos invités. Nous nous occupons du reste.</p></div>
+</div>
+</div></section>
+
+{% include "partials/avis.njk" %}
+{% include "partials/cta.njk" %}

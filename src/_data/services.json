@@ -46,7 +46,8 @@
         "a": "Le bar à crêpes démarre à 50 invités. En dessous, nous vous proposons un forfait adapté."
       }
     ],
-    "image": "https://unsplash.com/photos/1ZTccDpF71k/download?w=1600"
+    "image": "https://unsplash.com/photos/1ZTccDpF71k/download?w=1600",
+    "parPersonne": 8.0
   },
   {
     "slug": "bar-a-mini-pancakes",
@@ -91,7 +92,8 @@
         "a": "Le bar à mini pancakes démarre à 50 invités. En dessous, demandez-nous un forfait adapté."
       }
     ],
-    "image": "https://unsplash.com/photos/TkzdkVn1AyA/download?w=1600"
+    "image": "https://unsplash.com/photos/TkzdkVn1AyA/download?w=1600",
+    "parPersonne": 7.0
   },
   {
     "slug": "bar-a-tiramisu",
@@ -140,7 +142,8 @@
         "a": "Le bar à tiramisu démarre à 40 invités."
       }
     ],
-    "image": "https://unsplash.com/photos/-gCl5waFE5U/download?w=1600"
+    "image": "https://unsplash.com/photos/-gCl5waFE5U/download?w=1600",
+    "parPersonne": 7.0
   },
   {
     "slug": "bar-a-gaufres",
@@ -185,7 +188,8 @@
         "a": "Le bar à gaufres démarre à 50 invités."
       }
     ],
-    "image": "https://unsplash.com/photos/dEUyLofZe5o/download?w=1600"
+    "image": "https://unsplash.com/photos/dEUyLofZe5o/download?w=1600",
+    "parPersonne": 7.0
   },
   {
     "slug": "livre-dor-audio-video",

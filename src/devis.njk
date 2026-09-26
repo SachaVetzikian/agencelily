@@ -12,8 +12,18 @@ meta: "Demandez votre devis gratuit pour un bar gourmand, un livre d'or audio, u
 <p class="lede">Deux minutes pour nous décrire votre événement. On vérifie la disponibilité de votre date et on vous envoie un devis précis, frais de déplacement compris.</p>
 
 {# Formulaire Tally : renseigner "tallyId" dans src/_data/site.json.
-   Dans Tally, créer les champs cachés "evenement", "service" et "pack" pour récupérer la page d'origine,
-   et régler la redirection de fin vers https://agencelily.fr/merci/ #}
+   Dans Tally, créer les champs cachés "evenement", "service", "pack", "config", "invites" et "estimation" pour récupérer la page d'origine,
+   et régler la redirection de fin vers https://www.agencelily.fr/merci/ #}
+<div class="box" id="recap" hidden style="margin-top:24px;"><span class="eyebrow">Votre sélection</span><p id="recap-text" style="margin:0;"></p></div>
+<script>
+(function () {
+  var q = new URLSearchParams(location.search), c = q.get("config");
+  if (!c) return;
+  var t = c + (q.get("invites") ? " · " + q.get("invites") + " invités" : "") + (q.get("estimation") ? " · estimation " + q.get("estimation") + " €" : "");
+  document.getElementById("recap-text").textContent = t;
+  document.getElementById("recap").hidden = false;
+})();
+</script>
 {% if site.tallyId %}
 <div style="margin-top:32px;">
 <iframe id="tally-devis" data-tally-src="https://tally.so/embed/{{ site.tallyId }}?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="700" frameborder="0" marginheight="0" marginwidth="0" title="Demande de devis"></iframe>
@@ -43,7 +53,7 @@ meta: "Demandez votre devis gratuit pour un bar gourmand, un livre d'or audio, u
 (function () {
   var f = document.getElementById("tally-devis");
   var q = new URLSearchParams(location.search);
-  var extra = ["evenement", "service", "pack"].filter(function (k) { return q.get(k); })
+  var extra = ["evenement", "service", "pack", "config", "invites", "estimation"].filter(function (k) { return q.get(k); })
     .map(function (k) { return k + "=" + encodeURIComponent(q.get(k)); }).join("&");
   if (f && extra) f.setAttribute("data-tally-src", f.getAttribute("data-tally-src") + "&" + extra);
 })();

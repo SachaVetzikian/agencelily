@@ -5,23 +5,35 @@
 <a class="logo" href="/">Agence <span>Lily</span></a>
 <p style="margin-top:14px;">{{ site.baseline }}.</p>
 <p><a href="mailto:{{ site.email }}">{{ site.email }}</a>{% if site.phone %}<br><a href="tel:{{ site.phone | replace(' ', '') }}">{{ site.phone }}</a>{% endif %}</p>
+{% if site.instagram or site.googleBusiness %}<p>{% if site.instagram %}<a href="{{ site.instagram }}" rel="noopener" target="_blank">Instagram</a>{% endif %}{% if site.instagram and site.googleBusiness %} · {% endif %}{% if site.googleBusiness %}<a href="{{ site.googleBusiness }}" rel="noopener" target="_blank">Google</a>{% endif %}</p>{% endif %}
 </div>
 <div>
 <h4>Bars gourmands</h4>
 <ul>{% for s in services | byCategorie('animations') %}<li><a href="/animations/{{ s.slug }}/">{{ s.nom }}</a></li>{% endfor %}</ul>
-</div>
-<div>
-<h4>Location</h4>
+<h4 style="margin-top:24px;">Location</h4>
 <ul>{% for s in services | byCategorie('location') %}<li><a href="/location/{{ s.slug }}/">{{ s.nom }}</a></li>{% endfor %}</ul>
 </div>
 <div>
 <h4>Événements</h4>
 <ul>{% for e in evenements %}<li><a href="/evenements/{{ e.slug }}/">{{ e.nom }}</a></li>{% endfor %}</ul>
+<h4 style="margin-top:24px;">Mariage en Île-de-France</h4>
+<ul>{% for d in departements %}<li><a href="/mariage/{{ d.slug }}/">{{ d.nom }} ({{ d.code }})</a></li>{% endfor %}</ul>
+</div>
+<div>
+<h4>Agence Lily</h4>
+<ul>
+<li><a href="/configurateur/">Simuler mon budget</a></li>
+<li><a href="/tarifs/">Tarifs</a></li>
+{% if realisations.length %}<li><a href="/realisations/">Réalisations</a></li>{% endif %}
+<li><a href="/blog/">Guides et conseils</a></li>
+<li><a href="/a-propos/">À propos</a></li>
+<li><a href="/devis/">Devis gratuit</a></li>
+</ul>
 </div>
 </div>
 <div class="legal">
 <span>© {{ year }} Agence Lily · {{ site.zone }}</span>
-<span><a href="/tarifs/">Tarifs</a> · <a href="/devis/">Devis</a> · <a href="/mentions-legales/">Mentions légales</a></span>
+<span><a href="/mentions-legales/">Mentions légales</a></span>
 </div>
 </div>
 </footer>

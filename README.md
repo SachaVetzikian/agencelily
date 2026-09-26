@@ -17,12 +17,15 @@ Hébergement : Vercel (`vercel.json`).
 
 ## Formulaire de devis (Tally)
 1. Créer le formulaire sur tally.so
-2. Ajouter les champs cachés `evenement`, `service` et `pack` (ils récupèrent la page d'origine du visiteur)
+2. Ajouter les champs cachés `evenement`, `service`, `pack`, `config`, `invites` et `estimation` (page d'origine et sélection du simulateur)
 3. Régler la fin du formulaire sur une redirection vers `https://www.agencelily.fr/merci/`
 4. Copier l'ID du formulaire (`tally.so/r/XXXXXX`) dans `src/_data/site.json`, champ `tallyId`
 
+Guide d'édition depuis le téléphone : `docs/MODIFIER-LE-SITE.md`.
+
 ## À compléter avant la mise en ligne
-- `src/_data/site.json` : ID Tally, téléphone, Instagram, lien des avis Google
+- `src/_data/site.json` : ID Tally, téléphone, WhatsApp, Instagram, lien des avis Google, fiche Google Business, fondateur (page À propos)
 - Photos : remplacer les images Unsplash provisoires par les vraies (`"image"` sur chaque service/événement)
 - Avis Google réels sur la home (jamais d'avis inventés)
 - Mentions légales (SIRET, adresse, hébergeur)
+- Activer Vercel Web Analytics dans le projet Vercel (onglet Analytics). Le script est déjà dans le site.
