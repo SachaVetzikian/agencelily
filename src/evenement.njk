@@ -12,7 +12,7 @@ permalink: "/evenements/{{ e.slug }}/"
 {% set heroTitle = e.h1 %}{% set heroIntro = e.accroche %}
 {% set heroAside %}
 <a href="mailto:{{ site.email }}">{{ site.email }}</a>
-<div class="btns"><a class="btn sage" href="/devis/?evenement={{ e.slug }}" data-track="devis">Demander un devis</a><a class="btn ghost" href="#pack">Voir le pack</a></div>
+<div class="btns"><a class="btn primary" href="/devis/?evenement={{ e.slug }}" data-track="devis">Demander un devis</a><a class="btn ghost" href="#pack">Voir le pack</a></div>
 {% endset %}
 {% include "partials/hero-full.njk" %}
 {% include "partials/crumbs.njk" %}

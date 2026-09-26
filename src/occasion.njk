@@ -13,7 +13,7 @@ permalink: "{{ o.url }}"
 {% set heroTitle = o.h1 %}{% set heroIntro = o.enBref %}
 {% set heroAside %}
 <div class="price-box"><strong>Dès {{ livre.prix | euros }}</strong><span>livraison et installation comprises</span></div>
-<div class="btns"><a class="btn sage" href="/devis/?service=livre-dor-audio-video&evenement={{ o.evenement }}" data-track="devis">Vérifier ma date</a><a class="btn ghost" href="#formules">Voir les formules</a></div>
+<div class="btns"><a class="btn primary" href="/devis/?service=livre-dor-audio-video&evenement={{ o.evenement }}" data-track="devis">Vérifier ma date</a><a class="btn ghost" href="#formules">Voir les formules</a></div>
 {% endset %}
 {% include "partials/hero-full.njk" %}
 {% include "partials/crumbs.njk" %}

@@ -19,12 +19,12 @@ faqProduit:
 ---
 {% set livre = services | findBySlug("livre-dor-audio-video") %}
 {% set crumbs = [{ nom: "Livre d'or audio et vidéo" }] %}
-{% set heroImg = livre.image %}{% set heroAlt = "Téléphone vintage de livre d'or audio" %}{% set heroEyebrow = "Paris et Île-de-France" %}
+{% set heroImg = livre.image %}{% set heroImgMobile = livre.imageMobile %}{% set heroAlt = "Téléphone vintage de livre d'or audio" %}{% set heroEyebrow = "Paris et Île-de-France" %}
 {% set heroTitle = "Livre d'or audio et vidéo sur téléphone vintage" %}
 {% set heroIntro = "Vos invités décrochent un téléphone vintage, écoutent votre message d'accueil et vous laissent un message vocal. Avec la vidéo, vous gardez aussi leurs visages. Livré et installé chez vous, dès 200 €." %}
 {% set heroAside %}
 <div class="price-box"><strong>200 € · 300 € · 400 €</strong><span>audio · audio + vidéo · avec animateur</span></div>
-<div class="btns"><a class="btn sage" href="/devis/?service=livre-dor-audio-video" data-track="devis">Vérifier ma date</a><a class="btn ghost" href="#formules">Voir les formules</a></div>
+<div class="btns"><a class="btn primary" href="/devis/?service=livre-dor-audio-video" data-track="devis">Vérifier ma date</a><a class="btn ghost" href="#formules">Voir les formules</a></div>
 {% endset %}
 {% include "partials/hero-full.njk" %}
 {% include "partials/crumbs.njk" %}
@@ -47,8 +47,8 @@ faqProduit:
 <section class="section"><div class="wrap two-cols">
 <div>
 <h2>Ce qui est inclus dans la prestation</h2>
-<h3 style="margin-top:24px;">Le téléphone vintage et son combiné</h3>
-<p>Un vrai téléphone rétro, qui fait aussi partie de la décoration. Il se pose sur une petite table, avec une affiche qui explique le principe.</p>
+<h3 style="margin-top:24px;">Le téléphone vintage dans son arche lumineuse</h3>
+<p>Un vrai téléphone rétro à cadran, présenté dans une arche lumineuse qui en fait une pièce de décoration. Vos invités le repèrent dès l'entrée, et une affiche explique le principe.</p>
 <h3 style="margin-top:24px;">L'installation sur place</h3>
 <p>Nous livrons, installons et vérifions le téléphone sur votre lieu de réception avant l'arrivée des invités. Vous n'avez rien à brancher ni à régler.</p>
 <h3 style="margin-top:24px;">La remise par lien numérique et clé USB</h3>

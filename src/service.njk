@@ -13,7 +13,7 @@ permalink: "/{{ s.categorie }}/{{ s.slug }}/"
 {% set heroTitle = s.h1 %}{% set heroIntro = s.accroche %}
 {% set heroAside %}
 <div class="price-box"><strong>Dès {{ s.prix | euros }}</strong><span>{{ s.prixDetail }}</span></div>
-<div class="btns"><a class="btn sage" href="/devis/?service={{ s.slug }}" data-track="devis">Vérifier ma date</a><a class="btn ghost" href="/configurateur/">Simuler mon budget</a></div>
+<div class="btns"><a class="btn primary" href="/devis/?service={{ s.slug }}" data-track="devis">Vérifier ma date</a><a class="btn ghost" href="/configurateur/">Simuler mon budget</a></div>
 {% endset %}
 {% include "partials/hero-full.njk" %}
 {% include "partials/crumbs.njk" %}

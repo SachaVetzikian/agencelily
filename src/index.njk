@@ -13,25 +13,43 @@ faqHome:
     a: "Oui : bars gourmands (crêpes, mini pancakes, tiramisu, gaufres), photobooth et mur d'entrée personnalisé. Tout peut être réuni dans un seul devis."
 ---
 {% set livre = services | findBySlug("livre-dor-audio-video") %}
-{% set heroImg = livre.image %}{% set heroAlt = "Téléphone vintage de livre d'or audio" %}{% set heroEyebrow = "Agence Lily · Paris et Île-de-France" %}
+{% set heroImg = livre.image %}{% set heroImgMobile = livre.imageMobile %}{% set heroAlt = "Téléphone vintage de livre d'or audio" %}{% set heroEyebrow = "Agence Lily · Paris et Île-de-France" %}
 {% set heroTitle = "Le livre d'or audio et vidéo de votre événement" %}
 {% set heroIntro = "Vos invités décrochent un téléphone vintage et vous laissent un message. Avec la vidéo, vous gardez aussi leurs visages. Nous le livrons et l'installons chez vous, à Paris et en Île-de-France." %}
 {% set heroAside %}
 <div class="price-box"><strong>Dès 200 €</strong><span>livraison et installation comprises</span></div>
 <div class="trust"><span><span class="stars">★★★★★</span> <strong>{{ site.avis.nombre }} avis</strong> Google</span><span><strong>Devis sous {{ site.delaiReponse }}</strong></span></div>
-<div class="btns"><a class="btn sage" href="/devis/?service=livre-dor-audio-video" data-track="devis">Vérifier ma date</a><a class="btn ghost" href="{{ livre.url }}">Découvrir</a></div>
+<div class="btns"><a class="btn primary" href="/devis/?service=livre-dor-audio-video" data-track="devis">Vérifier ma date</a><a class="btn ghost" href="{{ livre.url }}">Découvrir</a></div>
 {% endset %}
 {% include "partials/hero-full.njk" %}
+
+<section class="section"><div class="wrap">
+<div class="feature feature-dark">
+{% set label = "Téléphone vintage dans son arche lumineuse" %}{% set img = livre.imageTotem %}{% set tall = true %}{% include "partials/visual.njk" %}
+<div class="body">
+<span class="eyebrow">Notre signature</span>
+<h2>Un téléphone vintage dans son arche lumineuse</h2>
+<p>Chez nous, le téléphone n'est pas posé dans un coin de table. Il est présenté dans une arche lumineuse, une vraie pièce de décoration qui attire le regard dès l'entrée.</p>
+<ul class="check">
+<li>Vos invités le repèrent tout de suite</li>
+<li>Il s'accorde à tous les décors, du champêtre au plus chic</li>
+<li>Sa lumière douce met en valeur le téléphone et vos photos</li>
+</ul>
+<div class="btns"><a class="btn" href="{{ livre.url }}">Découvrir le livre d'or</a></div>
+</div>
+</div>
+</div></section>
 
 <section class="section">
 <div class="wrap">
 <div class="section-head"><h2>Comment ça marche</h2><a class="link" href="/blog/comment-fonctionne-livre-d-or-audio/">Le guide complet</a></div>
-<div class="steps">
+<div class="steps m-rail">
 <div class="step"><h3>Vous enregistrez votre message d'accueil</h3><p>C'est ce que vos invités entendent en décrochant. Il donne le ton et lance les plus timides.</p></div>
 <div class="step"><h3>Nous installons le téléphone</h3><p>Livraison, installation et vérification sur votre lieu, avant l'arrivée des invités.</p></div>
 <div class="step"><h3>Vos invités parlent après le bip</h3><p>Pas d'application, pas de QR code : on décroche, on parle, on raccroche.</p></div>
 <div class="step"><h3>Vous gardez les souvenirs</h3><p>Tous les messages audio, et vidéo selon la formule, vous sont remis après l'événement.</p></div>
 </div>
+<span class="rail-hint">Faites glisser →</span>
 </div>
 </section>
 
@@ -61,16 +79,17 @@ faqHome:
 <div class="wrap">
 {% if qa %}<p>« {{ qa.texte }} »</p><span class="eyebrow" style="color:#fff;margin-top:16px;">{{ qa.prenom }}{% if qa.evenement %} · {{ qa.evenement }}{% endif %}</span>
 {% else %}<p>Dans vingt ans, c'est leur voix que vous réécouterez.</p>{% endif %}
-<div><a class="btn sage" href="/devis/?service=livre-dor-audio-video" data-track="devis">Vérifier ma date</a></div>
+<div><a class="btn primary" href="/devis/?service=livre-dor-audio-video" data-track="devis">Vérifier ma date</a></div>
 </div>
 </section>
 
 <section class="section">
 <div class="wrap">
 <div class="section-head"><h2>Exemples de messages d'accueil</h2></div>
-<div class="avis-grid">
+<div class="avis-grid m-rail">
 {% for x in occasions %}<figure class="avis"><span class="tag">{{ x.nom }}</span><blockquote>{{ x.messagesAccueil[0] }}</blockquote><figcaption><a href="{{ x.url }}">Plus d'exemples</a></figcaption></figure>{% endfor %}
 </div>
+<span class="rail-hint">Faites glisser →</span>
 </div>
 </section>
 

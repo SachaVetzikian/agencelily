@@ -9,7 +9,7 @@ Toutes les valeurs vivent dans `src/assets/style.css` (bloc `:root`). Ne jamais 
 2. **Angles droits partout**, sauf les boutons et les pastilles, toujours en pilule.
 3. **Capitales pour les titres**, bas de casse pour le texte courant.
 4. **Pas d'ombres.** La hiérarchie se fait par les fonds (blanc / gris clair / noir) et l'espace.
-5. **Une seule couleur d'accent**, le sauge, réservée à l'action principale d'une section (demande de devis).
+5. **Noir et blanc uniquement.** Aucune couleur d'accent : la hiérarchie vient du contraste, de la taille et de l'espace. L'action principale est un bouton noir plein (blanc plein sur fond sombre).
 6. **Les prix restent visibles** : c'est la différence avec un palace. Luxe accessible, pas luxe inaccessible.
 
 ## 2. Couleurs
@@ -22,8 +22,6 @@ Toutes les valeurs vivent dans `src/assets/style.css` (bloc `:root`). Ne jamais 
 | `--ink` | `#111111` | Texte principal, boutons principaux |
 | `--muted` | `#6e6e6a` | Texte secondaire |
 | `--black` | `#000000` | Header, footer, bandeaux sombres |
-| `--sage` | `#cfe0d3` | Bouton d'action principale (devis) |
-| `--sage-ink` | `#1f3527` | Texte sur fond sauge |
 
 ## 3. Typographie
 Une seule famille : **Jost** (géométrique, auto-hébergée dans `src/assets/fonts/`).
@@ -53,7 +51,9 @@ Une seule famille : **Jost** (géométrique, auto-hébergée dans `src/assets/fo
 
 ## 6. Composants
 
-**Hero plein cadre** (`partials/hero-full.njk`) : photo pleine largeur, dégradé sombre en bas, H1 en capitales blanches en bas à gauche. Juste dessous, un **bandeau d'intro** gris : texte d'intro à gauche, prix / contact / bouton à droite.
+**Hero plein cadre** (`partials/hero-full.njk`) : photo pleine largeur, dégradé sombre en bas, H1 en capitales blanches en bas à gauche. Juste dessous, un **bandeau d'intro** gris : texte d'intro à gauche, prix / contact / bouton à droite. Sur mobile : image verticale dédiée (`heroImgMobile`, 4:5), hero plus court, prix et bouton affichés avant le texte.
+
+**Carrousel mobile** (`.m-rail`) : sur mobile, une grille (formules, exemples, étapes) devient un défilement horizontal pour raccourcir la page.
 
 **Carte** (`.card`) : photo en haut (ratio 3:2), corps gris `--surface`, surtitre, titre en capitales, texte gris, puis une ligne prix à gauche + bouton pilule noir à droite.
 
@@ -61,13 +61,13 @@ Une seule famille : **Jost** (géométrique, auto-hébergée dans `src/assets/fo
 
 **Galerie** (`.gallery`) : mosaïque en colonnes, photos sans marge ni légende.
 
-**Bandeau citation** (`.quote-band`) : photo plein cadre, phrase en capitales blanches, bouton sauge. N'y mettre qu'un vrai avis client ou une promesse de marque, jamais un faux témoignage.
+**Bandeau citation** (`.quote-band`) : photo plein cadre, phrase en capitales blanches, bouton blanc. N'y mettre qu'un vrai avis client ou une promesse de marque, jamais un faux témoignage.
 
-**Encart devis** (`.enquiry`) : bloc gris horizontal, titre en capitales, phrase courte, bouton sauge à droite.
+**Encart devis** (`.enquiry`) : bloc gris horizontal, titre en capitales, phrase courte, bouton noir à droite.
 
 **Boutons**
 - `.btn` : noir, texte blanc. Action standard.
-- `.btn.sage` : sauge, texte vert foncé. Action principale (devis).
+- `.btn.primary` : noir plein, plus grand et plus gras. Action principale (devis). Devient blanc plein sur fond sombre (header, pack, bandeau citation, barre mobile).
 - `.btn.ghost` : blanc, bordure fine. Action secondaire.
 - `.btn.light` : blanc sur fond sombre ou photo.
 
@@ -81,6 +81,6 @@ Une seule famille : **Jost** (géométrique, auto-hébergée dans `src/assets/fo
 ## 8. À ne pas faire
 - Pas d'arrondi sur une photo ou une carte.
 - Pas d'ombre portée.
-- Pas de deuxième couleur d'accent.
+- Aucune couleur : noir, blanc et gris uniquement.
 - Pas de titre de section en bas de casse.
 - Pas de tiret long (—) dans les textes.

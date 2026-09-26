@@ -263,7 +263,9 @@
       }
     ],
     "image": "https://unsplash.com/photos/8gWEAAXJjtI/download?w=1600",
-    "url": "/livre-d-or-audio-video/"
+    "url": "/livre-d-or-audio-video/",
+    "imageMobile": "",
+    "imageTotem": ""
   },
   {
     "slug": "photobooth",
