@@ -13,5 +13,5 @@ layout: layouts/base.njk
 </div></article>
 {% include "partials/cta.njk" %}
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":{{ h1 | json | safe }},"description":{{ meta | json | safe }},"datePublished":"{{ page.date | isoDate }}","dateModified":"{{ page.date | isoDate }}","mainEntityOfPage":"{{ site.url }}{{ page.url }}","author":{"@type":"Organization","name":"{{ site.name }}","url":"{{ site.url }}/"},"publisher":{"@type":"Organization","name":"{{ site.name }}","logo":{"@type":"ImageObject","url":"{{ site.url }}/assets/logo.png"}}}
+{"@context":"https://schema.org","@type":"Article","headline":{{ h1 | json | safe }},"description":{{ meta | json | safe }},"datePublished":"{{ page.date | isoDate }}","dateModified":"{{ page.date | isoDate }}","mainEntityOfPage":"{{ site.url }}{{ page.url }}","author":{"@id":"{{ site.url }}/#business"},"publisher":{"@id":"{{ site.url }}/#business"}}
 </script>

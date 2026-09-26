@@ -22,9 +22,46 @@
 <meta name="theme-color" content="#1f1f1f">
 <link rel="stylesheet" href="/assets/fonts/fonts.css">
 <link rel="stylesheet" href="/assets/style.css">
-{%- if schema %}
-<script type="application/ld+json">{{ schema | safe }}</script>
-{%- endif %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "{{ site.url }}/#business",
+      "name": "{{ site.name }}",
+      "url": "{{ site.url }}/",
+      "logo": "{{ site.url }}/assets/logo.png",
+      "image": "{{ site.url }}/assets/og/og-default.png",
+      "description": "Location de livre d'or audio et vidéo sur téléphone vintage, livré et installé à Paris et en Île-de-France, et animations pour vos événements.",
+      "email": "{{ site.email }}",{% if site.phone %}
+      "telephone": "{{ site.phone }}",{% endif %}
+      "priceRange": "€€",
+      "areaServed": [
+        {"@type": "City", "name": "Paris"},
+        {"@type": "AdministrativeArea", "name": "Hauts-de-Seine"},
+        {"@type": "AdministrativeArea", "name": "Seine-Saint-Denis"},
+        {"@type": "AdministrativeArea", "name": "Val-de-Marne"},
+        {"@type": "AdministrativeArea", "name": "Seine-et-Marne"},
+        {"@type": "AdministrativeArea", "name": "Yvelines"},
+        {"@type": "AdministrativeArea", "name": "Essonne"},
+        {"@type": "AdministrativeArea", "name": "Val-d'Oise"}
+      ],{% if site.googleBusiness %}
+      "hasMap": "{{ site.googleBusiness }}",{% endif %}{% set same = [] %}{% if site.googleBusiness %}{% set same = (same.push(site.googleBusiness), same) %}{% endif %}{% if site.instagram %}{% set same = (same.push(site.instagram), same) %}{% endif %}{% if same.length %}
+      "sameAs": {{ same | json | safe }},{% endif %}
+      "knowsAbout": ["Livre d'or audio", "Livre d'or vidéo", "Location de téléphone livre d'or", "Animation de mariage"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "{{ site.url }}/#website",
+      "url": "{{ site.url }}/",
+      "name": "{{ site.name }}",
+      "inLanguage": "fr-FR",
+      "publisher": {"@id": "{{ site.url }}/#business"}
+    }
+  ]
+}
+</script>
 </head>
 <body>
 {% include "partials/header.njk" %}

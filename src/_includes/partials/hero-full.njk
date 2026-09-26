@@ -2,7 +2,7 @@
 <section class="hero-full">
 {% if heroImg %}<picture>
 {% if heroImgMobile %}<source media="(max-width: 700px)" srcset="{{ heroImgMobile }}">{% endif %}
-<img src="{{ heroImg }}" alt="{{ heroAlt or heroTitle }}" fetchpriority="high" onerror="this.closest('picture').remove()">
+<img src="{{ heroImg }}" alt="{{ heroAlt or heroTitle }}" sizes="100vw" fetchpriority="high" onerror="this.closest('picture').remove()">
 </picture>{% endif %}
 <div class="wrap">
 {% if heroEyebrow %}<span class="eyebrow">{{ heroEyebrow }}</span>{% endif %}

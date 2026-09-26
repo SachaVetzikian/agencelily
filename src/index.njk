@@ -18,7 +18,7 @@ faqHome:
 {% set heroIntro = "Vos invités décrochent un téléphone vintage et vous laissent un message. Avec la vidéo, vous gardez aussi leurs visages. Nous le livrons et l'installons chez vous, à Paris et en Île-de-France." %}
 {% set heroAside %}
 <div class="price-box"><strong>Dès 200 €</strong><span>livraison et installation comprises</span></div>
-<div class="trust"><span><span class="stars">★★★★★</span> <strong>{{ site.avis.nombre }} avis</strong> Google</span><span><strong>Devis sous {{ site.delaiReponse }}</strong></span></div>
+<div class="trust"><a href="{{ site.avis.lien }}" rel="noopener" target="_blank" style="text-decoration:none;"><span class="stars">★★★★★</span> <strong>{{ site.avis.nombre }} avis</strong> Google</a><span><strong>Devis sous {{ site.delaiReponse }}</strong></span></div>
 <div class="btns"><a class="btn primary" href="/devis/?service=livre-dor-audio-video" data-track="devis">Vérifier ma date</a><a class="btn ghost" href="{{ livre.url }}">Découvrir</a></div>
 {% endset %}
 {% include "partials/hero-full.njk" %}
@@ -59,7 +59,7 @@ faqHome:
 {# Bandeau : promesse de marque (jamais un faux témoignage). Un vrai avis le remplace dès que avis.json est rempli. #}
 <section class="quote-band">
 {% set qa = avis[0] %}
-{% set bandImg = (evenements | findBySlug("mariage")).image %}{% if bandImg %}<img src="{{ bandImg }}" alt="" loading="lazy" onerror="this.remove()">{% endif %}
+{% set bandImg = (evenements | findBySlug("mariage")).image %}{% if bandImg %}<img src="{{ bandImg }}" alt="" sizes="100vw" loading="lazy" onerror="this.remove()">{% endif %}
 <div class="wrap">
 {% if qa %}<p>« {{ qa.texte }} »</p><span class="eyebrow" style="color:#fff;margin-top:16px;">{{ qa.prenom }}{% if qa.evenement %} · {{ qa.evenement }}{% endif %}</span>
 {% else %}<p>Dans vingt ans, c'est leur voix que vous réécouterez.</p>{% endif %}
@@ -96,23 +96,6 @@ faqHome:
 {% set devisParam = "service=livre-dor-audio-video" %}
 {% include "partials/cta.njk" %}
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "{{ site.name }}",
-  "url": "{{ site.url }}/",
-  "email": "{{ site.email }}",
-  "description": "Livre d'or audio et vidéo sur téléphone vintage, livré et installé à Paris et en Île-de-France, et animations pour vos événements.",
-  "areaServed": [{"@type": "City", "name": "Paris"}, {"@type": "AdministrativeArea", "name": "Île-de-France"}],
-  "priceRange": "€€",
-  "logo": "{{ site.url }}/assets/logo.png",
-  "image": "{{ site.url }}/assets/og/og-default.png",{% if site.phone %}
-  "telephone": "{{ site.phone }}",{% endif %}{% set same = [] %}{% if site.instagram %}{% set same = (same.push(site.instagram), same) %}{% endif %}{% if site.googleBusiness %}{% set same = (same.push(site.googleBusiness), same) %}{% endif %}{% if same.length %}
-  "sameAs": {{ same | json | safe }},{% endif %}
-  "makesOffer": [{% for s in services %}{"@type": "Offer", "itemOffered": {"@type": "Service", "name": "{{ s.nom }}", "url": "{{ site.url }}{{ s | serviceUrl }}"}, "price": "{{ s.prix }}", "priceCurrency": "EUR"}{% if not loop.last %},{% endif %}{% endfor %}]
-}
-</script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{% for f in faqHome %}{"@type":"Question","name":{{ f.q | json | safe }},"acceptedAnswer":{"@type":"Answer","text":{{ f.a | json | safe }}}}{% if not loop.last %},{% endif %}{% endfor %}]}
 </script>

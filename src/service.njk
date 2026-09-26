@@ -89,7 +89,7 @@ permalink: "/{{ s.categorie }}/{{ s.slug }}/"
   "description": {{ s.meta | json | safe }},
   "url": "{{ site.url }}{{ page.url }}",
   "areaServed": {"@type": "AdministrativeArea", "name": "Île-de-France"},
-  "provider": {"@type": "LocalBusiness", "name": "{{ site.name }}", "url": "{{ site.url }}/"},
+  "provider": {"@id": "{{ site.url }}/#business"},
   "offers": {% if s.formules %}[{% for f in s.formules %}{"@type": "Offer", "name": {{ f.nom | json | safe }}, "price": "{{ f.prix }}", "priceCurrency": "EUR"}{% if not loop.last %},{% endif %}{% endfor %}]{% else %}{"@type": "Offer", "price": "{{ s.prix }}", "priceCurrency": "EUR", "description": {{ s.prixDetail | json | safe }}}{% endif %}
 }
 </script>

@@ -87,8 +87,11 @@ faqLocation:
 {% include "partials/cta.njk" %}
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Service","name":"Location de livre d'or audio et vidéo","serviceType":"Location de livre d'or audio","url":"{{ site.url }}{{ page.url }}","areaServed":{"@type":"AdministrativeArea","name":"Île-de-France"},"provider":{"@type":"LocalBusiness","name":"{{ site.name }}","url":"{{ site.url }}/"},"offers":[{% for f in livre.formules %}{"@type":"Offer","name":{{ f.nom | json | safe }},"price":"{{ f.prix }}","priceCurrency":"EUR"}{% if not loop.last %},{% endif %}{% endfor %}]}
+{"@context":"https://schema.org","@type":"Service","name":"Location de livre d'or audio et vidéo","serviceType":"Location de livre d'or audio","url":"{{ site.url }}{{ page.url }}","areaServed":{"@type":"AdministrativeArea","name":"Île-de-France"},"provider":{"@id":"{{ site.url }}/#business"},"offers":[{% for f in livre.formules %}{"@type":"Offer","name":{{ f.nom | json | safe }},"price":"{{ f.prix }}","priceCurrency":"EUR"}{% if not loop.last %},{% endif %}{% endfor %}]}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{% for f in faqLocation %}{"@type":"Question","name":{{ f.q | json | safe }},"acceptedAnswer":{"@type":"Answer","text":{{ f.a | json | safe }}}}{% if not loop.last %},{% endif %}{% endfor %}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"{{ site.url }}/"},{"@type":"ListItem","position":2,"name":"Livre d'or audio et vidéo","item":"{{ site.url }}/livre-d-or-audio-video/"},{"@type":"ListItem","position":3,"name":"Location"}]}
 </script>
