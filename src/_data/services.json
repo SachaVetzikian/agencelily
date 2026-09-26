@@ -216,7 +216,8 @@
           "Messages illimités",
           "Fichiers envoyés en ligne",
           "Livraison et installation"
-        ]
+        ],
+        "image": "https://unsplash.com/photos/cD2oCRUD6RA/download?w=1600"
       },
       {
         "nom": "Audio + vidéo",
@@ -226,7 +227,8 @@
           "Espace vidéo pour les messages face caméra",
           "Vidéos envoyées en ligne"
         ],
-        "populaire": true
+        "populaire": true,
+        "image": "https://unsplash.com/photos/z9ZB6KvHPt4/download?w=1600"
       },
       {
         "nom": "Audio + vidéo avec animateur",
@@ -235,7 +237,8 @@
           "Tout le pack Audio + vidéo",
           "Un animateur qui va chercher vos invités",
           "Plus de messages, même des invités les plus timides"
-        ]
+        ],
+        "image": "https://unsplash.com/photos/CNSH-JGEwtI/download?w=1600"
       }
     ],
     "options": [
@@ -264,8 +267,7 @@
     ],
     "image": "https://unsplash.com/photos/8gWEAAXJjtI/download?w=1600",
     "url": "/livre-d-or-audio-video/",
-    "imageMobile": "",
-    "imageTotem": ""
+    "imageMobile": ""
   },
   {
     "slug": "photobooth",
