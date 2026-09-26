@@ -28,7 +28,7 @@ permalink: "/evenements/{{ e.slug }}/"
 <div class="wrap">
 <h2>Nos recommandations</h2>
 <div class="reco" style="margin-top:24px;">
-{% for r in e.services %}{% set x = services | findBySlug(r.slug) %}<a href="/{{ x.categorie }}/{{ x.slug }}/"><div><span class="tag">{% if x.categorie == 'animations' %}Bar gourmand{% else %}Location{% endif %}</span><h3 style="margin:4px 0 0;">{{ x.nom }}</h3><p>{{ r.pourquoi }}</p></div><span class="price" style="padding:0;white-space:nowrap;">Dès {{ x.prix | euros }}</span></a>
+{% for r in e.services %}{% set x = services | findBySlug(r.slug) %}<a href="{{ x | serviceUrl }}"><div><span class="tag">{% if x.categorie == 'animations' %}Bar gourmand{% else %}Location{% endif %}</span><h3 style="margin:4px 0 0;">{{ x.nom }}</h3><p>{{ r.pourquoi }}</p></div><span class="price" style="padding:0;white-space:nowrap;">Dès {{ x.prix | euros }}</span></a>
 {% endfor %}
 </div>
 </div>
@@ -58,12 +58,10 @@ permalink: "/evenements/{{ e.slug }}/"
 </div>
 </section>
 
-{% if e.slug == "mariage" %}<section class="section alt">
-<div class="wrap">
-<h2>Votre mariage par département</h2>
-<div class="pills" style="margin-top:20px;">{% for d in departements %}<a class="pill" href="/mariage/{{ d.slug }}/">{{ d.nom }} ({{ d.code }})</a>{% endfor %}</div>
-</div>
-</section>{% endif %}
+{% for o in occasions %}{% if o.evenement == e.slug %}<section class="section"><div class="wrap"><div class="enquiry">
+<div><h2>Le livre d'or audio pour {{ e.unNom }}</h2><p>Exemples de messages d'accueil, formules et logistique : tout sur le livre d'or audio et vidéo pour votre {{ e.nom | lower }}.</p></div>
+<a class="btn" href="{{ o.url }}">Découvrir</a>
+</div></div></section>{% endif %}{% endfor %}
 
 <section class="section">
 <div class="wrap">

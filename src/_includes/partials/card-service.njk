@@ -1,4 +1,4 @@
-<a class="card" href="/{{ c.categorie }}/{{ c.slug }}/">
+<a class="card" href="{{ c | serviceUrl }}">
 {% set label = c.nom %}{% set img = c.image %}{% set tall = false %}{% include "partials/visual.njk" %}
 <div class="body">
 <span class="tag">{% if c.categorie == 'animations' %}Bar gourmand{% else %}Location{% endif %}</span>

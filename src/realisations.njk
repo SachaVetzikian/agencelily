@@ -18,7 +18,7 @@ meta: "Découvrez nos bars gourmands, livres d'or audio et photobooths en situat
 <span class="tag">{{ r.evenement }}{% if r.ville %} · {{ r.ville }}{% endif %}{% if r.date %} · {{ r.date }}{% endif %}</span>
 <h3>{{ r.titre }}</h3>
 {% if r.texte %}<p>{{ r.texte }}</p>{% endif %}
-{% if r.prestations %}<p class="price">{% for slug in r.prestations %}{% set x = services | findBySlug(slug) %}{% if x %}<a href="/{{ x.categorie }}/{{ x.slug }}/">{{ x.nom }}</a>{% if not loop.last %} · {% endif %}{% endif %}{% endfor %}</p>{% endif %}
+{% if r.prestations %}<p class="price">{% for slug in r.prestations %}{% set x = services | findBySlug(slug) %}{% if x %}<a href="{{ x | serviceUrl }}">{{ x.nom }}</a>{% if not loop.last %} · {% endif %}{% endif %}{% endfor %}</p>{% endif %}
 </div>
 </article>{% endfor %}
 </div>

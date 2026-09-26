@@ -1,7 +1,7 @@
 {%- set u = page.url or "" -%}
+<a href="/livre-d-or-audio-video/"{% if u == '/livre-d-or-audio-video/' %} aria-current="page"{% endif %}>Livre d'or audio & vidéo</a>
+<a href="/location-livre-d-or-audio/"{% if u == '/location-livre-d-or-audio/' %} aria-current="page"{% endif %}>Location</a>
+<a href="/livre-d-or-mariage/"{% if u == '/livre-d-or-mariage/' %} aria-current="page"{% endif %}>Mariage</a>
 <a href="/animations/"{% if u.startsWith('/animations/') %} aria-current="page"{% endif %}>Bars gourmands</a>
-<a href="/location/"{% if u.startsWith('/location/') %} aria-current="page"{% endif %}>Location</a>
-<a href="/evenements/"{% if u.startsWith('/evenements/') %} aria-current="page"{% endif %}>Événements</a>
-<a href="/configurateur/"{% if u == '/configurateur/' %} aria-current="page"{% endif %}>Simuler mon budget</a>
 <a href="/tarifs/"{% if u == '/tarifs/' %} aria-current="page"{% endif %}>Tarifs</a>
 <a class="btn" href="/devis/">Devis gratuit</a>

@@ -1,115 +1,96 @@
 ---
 layout: layouts/base.njk
-title: "Bars gourmands et animations Paris & IDF | Agence Lily"
-meta: "Bar à crêpes, pancakes, tiramisu, gaufres, livre d'or audio et vidéo, photobooth, mur cascade : les animations de vos mariages, baptêmes, baby showers et anniversaires en Île-de-France."
+title: "Livre d'or audio et vidéo à Paris et en IDF | Agence Lily"
+meta: "Agence Lily : livre d'or audio et vidéo sur téléphone vintage, livré et installé à Paris et en Île-de-France. Mariage, anniversaire, baptême, entreprise. Dès 200 €."
 faqHome:
+  - q: "Qu'est-ce qu'un livre d'or audio ?"
+    a: "Un téléphone vintage sur lequel vos invités laissent un message vocal après avoir écouté votre message d'accueil. Avec la formule vidéo, ils sont aussi filmés. Vous récupérez tous les messages après l'événement."
+  - q: "Combien coûte la location ?"
+    a: "200 € pour l'audio, 300 € pour l'audio et la vidéo, 400 € avec un animateur. Livraison et installation comprises à Paris et en Île-de-France."
   - q: "Dans quelle zone intervenez-vous ?"
-    a: "À Paris et dans toute l'Île-de-France. Les frais de déplacement sont calculés selon la distance et indiqués clairement dans votre devis."
-  - q: "Peut-on combiner un bar gourmand et une location ?"
-    a: "Oui, c'est notre spécialité : un seul interlocuteur, une seule livraison et un tarif pack plus avantageux que les prestations séparées."
-  - q: "Combien de temps à l'avance réserver ?"
-    a: "Pour un samedi entre mai et septembre, réservez 3 à 6 mois avant. Le reste de l'année, quelques semaines suffisent souvent. Demandez-nous, on vous répond sous 24h."
-  - q: "Comment se passe le paiement ?"
-    a: "Un acompte confirme la réservation de votre date, le solde est réglé avant l'événement. Tout est précisé dans le devis."
+    a: "À Paris et dans toute l'Île-de-France : 75, 77, 78, 91, 92, 93, 94 et 95."
+  - q: "Proposez-vous d'autres animations ?"
+    a: "Oui : bars gourmands (crêpes, mini pancakes, tiramisu, gaufres), photobooth et mur d'entrée personnalisé. Tout peut être réuni dans un seul devis."
 ---
-{% set mariage = evenements | findBySlug("mariage") %}
-{% set heroImg = mariage.image %}{% set heroAlt = "Réception de mariage" %}{% set heroEyebrow = site.zone %}
-{% set heroTitle = "Bars gourmands et animations pour vos événements" %}
-{% set heroIntro = "Bar à crêpes, pancakes, tiramisu ou gaufres préparés devant vos invités. Livre d'or audio, photobooth et mur cascade livrés et installés. Pour votre mariage, baptême, baby shower ou anniversaire." %}
+{% set livre = services | findBySlug("livre-dor-audio-video") %}
+{% set heroImg = livre.image %}{% set heroAlt = "Téléphone vintage de livre d'or audio" %}{% set heroEyebrow = "Agence Lily · Paris et Île-de-France" %}
+{% set heroTitle = "Le livre d'or audio et vidéo de votre événement" %}
+{% set heroIntro = "Vos invités décrochent un téléphone vintage et vous laissent un message. Avec la vidéo, vous gardez aussi leurs visages. Nous le livrons et l'installons chez vous, à Paris et en Île-de-France." %}
 {% set heroAside %}
+<div class="price-box"><strong>Dès 200 €</strong><span>livraison et installation comprises</span></div>
 <div class="trust"><span><span class="stars">★★★★★</span> <strong>{{ site.avis.nombre }} avis</strong> Google</span><span><strong>Devis sous {{ site.delaiReponse }}</strong></span></div>
-<a href="mailto:{{ site.email }}">{{ site.email }}</a>
-<div class="btns"><a class="btn sage" href="/devis/" data-track="devis">Demander un devis</a><a class="btn ghost" href="/configurateur/">Simuler mon budget</a></div>
+<div class="btns"><a class="btn sage" href="/devis/?service=livre-dor-audio-video" data-track="devis">Vérifier ma date</a><a class="btn ghost" href="{{ livre.url }}">Découvrir</a></div>
 {% endset %}
 {% include "partials/hero-full.njk" %}
 
 <section class="section">
 <div class="wrap">
-<div class="section-head"><h2>Types d'événements</h2><a class="link" href="/evenements/">Tous les événements</a></div>
-{% include "partials/tiles-evenements.njk" %}
+<div class="section-head"><h2>Comment ça marche</h2><a class="link" href="/blog/comment-fonctionne-livre-d-or-audio/">Le guide complet</a></div>
+<div class="steps">
+<div class="step"><h3>Vous enregistrez votre message d'accueil</h3><p>C'est ce que vos invités entendent en décrochant. Il donne le ton et lance les plus timides.</p></div>
+<div class="step"><h3>Nous installons le téléphone</h3><p>Livraison, installation et vérification sur votre lieu, avant l'arrivée des invités.</p></div>
+<div class="step"><h3>Vos invités parlent après le bip</h3><p>Pas d'application, pas de QR code : on décroche, on parle, on raccroche.</p></div>
+<div class="step"><h3>Vous gardez les souvenirs</h3><p>Tous les messages audio, et vidéo selon la formule, vous sont remis après l'événement.</p></div>
+</div>
 </div>
 </section>
 
 <section class="section alt">
 <div class="wrap">
-<div class="section-head"><h2>Nos prestations</h2><a class="link" href="/tarifs/">Voir les tarifs</a></div>
-<div class="rail">{% for c in services %}{% include "partials/card-service.njk" %}{% endfor %}</div>
+<div class="section-head"><h2>Nos formules</h2><a class="link" href="/location-livre-d-or-audio/">Conditions de location</a></div>
+{% include "partials/formules-livre.njk" %}
 </div>
 </section>
 
 <section class="section">
 <div class="wrap">
-<div class="section-head"><h2>Galerie</h2></div>
-<div class="gallery">
-{% for x in services %}{% if x.image %}<img src="{{ x.image }}" alt="{{ x.nom }}" loading="lazy" onerror="this.remove()">{% endif %}{% endfor %}
-{% for x in evenements %}{% if x.image %}<img src="{{ x.image }}" alt="{{ x.nom }}" loading="lazy" onerror="this.remove()">{% endif %}{% endfor %}
+<div class="section-head"><h2>Pour quelle occasion ?</h2></div>
+<div class="tiles">
+{% for o in occasions %}{% set evt = evenements | findBySlug(o.evenement) %}<a class="tile" href="{{ o.url }}">
+{% if evt and evt.image %}<img src="{{ evt.image }}" alt="Livre d'or audio : {{ o.nom }}" loading="lazy" onerror="this.remove()">{% endif %}
+<span class="tile-title">{{ o.nom }}</span>
+</a>{% endfor %}
 </div>
 </div>
 </section>
 
-{# Bandeau : promesse de marque (jamais un faux témoignage). Remplacer par un vrai avis quand avis.json est rempli. #}
+{# Bandeau : promesse de marque (jamais un faux témoignage). Un vrai avis le remplace dès que avis.json est rempli. #}
 <section class="quote-band">
 {% set qa = avis[0] %}
-{% set bandImg = (services | findBySlug("mur-cascade")).image %}{% if bandImg %}<img src="{{ bandImg }}" alt="" loading="lazy" onerror="this.remove()">{% endif %}
+{% set bandImg = (evenements | findBySlug("mariage")).image %}{% if bandImg %}<img src="{{ bandImg }}" alt="" loading="lazy" onerror="this.remove()">{% endif %}
 <div class="wrap">
 {% if qa %}<p>« {{ qa.texte }} »</p><span class="eyebrow" style="color:#fff;margin-top:16px;">{{ qa.prenom }}{% if qa.evenement %} · {{ qa.evenement }}{% endif %}</span>
-{% else %}<p>Un seul interlocuteur pour les saveurs et les souvenirs de votre fête.</p>{% endif %}
-<div><a class="btn sage" href="/devis/" data-track="devis">Demander un devis</a></div>
+{% else %}<p>Dans vingt ans, c'est leur voix que vous réécouterez.</p>{% endif %}
+<div><a class="btn sage" href="/devis/?service=livre-dor-audio-video" data-track="devis">Vérifier ma date</a></div>
 </div>
 </section>
 
 <section class="section">
 <div class="wrap">
-<div class="section-head"><h2>Deux façons de vous aider</h2></div>
-<div class="split">
-<a class="card" href="/animations/">
-{% set label = "Bar gourmand" %}{% set img = (services | findBySlug("bar-a-crepes")).image %}{% set tall = false %}{% include "partials/visual.njk" %}
-<div class="body"><span class="tag">Avec animateur</span><h3>Bars gourmands</h3><p>Un animateur prépare crêpes, pancakes, tiramisu ou gaufres devant vos invités. Vous n'avez rien à gérer.</p><div class="card-foot"><span class="price">Dès 280 € <small>pour 40 invités</small></span><span class="btn small">Découvrir</span></div></div>
-</a>
-<a class="card" href="/location/">
-{% set label = "Livre d'or audio" %}{% set img = (services | findBySlug("livre-dor-audio-video")).image %}{% include "partials/visual.njk" %}
-<div class="body"><span class="tag">Livré et installé</span><h3>Location de matériel</h3><p>Livre d'or audio et vidéo, photobooth, mur cascade personnalisé : on livre, on installe, on reprend.</p><div class="card-foot"><span class="price">Dès 150 €</span><span class="btn small">Découvrir</span></div></div>
-</a>
+<div class="section-head"><h2>Exemples de messages d'accueil</h2></div>
+<div class="avis-grid">
+{% for x in occasions %}<figure class="avis"><span class="tag">{{ x.nom }}</span><blockquote>{{ x.messagesAccueil[0] }}</blockquote><figcaption><a href="{{ x.url }}">Plus d'exemples</a></figcaption></figure>{% endfor %}
 </div>
 </div>
 </section>
 
+{% set avisService = "" %}{% include "partials/avis.njk" %}
+
 <section class="section alt">
 <div class="wrap">
-<div class="section-head"><h2>Les packs par événement</h2><a class="link" href="/configurateur/">Composer le mien</a></div>
-<div class="rail">
-{% for e in evenements %}<a class="card" href="/evenements/{{ e.slug }}/#pack">
-{% set label = e.nom %}{% set img = e.image %}{% set tall = false %}{% include "partials/visual.njk" %}
-<div class="body">
-<span class="tag">{{ e.nom }}</span><h3>{{ e.pack.nom }}</h3>
-<p>{{ e.pack.contenu | join(" + ") }}</p>
-<div class="card-foot"><span class="price">{{ e.pack.prix | euros }} <small><s>{{ e.pack.valeur | euros }}</s></small></span><span class="btn small">Réserver</span></div>
-</div></a>{% endfor %}
-</div>
+<div class="section-head"><h2>Pour compléter votre fête</h2><a class="link" href="/animations/">Bars gourmands</a></div>
+<div class="rail">{% for c in services %}{% if c.slug != "livre-dor-audio-video" %}{% include "partials/card-service.njk" %}{% endif %}{% endfor %}</div>
 </div>
 </section>
 
 <section class="section">
-<div class="wrap">
-<div class="section-head"><h2>Comment ça se passe</h2></div>
-<div class="steps">
-<div class="step"><h3>Vous demandez un devis</h3><p>Événement, date, lieu, nombre d'invités. Deux minutes suffisent.</p></div>
-<div class="step"><h3>Réponse sous 24h</h3><p>Un devis clair, frais de déplacement compris, et nos conseils pour votre événement.</p></div>
-<div class="step"><h3>Un acompte bloque la date</h3><p>On cale les détails avec vous, votre lieu et votre traiteur.</p></div>
-<div class="step"><h3>Le jour J, vous profitez</h3><p>On installe, on anime, on range. Vous, vous êtes avec vos invités.</p></div>
-</div>
-</div>
-</section>
-
-{% include "partials/avis.njk" %}
-
-<section class="section alt">
 <div class="wrap" style="max-width:820px;">
 <h2>Questions fréquentes</h2>
 {% set faq = faqHome %}{% include "partials/faq.njk" %}
 </div>
 </section>
 
+{% set devisParam = "service=livre-dor-audio-video" %}
 {% include "partials/cta.njk" %}
 
 <script type="application/ld+json">
@@ -119,14 +100,14 @@ faqHome:
   "name": "{{ site.name }}",
   "url": "{{ site.url }}/",
   "email": "{{ site.email }}",
-  "description": "{{ site.baseline }}",
+  "description": "Livre d'or audio et vidéo sur téléphone vintage, livré et installé à Paris et en Île-de-France, et animations pour vos événements.",
   "areaServed": [{"@type": "City", "name": "Paris"}, {"@type": "AdministrativeArea", "name": "Île-de-France"}],
   "priceRange": "€€",
   "logo": "{{ site.url }}/assets/logo.png",
   "image": "{{ site.url }}/assets/og/og-default.png",{% if site.phone %}
   "telephone": "{{ site.phone }}",{% endif %}{% set same = [] %}{% if site.instagram %}{% set same = (same.push(site.instagram), same) %}{% endif %}{% if site.googleBusiness %}{% set same = (same.push(site.googleBusiness), same) %}{% endif %}{% if same.length %}
   "sameAs": {{ same | json | safe }},{% endif %}
-  "makesOffer": [{% for s in services %}{"@type": "Offer", "itemOffered": {"@type": "Service", "name": "{{ s.nom }}", "url": "{{ site.url }}/{{ s.categorie }}/{{ s.slug }}/"}, "price": "{{ s.prix }}", "priceCurrency": "EUR"}{% if not loop.last %},{% endif %}{% endfor %}]
+  "makesOffer": [{% for s in services %}{"@type": "Offer", "itemOffered": {"@type": "Service", "name": "{{ s.nom }}", "url": "{{ site.url }}{{ s | serviceUrl }}"}, "price": "{{ s.prix }}", "priceCurrency": "EUR"}{% if not loop.last %},{% endif %}{% endfor %}]
 }
 </script>
 <script type="application/ld+json">

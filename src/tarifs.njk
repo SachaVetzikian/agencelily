@@ -1,17 +1,24 @@
 ---
 layout: layouts/base.njk
-title: "Tarifs animations et location IDF | Agence Lily"
-meta: "Tous nos prix en clair : bar à crêpes dès 400 €, bar à tiramisu dès 280 €, livre d'or audio dès 200 €, photobooth dès 290 €. Packs par événement dès 450 €."
+title: "Livre d'or audio : tarifs et formules | Agence Lily"
+meta: "Tarifs du livre d'or audio et vidéo : 200 € audio, 300 € audio + vidéo, 400 € avec animateur, livraison et installation comprises en Île-de-France."
 ---
 {% set crumbs = [{ nom: "Tarifs" }] %}
 {% include "partials/crumbs.njk" %}
 <section class="hero"><div class="wrap">
 <span class="eyebrow">Prix transparents</span>
-<h1>Nos tarifs</h1>
+<h1>Tarifs du livre d'or audio et vidéo</h1>
 <p class="lede">Des prix de départ clairs, pour que vous sachiez où vous mettez les pieds. Le devis final dépend du nombre d'invités et du lieu : frais de déplacement indiqués noir sur blanc, sans surprise.</p>
 </div></section>
 
 <section class="section alt"><div class="wrap">
+<h2>Livre d'or audio et vidéo</h2>
+<p class="lede" style="margin-bottom:32px;">Livraison et installation comprises à Paris et en Île-de-France.</p>
+{% include "partials/formules-livre.njk" %}
+<div class="btns"><a class="btn" href="/livre-d-or-audio-video/">Tout savoir sur le livre d'or</a><a class="btn ghost" href="/configurateur/">Simuler mon budget</a></div>
+</div></section>
+
+<section class="section"><div class="wrap">
 <h2>Bars gourmands (avec animateur)</h2>
 <div class="table-wrap" style="margin-top:20px;"><table class="table">
 <thead><tr><th>Prestation</th><th>Ce qui est compris</th><th>Dès</th></tr></thead>
@@ -22,11 +29,11 @@ meta: "Tous nos prix en clair : bar à crêpes dès 400 €, bar à tiramisu dè
 <div class="table-wrap" style="margin-top:20px;"><table class="table">
 <thead><tr><th>Prestation</th><th>Détail</th><th>Prix</th></tr></thead>
 <tbody>
-{% for s in services | byCategorie('location') %}
-{% if s.formules %}{% for f in s.formules %}<tr><td><a href="/location/{{ s.slug }}/"><strong>{{ s.nom }}</strong></a></td><td>Formule {{ f.nom }}</td><td>{{ f.prix | euros }}</td></tr>{% endfor %}
+{% for s in services | byCategorie('location') %}{% if not s.formules %}
+{% if s.formules %}{% for f in s.formules %}<tr><td><a href="{{ s | serviceUrl }}"><strong>{{ s.nom }}</strong></a></td><td>Formule {{ f.nom }}</td><td>{{ f.prix | euros }}</td></tr>{% endfor %}
 {% for o in s.options %}<tr><td>{{ s.nom }}</td><td>Option : {{ o.nom }}</td><td>+ {{ o.prix }}</td></tr>{% endfor %}
-{% else %}<tr><td><a href="/location/{{ s.slug }}/"><strong>{{ s.nom }}</strong></a></td><td>{{ s.prixDetail }}</td><td>Dès {{ s.prix | euros }}</td></tr>{% endif %}
-{% endfor %}
+{% else %}<tr><td><a href="{{ s | serviceUrl }}"><strong>{{ s.nom }}</strong></a></td><td>{{ s.prixDetail }}</td><td>Dès {{ s.prix | euros }}</td></tr>{% endif %}
+{% endif %}{% endfor %}
 </tbody>
 </table></div>
 

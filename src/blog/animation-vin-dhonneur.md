@@ -4,6 +4,7 @@ h1: "Animation vin d'honneur : que prévoir pour occuper vos invités"
 meta: "Le vin d'honneur dure souvent 1h30 à 2h pendant que les mariés font les photos. Nos idées d'animation pour que vos invités ne s'ennuient pas."
 extrait: "Pendant que vous faites vos photos de couple, vos invités attendent parfois deux heures, un verre à la main. Voici comment transformer ce temps mort en moment fort."
 date: 2026-09-23
+draft: true
 ---
 
 ## Le problème du vin d'honneur

@@ -4,6 +4,7 @@ h1: "Photobooth ou livre d'or audio : lequel choisir ?"
 meta: "Photobooth ou livre d'or audio pour votre mariage ou anniversaire ? Comparatif prix, ambiance, souvenirs et nos conseils selon votre événement."
 extrait: "Les deux laissent des souvenirs, mais pas les mêmes. Voici comment choisir selon votre événement, votre budget et le souvenir que vous voulez garder."
 date: 2026-09-22
+draft: true
 ---
 
 ## En résumé

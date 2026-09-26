@@ -4,6 +4,7 @@ h1: "10 idées d'animation pour une baby shower réussie"
 meta: "Idées d'animation pour une baby shower : jeux, bar gourmand, livre d'or audio pour bébé, décor d'entrée. Nos conseils pour une fête simple et mémorable."
 extrait: "Une baby shower réussie, c'est un moment doux, gourmand et plein de souvenirs, sans que la future maman ait quoi que ce soit à gérer. Voici nos 10 idées préférées."
 date: 2026-09-24
+draft: true
 ---
 
 ## Avant de commencer : le bon format

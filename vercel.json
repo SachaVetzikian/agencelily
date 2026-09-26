@@ -1,5 +1,42 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": "_site",
-  "trailingSlash": true
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/location/livre-dor-audio-video/",
+      "destination": "/livre-d-or-audio-video/",
+      "permanent": true
+    },
+    {
+      "source": "/mariage/:dept/",
+      "destination": "/location-livre-d-or-audio/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/livre-dor-audio-prix-fonctionnement/",
+      "destination": "/blog/comment-fonctionne-livre-d-or-audio/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/prix-bar-a-crepes-mariage/",
+      "destination": "/blog/",
+      "permanent": false
+    },
+    {
+      "source": "/blog/idees-animation-baby-shower/",
+      "destination": "/blog/",
+      "permanent": false
+    },
+    {
+      "source": "/blog/animation-vin-dhonneur/",
+      "destination": "/blog/",
+      "permanent": false
+    },
+    {
+      "source": "/blog/photobooth-ou-livre-dor-audio/",
+      "destination": "/blog/",
+      "permanent": false
+    }
+  ]
 }

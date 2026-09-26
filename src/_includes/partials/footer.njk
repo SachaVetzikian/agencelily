@@ -8,16 +8,18 @@
 {% if site.instagram or site.googleBusiness %}<p>{% if site.instagram %}<a href="{{ site.instagram }}" rel="noopener" target="_blank">Instagram</a>{% endif %}{% if site.instagram and site.googleBusiness %} · {% endif %}{% if site.googleBusiness %}<a href="{{ site.googleBusiness }}" rel="noopener" target="_blank">Google</a>{% endif %}</p>{% endif %}
 </div>
 <div>
-<h4>Bars gourmands</h4>
-<ul>{% for s in services | byCategorie('animations') %}<li><a href="/animations/{{ s.slug }}/">{{ s.nom }}</a></li>{% endfor %}</ul>
-<h4 style="margin-top:24px;">Location</h4>
-<ul>{% for s in services | byCategorie('location') %}<li><a href="/location/{{ s.slug }}/">{{ s.nom }}</a></li>{% endfor %}</ul>
+<h4>Livre d'or audio & vidéo</h4>
+<ul>
+<li><a href="/livre-d-or-audio-video/">Livre d'or audio et vidéo</a></li>
+<li><a href="/location-livre-d-or-audio/">Location en Île-de-France</a></li>
+{% for o in occasions %}<li><a href="{{ o.url }}">Livre d'or {{ o.nom | lower }}</a></li>{% endfor %}
+</ul>
 </div>
 <div>
-<h4>Événements</h4>
+<h4>Autres prestations</h4>
+<ul>{% for s in services %}{% if s.slug != "livre-dor-audio-video" %}<li><a href="{{ s | serviceUrl }}">{{ s.nom }}</a></li>{% endif %}{% endfor %}</ul>
+<h4 style="margin-top:24px;">Événements</h4>
 <ul>{% for e in evenements %}<li><a href="/evenements/{{ e.slug }}/">{{ e.nom }}</a></li>{% endfor %}</ul>
-<h4 style="margin-top:24px;">Mariage en Île-de-France</h4>
-<ul>{% for d in departements %}<li><a href="/mariage/{{ d.slug }}/">{{ d.nom }} ({{ d.code }})</a></li>{% endfor %}</ul>
 </div>
 <div>
 <h4>Agence Lily</h4>

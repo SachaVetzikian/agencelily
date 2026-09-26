@@ -16,7 +16,7 @@ module.exports = function (eleventyConfig) {
   );
   // Articles du blog, du plus récent au plus ancien
   eleventyConfig.addCollection("posts", (c) =>
-    c.getFilteredByGlob("src/blog/*.md").sort((a, b) => b.date - a.date)
+    c.getFilteredByGlob("src/blog/*.md").filter((p) => !p.data.draft).sort((a, b) => b.date - a.date)
   );
   const MOIS = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"];
   eleventyConfig.addFilter("dateFr", (d) => {
@@ -24,6 +24,8 @@ module.exports = function (eleventyConfig) {
     return `${date.getUTCDate()} ${MOIS[date.getUTCMonth()]} ${date.getUTCFullYear()}`;
   });
   eleventyConfig.addFilter("isoDate", (d) => new Date(d).toISOString().slice(0, 10));
+  // URL d'un service : URL dédiée si définie (livre d'or), sinon /categorie/slug/
+  eleventyConfig.addFilter("serviceUrl", (s) => (s && s.url) || `/${s.categorie}/${s.slug}/`);
   eleventyConfig.addFilter("euros", (n) => `${n} €`);
   eleventyConfig.addFilter("json", (v) => JSON.stringify(v));
 

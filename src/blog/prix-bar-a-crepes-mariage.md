@@ -4,6 +4,7 @@ h1: "Combien coûte un bar à crêpes pour un mariage ?"
 meta: "Prix d'un bar à crêpes de mariage en Île-de-France : tarif par invité, forfait minimum, ce qui est inclus et comment éviter les mauvaises surprises."
 extrait: "Entre 6 et 20 € par invité selon les prestataires : voici comment lire un devis de bar à crêpes, ce qu'il doit inclure et les pièges à éviter."
 date: 2026-09-25
+draft: true
 ---
 
 ## La fourchette de prix

@@ -1,0 +1,15 @@
+{# Formules du livre d'or (services.json > livre-dor-audio-video) #}
+{% set livre = services | findBySlug("livre-dor-audio-video") %}
+<div class="formules">
+{% for f in livre.formules %}<div class="formule{% if f.populaire %} pop{% endif %}">
+{% if f.populaire %}<span class="badge">La plus choisie</span>{% endif %}
+{% set label = "Formule " + f.nom %}{% set img = f.image %}{% set tall = false %}<div class="formule-visual">{% include "partials/visual.njk" %}</div>
+<h3>{{ f.nom }}</h3>
+<div class="amount">{{ f.prix | euros }}</div>
+<ul class="check">{% for d in f.detail %}<li>{{ d }}</li>{% endfor %}</ul>
+</div>{% endfor %}
+</div>
+<div class="box" style="margin-top:24px;">
+<h3>Options</h3>
+<ul class="options">{% for o in livre.options %}<li><span>{{ o.nom }}</span><b>+ {{ o.prix }}</b></li>{% endfor %}</ul>
+</div>
