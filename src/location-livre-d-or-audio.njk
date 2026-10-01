@@ -17,70 +17,43 @@ faqLocation:
 ---
 {% set livre = services | findBySlug("livre-dor-audio-video") %}
 {% set crumbs = [{ nom: "Livre d'or audio et vidéo", url: livre.url }, { nom: "Location" }] %}
-{% set heroImg = livre.image %}{% set heroAlt = "Location de livre d'or audio" %}{% set heroEyebrow = "Location · Paris et Île-de-France" %}
+{% set heroImg = livre.image %}{% set heroImgMobile = livre.imageMobile %}{% set heroAlt = "Location de livre d'or audio" %}{% set heroEyebrow = "Location · Paris & Île-de-France" %}
 {% set heroTitle = "Location de livre d'or audio et vidéo en Île-de-France" %}
-{% set heroIntro = "Nous livrons et installons un téléphone vintage sur votre lieu de réception. Vos invités laissent leurs messages, nous récupérons le matériel, vous gardez les souvenirs. De 200 à 400 €, tout compris." %}
-{% set heroAside %}
-<div class="price-box"><strong>Dès 200 €</strong><span>livraison et installation comprises</span></div>
-<div class="btns"><a class="btn primary" href="/devis/?service=livre-dor-audio-video" data-track="devis">Vérifier ma date</a></div>
-{% endset %}
+{% set heroIntro = "Nous livrons, installons et reprenons le téléphone. Vous gardez les souvenirs." %}
+{% set heroAside %}<div class="price-box"><strong>Dès 200 €</strong><span>livraison et installation comprises</span></div><div class="btns"><a class="btn primary" href="/devis/?service=livre-dor-audio-video" data-track="devis">Vérifier ma date</a></div>{% endset %}
 {% include "partials/hero-full.njk" %}
 
-<section class="section"><div class="wrap two-cols">
-<div>
-<h2>Louer plutôt qu'acheter : pourquoi c'est plus simple</h2>
-<p>Un livre d'or audio sert une fois, le jour J. L'acheter, c'est payer plus cher, l'installer soi-même le jour où l'on a mille autres choses à gérer, puis le stocker.</p>
-<p>En location, nous nous occupons de tout : livraison, installation, vérification, récupération. Vous, vous profitez de votre événement.</p>
-</div>
-<div class="box">
-<h3>Notre zone d'intervention</h3>
-<p>Paris et toute l'Île-de-France :</p>
-<ul class="check">
-<li>Paris (75)</li><li>Hauts-de-Seine (92)</li><li>Seine-Saint-Denis (93)</li><li>Val-de-Marne (94)</li>
-<li>Seine-et-Marne (77)</li><li>Yvelines (78)</li><li>Essonne (91)</li><li>Val-d'Oise (95)</li>
-</ul>
-</div>
+<section class="section"><div class="wrap split-lead">
+<h2>Louer plutôt qu'acheter</h2>
+<div><p>Un livre d'or audio sert une fois. En location, vous n'avez rien à installer, rien à stocker, rien à renvoyer.</p></div>
 </div></section>
 
 <section class="section alt"><div class="wrap">
 <h2>Ce que comprend la location</h2>
-<div class="steps" style="margin-top:32px;">
-<div class="step"><h3>Livraison et installation sur place</h3><p>Nous apportons le téléphone sur votre lieu de réception et l'installons avant l'arrivée des invités, à l'emplacement qui convient le mieux.</p></div>
-<div class="step"><h3>Prise en main et vérification</h3><p>Nous vérifions que tout fonctionne sur place et vous montrons le principe en quelques minutes.</p></div>
-<div class="step"><h3>Récupération du matériel et des fichiers</h3><p>Nous reprenons le matériel à l'horaire convenu. Vous recevez ensuite tous vos messages en ligne.</p></div>
-</div>
+<ol class="steps-min">
+<li>Livraison et installation sur votre lieu.</li>
+<li>Vérification sur place, prise en main en cinq minutes.</li>
+<li>Reprise du matériel, puis vos messages en ligne.</li>
+</ol>
 </div></section>
 
 <section class="section" id="tarifs"><div class="wrap">
-<h2>Tarifs de location</h2>
-<div class="table-wrap" style="margin-top:24px;"><table class="table">
-<thead><tr><th>Formule</th><th>Ce qui est compris</th><th>Prix</th></tr></thead>
-<tbody>
-{% for f in livre.formules %}<tr><td><strong>{{ f.nom }}</strong></td><td>{{ f.detail | join(", ") }}</td><td>{{ f.prix | euros }}</td></tr>{% endfor %}
-{% for o in livre.options %}<tr><td>Option</td><td>{{ o.nom }}</td><td>+ {{ o.prix }}</td></tr>{% endfor %}
-</tbody>
-</table></div>
-<div class="btns"><a class="btn" href="{{ livre.url }}#formules">Comparer les formules</a><a class="btn ghost" href="/configurateur/">Simuler mon budget</a></div>
+<h2 class="center">Tarifs de location</h2>
+{% include "partials/formules-min.njk" %}
 </div></section>
 
-<section class="section alt"><div class="wrap two-cols">
-<div>
-<h2>Disponibilités et réservation</h2>
-<p>Nous avons un nombre limité de téléphones par date. Les samedis de mai à septembre partent en premier : pour un mariage, réservez plusieurs mois à l'avance.</p>
-<p>Pour réserver, indiquez-nous la date, le lieu et la formule souhaitée. Nous vous confirmons la disponibilité et vous envoyons le devis.</p>
-</div>
-<div class="box">
-<h3>Pour quelle occasion ?</h3>
-<ul class="check">{% for x in occasions %}<li><a href="{{ x.url }}">Livre d'or audio : {{ x.nom | lower }}</a></li>{% endfor %}</ul>
-</div>
+<section class="section alt"><div class="wrap split-lead">
+<h2>Zone d'intervention</h2>
+<ul class="inline-list"><li>Paris (75)</li><li>Hauts-de-Seine (92)</li><li>Seine-Saint-Denis (93)</li><li>Val-de-Marne (94)</li><li>Seine-et-Marne (77)</li><li>Yvelines (78)</li><li>Essonne (91)</li><li>Val-d'Oise (95)</li></ul>
 </div></section>
 
-<section class="section"><div class="wrap" style="max-width:820px;">
-<h2>Questions sur la location</h2>
-{% set faq = faqLocation %}{% include "partials/faq.njk" %}
+<section class="section"><div class="wrap split-lead">
+<h2>Réservation</h2>
+<div><p>Un nombre limité de téléphones par date. Pour un samedi entre mai et septembre, réservez plusieurs mois à l'avance.</p>
+<a class="link" href="/devis/?service=livre-dor-audio-video">Vérifier ma date</a></div>
 </div></section>
 
-{% set avisService = "livre-dor-audio-video" %}{% include "partials/avis.njk" %}
+{% set faq = faqLocation %}{% include "partials/faq-section.njk" %}
 
 {% set devisParam = "service=livre-dor-audio-video" %}
 {% include "partials/cta.njk" %}

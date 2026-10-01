@@ -28,11 +28,25 @@
     ],
     "logistique": "Nous livrons et installons le téléphone sur votre lieu de réception avant l'arrivée des invités, en accord avec le lieu et votre traiteur. Il reste discret : une petite table, un téléphone, une affiche. Nous récupérons le matériel à l'horaire convenu avec vous.",
     "faq": [
-      { "q": "Où placer le téléphone pendant la réception ?", "a": "À un endroit de passage mais au calme : près du vin d'honneur ou du bar, jamais à côté de la musique. Nous vous conseillons sur l'emplacement selon votre lieu." },
-      { "q": "Peut-on personnaliser le message d'accueil ?", "a": "Oui, c'est même conseillé. Vous l'enregistrez vous-mêmes ou vous nous l'envoyez, et c'est la première chose que vos invités entendent en décrochant." },
-      { "q": "Livrez-vous sur le lieu de réception ?", "a": "Oui, partout à Paris et en Île-de-France. La livraison et l'installation sont comprises dans les formules." },
-      { "q": "Combien de temps à l'avance réserver pour un mariage ?", "a": "Pour un samedi entre mai et septembre, réservez plusieurs mois à l'avance : ce sont les dates qui partent en premier." }
-    ]
+      {
+        "q": "Où placer le téléphone pendant la réception ?",
+        "a": "À un endroit de passage mais au calme : près du vin d'honneur ou du bar, jamais à côté de la musique. Nous vous conseillons sur l'emplacement selon votre lieu."
+      },
+      {
+        "q": "Peut-on personnaliser le message d'accueil ?",
+        "a": "Oui, c'est même conseillé. Vous l'enregistrez vous-mêmes ou vous nous l'envoyez, et c'est la première chose que vos invités entendent en décrochant."
+      },
+      {
+        "q": "Livrez-vous sur le lieu de réception ?",
+        "a": "Oui, partout à Paris et en Île-de-France. La livraison et l'installation sont comprises dans les formules."
+      },
+      {
+        "q": "Combien de temps à l'avance réserver pour un mariage ?",
+        "a": "Pour un samedi entre mai et septembre, réservez plusieurs mois à l'avance : ce sont les dates qui partent en premier."
+      }
+    ],
+    "intro": "Leur voix, le jour où vous avez dit oui. Livré et installé sur votre lieu de réception, dès 200 €.",
+    "punchline": "Dans vingt ans, c'est leur voix que vous réécouterez."
   },
   {
     "slug": "anniversaire",
@@ -62,10 +76,21 @@
     ],
     "logistique": "Nous livrons et installons le téléphone chez vous, dans une salle ou au restaurant, partout à Paris et en Île-de-France. Idéal pour une fête surprise : nous nous organisons avec vous en toute discrétion.",
     "faq": [
-      { "q": "Peut-on l'utiliser pour une fête surprise ?", "a": "Oui, nous organisons la livraison avec vous pour garder la surprise jusqu'au bout." },
-      { "q": "Comment offrir les messages à la personne fêtée ?", "a": "Vous recevez les messages après la fête. Avec l'option clé USB, vous avez un souvenir physique à offrir." },
-      { "q": "Faut-il beaucoup d'invités ?", "a": "Non, le livre d'or audio fonctionne aussi bien pour 20 que pour 150 invités." }
-    ]
+      {
+        "q": "Peut-on l'utiliser pour une fête surprise ?",
+        "a": "Oui, nous organisons la livraison avec vous pour garder la surprise jusqu'au bout."
+      },
+      {
+        "q": "Comment offrir les messages à la personne fêtée ?",
+        "a": "Vous recevez les messages après la fête. Avec l'option clé USB, vous avez un souvenir physique à offrir."
+      },
+      {
+        "q": "Faut-il beaucoup d'invités ?",
+        "a": "Non, le livre d'or audio fonctionne aussi bien pour 20 que pour 150 invités."
+      }
+    ],
+    "intro": "Le cadeau collectif qui se réécoute. Livré et installé chez vous, dès 200 €.",
+    "punchline": "Une carte se range. Une voix se réécoute."
   },
   {
     "slug": "bapteme",
@@ -94,10 +119,21 @@
     ],
     "logistique": "Nous livrons et installons le téléphone sur le lieu de la réception, chez vous, au restaurant ou dans une salle, partout à Paris et en Île-de-France.",
     "faq": [
-      { "q": "Les enfants peuvent-ils s'en servir ?", "a": "Oui, c'est l'un des souvenirs préférés des familles : les cousins adorent décrocher le téléphone." },
-      { "q": "Peut-on garder les messages pour les 18 ans de l'enfant ?", "a": "Oui, vous recevez tous les fichiers. Avec l'option clé USB, vous pouvez les ranger avec les souvenirs de baptême." },
-      { "q": "Intervenez-vous le dimanche ?", "a": "Oui, nous intervenons 7 jours sur 7, selon les disponibilités." }
-    ]
+      {
+        "q": "Les enfants peuvent-ils s'en servir ?",
+        "a": "Oui, c'est l'un des souvenirs préférés des familles : les cousins adorent décrocher le téléphone."
+      },
+      {
+        "q": "Peut-on garder les messages pour les 18 ans de l'enfant ?",
+        "a": "Oui, vous recevez tous les fichiers. Avec l'option clé USB, vous pouvez les ranger avec les souvenirs de baptême."
+      },
+      {
+        "q": "Intervenez-vous le dimanche ?",
+        "a": "Oui, nous intervenons 7 jours sur 7, selon les disponibilités."
+      }
+    ],
+    "intro": "Les messages de la famille à l'enfant, à écouter quand il sera grand. Dès 200 €.",
+    "punchline": "Il ne se souviendra pas de ce jour. Il entendra ceux qui étaient là."
   },
   {
     "slug": "entreprise",
@@ -126,9 +162,20 @@
     ],
     "logistique": "Nous intervenons dans vos locaux, au restaurant ou sur un lieu de réception, partout à Paris et en Île-de-France. Devis et facture au nom de l'entreprise.",
     "faq": [
-      { "q": "Établissez-vous une facture au nom de l'entreprise ?", "a": "Oui, devis et facture à l'entreprise, avec les mentions nécessaires pour votre comptabilité." },
-      { "q": "Peut-on l'installer dans nos bureaux ?", "a": "Oui, il suffit d'un petit espace, idéalement un peu à l'écart du bruit." },
-      { "q": "Les collègues à distance peuvent-ils participer ?", "a": "Le téléphone recueille les messages sur place. Parlez-nous de votre besoin au moment du devis pour les collègues absents." }
-    ]
+      {
+        "q": "Établissez-vous une facture au nom de l'entreprise ?",
+        "a": "Oui, devis et facture à l'entreprise, avec les mentions nécessaires pour votre comptabilité."
+      },
+      {
+        "q": "Peut-on l'installer dans nos bureaux ?",
+        "a": "Oui, il suffit d'un petit espace, idéalement un peu à l'écart du bruit."
+      },
+      {
+        "q": "Les collègues à distance peuvent-ils participer ?",
+        "a": "Le téléphone recueille les messages sur place. Parlez-nous de votre besoin au moment du devis pour les collègues absents."
+      }
+    ],
+    "intro": "Pour un départ, une retraite ou un anniversaire d'entreprise. Dès 200 €.",
+    "punchline": "Des années de travail ensemble, en quelques secondes chacun."
   }
 ]

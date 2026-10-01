@@ -366,7 +366,8 @@ h1, h2, .statement p, .tile-title, .quote-band p { text-wrap: balance; }
 p, li { text-wrap: pretty; }
 
 /* Cibles tactiles : 44 px minimum pour les liens isolés */
-.link, .crumbs a, .footer a, .faq summary { display: inline-flex; align-items: center; min-height: 44px; }
+.link, .crumbs a, .footer a { display: inline-flex; align-items: center; min-height: 44px; }
+.faq summary { min-height: 44px; align-items: center; }
 .footer ul { gap: 0; }
 
 /* Fil d'Ariane posé sur la photo du hero */
@@ -384,3 +385,26 @@ p, li { text-wrap: pretty; }
 /* Page devis : encart de contact en attendant le formulaire */
 .devis-contact { display: grid; gap: var(--s4); padding: var(--s7) var(--s6); background: var(--surface); }
 .devis-contact .mail { font-family: var(--serif); font-size: var(--fs-h2); line-height: 1.1; text-decoration: none; word-break: break-word; }
+
+/* Bloc éditorial : titre à gauche, texte court à droite */
+.split-lead { display: grid; grid-template-columns: 1fr 1.25fr; gap: var(--s7); align-items: start; }
+.split-lead p { font-size: var(--fs-lead); font-weight: 300; line-height: 1.6; margin: 0 0 var(--s4); }
+.split-lead h2 { margin: 0; }
+@media (max-width: 860px) { .split-lead { grid-template-columns: 1fr; gap: var(--s5); } }
+
+/* Étapes en une ligne */
+.steps-min { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s6); counter-reset: s; margin-top: var(--s6); }
+.steps-min li { list-style: none; counter-increment: s; border-top: 1px solid var(--ink); padding-top: var(--s4); font-size: var(--fs-lead); font-weight: 300; }
+.steps-min li::before { content: counter(s, decimal-leading-zero); display: block; font-size: var(--fs-label); font-weight: 500; letter-spacing: .14em; color: var(--muted); margin-bottom: var(--s3); }
+.steps-min { padding: 0; margin-bottom: 0; }
+@media (max-width: 760px) { .steps-min { grid-template-columns: 1fr; gap: var(--s5); } }
+
+/* Citations (messages d'accueil) */
+.quotes { display: grid; grid-auto-flow: column; grid-auto-columns: min(760px, 86%); gap: var(--s6); overflow-x: auto; scroll-snap-type: x mandatory; margin-top: var(--s6); }
+.quotes blockquote { scroll-snap-align: start; margin: 0; font-family: var(--serif); font-style: italic; font-size: var(--fs-h2); line-height: 1.15; }
+@media (max-width: 700px) { .quotes { margin-right: -20px; padding-right: 20px; } }
+
+/* Liste en ligne (zone, idées) */
+.inline-list { display: flex; flex-wrap: wrap; gap: var(--s2) var(--s5); list-style: none; padding: 0; margin: 0; font-size: var(--fs-lead); font-weight: 300; }
+.inline-list li { display: inline-flex; align-items: center; gap: var(--s2); }
+.inline-list li::before { content: ""; width: 12px; height: 1px; background: var(--muted); }

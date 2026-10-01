@@ -9,61 +9,41 @@ permalink: "{{ o.url }}"
 {% set livre = services | findBySlug("livre-dor-audio-video") %}
 {% set evt = evenements | findBySlug(o.evenement) %}
 {% set crumbs = [{ nom: "Livre d'or audio et vidéo", url: livre.url }, { nom: o.nom }] %}
-{% set heroImg = evt.image if evt else livre.image %}{% set heroAlt = o.h1 %}{% set heroEyebrow = "Livre d'or audio et vidéo · " + o.nom %}
-{% set heroTitle = o.h1 %}{% set heroIntro = o.enBref %}
-{% set heroAside %}
-<div class="price-box"><strong>Dès {{ livre.prix | euros }}</strong><span>livraison et installation comprises</span></div>
-<div class="btns"><a class="btn primary" href="/devis/?service=livre-dor-audio-video&evenement={{ o.evenement }}" data-track="devis">Vérifier ma date</a><a class="btn ghost" href="#formules">Voir les formules</a></div>
-{% endset %}
+{% set heroImg = evt.image if evt else livre.image %}{% set heroAlt = o.h1 %}{% set heroEyebrow = "Livre d'or audio & vidéo · " + o.nom %}
+{% set heroTitle = o.h1 %}{% set heroIntro = o.intro %}
+{% set heroAside %}<div class="btns" style="margin-top:0;"><a class="btn primary" href="/devis/?service=livre-dor-audio-video&evenement={{ o.evenement }}" data-track="devis">Vérifier ma date</a></div>{% endset %}
 {% include "partials/hero-full.njk" %}
 
-<section class="section"><div class="wrap two-cols">
-<div>
+<section class="section statement"><div class="wrap">
+<p>{{ o.punchline }}</p>
+</div></section>
+
+<section class="section" style="padding-top:0;"><div class="wrap split-lead">
 <h2>Pourquoi un livre d'or audio pour {{ "un mariage" if o.slug == "mariage" else ("un anniversaire" if o.slug == "anniversaire" else ("un baptême" if o.slug == "bapteme" else "votre entreprise")) }} ?</h2>
-{% for p in o.pourquoi %}<p>{{ p }}</p>{% endfor %}
-</div>
-<div class="box">
-<h3>Comment vos invités l'utilisent</h3>
-<p style="margin:0;">{{ o.usage }}</p>
-</div>
+<div><p>{{ o.enBref }}</p></div>
 </div></section>
 
 <section class="section alt"><div class="wrap">
 <h2>Exemples de messages d'accueil</h2>
-<p class="lede" style="margin-bottom:32px;">C'est ce que vos invités entendent en décrochant. Enregistrez le vôtre, ou inspirez-vous de ceux-ci.</p>
-<div class="avis-grid">{% for m in o.messagesAccueil %}<figure class="avis"><blockquote>{{ m }}</blockquote></figure>{% endfor %}</div>
+<div class="quotes">{% for m in o.messagesAccueil %}<blockquote>{{ m }}</blockquote>{% endfor %}</div>
 </div></section>
 
-<section class="section"><div class="wrap two-cols">
-<div>
-<h2>Idées de messages à faire laisser</h2>
-<p>Certains invités ne savent pas quoi dire. Une petite affiche avec quelques idées suffit à les lancer :</p>
-<ul class="check">{% for i in o.idees %}<li>{{ i }}</li>{% endfor %}</ul>
-</div>
-<div class="box">
-<h3>Logistique le jour J</h3>
-<p style="margin:0;">{{ o.logistique }}</p>
-</div>
+<section class="section"><div class="wrap split-lead">
+<h2>Idées de messages</h2>
+<ul class="inline-list" style="flex-direction:column;">{% for i in o.idees %}<li>{{ i }}</li>{% endfor %}</ul>
 </div></section>
 
 <section class="section alt" id="formules"><div class="wrap">
-<h2>Formules et tarifs</h2>
-<p class="lede" style="margin-bottom:32px;">Trois formules, livraison et installation comprises à Paris et en Île-de-France.</p>
-{% include "partials/formules-livre.njk" %}
-<div class="btns"><a class="btn" href="{{ livre.url }}">Tout savoir sur le livre d'or</a><a class="btn ghost" href="/location-livre-d-or-audio/">Conditions de location</a></div>
+<h2 class="center">Formules et tarifs</h2>
+{% include "partials/formules-min.njk" %}
 </div></section>
 
-<section class="section"><div class="wrap" style="max-width:820px;">
-<h2>Vos questions</h2>
-{% set faq = o.faq %}{% include "partials/faq.njk" %}
-</div></section>
+{% set faq = o.faq %}{% include "partials/faq-section.njk" %}
 
 {% set avisService = "livre-dor-audio-video" %}{% include "partials/avis.njk" %}
 
-<section class="section alt"><div class="wrap">
-<h2>Le livre d'or pour d'autres occasions</h2>
-<div class="pills" style="margin-top:20px;">{% for x in occasions %}{% if x.slug != o.slug %}<a class="pill" href="{{ x.url }}">{{ x.nom }}</a>{% endif %}{% endfor %}
-{% if evt %}<a class="pill" href="/evenements/{{ evt.slug }}/">Toutes nos animations : {{ evt.nom | lower }}</a>{% endif %}</div>
+<section class="section" style="padding-top:0;"><div class="wrap">
+<ul class="inline-list">{% for x in occasions %}{% if x.slug != o.slug %}<li><a href="{{ x.url }}">Livre d'or {{ x.nom | lower }}</a></li>{% endif %}{% endfor %}<li><a href="/location-livre-d-or-audio/">Conditions de location</a></li></ul>
 </div></section>
 
 {% set devisParam = "service=livre-dor-audio-video&evenement=" + o.evenement %}
