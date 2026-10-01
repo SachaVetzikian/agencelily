@@ -2,100 +2,54 @@
 layout: layouts/base.njk
 title: "Livre d'or audio et vidéo à Paris et en IDF | Agence Lily"
 meta: "Agence Lily : livre d'or audio et vidéo sur téléphone vintage, livré et installé à Paris et en Île-de-France. Mariage, anniversaire, baptême, entreprise. Dès 200 €."
-faqHome:
-  - q: "Qu'est-ce qu'un livre d'or audio ?"
-    a: "Un téléphone vintage sur lequel vos invités laissent un message vocal après avoir écouté votre message d'accueil. Avec la formule vidéo, ils sont aussi filmés. Vous récupérez tous les messages après l'événement."
-  - q: "Combien coûte la location ?"
-    a: "200 € pour l'audio, 300 € pour l'audio et la vidéo, 400 € avec un animateur. Livraison et installation comprises à Paris et en Île-de-France."
-  - q: "Dans quelle zone intervenez-vous ?"
-    a: "À Paris et dans toute l'Île-de-France : 75, 77, 78, 91, 92, 93, 94 et 95."
-  - q: "Proposez-vous d'autres animations ?"
-    a: "Oui : bars gourmands (crêpes, mini pancakes, tiramisu, gaufres), photobooth et mur d'entrée personnalisé. Tout peut être réuni dans un seul devis."
 ---
 {% set livre = services | findBySlug("livre-dor-audio-video") %}
-{% set heroImg = livre.image %}{% set heroImgMobile = livre.imageMobile %}{% set heroAlt = "Téléphone vintage de livre d'or audio" %}{% set heroEyebrow = "Agence Lily · Paris et Île-de-France" %}
-{% set heroTitle = "Le livre d'or audio et vidéo de votre événement" %}
-{% set heroIntro = "Vos invités décrochent un téléphone vintage et vous laissent un message. Avec la vidéo, vous gardez aussi leurs visages. Nous le livrons et l'installons chez vous, à Paris et en Île-de-France." %}
-{% set heroAside %}
-<div class="price-box"><strong>Dès 200 €</strong><span>livraison et installation comprises</span></div>
-<div class="trust">{% if site.avis.nombre >= site.avis.seuilAffichage %}<a href="{{ site.avis.lien }}" rel="noopener" target="_blank" style="text-decoration:none;"><span class="stars">★★★★★</span> <strong>{{ site.avis.nombre }} avis</strong> Google</a>{% endif %}<span><strong>Devis sous {{ site.delaiReponse }}</strong></span></div>
-<div class="btns"><a class="btn primary" href="/devis/?service=livre-dor-audio-video" data-track="devis">Vérifier ma date</a><a class="btn ghost" href="{{ livre.url }}">Découvrir</a></div>
-{% endset %}
+{% set heroImg = livre.image %}{% set heroImgMobile = livre.imageMobile %}{% set heroAlt = "Téléphone vintage de livre d'or audio" %}
+{% set heroEyebrow = "Livre d'or audio & vidéo · Paris & Île-de-France" %}
+{% set heroTitle = "Leur voix, pour toujours." %}
+{% set heroIntro = "Un téléphone vintage, un message après le bip. Livré et installé chez vous, dès 200 €." %}
+{% set heroAside %}<div class="btns" style="margin-top:0;"><a class="btn primary" href="/devis/?service=livre-dor-audio-video" data-track="devis">Vérifier ma date</a></div>{% endset %}
 {% include "partials/hero-full.njk" %}
 
+<section class="section statement"><div class="wrap">
+<p>Un téléphone vintage.<br>Un message.<br><em>Un souvenir qui ne jaunit pas.</em></p>
+</div></section>
 
-<section class="section">
-<div class="wrap">
-<div class="section-head"><h2>Comment ça marche</h2><a class="link" href="/blog/comment-fonctionne-livre-d-or-audio/">Le guide complet</a></div>
-<div class="steps m-rail">
-<div class="step"><h3>Vous enregistrez votre message d'accueil</h3><p>C'est ce que vos invités entendent en décrochant. Il donne le ton et lance les plus timides.</p></div>
-<div class="step"><h3>Nous installons le téléphone</h3><p>Livraison, installation et vérification sur votre lieu, avant l'arrivée des invités.</p></div>
-<div class="step"><h3>Vos invités parlent après le bip</h3><p>Pas d'application, pas de QR code : on décroche, on parle, on raccroche.</p></div>
-<div class="step"><h3>Vous gardez les souvenirs</h3><p>Tous les messages audio, et vidéo selon la formule, vous sont remis après l'événement.</p></div>
+<section class="section" style="padding-top:0;"><div class="wrap">
+<div class="objet">
+{% set label = "Le téléphone vintage" %}{% set img = livre.image %}{% set tall = true %}{% include "partials/visual.njk" %}
+<div class="objet-text">
+<span class="eyebrow">L'objet</span>
+<h2>Le téléphone</h2>
+<p>Posé là où vos invités passent. Ils décrochent, ils parlent, c'est enregistré.</p>
+<a class="link" href="{{ livre.url }}">Comment ça marche</a>
 </div>
-<span class="rail-hint">Faites glisser →</span>
 </div>
-</section>
+</div></section>
 
-<section class="section alt">
-<div class="wrap">
-<div class="section-head"><h2>Nos formules</h2><a class="link" href="/location-livre-d-or-audio/">Conditions de location</a></div>
-{% include "partials/formules-livre.njk" %}
+<section class="section alt"><div class="wrap">
+<h2 class="center">Trois formules</h2>
+<div class="formules-min m-rail">
+{% set lignes = ["Messages vocaux", "Voix et visages", "On va chercher vos invités"] %}
+{% for f in livre.formules %}<a class="fm{% if f.populaire %} pop{% endif %}" href="{{ livre.url }}#formules">
+<span class="tag">{{ f.nom }}</span>
+<span class="fm-price">{{ f.prix }} €</span>
+<span class="fm-line">{{ lignes[loop.index0] }}</span>
+</a>{% endfor %}
 </div>
-</section>
+<p class="center fm-note">Lien en ligne inclus · clé USB en option · livraison et installation comprises</p>
+</div></section>
 
-<section class="section">
-<div class="wrap">
-<div class="section-head"><h2>Pour quelle occasion ?</h2></div>
-<div class="tiles">
+<section class="section"><div class="wrap">
+<h2>Pour chaque occasion</h2>
+<div class="tiles" style="margin-top:32px;">
 {% for o in occasions %}{% set evt = evenements | findBySlug(o.evenement) %}<a class="tile" href="{{ o.url }}">
 {% if evt and evt.image %}<img src="{{ evt.image }}" alt="Livre d'or audio : {{ o.nom }}" loading="lazy" onerror="this.remove()">{% endif %}
 <span class="tile-title">{{ o.nom }}</span>
 </a>{% endfor %}
 </div>
-</div>
-</section>
-
-{# Bandeau : promesse de marque (jamais un faux témoignage). Un vrai avis le remplace dès que avis.json est rempli. #}
-<section class="quote-band">
-{% set qa = avis[0] %}
-{% set bandImg = (evenements | findBySlug("mariage")).image %}{% if bandImg %}<img src="{{ bandImg }}" alt="" sizes="100vw" loading="lazy" onerror="this.remove()">{% endif %}
-<div class="wrap">
-{% if qa %}<p>« {{ qa.texte }} »</p><span class="eyebrow" style="color:#fff;margin-top:16px;">{{ qa.prenom }}{% if qa.evenement %} · {{ qa.evenement }}{% endif %}</span>
-{% else %}<p>Dans vingt ans, c'est leur voix que vous réécouterez.</p>{% endif %}
-<div><a class="btn primary" href="/devis/?service=livre-dor-audio-video" data-track="devis">Vérifier ma date</a></div>
-</div>
-</section>
-
-<section class="section">
-<div class="wrap">
-<div class="section-head"><h2>Exemples de messages d'accueil</h2></div>
-<div class="avis-grid m-rail">
-{% for x in occasions %}<figure class="avis"><span class="tag">{{ x.nom }}</span><blockquote>{{ x.messagesAccueil[0] }}</blockquote><figcaption><a href="{{ x.url }}">Plus d'exemples</a></figcaption></figure>{% endfor %}
-</div>
-<span class="rail-hint">Faites glisser →</span>
-</div>
-</section>
-
-{% set avisService = "" %}{% include "partials/avis.njk" %}
-
-<section class="section alt">
-<div class="wrap">
-<div class="section-head"><h2>Pour compléter votre fête</h2><a class="link" href="/animations/">Bars gourmands</a></div>
-<div class="rail">{% for c in services %}{% if c.slug != "livre-dor-audio-video" %}{% include "partials/card-service.njk" %}{% endif %}{% endfor %}</div>
-</div>
-</section>
-
-<section class="section">
-<div class="wrap" style="max-width:820px;">
-<h2>Questions fréquentes</h2>
-{% set faq = faqHome %}{% include "partials/faq.njk" %}
-</div>
-</section>
+</div></section>
 
 {% set devisParam = "service=livre-dor-audio-video" %}
 {% include "partials/cta.njk" %}
 
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{% for f in faqHome %}{"@type":"Question","name":{{ f.q | json | safe }},"acceptedAnswer":{"@type":"Answer","text":{{ f.a | json | safe }}}}{% if not loop.last %},{% endif %}{% endfor %}]}
-</script>

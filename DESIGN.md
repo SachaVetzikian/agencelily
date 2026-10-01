@@ -24,17 +24,25 @@ Toutes les valeurs vivent dans `src/assets/style.css` (bloc `:root`). Ne jamais 
 | `--black` | `#000000` | Header, footer, bandeaux sombres |
 
 ## 3. Typographie
-Une seule famille : **Jost** (géométrique, auto-hébergée dans `src/assets/fonts/`).
+Deux familles, auto-hébergées dans `src/assets/fonts/` :
+- **Instrument Serif** (titres) : grand serif éditorial, en bas de casse, jamais en capitales. L'italique sert à une seule phrase d'accent par page, en gris.
+- **Jost** (texte, étiquettes, boutons) : géométrique, discrète.
 
-| Rôle | Taille | Graisse | Casse | Interlettrage |
-|---|---|---|---|---|
-| Titre hero (H1 sur photo) | 40 à 64 px | 400 | Capitales | 0.02em |
-| Titre de section (H2) | 24 à 30 px | 500 | Capitales | 0.04em |
-| Titre de carte (H3) | 15 px | 500 | Capitales | 0.06em |
-| Surtitre / tag | 11 px | 500 | Capitales | 0.14em |
-| Texte d'intro (lede) | 18 à 20 px | 300 | Normale | 0 |
-| Texte courant | 15 px | 400 | Normale | 0 |
-| Bouton | 12 px | 500 | Capitales | 0.1em |
+| Rôle | Police | Taille | Casse |
+|---|---|---|---|
+| H1 | Instrument Serif | 44 à 96 px | Normale |
+| H2 | Instrument Serif | 32 à 56 px | Normale |
+| Phrase manifeste (`.statement`) | Instrument Serif | 36 à 80 px | Normale, fin en italique gris |
+| Prix des formules | Instrument Serif | 56 à 88 px | Chiffres |
+| H3 / étiquette de carte | Jost 500 | 15 px | Capitales, interlettrage 0.06em |
+| Surtitre / tag | Jost 500 | 11 px | Capitales, interlettrage 0.14em |
+| Texte d'intro | Jost 300 | 17 à 20 px | Normale |
+| Texte courant | Jost 400 | 15 px | Normale |
+| Bouton | Jost 500 | 12 px | Capitales, interlettrage 0.1em |
+
+**Règle des mots :** une idée par section, une phrase par idée. L'accueil reste sous 150 mots ; le texte détaillé (étapes, FAQ, logistique) vit sur les pages produit et location.
+
+**Un seul verbe d'action sur tout le site :** « Vérifier ma date ».
 
 ## 4. Espacements
 Échelle de 4 px : `--s1` 4 · `--s2` 8 · `--s3` 12 · `--s4` 16 · `--s5` 24 · `--s6` 32 · `--s7` 48 · `--s8` 72 · `--s9` 112.
