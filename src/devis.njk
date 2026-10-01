@@ -29,8 +29,10 @@ meta: "Demandez votre devis gratuit pour un bar gourmand, un livre d'or audio, u
 <iframe id="tally-devis" data-tally-src="https://tally.so/embed/{{ site.tallyId }}?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="700" frameborder="0" marginheight="0" marginwidth="0" title="Demande de devis"></iframe>
 </div>
 {% else %}
-<div class="box" style="margin-top:32px;">
-<p style="margin:0;">Le formulaire arrive très vite. En attendant, écrivez-nous à <a href="mailto:{{ site.email }}">{{ site.email }}</a> avec votre événement, la date, le lieu et le nombre d'invités.</p>
+<div class="devis-contact" style="margin-top:32px;">
+<span class="eyebrow">Écrivez-nous</span>
+<a class="mail" href="mailto:{{ site.email }}?subject=Livre%20d%27or%20audio%20-%20v%C3%A9rifier%20ma%20date&body=Date%20%3A%0ALieu%20%3A%0AType%20d%27%C3%A9v%C3%A9nement%20%3A%0ANombre%20d%27invit%C3%A9s%20%3A%0AFormule%20souhait%C3%A9e%20%3A" data-track="email">{{ site.email }}</a>
+<p style="margin:0;color:var(--muted);">Indiquez la date, le lieu et l'événement. Réponse sous {{ site.delaiReponse }}.</p>
 </div>
 {% endif %}
 </div>
@@ -43,7 +45,7 @@ meta: "Demandez votre devis gratuit pour un bar gourmand, un livre d'or audio, u
 <div class="step"><p><strong>Le jour J</strong>, on installe, on anime, on range.</p></div>
 </div>
 {# Le nombre d'avis ne s'affiche qu'à partir du seuil défini dans site.json #}
-{% if site.avis.nombre >= site.avis.seuilAffichage %}<p style="margin-top:20px;color:var(--muted);font-size:15px;"><span class="stars">★★★★★</span> {{ site.avis.nombre }} avis Google</p>{% elif site.avis.lien %}<p style="margin-top:20px;font-size:15px;"><a href="{{ site.avis.lien }}" rel="noopener" target="_blank">Voir notre fiche Google</a></p>{% endif %}
+{% if site.avis.nombre >= site.avis.seuilAffichage %}<p style="margin-top:20px;color:var(--muted);"><span class="stars">★★★★★</span> {{ site.avis.nombre }} avis Google</p>{% elif site.avis.lien %}<p style="margin-top:20px;"><a href="{{ site.avis.lien }}" rel="noopener" target="_blank">Voir notre fiche Google</a></p>{% endif %}
 </div>
 </div>
 </div></section>

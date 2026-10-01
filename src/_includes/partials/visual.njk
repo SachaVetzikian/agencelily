@@ -1,2 +1,2 @@
-{# Photo provisoire Unsplash : si elle ne charge pas, le fond neutre reste visible #}
-<div class="ph{% if tall %} tall{% endif %}">{% if img %}<img src="{{ img }}" alt="{{ label }}" loading="lazy" onerror="this.remove()">{% endif %}<span>{% if not img %}Photo : {% endif %}{{ label }}</span></div>
+{# Visuel : si l'image manque ou ne charge pas, un fond neutre reste en place (sans étiquette) #}
+<div class="ph{% if tall %} tall{% endif %}">{% if img %}<img src="{{ img }}" alt="{{ label }}" loading="lazy" onerror="this.remove()">{% endif %}</div>

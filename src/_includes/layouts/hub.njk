@@ -4,9 +4,8 @@ layout: layouts/base.njk
 {% set crumbs = [{ nom: hubNom }] %}
 {% set first = (services | byCategorie(categorie))[0] %}
 {% set heroImg = first.image %}{% set heroAlt = hubNom %}{% set heroEyebrow = eyebrow %}{% set heroTitle = h1 %}{% set heroIntro = lede %}
-{% set heroAside %}<div class="btns"><a class="btn primary" href="/devis/" data-track="devis">Demander un devis</a><a class="btn ghost" href="/configurateur/">Simuler mon budget</a></div>{% endset %}
+{% set heroAside %}<div class="btns"><a class="btn primary" href="/devis/" data-track="devis">Vérifier ma date</a><a class="btn ghost" href="/configurateur/">Simuler mon budget</a></div>{% endset %}
 {% include "partials/hero-full.njk" %}
-{% include "partials/crumbs.njk" %}
 <section class="section">
 <div class="wrap">
 <div class="cards">{% for c in services | byCategorie(categorie) %}{% include "partials/card-service.njk" %}{% endfor %}</div>

@@ -16,7 +16,6 @@ permalink: "/{{ s.categorie }}/{{ s.slug }}/"
 <div class="btns"><a class="btn primary" href="/devis/?service={{ s.slug }}" data-track="devis">Vérifier ma date</a><a class="btn ghost" href="/configurateur/">Simuler mon budget</a></div>
 {% endset %}
 {% include "partials/hero-full.njk" %}
-{% include "partials/crumbs.njk" %}
 
 {% if s.formules %}
 <section class="section">

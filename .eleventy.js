@@ -73,6 +73,14 @@ module.exports = function (eleventyConfig) {
     return content;
   });
 
+  // Typographie française : apostrophe courbe (’) dans le texte visible uniquement
+  eleventyConfig.addTransform("apostrophes", function (content, outputPath) {
+    if (!outputPath || !outputPath.endsWith(".html")) return content;
+    return content.replace(/(<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>|<[^>]+>)|([^<]+)/g, (m, tag, text) =>
+      tag ? tag : text.replace(/(\p{L})'(?=\p{L})/gu, "$1’").replace(/(\p{L})&#39;(?=\p{L})/gu, "$1’")
+    );
+  });
+
   return {
     dir: { input: "src", output: "_site", includes: "_includes", data: "_data" },
     htmlTemplateEngine: "njk",

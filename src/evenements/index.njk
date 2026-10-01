@@ -6,9 +6,8 @@ meta: "Trouvez les bonnes animations pour votre événement à Paris et en Île-
 {% set crumbs = [{ nom: "Événements" }] %}
 {% set heroImg = (evenements | findBySlug("mariage")).image %}{% set heroEyebrow = "Par événement" %}{% set heroTitle = "Quelle animation pour votre événement ?" %}
 {% set heroIntro = "Chaque fête a ses moments forts et ses temps morts. Choisissez la vôtre, on vous dit ce qui marche vraiment." %}
-{% set heroAside %}<div class="btns"><a class="btn primary" href="/devis/" data-track="devis">Demander un devis</a></div>{% endset %}
+{% set heroAside %}<div class="btns"><a class="btn primary" href="/devis/" data-track="devis">Vérifier ma date</a></div>{% endset %}
 {% include "partials/hero-full.njk" %}
-{% include "partials/crumbs.njk" %}
 <section class="section"><div class="wrap">
 {% include "partials/tiles-evenements.njk" %}</div></section>
 {% include "partials/cta.njk" %}

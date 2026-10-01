@@ -28,17 +28,22 @@ Deux familles, auto-hébergées dans `src/assets/fonts/` :
 - **Instrument Serif** (titres) : grand serif éditorial, en bas de casse, jamais en capitales. L'italique sert à une seule phrase d'accent par page, en gris.
 - **Jost** (texte, étiquettes, boutons) : géométrique, discrète.
 
-| Rôle | Police | Taille | Casse |
-|---|---|---|---|
-| H1 | Instrument Serif | 44 à 96 px | Normale |
-| H2 | Instrument Serif | 32 à 56 px | Normale |
-| Phrase manifeste (`.statement`) | Instrument Serif | 36 à 80 px | Normale, fin en italique gris |
-| Prix des formules | Instrument Serif | 56 à 88 px | Chiffres |
-| H3 / étiquette de carte | Jost 500 | 15 px | Capitales, interlettrage 0.06em |
-| Surtitre / tag | Jost 500 | 11 px | Capitales, interlettrage 0.14em |
-| Texte d'intro | Jost 300 | 17 à 20 px | Normale |
-| Texte courant | Jost 400 | 15 px | Normale |
-| Bouton | Jost 500 | 12 px | Capitales, interlettrage 0.1em |
+**Échelle : 7 tailles, et aucune autre.** Chaque `font-size` du CSS utilise un de ces tokens.
+
+| Token | Valeur | Usage |
+|---|---|---|
+| `--fs-label` | 11 px | Surtitres, tags, boutons, fil d'Ariane, en-têtes de tableau (Jost, capitales, interlettrage 0.1 à 0.14em) |
+| `--fs-small` | 13 px | Notes, légendes, liens du footer |
+| `--fs-body` | 16 px | Texte courant, h3 en capitales |
+| `--fs-lead` | 18 à 20 px | Texte d'intro (Jost 300) |
+| `--fs-h2` | 32 à 56 px | H2 (Instrument Serif) |
+| `--fs-h1` | 44 à 92 px | H1 (Instrument Serif) |
+| `--fs-display` | 48 à 88 px | Phrase manifeste, prix des formules (Instrument Serif) |
+
+**Règles de composition**
+- Titres en `text-wrap: balance` : jamais un mot seul sur la dernière ligne.
+- Apostrophe typographique (’) partout dans le texte visible : elle est appliquée automatiquement au build (transform `apostrophes`).
+- Italique serif gris : une seule phrase d'accent par section au maximum.
 
 **Règle des mots :** une idée par section, une phrase par idée. L'accueil reste sous 150 mots ; le texte détaillé (étapes, FAQ, logistique) vit sur les pages produit et location.
 
@@ -52,7 +57,9 @@ Deux familles, auto-hébergées dans `src/assets/fonts/` :
 - Padding des cartes : `--s5`.
 - Largeur de contenu : 1200 px, texte long limité à 720 px.
 
-## 5. Formes
+## 5. Formes et interactions
+- Cibles tactiles : 44 px minimum pour tout lien isolé (liens du footer, fil d'Ariane, liens « Comment ça marche », questions de FAQ).
+- La barre de contact mobile est masquée sur les pages Devis et Merci.
 - Photos, cartes, encarts, tuiles : **rayon 0**.
 - Boutons, pastilles, badges : **pilule** (`999px`).
 - Bordures : 1 px `--line`, uniquement quand un fond ne suffit pas.
@@ -60,6 +67,12 @@ Deux familles, auto-hébergées dans `src/assets/fonts/` :
 ## 6. Composants
 
 **Hero plein cadre** (`partials/hero-full.njk`) : photo pleine largeur, dégradé sombre en bas, H1 en capitales blanches en bas à gauche. Juste dessous, un **bandeau d'intro** gris : texte d'intro à gauche, prix / contact / bouton à droite. Sur mobile : image verticale dédiée (`heroImgMobile`, 4:5), hero plus court, prix et bouton affichés avant le texte.
+
+**Fil d'Ariane** : posé en haut de la photo du hero (texte blanc, 11 px). Sur les pages sans hero photo, en haut de page.
+
+**Footer** (`.footer-min`) : la phrase de marque en serif, un bouton « Vérifier ma date », une ligne de liens, une ligne légale. Rien d'autre.
+
+**Visuel manquant** : fond neutre seul, jamais d'étiquette « Photo : … ». Une section sans photo vaut mieux qu'un rectangle annoté.
 
 **Carrousel mobile** (`.m-rail`) : sur mobile, une grille (formules, exemples, étapes) devient un défilement horizontal pour raccourcir la page.
 

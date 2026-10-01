@@ -1,40 +1,23 @@
 <footer class="footer">
-<div class="wrap">
-<div class="cols">
-<div>
-<a class="logo" href="/">Agence <span>Lily</span></a>
-<p style="margin-top:14px;">{{ site.baseline }}.</p>
-<p><a href="mailto:{{ site.email }}">{{ site.email }}</a>{% if site.phone %}<br><a href="tel:{{ site.phone | replace(' ', '') }}">{{ site.phone }}</a>{% endif %}</p>
-{% if site.instagram or site.googleBusiness %}<p>{% if site.instagram %}<a href="{{ site.instagram }}" rel="noopener" target="_blank">Instagram</a>{% endif %}{% if site.instagram and site.googleBusiness %} · {% endif %}{% if site.googleBusiness %}<a href="{{ site.googleBusiness }}" rel="noopener" target="_blank">Google</a>{% endif %}</p>{% endif %}
+<div class="wrap footer-min">
+<div class="f-top">
+<p class="f-tagline">Les fleurs fanent. Les voix restent.</p>
+<a class="btn light" href="/devis/" data-track="devis">Vérifier ma date</a>
 </div>
-<div>
-<h4>Livre d'or audio & vidéo</h4>
-<ul>
-<li><a href="/livre-d-or-audio-video/">Livre d'or audio et vidéo</a></li>
-<li><a href="/location-livre-d-or-audio/">Location en Île-de-France</a></li>
-{% for o in occasions %}<li><a href="{{ o.url }}">Livre d'or {{ o.nom | lower }}</a></li>{% endfor %}
-</ul>
-</div>
-<div>
-<h4>Autres prestations</h4>
-<ul>{% for s in services %}{% if s.slug != "livre-dor-audio-video" %}<li><a href="{{ s | serviceUrl }}">{{ s.nom }}</a></li>{% endif %}{% endfor %}</ul>
-<h4 style="margin-top:24px;">Événements</h4>
-<ul>{% for e in evenements %}<li><a href="/evenements/{{ e.slug }}/">{{ e.nom }}</a></li>{% endfor %}</ul>
-</div>
-<div>
-<h4>Agence Lily</h4>
-<ul>
-<li><a href="/configurateur/">Simuler mon budget</a></li>
+<ul class="f-links">
+<li><a href="/livre-d-or-audio-video/">Livre d'or audio & vidéo</a></li>
+<li><a href="/location-livre-d-or-audio/">Location</a></li>
+{% for o in occasions %}<li><a href="{{ o.url }}">{{ o.nom }}</a></li>{% endfor %}
 <li><a href="/tarifs/">Tarifs</a></li>
-{% if realisations.length %}<li><a href="/realisations/">Réalisations</a></li>{% endif %}
-<li><a href="/blog/">Guides et conseils</a></li>
+<li><a href="/animations/">Bars gourmands</a></li>
+<li><a href="/blog/">Guides</a></li>
 <li><a href="/a-propos/">À propos</a></li>
-<li><a href="/devis/">Devis gratuit</a></li>
+<li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+{% if site.googleBusiness %}<li><a href="{{ site.googleBusiness }}" rel="noopener" target="_blank">Google</a></li>{% endif %}
+{% if site.instagram %}<li><a href="{{ site.instagram }}" rel="noopener" target="_blank">Instagram</a></li>{% endif %}
 </ul>
-</div>
-</div>
 <div class="legal">
-<span>© {{ year }} Agence Lily · {{ site.zone }}</span>
+<span><span class="logo" style="font-size:var(--fs-small);">Agence <span>Lily</span></span> · {{ site.zone }} · © {{ year }}</span>
 <span><a href="/mentions-legales/">Mentions légales</a></span>
 </div>
 </div>

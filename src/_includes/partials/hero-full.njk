@@ -4,6 +4,7 @@
 {% if heroImgMobile %}<source media="(max-width: 700px)" srcset="{{ heroImgMobile }}">{% endif %}
 <img src="{{ heroImg }}" alt="{{ heroAlt or heroTitle }}" sizes="100vw" fetchpriority="high" onerror="this.closest('picture').remove()">
 </picture>{% endif %}
+{% if crumbs %}{% include "partials/crumbs.njk" %}{% endif %}
 <div class="wrap">
 {% if heroEyebrow %}<span class="eyebrow">{{ heroEyebrow }}</span>{% endif %}
 <h1>{{ heroTitle }}</h1>
