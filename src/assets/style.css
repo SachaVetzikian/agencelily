@@ -577,3 +577,5 @@ p, li { text-wrap: pretty; }
   .masonry a:nth-child(2) { margin-top: var(--s6); }
   .masonry .m-cap { font-size: var(--fs-body); left: var(--s3); bottom: var(--s3); }
 }
+/* Lisibilité du titre sur photo chargée */
+.hero-full::after { background: linear-gradient(to bottom, rgba(30,22,18,.62), rgba(30,22,18,.18) 45%, rgba(30,22,18,.05) 60%, rgba(30,22,18,.55)); }

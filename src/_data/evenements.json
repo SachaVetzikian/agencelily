@@ -54,7 +54,7 @@
         "a": "C'est même ce que nous conseillons : un seul interlocuteur, une seule livraison, et un tarif pack plus avantageux."
       }
     ],
-    "image": "https://unsplash.com/photos/uIHchSu0h88/download?w=1600"
+    "image": "/assets/photos/mariage-soir.webp"
   },
   {
     "slug": "bapteme",
@@ -102,7 +102,7 @@
         "a": "Demandez-nous un devis, nous adaptons le forfait."
       }
     ],
-    "image": "https://unsplash.com/photos/tSvUXxXSrh8/download?w=1600"
+    "image": "/assets/photos/occasion-bapteme.webp"
   },
   {
     "slug": "baby-shower",
@@ -210,7 +210,7 @@
         "a": "Oui, en journée comme en soirée, 7 jours sur 7."
       }
     ],
-    "image": "https://unsplash.com/photos/juq4uxulFM4/download?w=1600"
+    "image": "/assets/photos/occasion-anniversaire.webp"
   },
   {
     "slug": "entreprise",
@@ -262,6 +262,6 @@
         "a": "Oui, nous dimensionnons le nombre de stands et d'animateurs selon votre effectif."
       }
     ],
-    "image": "https://unsplash.com/photos/Kxo17w7BurY/download?w=1600"
+    "image": "/assets/photos/occasion-entreprise.webp"
   }
 ]
