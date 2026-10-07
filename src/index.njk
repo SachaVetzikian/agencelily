@@ -2,46 +2,73 @@
 layout: layouts/base.njk
 title: "Livre d'or audio et vidéo à Paris et en IDF | Agence Lily"
 meta: "Agence Lily : livre d'or audio et vidéo sur téléphone vintage, livré et installé à Paris et en Île-de-France. Mariage, anniversaire, baptême, entreprise. Dès 200 €."
+faqHome:
+  - q: "Comment fonctionne le livre d'or audio ?"
+    a: "Vos invités décrochent un téléphone vintage, écoutent votre message d'accueil et vous laissent un message après le bip. Vous recevez tous les messages par lien en ligne après la fête."
+  - q: "Combien coûte la location ?"
+    a: "200 € pour l'audio, 300 € pour l'audio et la vidéo, 400 € avec un animateur. Livraison et installation comprises à Paris et en Île-de-France."
+  - q: "Dans quelle zone intervenez-vous ?"
+    a: "À Paris et dans toute l'Île-de-France : 75, 77, 78, 91, 92, 93, 94 et 95."
+  - q: "Combien de temps à l'avance réserver ?"
+    a: "Quelques semaines suffisent en général. Pour un samedi entre mai et septembre, réservez plusieurs mois avant."
 ---
+
 {% set livre = services | findBySlug("livre-dor-audio-video") %}
 {% set heroImg = livre.image %}{% set heroImgMobile = livre.imageMobile %}{% set heroAlt = "Téléphone vintage de livre d'or audio" %}
-{% set heroEyebrow = "Agence Lily · Paris & Île-de-France" %}
+{% set heroEyebrow = "Paris & Île-de-France" %}
 {% set heroTitle = "Location de livre d'or audio et vidéo" %}
 {% set heroIntro = "Un téléphone vintage, un message après le bip. Livré et installé chez vous, dès 200 €." %}
-{% set heroAside %}<div class="btns" style="margin-top:0;"><a class="btn primary" href="/devis/?service=livre-dor-audio-video" data-track="devis">Vérifier ma date</a></div>{% endset %}
+{% set heroAside %}<a class="btn" href="/devis/?service=livre-dor-audio-video" data-track="devis">Vérifier ma date</a>{% endset %}
 {% include "partials/hero-full.njk" %}
 
-<section class="section statement"><div class="wrap">
-<p>Les fleurs fanent.<br><em>Les voix restent.</em></p>
+<section class="section"><div class="wrap intro-center">
+{% include "partials/logo-mark.njk" %}
+<p>Les fleurs fanent. Les voix restent. <span>Pendant votre fête, vos invités décrochent un téléphone vintage et vous laissent un message. Vous le gardez pour toujours.</span></p>
+<div class="btns"><a class="btn" href="{{ livre.url }}">Découvrir le livre d’or</a></div>
 </div></section>
 
 <section class="section" style="padding-top:0;"><div class="wrap">
-<div class="objet">
-{% set label = "Le téléphone vintage" %}{% set img = livre.image %}{% set tall = true %}{% include "partials/visual.njk" %}
-<div class="objet-text">
-<span class="eyebrow">L'objet</span>
-<h2>Le téléphone</h2>
-<p>Posé là où vos invités passent. Ils décrochent, ils parlent, c'est enregistré.</p>
-<a class="link" href="{{ livre.url }}">Comment ça marche</a>
-</div>
+<div class="section-title"><span class="eyebrow">L’expérience</span></div>
+<div class="trio">
+<div class="trio-item">{% set label = "Le téléphone vintage" %}{% set img = livre.image %}{% set tall = false %}{% include "partials/visual.njk" %}<div><h3>Le téléphone</h3><p>Un téléphone vintage à cadran, posé là où vos invités passent.</p></div></div>
+<div class="trio-item">{% set label = "Le message d'accueil" %}{% set img = livre.formules[0].image %}{% include "partials/visual.njk" %}<div><h3>Le message d’accueil</h3><p>Votre voix accueille chaque invité qui décroche. Il donne le ton.</p></div></div>
+<div class="trio-item">{% set label = "Vos souvenirs" %}{% set img = livre.formules[1].image %}{% include "partials/visual.njk" %}<div><h3>Vos souvenirs</h3><p>Tous les messages, audio et vidéo, remis par lien en ligne après la fête.</p></div></div>
 </div>
 </div></section>
 
 <section class="section alt"><div class="wrap">
-<h2 class="center">Trois formules</h2>
-{% include "partials/formules-min.njk" %}
+<div class="section-title"><span class="eyebrow">Tarifs</span><h2>Trois formules</h2><p>Livraison et installation comprises à Paris et en Île-de-France.</p></div>
+{% include "partials/formules-zigzag.njk" %}
 </div></section>
 
+{# Bandeau témoignage : un vrai avis dès que avis.json est rempli, sinon la promesse de marque (jamais de faux témoignage) #}
+{% set qa = avis[0] %}{% set bandImg = (evenements | findBySlug("mariage")).image %}
+<section class="testimonial">
+{% if bandImg %}<img src="{{ bandImg }}" alt="" sizes="100vw" loading="lazy" onerror="this.remove()">{% endif %}
+<div class="wrap">
+<div><span class="eyebrow">{% if qa %}Témoignage{% else %}Notre promesse{% endif %}</span><h2>{% if qa %}Ils nous ont fait confiance{% else %}Installé, vérifié, suivi.{% endif %}</h2></div>
+<div class="testimonial-card">
+{% if qa %}<p>« {{ qa.texte }} »</p><span>{{ qa.prenom }}{% if qa.evenement %} · {{ qa.evenement }}{% endif %}</span>
+{% else %}<p>Nous livrons le téléphone, l’installons, le vérifions avant l’arrivée de vos invités et restons joignables pendant toute la fête.</p><span>Pas un colis : une équipe.</span>{% endif %}
+</div>
+</div>
+</section>
+
 <section class="section"><div class="wrap">
-<h2>Pour chaque occasion</h2>
-<div class="tiles" style="margin-top:32px;">
-{% for o in occasions %}{% set evt = evenements | findBySlug(o.evenement) %}<a class="tile" href="{{ o.url }}">
-{% if evt and evt.image %}<img src="{{ evt.image }}" alt="Livre d'or audio : {{ o.nom }}" loading="lazy" onerror="this.remove()">{% endif %}
-<span class="tile-title">{{ o.nom }}</span>
-</a>{% endfor %}
+<div class="section-title"><span class="eyebrow">Occasions</span><h2>Pour chaque occasion</h2></div>
+<div class="masonry">
+{% for o in occasions %}{% set evt = evenements | findBySlug(o.evenement) %}<a href="{{ o.url }}">{% set label = o.nom %}{% set img = evt.image if evt else "" %}{% set tall = false %}{% include "partials/visual.njk" %}<span class="m-cap">{{ o.nom }}</span></a>{% endfor %}
 </div>
 </div></section>
 
-{% set devisParam = "service=livre-dor-audio-video" %}
-{% include "partials/cta.njk" %}
+<section class="section alt"><div class="wrap">
+<div class="section-title"><span class="eyebrow">FAQ</span><h2>Questions fréquentes</h2></div>
+<div class="faq-center">{% set faq = faqHome %}{% include "partials/faq.njk" %}
+<div class="btns" style="justify-content:center;margin-top:var(--s6);"><a class="btn" href="/devis/" data-track="devis">Vérifier ma date</a></div></div>
+</div></section>
 
+
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{% for f in faqHome %}{"@type":"Question","name":{{ f.q | json | safe }},"acceptedAnswer":{"@type":"Answer","text":{{ f.a | json | safe }}}}{% if not loop.last %},{% endif %}{% endfor %}]}
+</script>

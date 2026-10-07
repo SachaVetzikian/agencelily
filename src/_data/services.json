@@ -217,7 +217,8 @@
           "Fichiers envoyés en ligne",
           "Livraison et installation"
         ],
-        "image": "https://unsplash.com/photos/cD2oCRUD6RA/download?w=1600"
+        "image": "https://unsplash.com/photos/cD2oCRUD6RA/download?w=1600",
+        "desc": "Le téléphone, votre message d’accueil et tous les messages de vos invités, remis par lien en ligne."
       },
       {
         "nom": "Audio + vidéo",
@@ -228,7 +229,8 @@
           "Vidéos envoyées en ligne"
         ],
         "populaire": true,
-        "image": "https://unsplash.com/photos/z9ZB6KvHPt4/download?w=1600"
+        "image": "https://unsplash.com/photos/z9ZB6KvHPt4/download?w=1600",
+        "desc": "La voix et le visage : vos invités parlent au téléphone et sont filmés en même temps."
       },
       {
         "nom": "Audio + vidéo avec animateur",
@@ -238,7 +240,8 @@
           "Un animateur qui va chercher vos invités",
           "Plus de messages, même des invités les plus timides"
         ],
-        "image": "https://unsplash.com/photos/CNSH-JGEwtI/download?w=1600"
+        "image": "https://unsplash.com/photos/CNSH-JGEwtI/download?w=1600",
+        "desc": "Quelqu’un de notre équipe va chercher vos invités tout au long de la soirée, même les plus timides."
       }
     ],
     "options": [

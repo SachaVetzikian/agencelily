@@ -1,0 +1,17 @@
+{# Formules en zigzag : photo d'un côté, texte, puces, prix « dès », bouton contour #}
+{% set livre = services | findBySlug("livre-dor-audio-video") %}
+<div class="zigzag">
+{% for f in livre.formules %}<div class="zz">
+<div class="zz-media">{% set label = "Formule " + f.nom %}{% set img = f.image %}{% set tall = false %}{% include "partials/visual.njk" %}</div>
+<div class="zz-text">
+{% if f.populaire %}<span class="zz-badge">La plus choisie</span>{% endif %}
+<h3>{{ f.nom }}</h3>
+<p>{{ f.desc }}</p>
+<ul class="check">{% for d in f.detail %}<li>{{ d }}</li>{% endfor %}</ul>
+<span class="zz-from">Prix</span>
+<div class="zz-price">{{ f.prix }} €</div>
+<div class="btns"><a class="btn" href="/devis/?service=livre-dor-audio-video" data-track="devis">Vérifier ma date</a></div>
+</div>
+</div>{% endfor %}
+</div>
+<p class="center fm-note" style="margin-top:var(--s7);">Clé USB en option (25 €) · décoration florale en option (50 €) · livraison et installation comprises</p>

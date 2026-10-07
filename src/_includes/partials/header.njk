@@ -1,7 +1,16 @@
+{%- set u = page.url or "" -%}
 <header class="header">
-<div class="wrap">
-<a class="logo" href="/">Agence <span>Lily</span></a>
-<nav class="nav desktop" aria-label="Navigation principale">{% include "partials/nav-links.njk" %}</nav>
+<div class="wrap header-grid">
+<nav class="nav-left" aria-label="Navigation principale">
+<a href="/livre-d-or-audio-video/"{% if u == '/livre-d-or-audio-video/' %} aria-current="page"{% endif %}>Livre d’or</a>
+<a href="/location-livre-d-or-audio/"{% if u == '/location-livre-d-or-audio/' %} aria-current="page"{% endif %}>Location</a>
+<a href="/livre-d-or-mariage/"{% if u == '/livre-d-or-mariage/' %} aria-current="page"{% endif %}>Mariage</a>
+<a href="/tarifs/"{% if u == '/tarifs/' %} aria-current="page"{% endif %}>Tarifs</a>
+</nav>
+<a class="logo" href="/">{% include "partials/logo-mark.njk" %}<span>agence lily</span></a>
+<div class="header-right">
+<a class="btn primary" href="/devis/" data-track="devis">Vérifier ma date</a>
 <details class="burger"><summary>Menu</summary><nav class="nav" aria-label="Navigation mobile">{% include "partials/nav-links.njk" %}</nav></details>
+</div>
 </div>
 </header>

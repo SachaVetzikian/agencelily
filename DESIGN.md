@@ -1,41 +1,42 @@
 # Design system Agence Lily
 
-Direction artistique inspirée de l'hôtellerie de luxe parisienne : photos plein cadre, capitales, angles droits, beaucoup d'air, boutons en pilule. Le luxe vient de la retenue, pas de la décoration.
+Direction artistique inspirée de « Rosella » (site de wedding planner haut de gamme) : fond ivoire chaud, brun très foncé, un accent taupe, grand serif, photos de mariage généreuses, filets fins, angles quasi droits, beaucoup d'air. Le luxe vient de la chaleur et de la retenue.
 
-Toutes les valeurs vivent dans `src/assets/style.css` (bloc `:root`). Ne jamais écrire une couleur, une taille ou un espacement en dur dans un template : utiliser un token ou une classe existante.
+Toutes les valeurs vivent dans `src/assets/style.css` (bloc `:root` et couche « DA Rosella » en fin de fichier). Ne jamais écrire une couleur, une taille ou un espacement en dur dans un template : utiliser un token ou une classe existante.
 
 ## 1. Principes
-1. **La photo porte l'émotion.** Le reste de l'interface est neutre (noir, blanc, gris) pour la laisser respirer.
-2. **Angles droits partout**, sauf les boutons et les pastilles, toujours en pilule.
-3. **Capitales pour les titres**, bas de casse pour le texte courant.
-4. **Pas d'ombres.** La hiérarchie se fait par les fonds (blanc / gris clair / noir) et l'espace.
-5. **Noir et blanc uniquement.** Aucune couleur d'accent : la hiérarchie vient du contraste, de la taille et de l'espace. L'action principale est un bouton noir plein (blanc plein sur fond sombre).
-6. **Les prix restent visibles** : c'est la différence avec un palace. Luxe accessible, pas luxe inaccessible.
+1. **La photo porte l'émotion** : grandes images de vrais moments, l'interface reste neutre et chaude.
+2. **Une seule couleur d'accent, le taupe**, pour l'action principale, les surtitres et le footer. Jamais de noir pur, jamais d'autre couleur.
+3. **Grand serif en bas de casse pour les titres**, en capitales uniquement pour le H1 du hero.
+4. **Angles quasi droits** (2 px) partout, boutons compris. Filets de 1 px plutôt que des ombres.
+5. **Une idée par section, une phrase par idée.** Les prix restent visibles.
 
 ## 2. Couleurs
 
 | Token | Valeur | Usage |
 |---|---|---|
-| `--white` | `#ffffff` | Fond principal |
-| `--surface` | `#f4f4f2` | Cartes, bandeaux d'intro, encarts |
-| `--line` | `#e4e4e0` | Séparateurs fins |
-| `--ink` | `#111111` | Texte principal, boutons principaux |
-| `--muted` | `#6e6e6a` | Texte secondaire |
-| `--black` | `#000000` | Header, footer, bandeaux sombres |
+| `--bg` | `#f8f6f2` | Ivoire : fond principal |
+| `--surface` | `#f0ebe4` | Sable : sections alternées, encarts |
+| `--white` | `#ffffff` | Cartes, texte sur photo |
+| `--line` | `#e2d9cf` | Filets, bordures |
+| `--ink` | `#2a2420` | Brun très foncé : texte, boutons contour |
+| `--muted` | `#8b8079` | Texte secondaire, seconde moitié des paragraphes deux tons |
+| `--accent` | `#7a6558` | Taupe : bouton principal, surtitres, puces, footer |
+| `--accent-dark` | `#5f4d42` | Survol du bouton principal |
 
 ## 3. Typographie
 Deux familles, auto-hébergées dans `src/assets/fonts/` :
-- **Instrument Serif** (titres) : grand serif éditorial, en bas de casse, jamais en capitales. L'italique sert à une seule phrase d'accent par page, en gris.
-- **Jost** (texte, étiquettes, boutons) : géométrique, discrète.
+- **Instrument Serif** (titres) : grand serif éditorial en bas de casse ; en capitales pour le seul H1 du hero.
+- **Manrope** (texte, étiquettes, boutons) : sans-serif humaniste, discret.
 
 **Échelle : 7 tailles, et aucune autre.** Chaque `font-size` du CSS utilise un de ces tokens.
 
 | Token | Valeur | Usage |
 |---|---|---|
-| `--fs-label` | 11 px | Surtitres, tags, boutons, fil d'Ariane, en-têtes de tableau (Jost, capitales, interlettrage 0.1 à 0.14em) |
-| `--fs-small` | 13 px | Notes, légendes, liens du footer |
+| `--fs-label` | 11 px | Surtitres taupe (capitales, interlettrage 0.22em), tags, fil d'Ariane |
+| `--fs-small` | 13 px | Boutons (bas de casse), notes, légendes, liens, texte des cartes |
 | `--fs-body` | 16 px | Texte courant, h3 en capitales |
-| `--fs-lead` | 18 à 20 px | Texte d'intro (Jost 300) |
+| `--fs-lead` | 18 à 21 px | Paragraphe d'intro centré en deux tons |
 | `--fs-h2` | 32 à 56 px | H2 (Instrument Serif) |
 | `--fs-h1` | 44 à 92 px | H1 (Instrument Serif) |
 | `--fs-display` | 48 à 88 px | Phrase manifeste, prix des formules (Instrument Serif) |
@@ -66,31 +67,33 @@ Deux familles, auto-hébergées dans `src/assets/fonts/` :
 
 ## 6. Composants
 
-**Hero plein cadre** (`partials/hero-full.njk`) : photo pleine largeur, dégradé sombre en bas, H1 en capitales blanches en bas à gauche. Juste dessous, un **bandeau d'intro** gris : texte d'intro à gauche, prix / contact / bouton à droite. Sur mobile : image verticale dédiée (`heroImgMobile`, 4:5), hero plus court, prix et bouton affichés avant le texte.
+**En-tête** : fond ivoire, filet bas. Liens à gauche (Livre d'or, Location, Mariage, Tarifs), logo centré (pictogramme téléphone + « agence lily » en serif italique), bouton taupe « Vérifier ma date » à droite. Mobile : logo à gauche, menu à droite.
 
-**Fil d'Ariane** : posé en haut de la photo du hero (texte blanc, 11 px). Sur les pages sans hero photo, en haut de page.
+**Hero encadré** (`partials/hero-full.njk`) : photo en retrait de 20 px dans la page, voile sombre en haut et en bas. H1 en capitales serif en haut à gauche. En bas à gauche : bouton contour blanc (et prix si utile). En bas à droite : légende courte (`heroIntro`).
 
-**Footer** (`.footer-min`) : la phrase de marque en serif, un bouton « Vérifier ma date », une ligne de liens, une ligne légale. Rien d'autre.
+**Intro centrée** (`.intro-center`) : pictogramme, paragraphe en deux tons (première phrase en `--ink`, suite en `--muted` dans un `<span>`), bouton contour.
 
-**Visuel manquant** : fond neutre seul, jamais d'étiquette « Photo : … ». Une section sans photo vaut mieux qu'un rectangle annoté.
+**Titre de section** (`.section-title`) : surtitre taupe en capitales espacées, H2 serif centré, phrase courte grise optionnelle.
 
-**Carrousel mobile** (`.m-rail`) : sur mobile, une grille (formules, exemples, étapes) devient un défilement horizontal pour raccourcir la page.
+**Trio décalé** (`.trio`) : trois colonnes de photos verticales, la colonne du milieu descend et place son titre au-dessus de la photo.
 
-**Carte** (`.card`) : photo en haut (ratio 3:2), corps gris `--surface`, surtitre, titre en capitales, texte gris, puis une ligne prix à gauche + bouton pilule noir à droite.
+**Offres en zigzag** (`partials/formules-zigzag.njk`) : photo et texte alternés gauche/droite. Texte : badge éventuel, nom en serif, description grise, puces rondes taupe, « Prix » puis montant en serif, bouton contour.
 
-**Carrousel** (`.rail`) : cartes en défilement horizontal avec accroche magnétique, la suivante dépasse pour inviter à glisser.
+**Bandeau témoignage** (`.testimonial`) : photo pleine largeur, surtitre et titre en haut à gauche, carte translucide en bas à droite. Un vrai avis uniquement ; à défaut, la promesse de marque.
 
-**Galerie** (`.gallery`) : mosaïque en colonnes, photos sans marge ni légende.
+**Galerie** (`.masonry`) : mosaïque à hauteurs variées, légende serif sur la photo.
 
-**Bandeau citation** (`.quote-band`) : photo plein cadre, phrase en capitales blanches, bouton blanc. N'y mettre qu'un vrai avis client ou une promesse de marque, jamais un faux témoignage.
+**FAQ** (`.faq-center`) : colonne centrée étroite, filets fins, chevrons, bouton contour centré dessous.
 
-**Encart devis** (`.enquiry`) : bloc gris horizontal, titre en capitales, phrase courte, bouton noir à droite.
+**Footer** : fond taupe, phrase de marque en serif, bouton contour blanc, une ligne de liens, une ligne légale.
 
 **Boutons**
-- `.btn` : noir, texte blanc. Action standard.
-- `.btn.primary` : noir plein, plus grand et plus gras. Action principale (devis). Devient blanc plein sur fond sombre (header, pack, bandeau citation, barre mobile).
-- `.btn.ghost` : blanc, bordure fine. Action secondaire.
-- `.btn.light` : blanc sur fond sombre ou photo.
+- `.btn` : contour 1 px brun, fond transparent, bas de casse. Action secondaire et standard.
+- `.btn.primary` : taupe plein, texte blanc. Action principale (en-tête, barre mobile).
+- Sur photo ou fond taupe : contour blanc (automatique dans le hero, le bandeau, le footer).
+- Un seul libellé d'action principale sur tout le site : « Vérifier ma date ».
+
+**Fil d'Ariane** : posé en haut de la photo du hero. **Visuel manquant** : fond neutre seul, sans étiquette. **Carrousel mobile** (`.m-rail`) pour les grilles qui rallongent la page.
 
 ## 7. Images
 - Lumière naturelle, tons chauds et neutres, jamais saturés.
@@ -102,6 +105,6 @@ Deux familles, auto-hébergées dans `src/assets/fonts/` :
 ## 8. À ne pas faire
 - Pas d'arrondi sur une photo ou une carte.
 - Pas d'ombre portée.
-- Aucune couleur : noir, blanc et gris uniquement.
+- Aucune autre couleur que la palette ivoire, sable, brun et taupe.
 - Pas de titre de section en bas de casse.
 - Pas de tiret long (—) dans les textes.

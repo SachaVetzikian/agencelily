@@ -1,16 +1,18 @@
-{# Hero plein cadre + bandeau d'intro. Variables : heroImg, heroImgMobile (4:5, optionnelle), heroAlt, heroEyebrow, heroTitle, heroIntro ; bloc droit via heroAside (HTML) #}
+{# Hero encadré. Variables : heroImg, heroImgMobile (4:5, optionnelle), heroAlt, heroEyebrow, heroTitle, heroIntro (légende en bas à droite), heroAside (HTML en bas à gauche : prix, boutons) #}
 <section class="hero-full">
 {% if heroImg %}<picture>
 {% if heroImgMobile %}<source media="(max-width: 700px)" srcset="{{ heroImgMobile }}">{% endif %}
 <img src="{{ heroImg }}" alt="{{ heroAlt or heroTitle }}" sizes="100vw" fetchpriority="high" onerror="this.closest('picture').remove()">
 </picture>{% endif %}
 {% if crumbs %}{% include "partials/crumbs.njk" %}{% endif %}
-<div class="wrap">
+<div class="hero-inner">
+<div class="hero-top">
 {% if heroEyebrow %}<span class="eyebrow">{{ heroEyebrow }}</span>{% endif %}
 <h1>{{ heroTitle }}</h1>
 </div>
+<div class="hero-bottom">
+<div class="hero-aside">{{ heroAside | safe }}</div>
+{% if heroIntro %}<p class="hero-caption">{{ heroIntro }}</p>{% endif %}
+</div>
+</div>
 </section>
-<section class="intro-band"><div class="wrap">
-<p class="lede">{{ heroIntro }}</p>
-<div class="intro-aside">{{ heroAside | safe }}</div>
-</div></section>
