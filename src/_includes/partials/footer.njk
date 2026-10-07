@@ -12,6 +12,7 @@
 <li><a href="/animations/">Bars gourmands</a></li>
 <li><a href="/blog/">Guides</a></li>
 <li><a href="/a-propos/">À propos</a></li>
+{% if site.phone %}<li><a href="tel:{{ site.phone | replace(' ', '') }}" data-track="appel">{{ site.phone }}</a></li>{% endif %}
 <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
 {% if site.googleBusiness %}<li><a href="{{ site.googleBusiness }}" rel="noopener" target="_blank">Google</a></li>{% endif %}
 {% if site.instagram %}<li><a href="{{ site.instagram }}" rel="noopener" target="_blank">Instagram</a></li>{% endif %}

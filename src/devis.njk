@@ -36,7 +36,7 @@ meta: "Demandez votre devis gratuit pour un bar gourmand, un livre d'or audio, u
 <span class="eyebrow">Écrivez-nous</span>
 <a class="mail" href="{{ mailDevis }}" data-track="email">{{ site.email }}</a>
 <p style="margin:0;color:var(--muted);">Indiquez la date, le lieu et l'événement. Le message est déjà prêt, il suffit de compléter.</p>
-<div><a class="btn primary" href="{{ mailDevis }}" data-track="email">Écrire mon message</a></div>
+<div class="btns" style="margin-top:0;"><a class="btn primary" href="{{ mailDevis }}" data-track="email">Écrire mon message</a>{% if site.phone %}<a class="btn" href="tel:{{ site.phone | replace(' ', '') }}" data-track="appel">Appeler le {{ site.phone }}</a>{% endif %}</div>
 </div>
 {% endif %}
 </div>
