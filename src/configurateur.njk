@@ -5,10 +5,10 @@ meta: "Composez votre événement en 1 minute : bar à crêpes, pancakes, tirami
 ---
 {% set crumbs = [{ nom: "Simuler mon budget" }] %}
 {% include "partials/crumbs.njk" %}
-<section class="hero" style="padding-bottom:32px;"><div class="wrap">
+<section class="page-head"><div class="wrap">
 <span class="eyebrow">1 minute, sans engagement</span>
-<h1>Composez votre événement</h1>
-<p class="lede">Cochez ce qui vous fait envie, indiquez votre nombre d'invités : l'estimation se calcule en direct. On vous confirme le prix exact sous {{ site.delaiReponse }}.</p>
+<h1>Simulez votre budget</h1>
+<p class="lede">Cochez, l'estimation se calcule en direct. Prix exact confirmé sous {{ site.delaiReponse }}.</p>
 </div></section>
 
 <section class="section" style="padding-top:0;"><div class="wrap config">
@@ -19,6 +19,20 @@ meta: "Composez votre événement en 1 minute : bar à crêpes, pancakes, tirami
 </label>
 </div>
 
+<h2 class="config-title" style="margin-top:var(--s6);">Livre d'or <small>audio &amp; vidéo</small></h2>
+{% set livre = services | findBySlug("livre-dor-audio-video") %}
+<div class="config-grid">
+{% for f in livre.formules %}
+<label class="config-item"><input type="radio" name="livre" value="{{ loop.index0 }}"><span class="ci-body"><strong>{{ f.nom }}</strong><span>{{ f.prix }} €</span></span></label>
+{% endfor %}
+<label class="config-item"><input type="radio" name="livre" value="" checked><span class="ci-body"><strong>Pas de livre d'or</strong></span></label>
+</div>
+<div class="config-grid config-options" id="c-livre-options" hidden>
+{% for o in livre.options %}
+<label class="config-item small"><input type="checkbox" name="livre-option" value="{{ loop.index0 }}"><span class="ci-body"><strong>{{ o.nom }}</strong><span>+ {{ o.prix }}</span></span></label>
+{% endfor %}
+</div>
+
 <h2 class="config-title">Bars gourmands <small>avec animateur</small></h2>
 <div class="config-grid">
 {% for s in services | byCategorie('animations') %}
@@ -26,20 +40,6 @@ meta: "Composez votre événement en 1 minute : bar à crêpes, pancakes, tirami
 <input type="checkbox" name="bar" value="{{ s.slug }}">
 <span class="ci-body"><strong>{{ s.nom }}</strong><span>{{ s.parPersonne }} € / invité, dès {{ s.prix }} € ({{ s.minInvites }} invités min.)</span></span>
 </label>
-{% endfor %}
-</div>
-
-<h2 class="config-title">Livre d'or <small>audio &amp; vidéo</small></h2>
-{% set livre = services | findBySlug("livre-dor-audio-video") %}
-<div class="config-grid">
-<label class="config-item"><input type="radio" name="livre" value="" checked><span class="ci-body"><strong>Pas de livre d'or</strong><span>&nbsp;</span></span></label>
-{% for f in livre.formules %}
-<label class="config-item"><input type="radio" name="livre" value="{{ loop.index0 }}"><span class="ci-body"><strong>{{ f.nom }}</strong><span>{{ f.prix }} €</span></span></label>
-{% endfor %}
-</div>
-<div class="config-grid config-options" id="c-livre-options" hidden>
-{% for o in livre.options %}
-<label class="config-item small"><input type="checkbox" name="livre-option" value="{{ loop.index0 }}"><span class="ci-body"><strong>{{ o.nom }}</strong><span>+ {{ o.prix }}</span></span></label>
 {% endfor %}
 </div>
 
@@ -61,9 +61,10 @@ meta: "Composez votre événement en 1 minute : bar à crêpes, pancakes, tirami
 <div class="config-total"><span>Total estimé</span><strong id="c-total">0 €</strong></div>
 <p class="config-note" id="c-pack" hidden>Bar gourmand + location : demandez le tarif pack, il est souvent plus avantageux.</p>
 <p class="config-note">Estimation hors frais de déplacement, confirmée dans votre devis.</p>
-<a class="btn" id="c-cta" href="/devis/" data-track="configurateur">Vérifier ma date</a>
+<a class="btn primary" id="c-cta" href="/devis/" data-track="configurateur">Vérifier ma date</a>
 </div>
 </aside>
+<div class="config-sticky" aria-hidden="true"><div><span>Total estimé</span><strong id="c-total-m">0 €</strong></div><a class="btn primary" id="c-cta-m" href="/devis/" tabindex="-1" data-track="configurateur">Vérifier ma date</a></div>
 </div></section>
 
 <script>
@@ -109,12 +110,14 @@ meta: "Composez votre événement en 1 minute : bar à crêpes, pancakes, tirami
       ? lines.map(function (l) { return "<li><span>" + l[0] + "</span><b>" + fmt(l[1]) + "</b></li>"; }).join("")
       : "<li><span>Rien de sélectionné pour l'instant</span><b></b></li>";
     totalEl.textContent = fmt(total);
+    document.getElementById("c-total-m").textContent = fmt(total);
     packNote.hidden = !(hasBar && hasLoc);
     var summary = lines.map(function (l) { return l[0]; }).join(" + ");
     var q = new URLSearchParams();
     q.set("invites", n);
     if (summary) { q.set("config", summary); q.set("estimation", Math.round(total)); }
     cta.href = "/devis/?" + q.toString();
+    document.getElementById("c-cta-m").href = cta.href;
   }
   form.addEventListener("input", update);
   form.addEventListener("change", update);

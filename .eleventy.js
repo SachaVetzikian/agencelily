@@ -1,4 +1,16 @@
 const Image = require("@11ty/eleventy-img");
+const sharp = require("sharp");
+const path = require("path");
+
+// Dimensions des images locales (évite les décalages de mise en page au chargement)
+const dimCache = new Map();
+function localSize(src) {
+  if (!dimCache.has(src)) {
+    const file = path.join(__dirname, "src", decodeURI(src.split("?")[0]));
+    dimCache.set(src, sharp(file).metadata().then((m) => ({ width: m.width, height: m.height })).catch(() => null));
+  }
+  return dimCache.get(src);
+}
 
 // Optimisation des photos distantes (Unsplash, etc.) au moment du build :
 // téléchargées, converties en WebP en 3 tailles et servies depuis le site.
@@ -69,6 +81,19 @@ module.exports = function (eleventyConfig) {
       if (!/\ssizes=/.test(out)) out = out.replace(/<img\b/, '<img sizes="(max-width: 700px) 100vw, 50vw"');
       if (!/\swidth=/.test(out)) out = out.replace(/<img\b/, `<img width="${largest.width}" height="${largest.height}"`);
       content = content.split(tag).join(out);
+    }
+    return content;
+  });
+
+  eleventyConfig.addTransform("images-dimensions", async function (content, outputPath) {
+    if (!outputPath || !outputPath.endsWith(".html")) return content;
+    const tags = content.match(/<img\b[^>]*\ssrc="\/assets\/[^"]+"[^>]*>/g);
+    if (!tags) return content;
+    for (const tag of new Set(tags)) {
+      if (/\swidth=/.test(tag)) continue;
+      const dim = await localSize(tag.match(/\ssrc="([^"]+)"/)[1]);
+      if (!dim) continue;
+      content = content.split(tag).join(tag.replace(/<img\b/, `<img width="${dim.width}" height="${dim.height}"`));
     }
     return content;
   });

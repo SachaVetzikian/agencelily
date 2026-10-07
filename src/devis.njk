@@ -5,16 +5,18 @@ meta: "Demandez votre devis gratuit pour un bar gourmand, un livre d'or audio, u
 ---
 {% set crumbs = [{ nom: "Devis" }] %}
 {% include "partials/crumbs.njk" %}
-<section class="hero"><div class="wrap two-cols">
-<div>
+<section class="page-head" style="padding-bottom:0;"><div class="wrap">
 <span class="eyebrow">Gratuit et sans engagement</span>
-<h1>Votre devis sous {{ site.delaiReponse }}</h1>
-<p class="lede">Deux minutes pour nous décrire votre événement. On vérifie la disponibilité de votre date et on vous envoie un devis précis, frais de déplacement compris.</p>
+<h1>Vérifier ma date</h1>
+<p class="lede">Disponibilité et devis précis sous {{ site.delaiReponse }}, frais de déplacement compris.</p>
+</div></section>
+<section class="section" style="padding-top:var(--s6);"><div class="wrap two-cols">
+<div>
 
 {# Formulaire Tally : renseigner "tallyId" dans src/_data/site.json.
    Dans Tally, créer les champs cachés "evenement", "service", "pack", "config", "invites" et "estimation" pour récupérer la page d'origine,
    et régler la redirection de fin vers https://www.agencelily.fr/merci/ #}
-<div class="box" id="recap" hidden style="margin-top:24px;"><span class="eyebrow">Votre sélection</span><p id="recap-text" style="margin:0;"></p></div>
+<div class="box" id="recap" hidden style="margin-bottom:24px;"><span class="eyebrow">Votre sélection</span><p id="recap-text" style="margin:0;"></p></div>
 <script>
 (function () {
   var q = new URLSearchParams(location.search), c = q.get("config");
@@ -25,20 +27,22 @@ meta: "Demandez votre devis gratuit pour un bar gourmand, un livre d'or audio, u
 })();
 </script>
 {% if site.tallyId %}
-<div style="margin-top:32px;">
+<div>
 <iframe id="tally-devis" data-tally-src="https://tally.so/embed/{{ site.tallyId }}?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="700" frameborder="0" marginheight="0" marginwidth="0" title="Demande de devis"></iframe>
 </div>
 {% else %}
-<div class="devis-contact" style="margin-top:32px;">
+{% set mailDevis = "mailto:" + site.email + "?subject=Livre%20d%27or%20audio%20-%20v%C3%A9rifier%20ma%20date&body=Date%20%3A%0ALieu%20%3A%0AType%20d%27%C3%A9v%C3%A9nement%20%3A%0ANombre%20d%27invit%C3%A9s%20%3A%0AFormule%20souhait%C3%A9e%20%3A" %}
+<div class="devis-contact">
 <span class="eyebrow">Écrivez-nous</span>
-<a class="mail" href="mailto:{{ site.email }}?subject=Livre%20d%27or%20audio%20-%20v%C3%A9rifier%20ma%20date&body=Date%20%3A%0ALieu%20%3A%0AType%20d%27%C3%A9v%C3%A9nement%20%3A%0ANombre%20d%27invit%C3%A9s%20%3A%0AFormule%20souhait%C3%A9e%20%3A" data-track="email">{{ site.email }}</a>
-<p style="margin:0;color:var(--muted);">Indiquez la date, le lieu et l'événement. Réponse sous {{ site.delaiReponse }}.</p>
+<a class="mail" href="{{ mailDevis }}" data-track="email">{{ site.email }}</a>
+<p style="margin:0;color:var(--muted);">Indiquez la date, le lieu et l'événement. Le message est déjà prêt, il suffit de compléter.</p>
+<div><a class="btn primary" href="{{ mailDevis }}" data-track="email">Écrire mon message</a></div>
 </div>
 {% endif %}
 </div>
 <div>
 <div class="box" style="position:sticky;top:96px;">
-<h3>Ce qui se passe ensuite</h3>
+<h2 style="font-size:var(--fs-body);font-family:var(--font);text-transform:uppercase;letter-spacing:.06em;font-weight:500;">Ce qui se passe ensuite</h2>
 <div class="steps" style="grid-template-columns:1fr;gap:12px;margin-top:16px;">
 <div class="step"><p><strong>Sous {{ site.delaiReponse }}</strong>, on vous confirme la disponibilité et on vous envoie le devis.</p></div>
 <div class="step"><p><strong>Un acompte</strong> bloque votre date.</p></div>

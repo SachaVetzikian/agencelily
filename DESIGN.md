@@ -20,7 +20,7 @@ Toutes les valeurs vivent dans `src/assets/style.css` (bloc `:root` et couche «
 | `--white` | `#ffffff` | Cartes, texte sur photo |
 | `--line` | `#e2d9cf` | Filets, bordures |
 | `--ink` | `#2a2420` | Brun très foncé : texte, boutons contour |
-| `--muted` | `#8b8079` | Texte secondaire, seconde moitié des paragraphes deux tons |
+| `--muted` | `#6f655e` | Texte secondaire, seconde moitié des paragraphes deux tons (contraste 5,3 sur ivoire, 4,8 sur sable) |
 | `--accent` | `#7a6558` | Taupe : bouton principal, surtitres, puces, footer |
 | `--accent-dark` | `#5f4d42` | Survol du bouton principal |
 
@@ -37,8 +37,8 @@ Deux familles, auto-hébergées dans `src/assets/fonts/` :
 | `--fs-small` | 13 px | Boutons (bas de casse), notes, légendes, liens, texte des cartes |
 | `--fs-body` | 16 px | Texte courant, h3 en capitales |
 | `--fs-lead` | 18 à 21 px | Paragraphe d'intro centré en deux tons |
-| `--fs-h2` | 32 à 56 px | H2 (Instrument Serif) |
-| `--fs-h1` | 44 à 92 px | H1 (Instrument Serif) |
+| `--fs-h2` | 32 à 52 px | H2 (Instrument Serif) |
+| `--fs-h1` | 46 à 96 px | H1 (Instrument Serif) |
 | `--fs-display` | 48 à 88 px | Phrase manifeste, prix des formules (Instrument Serif) |
 
 **Règles de composition**
@@ -60,9 +60,12 @@ Deux familles, auto-hébergées dans `src/assets/fonts/` :
 
 ## 5. Formes et interactions
 - Cibles tactiles : 44 px minimum pour tout lien isolé (liens du footer, fil d'Ariane, liens « Comment ça marche », questions de FAQ).
-- La barre de contact mobile est masquée sur les pages Devis et Merci.
-- Photos, cartes, encarts, tuiles : **rayon 0**.
-- Boutons, pastilles, badges : **pilule** (`999px`).
+- La barre de contact mobile est masquée sur les pages Devis et Merci. Sur le Simulateur, elle est remplacée par une barre « total estimé + Vérifier ma date ».
+- Chaque page a un bouton d'action dans le premier écran mobile.
+- Photos, cartes, encarts, tuiles, boutons, badges : **rayon 2 px** (`--radius`). Aucune pilule.
+- Focus clavier : contour taupe de 2 px (`:focus-visible`), blanc sur photo et sur le footer.
+- Images locales : largeur et hauteur ajoutées automatiquement au build (transform `images-dimensions`).
+- Contraste : tout texte atteint 4,5 (WCAG AA). Ne jamais éclaircir `--muted`.
 - Bordures : 1 px `--line`, uniquement quand un fond ne suffit pas.
 
 ## 6. Composants
@@ -93,6 +96,8 @@ Deux familles, auto-hébergées dans `src/assets/fonts/` :
 - Sur photo ou fond taupe : contour blanc (automatique dans le hero, le bandeau, le footer).
 - Un seul libellé d'action principale sur tout le site : « Vérifier ma date ».
 
+**En-tête de page sans photo** (`.page-head`) : surtitre, H1 et phrase grise centrés, boutons dessous (Tarifs, Devis, Simulateur).
+
 **Fil d'Ariane** : posé en haut de la photo du hero. **Visuel manquant** : fond neutre seul, sans étiquette. **Carrousel mobile** (`.m-rail`) pour les grilles qui rallongent la page.
 
 ## 7. Images
@@ -100,11 +105,11 @@ Deux familles, auto-hébergées dans `src/assets/fonts/` :
 - Scènes réelles plutôt que posées : invités, mains, détails de table.
 - Formats : hero 16:9 (recadré en 4:3 sur mobile), cartes 3:2, galerie libre.
 - Pas de texte incrusté dans les photos.
-- Photos provisoires Unsplash à remplacer par les vraies prestations.
+- Photos provisoires générées (sauf le baby shower, encore sur Unsplash) : à remplacer par les vraies prestations.
 
 ## 8. À ne pas faire
-- Pas d'arrondi sur une photo ou une carte.
+- Pas d'arrondi au-delà de 2 px.
 - Pas d'ombre portée.
 - Aucune autre couleur que la palette ivoire, sable, brun et taupe.
-- Pas de titre de section en bas de casse.
+- Pas de titre en capitales, sauf le H1 du hero et les h3 étiquettes.
 - Pas de tiret long (—) dans les textes.

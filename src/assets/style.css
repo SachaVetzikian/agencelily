@@ -6,7 +6,7 @@
   --surface: #f0ebe4;     /* sable : sections alternées, cartes */
   --line: #e2d9cf;        /* filets */
   --ink: #2a2420;         /* brun très foncé : texte */
-  --muted: #8b8079;       /* texte secondaire */
+  --muted: #6f655e;       /* texte secondaire : 5,3 sur ivoire, 4,8 sur sable (WCAG AA) */
   --black: #2a2420;       /* alias historique : jamais de noir pur */
   --accent: #7a6558;      /* taupe : action principale, surtitres, footer */
   --accent-dark: #5f4d42;
@@ -31,7 +31,7 @@
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font); font-size: var(--fs-body); line-height: 1.65; font-weight: 400; -webkit-font-smoothing: antialiased; }
-img { max-width: 100%; display: block; }
+img { max-width: 100%; height: auto; display: block; }
 a { color: inherit; }
 p { margin: 0 0 var(--s4); }
 /* Titres : grand serif éditorial en bas de casse. Les h3 restent des petites étiquettes en capitales. */
@@ -579,3 +579,54 @@ p, li { text-wrap: pretty; }
 }
 /* Lisibilité du titre sur photo chargée */
 .hero-full::after { background: linear-gradient(to bottom, rgba(30,22,18,.62), rgba(30,22,18,.18) 45%, rgba(30,22,18,.05) 60%, rgba(30,22,18,.55)); }
+
+/* ---------- Audit UX/UI ---------- */
+/* Navigation au clavier : contour taupe visible, jamais au clic souris */
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.hero-full :focus-visible, .testimonial :focus-visible, .footer :focus-visible { outline-color: var(--white); }
+.config-item:has(input:focus-visible) { outline: 2px solid var(--accent); }
+/* Footer : liens en blanc plein (contraste 5,5 sur taupe) */
+.footer, .footer-min .f-links a { color: var(--white); }
+
+/* Pages sans photo (tarifs, devis, simulateur) : en-tête centré façon Rosella */
+.page-head { text-align: center; padding: var(--s7) 0 var(--s6); }
+.page-head h1 { max-width: 860px; margin: 0 auto var(--s4); }
+.page-head .lede { margin: 0 auto; color: var(--muted); font-size: var(--fs-body); }
+.page-head .btns { justify-content: center; }
+@media (max-width: 700px) { .page-head { padding: var(--s5) 0; } }
+.crumbs + .page-head { padding-top: var(--s5); }
+
+/* Tableaux : filets fins, pas de fond blanc en bloc */
+.table { background: transparent; }
+.table th { color: var(--accent); }
+.table td:last-child { font-family: var(--serif); font-size: var(--fs-lead); font-weight: 400; }
+.table a { text-decoration: none; }
+.table a:hover strong { color: var(--accent); }
+
+/* Formules en cartes (tarifs, pages service) : badge et contour taupe */
+.formule { border: 1px solid var(--line); }
+.formule.pop { outline: 1px solid var(--accent); }
+.formule h3 { font-family: var(--serif); font-size: var(--fs-h2); font-weight: 400; text-transform: none; letter-spacing: -0.01em; margin: 0; }
+.formule .amount { color: var(--ink); }
+.formule .check { font-size: var(--fs-small); }
+
+/* Simulateur */
+.config-item { border: 1px solid var(--line); background: var(--white); outline-color: transparent; }
+.config-item:has(input:checked) { outline: 1px solid var(--accent); border-color: var(--accent); }
+.config-item input { accent-color: var(--accent); }
+.config-total strong { font-family: var(--serif); font-weight: 400; }
+.config-summary .box { border: 1px solid var(--line); }
+/* Mobile : total et bouton toujours visibles en bas d'écran */
+.config-sticky { display: none; }
+@media (max-width: 900px) {
+  .config-sticky { position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; display: flex; align-items: center; justify-content: space-between; gap: var(--s4); padding: 10px 16px calc(10px + env(safe-area-inset-bottom)); background: var(--bg); border-top: 1px solid var(--line); }
+  .config-sticky span { font-size: var(--fs-label); letter-spacing: .14em; text-transform: uppercase; color: var(--accent); display: block; }
+  .config-sticky strong { font-family: var(--serif); font-size: var(--fs-h2); font-weight: 400; line-height: 1; }
+  body:has(.config-sticky) { padding-bottom: 76px; }
+}
+
+/* Devis : adresse e-mail juste sous le titre */
+.devis-contact { border: 1px solid var(--line); background: var(--white); }
+/* Surtitre porté par un h2 (hiérarchie des titres sans changer le visuel) */
+h2.eyebrow { font-family: var(--font); font-size: var(--fs-label); line-height: 1.65; letter-spacing: .22em; margin: 0; }
+.config-title small { font-family: var(--font); text-transform: uppercase; }

@@ -1,4 +1,4 @@
-{% if page.url != "/devis/" and page.url != "/merci/" %}
+{% if page.url != "/devis/" and page.url != "/merci/" and page.url != "/configurateur/" %}
 {# Barre de contact fixe sur mobile : devis toujours visible, WhatsApp et appel si renseignés dans site.json #}
 <div class="contact-bar" role="complementary" aria-label="Contact rapide">
 {% if site.whatsapp %}<a class="cb-btn" href="https://wa.me/{{ site.whatsapp }}?text={{ site.whatsappMessage | urlencode }}" rel="noopener" target="_blank" data-track="whatsapp">WhatsApp</a>{% endif %}
