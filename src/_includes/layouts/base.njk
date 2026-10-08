@@ -6,6 +6,8 @@
 <title>{{ title }}</title>
 <meta name="description" content="{{ meta }}">
 <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+{% if robots %}<meta name="robots" content="{{ robots }}">{% endif %}
+{% if site.googleVerification %}<meta name="google-site-verification" content="{{ site.googleVerification }}">{% endif %}
 <meta property="og:type" content="website">
 <meta property="og:title" content="{{ title }}">
 <meta property="og:description" content="{{ meta }}">
@@ -20,6 +22,8 @@
 <link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <meta name="theme-color" content="#f8f6f2">
+<link rel="preload" href="/assets/fonts/instrument-serif-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/fonts/fonts.css">
 <link rel="stylesheet" href="/assets/style.css">
 <script type="application/ld+json">

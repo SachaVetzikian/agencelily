@@ -43,6 +43,10 @@
       {
         "q": "Combien de temps à l'avance réserver pour un mariage ?",
         "a": "Pour un samedi entre mai et septembre, réservez plusieurs mois à l'avance : ce sont les dates qui partent en premier."
+      },
+      {
+        "q": "Combien coûte un livre d'or audio pour un mariage ?",
+        "a": "200 € pour l'audio, 300 € avec la vidéo (la formule la plus choisie pour un mariage), 400 € avec un animateur qui va chercher les invités. Livraison et installation comprises à Paris et en Île-de-France."
       }
     ],
     "intro": "Leur voix, le jour où vous avez dit oui. Livré et installé sur votre lieu de réception, dès 200 €.",
@@ -87,6 +91,14 @@
       {
         "q": "Faut-il beaucoup d'invités ?",
         "a": "Non, le livre d'or audio fonctionne aussi bien pour 20 que pour 150 invités."
+      },
+      {
+        "q": "Pour quels anniversaires ?",
+        "a": "Pour tous : 18 ans, 30 ans, 40 ans, 50 ans, 60 ans et plus. Plus l'anniversaire est marquant, plus les messages sont précieux."
+      },
+      {
+        "q": "Combien coûte un livre d'or audio pour un anniversaire ?",
+        "a": "200 € pour l'audio, 300 € avec la vidéo, 400 € avec un animateur. Livraison et installation comprises à Paris et en Île-de-France."
       }
     ],
     "intro": "Le cadeau collectif qui se réécoute. Livré et installé chez vous, dès 200 €.",
@@ -130,6 +142,10 @@
       {
         "q": "Intervenez-vous le dimanche ?",
         "a": "Oui, nous intervenons 7 jours sur 7, selon les disponibilités."
+      },
+      {
+        "q": "Combien coûte un livre d'or audio pour un baptême ?",
+        "a": "200 € pour l'audio, 300 € avec la vidéo, 400 € avec un animateur. Livraison et installation comprises à Paris et en Île-de-France."
       }
     ],
     "intro": "Les messages de la famille à l'enfant, à écouter quand il sera grand. Dès 200 €.",
@@ -173,6 +189,14 @@
       {
         "q": "Les collègues à distance peuvent-ils participer ?",
         "a": "Le téléphone recueille les messages sur place. Parlez-nous de votre besoin au moment du devis pour les collègues absents."
+      },
+      {
+        "q": "Quels messages pour un livre d'or de départ à la retraite ?",
+        "a": "Un souvenir de travail partagé, une anecdote de réunion, un merci, un conseil pour la suite. À l'oral, chacun trouve ses mots en quelques secondes, même ceux qui n'aiment pas écrire."
+      },
+      {
+        "q": "Combien coûte un livre d'or audio pour un pot de départ ?",
+        "a": "200 € pour l'audio, 300 € avec la vidéo, 400 € avec un animateur. Livraison et installation comprises à Paris et en Île-de-France, facture au nom de l'entreprise."
       }
     ],
     "intro": "Pour un départ, une retraite ou un anniversaire d'entreprise. Dès 200 €.",

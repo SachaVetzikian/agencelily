@@ -14,6 +14,8 @@ faqProduit:
     a: "Oui, c'est la formule Audio + vidéo à 300 €, la plus choisie. Vos invités parlent au téléphone et sont filmés en même temps."
   - q: "Que se passe-t-il si le téléphone ne fonctionne pas ?"
     a: "Le matériel est vérifié avant chaque prestation et installé par nos soins sur place. Si un souci survient pendant l'événement, vous avez un contact direct pour nous joindre."
+  - q: "Quelle différence entre un livre d'or audio, vidéo et numérique ?"
+    a: "Le livre d'or audio enregistre la voix de vos invités sur un téléphone vintage. La version vidéo filme aussi leur visage pendant qu'ils parlent. Livre d'or numérique est le nom général : dans les deux cas, vous recevez des fichiers à écouter ou regarder, et non des pages écrites."
   - q: "Combien de temps à l'avance faut-il réserver ?"
     a: "Quelques semaines suffisent en général. Pour un samedi entre mai et septembre, réservez plusieurs mois avant : ce sont les dates les plus demandées."
 ---
@@ -30,6 +32,7 @@ faqProduit:
 <div>
 <p>Un téléphone vintage installé pendant votre événement. Vos invités décrochent, écoutent votre message d'accueil et parlent après le bip. La version vidéo filme aussi leur visage.</p>
 <p>Après la fête, vous recevez tous les messages par lien en ligne. Clé USB en option.</p>
+<p>On l'appelle aussi livre d'or sonore, livre d'or numérique ou audio guest book : c'est l'alternative vivante au livre d'or papier.</p>
 </div>
 </div></section>
 
@@ -65,7 +68,7 @@ faqProduit:
 </div></section>
 
 <section class="section"><div class="wrap">
-<h2>Ce que vos invités entendent</h2>
+<h2>Exemples de messages d'accueil</h2>
 <div class="quotes">{% for x in occasions %}<blockquote>{{ x.messagesAccueil[0] }}</blockquote>{% endfor %}</div>
 <ul class="inline-list" style="margin-top:var(--s6);">{% for x in occasions %}<li><a href="{{ x.url }}">Livre d'or {{ x.nom | lower }}</a></li>{% endfor %}</ul>
 </div></section>

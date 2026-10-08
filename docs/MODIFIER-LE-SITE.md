@@ -16,6 +16,7 @@ Tout le contenu est dans des fichiers texte. Tu les modifies sur GitHub, Vercel 
 | Un prix de formule du livre d'or | `src/_data/services.json` | `"formules"` > `"prix"` |
 | Le prix d'un pack | `src/_data/evenements.json` | `"pack"` > `"prix"` et `"valeur"` |
 | Le téléphone, WhatsApp, Instagram | `src/_data/site.json` | `"phone"`, `"whatsapp"`, `"instagram"` |
+| Le code de vérification Google Search Console | `src/_data/site.json` | `"googleVerification"` |
 | L'adresse qui reçoit les devis | Vercel > Settings > Environment Variables | `DEVIS_TO` |
 | Ajouter un avis client | `src/_data/avis.json` | voir modèle ci-dessous |
 | Mettre à jour le nombre d'avis Google | `src/_data/site.json` | `"avis"` > `"nombre"` (le compteur s'affiche à partir de 5 avis) |
