@@ -15,16 +15,26 @@ npm run build  # sortie dans _site/
 
 Hébergement : Vercel (`vercel.json`). Design system : `DESIGN.md` (tokens dans `src/assets/style.css`).
 
-## Formulaire de devis (Tally)
-1. Créer le formulaire sur tally.so
-2. Ajouter les champs cachés `evenement`, `service`, `pack`, `config`, `invites` et `estimation` (page d'origine et sélection du simulateur)
-3. Régler la fin du formulaire sur une redirection vers `https://www.agencelily.fr/merci/`
-4. Copier l'ID du formulaire (`tally.so/r/XXXXXX`) dans `src/_data/site.json`, champ `tallyId`
+## Formulaire de devis
+Le formulaire de `/devis/` envoie la demande à `api/devis.js` (fonction Vercel), qui la transmet par e-mail via Resend. Le bouton « Répondre » de l'e-mail répond directement au client.
+
+Mise en service (une fois) :
+1. Créer un compte gratuit sur resend.com avec l'adresse qui doit recevoir les demandes
+2. Resend > API Keys > Create API Key (droit « Sending access »), copier la clé
+3. Vercel > projet > Settings > Environment Variables, ajouter :
+   - `RESEND_API_KEY` : la clé
+   - `DEVIS_TO` : l'adresse du compte Resend
+4. Redéployer (Deployments > ⋯ > Redeploy)
+
+Optionnel : vérifier le domaine agencelily.fr dans Resend (DNS chez OVH) puis définir `DEVIS_FROM` (ex. `Agence Lily <devis@agencelily.fr>`) pour envoyer à n'importe quelle adresse.
+
+Le formulaire récupère la page d'origine et la sélection du simulateur (`evenement`, `service`, `pack`, `config`, `invites`, `estimation`). Champ piège anti-robots inclus. En cas d'échec, le visiteur voit l'e-mail et le téléphone.
 
 Guide d'édition depuis le téléphone : `docs/MODIFIER-LE-SITE.md`.
 
 ## À compléter avant la mise en ligne
-- `src/_data/site.json` : ID Tally, téléphone, WhatsApp, Instagram, lien des avis Google, fiche Google Business, fondateur (page À propos)
+- Variables Vercel du formulaire (`RESEND_API_KEY`, `DEVIS_TO`)
+- `src/_data/site.json` : WhatsApp, Instagram, lien des avis Google, fiche Google Business, fondateur (page À propos)
 - Photos : remplacer les images Unsplash provisoires par les vraies (`"image"` sur chaque service/événement)
 - Avis Google réels sur la home (jamais d'avis inventés)
 - Mentions légales (SIRET, adresse, hébergeur)

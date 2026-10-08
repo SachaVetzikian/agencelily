@@ -13,32 +13,97 @@ meta: "Demandez votre devis gratuit pour un bar gourmand, un livre d'or audio, u
 <section class="section" style="padding-top:var(--s6);"><div class="wrap two-cols">
 <div>
 
-{# Formulaire Tally : renseigner "tallyId" dans src/_data/site.json.
-   Dans Tally, créer les champs cachés "evenement", "service", "pack", "config", "invites" et "estimation" pour récupérer la page d'origine,
-   et régler la redirection de fin vers https://www.agencelily.fr/merci/ #}
-<div class="box" id="recap" hidden style="margin-bottom:24px;"><span class="eyebrow">Votre sélection</span><p id="recap-text" style="margin:0;"></p></div>
+{# Formulaire maison : envoyé à /api/devis (fonction Vercel), qui transmet la demande par e-mail.
+   Configuration : variables RESEND_API_KEY et DEVIS_TO dans Vercel (voir README). #}
+{% set livre = services | findBySlug("livre-dor-audio-video") %}
+<form class="devis-form" id="devis-form" action="/api/devis" method="post" novalidate>
+<div class="box" id="recap" hidden><span class="eyebrow">Votre sélection</span><p id="recap-text" style="margin:0;"></p></div>
+<div class="f-row">
+<label class="f-field"><span>Prénom</span><input name="prenom" autocomplete="given-name" required></label>
+<label class="f-field"><span>Date de l'événement</span><input name="date" type="date" required></label>
+</div>
+<div class="f-row">
+<label class="f-field"><span>E-mail</span><input name="email" type="email" autocomplete="email" inputmode="email" required></label>
+<label class="f-field"><span>Téléphone <small>facultatif</small></span><input name="telephone" type="tel" autocomplete="tel" inputmode="tel"></label>
+</div>
+<div class="f-row">
+<label class="f-field"><span>Événement</span><select name="evenement">
+{% for e in evenements %}<option value="{{ e.nom }}" data-slug="{{ e.slug }}">{{ e.nom }}</option>{% endfor %}
+<option value="Autre">Autre</option>
+</select></label>
+<label class="f-field"><span>Ville ou lieu</span><input name="lieu" autocomplete="address-level2" placeholder="Ex. Vincennes"></label>
+</div>
+<div class="f-row">
+<label class="f-field"><span>Formule</span><select name="formule">
+<option value="Je ne sais pas encore">Je ne sais pas encore</option>
+{% for f in livre.formules %}<option value="{{ f.nom }} ({{ f.prix }} €)">{{ f.nom }} · {{ f.prix }} €</option>{% endfor %}
+<option value="Autre prestation">Autre prestation (bar, photobooth…)</option>
+</select></label>
+<label class="f-field"><span>Nombre d'invités <small>environ</small></span><input name="invites" type="number" min="1" max="2000" inputmode="numeric"></label>
+</div>
+<label class="f-field"><span>Message <small>facultatif</small></span><textarea name="message" rows="3" placeholder="Une question, une envie particulière…"></textarea></label>
+<input type="hidden" name="config"><input type="hidden" name="estimation"><input type="hidden" name="service"><input type="hidden" name="pack">
+<label class="f-trap" aria-hidden="true">Site web<input name="site_web" tabindex="-1" autocomplete="off"></label>
+<p class="f-error" id="f-error" role="alert" hidden></p>
+<button class="btn primary f-submit" type="submit" data-track="devis-envoi">Vérifier ma date</button>
+<p class="f-note">Réponse sous {{ site.delaiReponse }}.{% if site.phone %} Pressé ? Appelez le <a href="tel:{{ site.phone | replace(' ', '') }}" data-track="appel">{{ site.phone }}</a>.{% endif %}</p>
+</form>
 <script>
 (function () {
-  var q = new URLSearchParams(location.search), c = q.get("config");
-  if (!c) return;
-  var t = c + (q.get("invites") ? " · " + q.get("invites") + " invités" : "") + (q.get("estimation") ? " · estimation " + q.get("estimation") + " €" : "");
-  document.getElementById("recap-text").textContent = t;
-  document.getElementById("recap").hidden = false;
+  var form = document.getElementById("devis-form");
+  var err = document.getElementById("f-error");
+  var q = new URLSearchParams(location.search);
+  var contact = 'écrivez-nous à <a href="mailto:{{ site.email }}">{{ site.email }}</a>{% if site.phone %} ou appelez le <a href="tel:{{ site.phone | replace(" ", "") }}">{{ site.phone }}</a>{% endif %}.';
+  function erreur(html) { err.innerHTML = html; err.hidden = false; }
+
+  // Préremplissage depuis la page d'origine (simulateur, pages événement et service)
+  ["config", "estimation", "service", "pack", "invites"].forEach(function (k) { if (q.get(k)) form.elements[k].value = q.get(k); });
+  var ev = q.get("evenement");
+  if (ev) [].forEach.call(form.elements.evenement.options, function (o) { if (o.dataset.slug === ev) o.selected = true; });
+  var service = q.get("service");
+  if (service && service !== "livre-dor-audio-video") form.elements.formule.value = "Autre prestation";
+  var c = q.get("config");
+  if (c) {
+    // Formule choisie dans le simulateur : la plus longue qui correspond
+    var best = "";
+    [].forEach.call(form.elements.formule.options, function (o) {
+      var nom = o.value.replace(/ \(.*$/, "");
+      if (o.value.indexOf("(") > -1 && c.indexOf("Livre d'or : " + nom) === 0 && nom.length > best.length) { best = nom; form.elements.formule.value = o.value; }
+    });
+    document.getElementById("recap-text").textContent = c + (q.get("invites") ? " · " + q.get("invites") + " invités" : "") + (q.get("estimation") ? " · estimation " + q.get("estimation") + " €" : "");
+    document.getElementById("recap").hidden = false;
+  }
+  form.elements.date.min = new Date().toISOString().slice(0, 10);
+  if (q.get("erreur")) erreur("L'envoi n'a pas fonctionné. Réessayez, ou " + contact);
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    err.hidden = true;
+    var manquants = ["prenom", "date", "email"].filter(function (k) { return !form.elements[k].checkValidity(); });
+    if (manquants.length) {
+      erreur("Merci d'indiquer votre prénom, la date et un e-mail valide.");
+      form.elements[manquants[0]].focus();
+      return;
+    }
+    var btn = form.querySelector(".f-submit");
+    btn.disabled = true; btn.textContent = "Envoi…";
+    fetch(form.action, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "Accept": "application/json" },
+      body: JSON.stringify(Object.fromEntries(new FormData(form)))
+    }).then(function (r) { return r.json().catch(function () { return { ok: false }; }); })
+      .then(function (d) {
+        if (!d.ok) throw new Error(d.erreur || "envoi");
+        if (window.va) window.va("event", { name: "devis-envoye" });
+        location.href = "/merci/";
+      })
+      .catch(function () {
+        btn.disabled = false; btn.textContent = "Vérifier ma date";
+        erreur("L'envoi n'a pas fonctionné. Réessayez, ou " + contact);
+      });
+  });
 })();
 </script>
-{% if site.tallyId %}
-<div>
-<iframe id="tally-devis" data-tally-src="https://tally.so/embed/{{ site.tallyId }}?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="700" frameborder="0" marginheight="0" marginwidth="0" title="Demande de devis"></iframe>
-</div>
-{% else %}
-{% set mailDevis = "mailto:" + site.email + "?subject=Livre%20d%27or%20audio%20-%20v%C3%A9rifier%20ma%20date&body=Date%20%3A%0ALieu%20%3A%0AType%20d%27%C3%A9v%C3%A9nement%20%3A%0ANombre%20d%27invit%C3%A9s%20%3A%0AFormule%20souhait%C3%A9e%20%3A" %}
-<div class="devis-contact">
-<span class="eyebrow">Écrivez-nous</span>
-<a class="mail" href="{{ mailDevis }}" data-track="email">{{ site.email }}</a>
-<p style="margin:0;color:var(--muted);">Indiquez la date, le lieu et l'événement. Le message est déjà prêt, il suffit de compléter.</p>
-<div class="btns" style="margin-top:0;"><a class="btn primary" href="{{ mailDevis }}" data-track="email">Écrire mon message</a>{% if site.phone %}<a class="btn" href="tel:{{ site.phone | replace(' ', '') }}" data-track="appel">Appeler le {{ site.phone }}</a>{% endif %}</div>
-</div>
-{% endif %}
 </div>
 <div>
 <div class="box" style="position:sticky;top:96px;">
@@ -54,16 +119,4 @@ meta: "Demandez votre devis gratuit pour un bar gourmand, un livre d'or audio, u
 </div>
 </div></section>
 
-{% if site.tallyId %}
-<script>
-// Transmet la page d'origine (?service=… / ?evenement=…&pack=1) aux champs cachés Tally
-(function () {
-  var f = document.getElementById("tally-devis");
-  var q = new URLSearchParams(location.search);
-  var extra = ["evenement", "service", "pack", "config", "invites", "estimation"].filter(function (k) { return q.get(k); })
-    .map(function (k) { return k + "=" + encodeURIComponent(q.get(k)); }).join("&");
-  if (f && extra) f.setAttribute("data-tally-src", f.getAttribute("data-tally-src") + "&" + extra);
-})();
-</script>
-<script src="https://tally.so/widgets/embed.js" async onload="Tally.loadEmbeds()"></script>
-{% endif %}
+

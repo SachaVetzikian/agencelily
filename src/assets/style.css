@@ -630,3 +630,25 @@ p, li { text-wrap: pretty; }
 /* Surtitre porté par un h2 (hiérarchie des titres sans changer le visuel) */
 h2.eyebrow { font-family: var(--font); font-size: var(--fs-label); line-height: 1.65; letter-spacing: .22em; margin: 0; }
 .config-title small { font-family: var(--font); text-transform: uppercase; }
+
+/* Formulaire de devis */
+.devis-form { display: grid; gap: var(--s5); }
+.f-row { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s5); }
+@media (max-width: 600px) { .f-row { grid-template-columns: 1fr; } }
+.f-field { display: grid; gap: var(--s2); }
+.f-field > span { font-size: var(--fs-label); font-weight: 500; letter-spacing: .14em; text-transform: uppercase; color: var(--ink); }
+.f-field small { font-size: var(--fs-label); letter-spacing: .06em; text-transform: none; color: var(--muted); font-weight: 400; margin-left: var(--s1); }
+.f-field input, .f-field select, .f-field textarea { width: 100%; min-height: 48px; padding: 12px 14px; font: inherit; font-size: var(--fs-body); color: var(--ink); background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); -webkit-appearance: none; appearance: none; }
+.f-field textarea { resize: vertical; min-height: 96px; }
+.f-field select { background-image: linear-gradient(45deg, transparent 50%, var(--ink) 50%), linear-gradient(135deg, var(--ink) 50%, transparent 50%); background-position: calc(100% - 20px) 50%, calc(100% - 15px) 50%; background-size: 5px 5px; background-repeat: no-repeat; padding-right: 40px; }
+.f-field input:focus, .f-field select:focus, .f-field textarea:focus { border-color: var(--accent); outline: none; box-shadow: 0 0 0 1px var(--accent); }
+.f-field input::placeholder, .f-field textarea::placeholder { color: var(--muted); }
+.f-trap { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.f-submit { justify-self: start; min-height: 48px; padding: 14px 32px; font-size: var(--fs-body); }
+.f-submit:disabled { opacity: .6; cursor: wait; }
+@media (max-width: 600px) { .f-submit { justify-self: stretch; } }
+.f-note { margin: 0; font-size: var(--fs-small); color: var(--muted); }
+.f-note a { color: var(--ink); }
+.f-error { margin: 0; padding: var(--s4) var(--s5); background: var(--white); border: 1px solid var(--accent); font-size: var(--fs-small); }
+.f-error a { color: var(--ink); }
+.devis-form .box { padding: var(--s4) var(--s5); border: 1px solid var(--line); }
