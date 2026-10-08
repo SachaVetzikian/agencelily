@@ -2,7 +2,7 @@
 layout: layouts/base.njk
 permalink: /livre-d-or-audio-video/
 title: "Livre d'or audio et vidéo sur téléphone vintage | Agence Lily"
-meta: "Livre d'or audio et vidéo sur téléphone vintage : message d'accueil personnalisé, installation à Paris et en Île-de-France. 3 formules de 200 à 400 €. Devis gratuit."
+meta: "Livre d'or audio et vidéo sur téléphone vintage : message d'accueil personnalisé, installé à Paris et en Île-de-France. De 200 à 400 €. Devis gratuit."
 faqProduit:
   - q: "Qu'est-ce qu'un livre d'or audio et vidéo ?"
     a: "C'est un téléphone vintage sur lequel vos invités laissent un message vocal pendant votre événement. Avec la formule vidéo, un espace filmé enregistre aussi leur visage. Vous récupérez tous les messages après la fête."
@@ -40,6 +40,7 @@ faqProduit:
 <li>Nous installons le téléphone sur votre lieu.</li>
 <li>Vos invités décrochent, parlent, raccrochent.</li>
 </ol>
+<p style="margin-top:var(--s6);font-size:var(--fs-small);"><a class="link" href="/blog/comment-fonctionne-livre-d-or-audio/">Le guide : comment fonctionne un livre d'or audio</a></p>
 </div></section>
 
 <section class="section alt" id="formules"><div class="wrap">
@@ -52,20 +53,21 @@ faqProduit:
 </div></section>
 
 <section class="section alt"><div class="wrap split-lead">
-<h2>Ce qui est inclus</h2>
-<ul class="check" style="font-size:var(--fs-lead);font-weight:300;">
+<h2>Livraison, installation et suivi inclus</h2>
+<div><ul class="check" style="font-size:var(--fs-lead);font-weight:300;">
 <li>Le téléphone vintage et son affiche</li>
 <li>Livraison et installation à Paris et en Île-de-France</li>
 <li>Vérification sur place avant l'arrivée des invités</li>
 <li>Un contact joignable pendant l'événement</li>
 <li>Vos messages par lien en ligne après la fête</li>
 </ul>
+<p style="margin:var(--s5) 0 0;font-size:var(--fs-small);"><a class="link" href="/location-livre-d-or-audio/">Location de livre d'or audio en Île-de-France : zone et réservation</a></p></div>
 </div></section>
 
 <section class="section"><div class="wrap">
 <h2>Ce que vos invités entendent</h2>
 <div class="quotes">{% for x in occasions %}<blockquote>{{ x.messagesAccueil[0] }}</blockquote>{% endfor %}</div>
-<ul class="inline-list" style="margin-top:var(--s6);">{% for x in occasions %}<li><a href="{{ x.url }}">{{ x.nom }}</a></li>{% endfor %}</ul>
+<ul class="inline-list" style="margin-top:var(--s6);">{% for x in occasions %}<li><a href="{{ x.url }}">Livre d'or {{ x.nom | lower }}</a></li>{% endfor %}</ul>
 </div></section>
 
 {% set faq = faqProduit.concat(livre.faq) %}{% include "partials/faq-section.njk" %}

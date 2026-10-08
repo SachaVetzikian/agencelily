@@ -47,9 +47,13 @@ meta: "Tarifs du livre d'or audio et vidéo : 200 € audio, 300 € audio + vid
 <section class="section alt"><div class="wrap faq-center">
 <div class="section-title"><span class="eyebrow">Bon à savoir</span><h2>Vos questions</h2></div>
 {% set faq = [
+  { q: "Combien coûte un livre d'or audio ?", a: "200 € pour la formule audio, 300 € avec la vidéo, 400 € avec un animateur. Livraison et installation comprises à Paris et en Île-de-France. Options : clé USB (+25 €), décoration florale (+50 €)." },
   { q: "Les frais de déplacement sont-ils inclus ?", a: "Ils sont calculés selon votre lieu en Île-de-France et indiqués clairement sur votre devis, avant toute réservation." },
   { q: "Comment réserver ma date ?", a: "Un acompte confirme la réservation. Le solde est réglé avant l'événement." },
   { q: "Et si j'ai moins d'invités que le minimum ?", a: "Demandez-nous un devis : nous adaptons le forfait aux petits comités." }
 ] %}{% include "partials/faq.njk" %}
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{% for f in faq %}{"@type":"Question","name":{{ f.q | json | safe }},"acceptedAnswer":{"@type":"Answer","text":{{ f.a | json | safe }}}}{% if not loop.last %},{% endif %}{% endfor %}]}
+</script>
 </div></section>
 {% include "partials/cta.njk" %}

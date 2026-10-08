@@ -1,7 +1,7 @@
 ---
 title: "Idées de livre d'or original : 7 alternatives | Agence Lily"
 h1: "Idées de livre d'or original : 7 alternatives au livre papier"
-meta: "Idées de livre d'or original pour un mariage, un anniversaire ou un baptême : livre d'or audio, vidéo, polaroid, cartes, arbre à empreintes. Comparatif et conseils."
+meta: "Idées de livre d'or original pour un mariage, un anniversaire ou un baptême : audio, vidéo, polaroid, cartes, arbre à empreintes. Comparatif et conseils."
 extrait: "Le livre d'or papier finit souvent au fond d'un placard avec trois « Félicitations ». Voici 7 idées plus originales, avec leurs avantages et leurs limites."
 date: 2026-09-25
 ---

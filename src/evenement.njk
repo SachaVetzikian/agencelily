@@ -59,7 +59,7 @@ permalink: "/evenements/{{ e.slug }}/"
 
 {% for o in occasions %}{% if o.evenement == e.slug %}<section class="section"><div class="wrap"><div class="enquiry">
 <div><h2>Le livre d'or audio pour {{ e.unNom }}</h2><p>Exemples de messages d'accueil, formules et logistique : tout sur le livre d'or audio et vidéo pour votre {{ e.nom | lower }}.</p></div>
-<a class="btn" href="{{ o.url }}">Découvrir</a>
+<a class="btn" href="{{ o.url }}">Livre d'or audio pour {{ e.unNom }}</a>
 </div></div></section>{% endif %}{% endfor %}
 
 <section class="section">

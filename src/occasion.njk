@@ -23,6 +23,11 @@ permalink: "{{ o.url }}"
 <div><p>{{ o.enBref }}</p></div>
 </div></section>
 
+<section class="section" style="padding-top:0;"><div class="wrap split-lead">
+<h2>Le jour J</h2>
+<div><p>{{ o.usage }}</p><p>{{ o.logistique }}</p></div>
+</div></section>
+
 <section class="section alt"><div class="wrap">
 <h2>Exemples de messages d'accueil</h2>
 <div class="quotes">{% for m in o.messagesAccueil %}<blockquote>{{ m }}</blockquote>{% endfor %}</div>
@@ -30,7 +35,8 @@ permalink: "{{ o.url }}"
 
 <section class="section"><div class="wrap split-lead">
 <h2>Idées de messages</h2>
-<ul class="inline-list" style="flex-direction:column;">{% for i in o.idees %}<li>{{ i }}</li>{% endfor %}</ul>
+<div><ul class="inline-list" style="flex-direction:column;">{% for i in o.idees %}<li>{{ i }}</li>{% endfor %}</ul>
+<p style="margin-top:var(--s5);font-size:var(--fs-small);"><a href="/blog/idees-livre-d-or-original/">Plus d'idées de livre d'or original</a></p></div>
 </div></section>
 
 <section class="section alt" id="formules"><div class="wrap">
@@ -43,7 +49,7 @@ permalink: "{{ o.url }}"
 {% set avisService = "livre-dor-audio-video" %}{% include "partials/avis.njk" %}
 
 <section class="section" style="padding-top:0;"><div class="wrap">
-<ul class="inline-list">{% for x in occasions %}{% if x.slug != o.slug %}<li><a href="{{ x.url }}">Livre d'or {{ x.nom | lower }}</a></li>{% endif %}{% endfor %}<li><a href="/location-livre-d-or-audio/">Conditions de location</a></li></ul>
+<ul class="inline-list">{% for x in occasions %}{% if x.slug != o.slug %}<li><a href="{{ x.url }}">Livre d'or {{ x.nom | lower }}</a></li>{% endif %}{% endfor %}<li><a href="/location-livre-d-or-audio/">Location de livre d'or audio en Île-de-France</a></li></ul>
 </div></section>
 
 {% set devisParam = "service=livre-dor-audio-video&evenement=" + o.evenement %}
