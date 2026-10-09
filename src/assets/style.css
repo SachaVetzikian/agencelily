@@ -667,3 +667,9 @@ h2.eyebrow { font-family: var(--font); font-size: var(--fs-label); line-height: 
 .voice-bar i { position: absolute; left: 0; top: 0; bottom: 0; width: 0; background: var(--white); }
 .voice-time { font-size: var(--fs-label); letter-spacing: .08em; color: rgba(255,255,255,.75); font-variant-numeric: tabular-nums; }
 @media (max-width: 700px) { .testimonial-card { align-self: stretch; max-width: none; } .voice { min-width: 0; } }
+
+/* Logo LILY (SVG) */
+.logo img { height: 22px; width: auto; display: block; }
+@media (min-width: 961px) { .logo img { height: 26px; } }
+.f-brand { display: inline-flex; align-items: center; gap: var(--s3); }
+.f-brand img { height: 12px; width: auto; }

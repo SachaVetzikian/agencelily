@@ -70,7 +70,7 @@ Deux familles, auto-hébergées dans `src/assets/fonts/` :
 
 ## 6. Composants
 
-**En-tête** : fond ivoire, filet bas. Liens à gauche (Livre d'or, Location, Mariage, Tarifs), logo centré (pictogramme téléphone + « agence lily » en serif italique), bouton taupe « Vérifier ma date » à droite. Mobile : logo à gauche, menu à droite.
+**En-tête** : fond ivoire, filet bas. Liens à gauche (Livre d'or, Location, Mariage, Tarifs), logo LILY centré (`assets/logo-lily.svg`, 26 px de haut, 22 px sur mobile ; version blanche `logo-lily-blanc.svg` dans le footer), bouton taupe « Vérifier ma date » à droite. Mobile : logo à gauche, menu à droite.
 
 **Hero encadré** (`partials/hero-full.njk`) : photo en retrait de 20 px dans la page, voile sombre en haut et en bas. H1 en capitales serif en haut à gauche. En bas à gauche : bouton contour blanc (et prix si utile). En bas à droite : légende courte (`heroIntro`).
 
