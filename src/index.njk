@@ -41,18 +41,40 @@ faqHome:
 {% include "partials/formules-zigzag.njk" %}
 </div></section>
 
-{# Bandeau témoignage : un vrai avis dès que avis.json est rempli, sinon la promesse de marque (jamais de faux témoignage) #}
-{% set qa = avis[0] %}{% set bandImg = (evenements | findBySlug("mariage")).image %}
+{# Bandeau témoignage : témoignage vocal (temoignages.json) en priorité, sinon un avis écrit (avis.json), sinon la promesse de marque (jamais de faux témoignage) #}
+{% set ta = temoignages[0] %}{% set qa = avis[0] %}{% set bandImg = (evenements | findBySlug("mariage")).image %}
 <section class="testimonial">
 {% if bandImg %}<img src="{{ bandImg }}" alt="" sizes="100vw" loading="lazy" onerror="this.remove()">{% endif %}
 <div class="wrap">
-<div><span class="eyebrow">{% if qa %}Témoignage{% else %}Notre promesse{% endif %}</span><h2>{% if qa %}Ils nous ont fait confiance{% else %}Installé, vérifié, suivi.{% endif %}</h2></div>
+<div><span class="eyebrow">{% if ta or qa %}Témoignage{% else %}Notre promesse{% endif %}</span><h2>{% if ta %}Écoutez {{ ta.prenom }}{% elif qa %}Ils nous ont fait confiance{% else %}Installé, vérifié, suivi.{% endif %}</h2></div>
 <div class="testimonial-card">
-{% if qa %}<p>« {{ qa.texte }} »</p><span>{{ qa.prenom }}{% if qa.evenement %} · {{ qa.evenement }}{% endif %}</span>
+{% if ta %}<div class="voice" data-voice>
+<button class="voice-play" type="button" aria-label="Écouter le témoignage de {{ ta.prenom }}"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="i-play" d="M8 5v14l11-7z"/><path class="i-pause" d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg></button>
+<div class="voice-body">
+<span class="voice-name">{{ ta.prenom }}{% if ta.evenement %} · {{ ta.evenement }}{% endif %}</span>
+<div class="voice-bar" aria-hidden="true"><i></i></div>
+<span class="voice-time"><span data-cur>0:00</span> / {{ ta.duree }}</span>
+</div>
+<audio preload="none" src="{{ ta.audio }}"></audio>
+</div>
+{% elif qa %}<p>« {{ qa.texte }} »</p><span>{{ qa.prenom }}{% if qa.evenement %} · {{ qa.evenement }}{% endif %}</span>
 {% else %}<p>Nous livrons le téléphone, l’installons, le vérifions avant l’arrivée de vos invités et restons joignables pendant toute la fête.</p><span>Pas un colis : une équipe.</span>{% endif %}
 </div>
 </div>
 </section>
+{% if ta %}<script>
+// Lecteur du témoignage vocal : lecture / pause, progression, clic sur la barre pour avancer
+document.querySelectorAll("[data-voice]").forEach(function (v) {
+  var a = v.querySelector("audio"), b = v.querySelector(".voice-play"), bar = v.querySelector(".voice-bar"), fill = bar.querySelector("i"), cur = v.querySelector("[data-cur]");
+  var fmt = function (t) { t = Math.floor(t || 0); return Math.floor(t / 60) + ":" + String(t % 60).padStart(2, "0"); };
+  b.addEventListener("click", function () { a.paused ? a.play() : a.pause(); });
+  a.addEventListener("play", function () { v.classList.add("is-playing"); if (window.va) window.va("event", { name: "temoignage-ecoute" }); });
+  a.addEventListener("pause", function () { v.classList.remove("is-playing"); });
+  a.addEventListener("ended", function () { v.classList.remove("is-playing"); a.currentTime = 0; });
+  a.addEventListener("timeupdate", function () { fill.style.width = (a.duration ? a.currentTime / a.duration * 100 : 0) + "%"; cur.textContent = fmt(a.currentTime); });
+  bar.addEventListener("click", function (e) { if (!a.duration) return; var r = bar.getBoundingClientRect(); a.currentTime = (e.clientX - r.left) / r.width * a.duration; });
+});
+</script>{% endif %}
 
 <section class="section"><div class="wrap">
 <div class="section-title"><span class="eyebrow">Occasions</span><h2>Pour chaque occasion</h2></div>

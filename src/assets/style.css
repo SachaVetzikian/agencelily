@@ -652,3 +652,18 @@ h2.eyebrow { font-family: var(--font); font-size: var(--fs-label); line-height: 
 .f-error { margin: 0; padding: var(--s4) var(--s5); background: var(--white); border: 1px solid var(--accent); font-size: var(--fs-small); }
 .f-error a { color: var(--ink); }
 .devis-form .box { padding: var(--s4) var(--s5); border: 1px solid var(--line); }
+
+/* Témoignage vocal (bandeau de l'accueil) */
+.voice { display: flex; align-items: center; gap: var(--s4); min-width: 280px; }
+.voice-play { flex: none; width: 56px; height: 56px; border-radius: 50%; border: 1px solid rgba(255,255,255,.85); background: transparent; color: var(--white); display: grid; place-items: center; cursor: pointer; transition: background .2s, color .2s; }
+.voice-play:hover, .is-playing .voice-play { background: var(--white); color: var(--ink); }
+.voice-play svg { width: 20px; height: 20px; fill: currentColor; }
+.voice-play .i-pause, .is-playing .voice-play .i-play { display: none; }
+.is-playing .voice-play .i-pause { display: inline; }
+.voice-body { flex: 1; display: grid; gap: var(--s2); }
+.voice-name { font-family: var(--serif); font-size: var(--fs-lead); color: var(--white); line-height: 1.2; }
+.voice-bar { position: relative; height: 2px; background: rgba(255,255,255,.3); cursor: pointer; }
+.voice-bar::before { content: ""; position: absolute; inset: -10px 0; }
+.voice-bar i { position: absolute; left: 0; top: 0; bottom: 0; width: 0; background: var(--white); }
+.voice-time { font-size: var(--fs-label); letter-spacing: .08em; color: rgba(255,255,255,.75); font-variant-numeric: tabular-nums; }
+@media (max-width: 700px) { .testimonial-card { align-self: stretch; max-width: none; } .voice { min-width: 0; } }
