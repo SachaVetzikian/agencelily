@@ -68,7 +68,7 @@ document.querySelectorAll("[data-voice]").forEach(function (v) {
   var a = v.querySelector("audio"), b = v.querySelector(".voice-play"), bar = v.querySelector(".voice-bar"), fill = bar.querySelector("i"), cur = v.querySelector("[data-cur]");
   var fmt = function (t) { t = Math.floor(t || 0); return Math.floor(t / 60) + ":" + String(t % 60).padStart(2, "0"); };
   b.addEventListener("click", function () { a.paused ? a.play() : a.pause(); });
-  a.addEventListener("play", function () { v.classList.add("is-playing"); if (window.va) window.va("event", { name: "temoignage-ecoute" }); });
+  a.addEventListener("play", function () { v.classList.add("is-playing"); if (window.lilyTrack) window.lilyTrack("temoignage_ecoute"); });
   a.addEventListener("pause", function () { v.classList.remove("is-playing"); });
   a.addEventListener("ended", function () { v.classList.remove("is-playing"); a.currentTime = 0; });
   a.addEventListener("timeupdate", function () { fill.style.width = (a.duration ? a.currentTime / a.duration * 100 : 0) + "%"; cur.textContent = fmt(a.currentTime); });

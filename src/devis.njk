@@ -94,8 +94,10 @@ meta: "Demandez votre devis gratuit pour un bar gourmand, un livre d'or audio, u
     }).then(function (r) { return r.json().catch(function () { return { ok: false }; }); })
       .then(function (d) {
         if (!d.ok) throw new Error(d.erreur || "envoi");
-        if (window.va) window.va("event", { name: "devis-envoye" });
-        location.href = "/merci/";
+        var go = function () { location.href = "/merci/"; };
+        // Conversion GA4 : on attend l'envoi (au plus 800 ms) avant de changer de page
+        if (window.gtag) { window.gtag("event", "generate_lead", { event_callback: go, event_timeout: 800, evenement: form.elements.evenement.value, formule: form.elements.formule.value }); setTimeout(go, 900); }
+        else { if (window.lilyTrack) window.lilyTrack("generate_lead"); go(); }
       })
       .catch(function () {
         btn.disabled = false; btn.textContent = "Vérifier ma date";

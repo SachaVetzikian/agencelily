@@ -15,6 +15,11 @@ npm run build  # sortie dans _site/
 
 Hébergement : Vercel (`vercel.json`). Design system : `DESIGN.md` (tokens dans `src/assets/style.css`).
 
+## Mesure d'audience (GA4)
+Renseigner l'identifiant GA4 (`G-XXXXXXX`) dans `src/_data/site.json`, champ `ga4Id`. Google Analytics ne se charge qu'après accord du visiteur (bandeau de consentement, exigence CNIL). Événements envoyés : `generate_lead` (formulaire de devis envoyé, à marquer comme événement clé dans GA4), `clic_devis`, `clic_appel`, `clic_email`, `temoignage_ecoute`.
+
+Search Console : coller le code de vérification dans `googleVerification` (même fichier), puis soumettre `sitemap.xml`.
+
 ## Formulaire de devis
 Le formulaire de `/devis/` envoie la demande à `api/devis.js` (fonction Vercel), qui la transmet par e-mail via Resend. Le bouton « Répondre » de l'e-mail répond directement au client.
 

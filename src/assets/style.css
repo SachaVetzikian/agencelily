@@ -703,3 +703,11 @@ h2.eyebrow { font-family: var(--font); font-size: var(--fs-label); line-height: 
   .fx-cols { grid-template-columns: 1fr 1fr; }
   .fx-bottom { flex-direction: column; gap: 0; }
 }
+
+/* Bandeau de consentement */
+.consent { position: fixed; left: 20px; bottom: 20px; z-index: 70; max-width: 380px; padding: var(--s5); background: var(--white); border: 1px solid var(--line); box-shadow: 0 8px 30px rgba(42,36,32,.12); font-size: var(--fs-small); }
+.consent p { margin: 0 0 var(--s4); }
+.consent-btns { display: flex; gap: var(--s3); }
+.consent-btns .btn { flex: 1; }
+@media (max-width: 760px) { .consent { left: 12px; right: 12px; bottom: 84px; max-width: none; } }
+.fx-legal { display: inline-flex; gap: var(--s5); }
