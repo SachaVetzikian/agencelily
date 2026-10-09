@@ -1,16 +1,21 @@
-{# Mesure d'audience. GA4 ne se charge qu'après accord du visiteur (exigence CNIL) ; renseigner "ga4Id" (G-XXXXXXX) dans site.json pour l'activer.
-   Événements envoyés : clics sur [data-track] (devis, appel, email…), "generate_lead" à l'envoi du formulaire, écoute du témoignage. #}
+{# Mesure d'audience.
+   - GTM (site.gtmId) : chargé sur toutes les pages en Consent Mode v2, mesure refusée par défaut ; l'accord du visiteur passe analytics_storage à "granted".
+   - GA4 direct (site.ga4Id) : utilisé seulement sans GTM, chargé après accord.
+   Événements poussés dans le dataLayer : generate_lead (devis envoyé), clic_devis, clic_appel, clic_email, temoignage_ecoute. #}
+{% set mesure = site.gtmId or site.ga4Id %}
 <script>
+window.dataLayer = window.dataLayer || [];
 window.lilyTrack = function (name, params) {
-  try { if (window.gtag) window.gtag("event", name, params || {}); } catch (e) {}
-  try { if (window.va) window.va("event", { name: name }); } catch (e) {}
+  var p = params || {};
+  {% if site.gtmId %}var o = { event: name }; for (var k in p) o[k] = p[k]; window.dataLayer.push(o);
+  {% else %}try { if (window.gtag) window.gtag("event", name, p); } catch (e) {}{% endif %}
 };
 document.addEventListener("click", function (e) {
   var el = e.target.closest && e.target.closest("[data-track]");
   if (el && el.tagName !== "BUTTON") window.lilyTrack("clic_" + el.dataset.track.replace(/-/g, "_"), { page: location.pathname });
 });
 </script>
-{% if site.ga4Id %}
+{% if mesure %}
 <div class="consent" id="consent" role="dialog" aria-label="Cookies de mesure d'audience" hidden>
 <p>Nous mesurons l'audience du site avec Google Analytics pour l'améliorer. D'accord ?</p>
 <div class="consent-btns"><button class="btn" type="button" data-consent="non">Refuser</button><button class="btn primary" type="button" data-consent="oui">Accepter</button></div>
@@ -20,24 +25,27 @@ document.addEventListener("click", function (e) {
   var KEY = "lily-consent", box = document.getElementById("consent");
   function get() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
   function set(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
-  function load() {
-    if (window.gtag) return;
+  function accept() {
+    {% if site.gtmId %}gtag("consent", "update", { analytics_storage: "granted" });
+    window.dataLayer.push({ event: "consent_granted" });
+    {% else %}if (window.gtag) return;
     var s = document.createElement("script"); s.async = true;
     s.src = "https://www.googletagmanager.com/gtag/js?id={{ site.ga4Id }}";
     document.head.appendChild(s);
-    window.dataLayer = window.dataLayer || [];
     window.gtag = function () { dataLayer.push(arguments); };
     gtag("js", new Date());
-    gtag("config", "{{ site.ga4Id }}", { anonymize_ip: true });
+    gtag("config", "{{ site.ga4Id }}", { anonymize_ip: true });{% endif %}
+  }
+  function refuse() {
+    {% if site.gtmId %}gtag("consent", "update", { analytics_storage: "denied" });{% endif %}
   }
   var c = get();
-  if (c === "oui") load(); else if (c !== "non") box.hidden = false;
+  if (c === "oui") { {% if not site.gtmId %}accept();{% endif %} } else if (c !== "non") box.hidden = false;
   box.addEventListener("click", function (e) {
     var b = e.target.closest("[data-consent]"); if (!b) return;
     set(b.dataset.consent); box.hidden = true;
-    if (b.dataset.consent === "oui") load();
+    b.dataset.consent === "oui" ? accept() : refuse();
   });
-  // Lien « Gérer les cookies » du footer
   document.addEventListener("click", function (e) {
     if (e.target.closest("[data-consent-open]")) { e.preventDefault(); box.hidden = false; }
   });

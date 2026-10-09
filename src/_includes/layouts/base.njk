@@ -2,6 +2,20 @@
 <html lang="fr">
 <head>
 <meta charset="utf-8">
+{% if site.gtmId %}<script>
+// Consent Mode v2 : tout est refusé par défaut, GTM ne dépose aucun cookie de mesure avant l'accord du visiteur
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("consent", "default", { ad_storage: "denied", ad_user_data: "denied", ad_personalization: "denied", analytics_storage: "denied", wait_for_update: 500 });
+try { if (localStorage.getItem("lily-consent") === "oui") gtag("consent", "update", { analytics_storage: "granted" }); } catch (e) {}
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','{{ site.gtmId }}');</script>
+<!-- End Google Tag Manager -->{% endif %}
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{{ title }}</title>
 <meta name="description" content="{{ meta }}">
@@ -68,6 +82,9 @@
 </script>
 </head>
 <body>
+{% if site.gtmId %}<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ site.gtmId }}" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->{% endif %}
 {% include "partials/header.njk" %}
 <main>
 {{ content | safe }}

@@ -15,8 +15,15 @@ npm run build  # sortie dans _site/
 
 Hébergement : Vercel (`vercel.json`). Design system : `DESIGN.md` (tokens dans `src/assets/style.css`).
 
-## Mesure d'audience (GA4)
-Renseigner l'identifiant GA4 (`G-XXXXXXX`) dans `src/_data/site.json`, champ `ga4Id`. Google Analytics ne se charge qu'après accord du visiteur (bandeau de consentement, exigence CNIL). Événements envoyés : `generate_lead` (formulaire de devis envoyé, à marquer comme événement clé dans GA4), `clic_devis`, `clic_appel`, `clic_email`, `temoignage_ecoute`.
+## Mesure d'audience (GTM + GA4)
+Google Tag Manager (`gtmId` dans `src/_data/site.json`, actuellement GTM-NP7VPK5P) est chargé sur toutes les pages en Consent Mode v2 : mesure refusée par défaut, accordée quand le visiteur clique « Accepter » sur le bandeau (choix mémorisé, lien « Cookies » dans le footer).
+
+À configurer dans GTM :
+1. Balise « Google tag » avec l'identifiant GA4 (G-XXXXXXX), déclencheur « Initialization - All Pages ».
+2. Balise « GA4 Event » nommée `{{Event}}`, déclencheur « Événement personnalisé » avec le nom en expression régulière `generate_lead|clic_.*|temoignage_ecoute`.
+3. Publier, puis dans GA4 marquer `generate_lead` comme événement clé.
+
+Événements envoyés dans le dataLayer : `generate_lead` (devis envoyé, avec `evenement` et `formule`), `clic_devis`, `clic_appel`, `clic_email`, `temoignage_ecoute`, `consent_granted`.
 
 Search Console : coller le code de vérification dans `googleVerification` (même fichier), puis soumettre `sitemap.xml`.
 
