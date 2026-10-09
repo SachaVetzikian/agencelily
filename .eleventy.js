@@ -65,6 +65,8 @@ module.exports = function (eleventyConfig) {
   // URL d'un service : URL dédiée si définie (livre d'or), sinon /categorie/slug/
   eleventyConfig.addFilter("serviceUrl", (s) => (s && s.url) || `/${s.categorie}/${s.slug}/`);
   eleventyConfig.addFilter("euros", (n) => `${n} €`);
+  // Note sur 5 au format français : 5 → « 5,0 »
+  eleventyConfig.addFilter("noteFr", (n) => Number(n).toFixed(1).replace(".", ","));
   eleventyConfig.addFilter("json", (v) => JSON.stringify(v));
 
   eleventyConfig.addTransform("images-webp", async function (content, outputPath) {

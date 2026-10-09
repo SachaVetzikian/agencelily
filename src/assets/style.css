@@ -711,3 +711,10 @@ h2.eyebrow { font-family: var(--font); font-size: var(--fs-label); line-height: 
 .consent-btns .btn { flex: 1; }
 @media (max-width: 760px) { .consent { left: 12px; right: 12px; bottom: 84px; max-width: none; } }
 .fx-legal { display: inline-flex; gap: var(--s5); }
+
+/* Avis Google */
+.avis-section .stars { color: var(--accent); letter-spacing: 2px; margin-right: var(--s1); }
+.avis-grid { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
+.avis { background: var(--white); border: 1px solid var(--line); }
+.avis blockquote { font-family: var(--serif); font-size: var(--fs-lead); line-height: 1.35; font-weight: 400; }
+.avis .stars { color: var(--accent); font-size: var(--fs-small); }

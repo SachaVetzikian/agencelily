@@ -1,1 +1,34 @@
-[]
+[
+  {
+    "prenom": "Tania Y.",
+    "evenement": "Mariage",
+    "date": "octobre 2026",
+    "note": 5,
+    "texte": "Prestataire au top pour l'animation de mariage de ma sœur, le livre d'or vidéo a créé une vraie ambiance, on recommande sans hésiter ! Merci encore !!!",
+    "services": ["livre-dor-audio-video"]
+  },
+  {
+    "prenom": "Allan R.",
+    "evenement": "",
+    "date": "juin 2026",
+    "note": 5,
+    "texte": "Excellente expérience avec Lily ! Nous avons été vraiment surpris par l'engouement autour de la borne livre d'or audio et vidéo. Nos invités ont adoré le concept et se sont pris au jeu […]",
+    "services": ["livre-dor-audio-video"]
+  },
+  {
+    "prenom": "Florian P.",
+    "evenement": "Baptême",
+    "date": "septembre 2026",
+    "note": 5,
+    "texte": "On a découvert le concept de livre d'or vidéo durant un baptême, une super surprise que les parrains ont pu offrir aux parents, tous les invités ont voulu y passer...",
+    "services": ["livre-dor-audio-video"]
+  },
+  {
+    "prenom": "Eddy C.",
+    "evenement": "Mariage",
+    "date": "septembre 2026",
+    "note": 5,
+    "texte": "Animation ultra originale que j'ai découvert lors du mariage de mon meilleur ami, le livre d'or vidéo a sérieusement fait un carton ! Super moment pour les invités, je recommande, au top",
+    "services": ["livre-dor-audio-video"]
+  }
+]

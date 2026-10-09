@@ -19,7 +19,7 @@ Tout le contenu est dans des fichiers texte. Tu les modifies sur GitHub, Vercel 
 | Le code de vérification Google Search Console | `src/_data/site.json` | `"googleVerification"` |
 | L'adresse qui reçoit les devis | Vercel > Settings > Environment Variables | `DEVIS_TO` |
 | Ajouter un avis client | `src/_data/avis.json` | voir modèle ci-dessous |
-| Mettre à jour le nombre d'avis Google | `src/_data/site.json` | `"avis"` > `"nombre"` (le compteur s'affiche à partir de 5 avis) |
+| Mettre à jour le nombre d'avis Google | `src/_data/site.json` | `"avis"` > `"nombre"` (le compteur s’affiche à partir de 4 avis) |
 | Ajouter une réalisation | `src/_data/realisations.json` | voir modèle ci-dessous |
 
 ## Règles pour ne rien casser

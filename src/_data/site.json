@@ -7,10 +7,10 @@
   "phone": "06 65 70 42 20",
   "instagram": "",
   "avis": {
-    "nombre": 1,
+    "nombre": 4,
     "note": 5.0,
     "lien": "https://maps.app.goo.gl/kBRec8DW11M3wWih8",
-    "seuilAffichage": 5
+    "seuilAffichage": 4
   },
   "delaiReponse": "24h",
   "whatsapp": "",
