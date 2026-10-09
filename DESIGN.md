@@ -21,7 +21,7 @@ Toutes les valeurs vivent dans `src/assets/style.css` (bloc `:root` et couche «
 | `--line` | `#e2d9cf` | Filets, bordures |
 | `--ink` | `#2a2420` | Brun très foncé : texte, boutons contour |
 | `--muted` | `#6f655e` | Texte secondaire, seconde moitié des paragraphes deux tons (contraste 5,3 sur ivoire, 4,8 sur sable) |
-| `--accent` | `#7a6558` | Taupe : bouton principal, surtitres, puces, footer |
+| `--accent` | `#7a6558` | Taupe : bouton principal, surtitres, puces |
 | `--accent-dark` | `#5f4d42` | Survol du bouton principal |
 
 ## 3. Typographie
@@ -88,7 +88,7 @@ Deux familles, auto-hébergées dans `src/assets/fonts/` :
 
 **FAQ** (`.faq-center`) : colonne centrée étroite, filets fins, chevrons, bouton contour centré dessous.
 
-**Footer** : fond taupe, phrase de marque en serif, bouton contour blanc, une ligne de liens, une ligne légale.
+**Footer** (`.footer-xl`) : fond brun très foncé (`--ink`). À gauche, phrase de marque en serif, téléphone, e-mail, zone et icônes rondes ; à droite, trois colonnes de liens (Livre d'or, Occasions, Agence) sous des surtitres. Filet fin terminé par le bouton blanc « Vérifier ma date », ligne légale, puis logo LILY géant à 14 % d'opacité, coupé en bas.
 
 **Boutons**
 - `.btn` : contour 1 px brun, fond transparent, bas de casse. Action secondaire et standard.

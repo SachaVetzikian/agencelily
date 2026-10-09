@@ -1,25 +1,42 @@
-<footer class="footer">
-<div class="wrap footer-min">
-<div class="f-top">
-<p class="f-tagline">Les fleurs fanent. Les voix restent.</p>
-<a class="btn light" href="/devis/" data-track="devis">Vérifier ma date</a>
-</div>
-<ul class="f-links">
-<li><a href="/livre-d-or-audio-video/">Livre d'or audio & vidéo</a></li>
-<li><a href="/location-livre-d-or-audio/">Location</a></li>
-{% for o in occasions %}<li><a href="{{ o.url }}">{{ o.nom }}</a></li>{% endfor %}
-<li><a href="/tarifs/">Tarifs</a></li>
-<li><a href="/animations/">Bars gourmands</a></li>
-<li><a href="/blog/">Guides</a></li>
-<li><a href="/a-propos/">À propos</a></li>
+<footer class="footer footer-xl">
+<div class="wrap">
+<div class="fx-top">
+<div class="fx-contact">
+<p class="fx-tagline">Les fleurs fanent.<br>Les voix restent.</p>
+<ul class="fx-coords">
 {% if site.phone %}<li><a href="tel:{{ site.phone | replace(' ', '') }}" data-track="appel">{{ site.phone }}</a></li>{% endif %}
 <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-{% if site.googleBusiness %}<li><a href="{{ site.googleBusiness }}" rel="noopener" target="_blank">Google</a></li>{% endif %}
-{% if site.instagram %}<li><a href="{{ site.instagram }}" rel="noopener" target="_blank">Instagram</a></li>{% endif %}
+<li><span>{{ site.zone }}, 7 jours sur 7</span></li>
 </ul>
-<div class="legal">
-<span class="f-brand"><img src="/assets/logo-lily-blanc.svg" alt="Agence Lily" width="587" height="224"> {{ site.zone }} · © {{ year }}</span>
-<span><a href="/mentions-legales/">Mentions légales</a></span>
+<div class="fx-social">
+{% if site.googleBusiness %}<a href="{{ site.googleBusiness }}" rel="noopener" target="_blank" aria-label="Agence Lily sur Google"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11Z"/><circle cx="12" cy="10" r="2.3"/></svg></a>{% endif %}
+{% if site.instagram %}<a href="{{ site.instagram }}" rel="noopener" target="_blank" aria-label="Agence Lily sur Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4.5"/><circle cx="12" cy="12" r="3.6"/><circle cx="16.6" cy="7.4" r=".6"/></svg></a>{% endif %}
+<a href="mailto:{{ site.email }}" aria-label="Nous écrire"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="6" width="17" height="12" rx="1"/><path d="m4 7 8 6 8-6"/></svg></a>
 </div>
 </div>
+<nav class="fx-cols" aria-label="Plan du site">
+<div><h2 class="fx-h">Livre d'or</h2><ul>
+<li><a href="/livre-d-or-audio-video/">Audio &amp; vidéo</a></li>
+<li><a href="/location-livre-d-or-audio/">Location</a></li>
+<li><a href="/tarifs/">Tarifs</a></li>
+<li><a href="/configurateur/">Simulateur</a></li>
+</ul></div>
+<div><h2 class="fx-h">Occasions</h2><ul>
+{% for o in occasions %}<li><a href="{{ o.url }}">{{ o.nom if o.nom | length < 14 else o.nom.split(",")[0] }}</a></li>{% endfor %}
+</ul></div>
+<div><h2 class="fx-h">Agence</h2><ul>
+<li><a href="/a-propos/">À propos</a></li>
+<li><a href="/blog/">Guides</a></li>
+<li><a href="/animations/">Bars gourmands</a></li>
+<li><a href="/devis/">Contact</a></li>
+</ul></div>
+</nav>
+</div>
+<div class="fx-line"><a class="btn light" href="/devis/" data-track="devis">Vérifier ma date</a></div>
+<div class="fx-bottom">
+<p>Location de livre d'or audio et vidéo sur téléphone vintage, livré et installé à Paris et en Île-de-France. © {{ year }} Agence Lily.</p>
+<a href="/mentions-legales/">Mentions légales</a>
+</div>
+</div>
+<div class="fx-giant" aria-hidden="true"><img src="/assets/logo-lily-blanc.svg" alt="" width="587" height="224" loading="lazy"></div>
 </footer>
