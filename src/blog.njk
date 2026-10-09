@@ -7,14 +7,14 @@ meta: "Prix, idées et conseils pour choisir les animations de votre mariage, ba
 {% include "partials/crumbs.njk" %}
 <section class="hero"><div class="wrap">
 <span class="eyebrow">Guides et conseils</span>
-<h1>Organiser une fête qui marque les esprits</h1>
+<h1>Guides du livre d’or audio et vidéo</h1>
 <p class="lede">Prix réels, idées concrètes et retours d'expérience pour choisir les bonnes animations.</p>
 </div></section>
 <section class="section alt"><div class="wrap">
 <div class="cards">
 {% for p in collections.posts %}<a class="card" href="{{ p.url }}"><div class="body">
 <span class="tag">{{ p.date | dateFr }}</span>
-<h3>{{ p.data.h1 }}</h3>
+<h2 class="card-title">{{ p.data.h1 }}</h2>
 <p>{{ p.data.extrait }}</p>
 <div class="price">Lire le guide →</div>
 </div></a>{% endfor %}

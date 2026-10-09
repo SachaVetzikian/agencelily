@@ -9,7 +9,15 @@ faqLocation:
   - q: "Intervenez-vous en dehors de l'Île-de-France ?"
     a: "Nous intervenons à Paris et dans toute l'Île-de-France. Pour un événement ailleurs, demandez-nous un devis."
   - q: "Faut-il une prise électrique ?"
-    a: "Indiquez-nous votre lieu au moment du devis : nous vous disons exactement ce qu'il faut prévoir sur place."
+    a: "Une simple prise électrique dans la salle suffit. Le téléphone peut aussi être installé en extérieur : nous nous occupons du branchement."
+  - q: "Combien de temps dure la location ?"
+    a: "Deux durées au choix : un forfait de 3 heures (par exemple de 18 h à 21 h), prolongeable à l'heure, ou un forfait soirée complète sans limite d'heure : le téléphone reste toute la nuit et nous le récupérons le lendemain."
+  - q: "Peut-on installer le téléphone en extérieur ?"
+    a: "Oui, en jardin, sous une tente ou en terrasse. Prévoyez simplement un endroit à l'abri de la pluie et du vent pour que vos invités s'entendent bien."
+  - q: "Comment réserver ma date ?"
+    a: "Un acompte de 50 % bloque votre date, le solde est réglé avant l'événement. Si vous réglez la totalité à la réservation, vous bénéficiez de 10 % de remise."
+  - q: "Et en cas d'annulation ?"
+    a: "Jusqu'à 30 jours avant l'événement, vous pouvez reporter votre date sans frais (selon nos disponibilités) ; en cas d'annulation, l'acompte reste acquis et le reste vous est remboursé. À moins de 30 jours, la prestation est due en totalité."
   - q: "Quand récupère-t-on les messages ?"
     a: "Après l'événement, vous recevez vos messages en ligne. Avec l'option clé USB, vous les avez aussi sur un support physique."
   - q: "Que comprend la location d'un livre d'or audio ?"
@@ -24,7 +32,7 @@ faqLocation:
 {% set livre = services | findBySlug("livre-dor-audio-video") %}
 {% set crumbs = [{ nom: "Livre d'or audio et vidéo", url: livre.url }, { nom: "Location" }] %}
 {% set heroImg = livre.image %}{% set heroImgMobile = livre.imageMobile %}{% set heroAlt = "Location de livre d'or audio" %}{% set heroEyebrow = "Location · Paris & Île-de-France" %}
-{% set heroTitle = "Louer un livre d'or audio : tarifs, zone et réservation" %}
+{% set heroTitle = "Location de livre d'or audio et vidéo en Île-de-France" %}
 {% set heroIntro = "Nous livrons, installons et reprenons le téléphone. Vous gardez les souvenirs." %}
 {% set heroAside %}<div class="price-box"><strong>Dès 200 €</strong><span>livraison et installation comprises</span></div><div class="btns"><a class="btn primary" href="/devis/?service=livre-dor-audio-video" data-track="devis">Vérifier ma date</a></div>{% endset %}
 {% include "partials/hero-full.njk" %}

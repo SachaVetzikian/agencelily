@@ -1,13 +1,20 @@
 ---
 layout: layouts/base.njk
-title: "Devis gratuit sous 24h | Agence Lily"
-meta: "Demandez votre devis gratuit pour un bar gourmand, un livre d'or audio, un photobooth ou un pack événement à Paris et en Île-de-France. Réponse sous 24h."
+title: "Contact et devis livre d'or audio | Agence Lily"
+meta: "Devis gratuit pour la location d'un livre d'or audio et vidéo à Paris et en Île-de-France. Réponse en 24 h. Vérifiez la disponibilité de votre date."
+faqDevis:
+  - q: "Combien de temps à l'avance réserver ?"
+    a: "Quelques semaines suffisent en général. Pour un samedi entre mai et septembre, réservez plusieurs mois avant : nous avons un nombre limité de téléphones par date."
+  - q: "Comment se passe le paiement ?"
+    a: "Un acompte de 50 % bloque votre date, le solde est réglé avant l'événement. Si vous réglez la totalité à la réservation, vous bénéficiez de 10 % de remise."
+  - q: "Et en cas d'annulation ?"
+    a: "Jusqu'à 30 jours avant l'événement, vous pouvez reporter votre date sans frais (selon nos disponibilités) ; en cas d'annulation, l'acompte reste acquis et le reste vous est remboursé. À moins de 30 jours, la prestation est due en totalité."
 ---
-{% set crumbs = [{ nom: "Devis" }] %}
+{% set crumbs = [{ nom: "Contact et devis" }] %}
 {% include "partials/crumbs.njk" %}
 <section class="page-head" style="padding-bottom:0;"><div class="wrap">
-<span class="eyebrow">Gratuit et sans engagement</span>
-<h1>Vérifier ma date</h1>
+<span class="eyebrow">Vérifier ma date</span>
+<h1>Demandez votre devis livre d'or audio</h1>
 <p class="lede">Disponibilité et devis précis sous {{ site.delaiReponse }}, frais de déplacement compris.</p>
 </div></section>
 <section class="section" style="padding-top:var(--s6);"><div class="wrap two-cols">
@@ -123,4 +130,12 @@ meta: "Demandez votre devis gratuit pour un bar gourmand, un livre d'or audio, u
 </div>
 </div></section>
 
+<section class="section alt"><div class="wrap split-lead">
+<h2>Nous contacter directement</h2>
+<div><p>{% if site.phone %}Par téléphone au <a href="tel:{{ site.phone | replace(' ', '') }}" data-track="appel">{{ site.phone }}</a>, {% endif %}par e-mail à <a href="mailto:{{ site.email }}" data-track="email">{{ site.email }}</a>. Nous intervenons 7 jours sur 7 à Paris et dans toute l'Île-de-France (75, 77, 78, 91, 92, 93, 94, 95).</p></div>
+</div></section>
 
+{% set faq = faqDevis %}{% include "partials/faq-section.njk" %}
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{% for f in faqDevis %}{"@type":"Question","name":{{ f.q | json | safe }},"acceptedAnswer":{"@type":"Answer","text":{{ f.a | json | safe }}}}{% if not loop.last %},{% endif %}{% endfor %}]}
+</script>

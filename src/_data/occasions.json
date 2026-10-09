@@ -47,6 +47,10 @@
       {
         "q": "Combien coûte un livre d'or audio pour un mariage ?",
         "a": "200 € pour l'audio, 300 € avec la vidéo (la formule la plus choisie pour un mariage), 400 € avec un animateur qui va chercher les invités. Livraison et installation comprises à Paris et en Île-de-France."
+      },
+      {
+        "q": "Combien de temps dure la location ?",
+        "a": "Deux durées au choix : un forfait de 3 heures (par exemple de 18 h à 21 h), prolongeable à l'heure, ou un forfait soirée complète sans limite d'heure : le téléphone reste toute la nuit et nous le récupérons le lendemain."
       }
     ],
     "intro": "Leur voix, le jour où vous avez dit oui. Livré et installé sur votre lieu de réception, dès 200 €.",
@@ -57,9 +61,9 @@
     "url": "/livre-d-or-anniversaire/",
     "evenement": "anniversaire",
     "nom": "Anniversaire",
-    "title": "Livre d'or audio pour anniversaire | Agence Lily",
-    "meta": "Un livre d'or audio et vidéo pour un anniversaire : 30, 40, 50 ou 60 ans, vos invités laissent un message sur un téléphone vintage. Paris et Île-de-France.",
-    "h1": "Livre d'or audio et vidéo d'anniversaire",
+    "title": "Livre d'or anniversaire sur téléphone vintage | Agence Lily",
+    "meta": "Un livre d'or anniversaire original : vos invités décrochent le combiné d'un téléphone vintage et laissent un vœu ou une anecdote drôle. Paris et IDF.",
+    "h1": "Livre d'or anniversaire sur téléphone vintage",
     "enBref": "Pour un anniversaire, le livre d'or audio remplace la carte signée par tout le monde : les invités décrochent un téléphone vintage et laissent un message vocal à la personne fêtée. C'est un cadeau collectif original, livré et installé à Paris et en Île-de-France, dès 200 €.",
     "pourquoi": [
       "Pour un anniversaire marquant, les invités ne savent souvent pas quoi écrire sur une carte. À l'oral, ça vient tout seul : une anecdote, une blague, un souvenir partagé.",
@@ -99,19 +103,32 @@
       {
         "q": "Combien coûte un livre d'or audio pour un anniversaire ?",
         "a": "200 € pour l'audio, 300 € avec la vidéo, 400 € avec un animateur. Livraison et installation comprises à Paris et en Île-de-France."
+      },
+      {
+        "q": "Est-ce adapté aux enfants ?",
+        "a": "Oui : on décroche, on parle, on raccroche. Les enfants adorent, et leurs messages sont souvent les plus drôles."
+      },
+      {
+        "q": "Combien de messages peut-on enregistrer ?",
+        "a": "Autant que vos invités le souhaitent : les messages sont illimités."
+      },
+      {
+        "q": "Peut-on l'installer en extérieur ?",
+        "a": "Oui, en jardin, sous une tente ou en terrasse, à l'abri de la pluie et du vent. Nous nous occupons du branchement."
       }
     ],
     "intro": "Le cadeau collectif qui se réécoute. Livré et installé chez vous, dès 200 €.",
-    "punchline": "Une carte se range. Une voix se réécoute."
+    "punchline": "Une carte se range. Une voix se réécoute.",
+    "ideesTitre": "Idées d'animation anniversaire : quoi faire dire aux invités"
   },
   {
     "slug": "bapteme",
     "url": "/livre-d-or-bapteme/",
     "evenement": "bapteme",
     "nom": "Baptême",
-    "title": "Livre d'or audio pour baptême | Agence Lily",
-    "meta": "Livre d'or audio et vidéo de baptême : la famille laisse des messages à l'enfant sur un téléphone vintage, à écouter plus tard. Paris et IDF, dès 200 €.",
-    "h1": "Livre d'or audio et vidéo de baptême",
+    "title": "Livre d'or baptême sur téléphone vintage | Agence Lily",
+    "meta": "Un livre d'or baptême original : famille et proches laissent un vœu ou un souvenir sur un téléphone vintage. Livré et installé à Paris et en IDF.",
+    "h1": "Livre d'or baptême sur téléphone vintage",
     "enBref": "Pour un baptême, le livre d'or audio recueille les messages de la famille et des proches adressés à l'enfant, sur un téléphone vintage. L'enfant pourra les écouter quand il sera grand. Livré et installé à Paris et en Île-de-France, dès 200 €.",
     "pourquoi": [
       "L'enfant ne se souviendra pas de son baptême. Ces messages, si : il entendra la voix de ses grands-parents, de son parrain et de sa marraine le jour où il a été fêté.",
@@ -146,19 +163,24 @@
       {
         "q": "Combien coûte un livre d'or audio pour un baptême ?",
         "a": "200 € pour l'audio, 300 € avec la vidéo, 400 € avec un animateur. Livraison et installation comprises à Paris et en Île-de-France."
+      },
+      {
+        "q": "Combien de temps dure la location ?",
+        "a": "Deux durées au choix : un forfait de 3 heures (par exemple de 18 h à 21 h), prolongeable à l'heure, ou un forfait soirée complète sans limite d'heure : le téléphone reste toute la nuit et nous le récupérons le lendemain."
       }
     ],
     "intro": "Les messages de la famille à l'enfant, à écouter quand il sera grand. Dès 200 €.",
-    "punchline": "Il ne se souviendra pas de ce jour. Il entendra ceux qui étaient là."
+    "punchline": "Il ne se souviendra pas de ce jour. Il entendra ceux qui étaient là.",
+    "ideesTitre": "Idées d'animation baptême : les messages à laisser"
   },
   {
     "slug": "entreprise",
     "url": "/livre-d-or-entreprise/",
     "evenement": "entreprise",
     "nom": "Entreprise, retraite, départ",
-    "title": "Livre d'or audio entreprise, retraite, départ | Agence Lily",
-    "meta": "Livre d'or audio pour un départ en retraite, un pot de départ ou un événement d'entreprise : les collègues laissent un message sur un téléphone vintage.",
-    "h1": "Livre d'or audio pour une retraite, un départ ou un événement d'entreprise",
+    "title": "Livre d'or entreprise, retraite et départ | Agence Lily",
+    "meta": "Livre d'or entreprise sur téléphone vintage : départ à la retraite, pot de départ, soirée d'équipe. Installé à Paris et en Île-de-France. Devis gratuit.",
+    "h1": "Livre d'or entreprise, retraite et départ",
     "enBref": "En entreprise, le livre d'or audio recueille les messages des collègues sur un téléphone vintage, pour un départ en retraite, un pot de départ ou un anniversaire d'entreprise. Un cadeau collectif plus personnel qu'une carte signée, livré et installé à Paris et en Île-de-France, dès 200 €.",
     "pourquoi": [
       "Pour un départ en retraite, la carte signée par 40 collègues finit dans un tiroir. Les messages vocaux, eux, racontent vraiment les années passées ensemble.",
@@ -197,6 +219,10 @@
       {
         "q": "Combien coûte un livre d'or audio pour un pot de départ ?",
         "a": "200 € pour l'audio, 300 € avec la vidéo, 400 € avec un animateur. Livraison et installation comprises à Paris et en Île-de-France, facture au nom de l'entreprise."
+      },
+      {
+        "q": "Combien de collaborateurs peuvent participer ?",
+        "a": "Tous : les messages sont illimités. Chacun décroche le combiné et parle quelques secondes ou quelques minutes."
       }
     ],
     "intro": "Pour un départ, une retraite ou un anniversaire d'entreprise. Dès 200 €.",

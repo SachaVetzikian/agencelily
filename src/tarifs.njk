@@ -1,13 +1,13 @@
 ---
 layout: layouts/base.njk
-title: "Livre d'or audio : tarifs et formules | Agence Lily"
-meta: "Tarifs du livre d'or audio et vidéo : 200 € audio, 300 € audio + vidéo, 400 € avec animateur, livraison et installation comprises en Île-de-France."
+title: "Tarifs location livre d'or audio | Agence Lily"
+meta: "Tarifs de location d'un livre d'or audio et vidéo sur téléphone vintage : formules, options, ce qui est inclus. Paris et IDF. Devis gratuit en 24 h."
 ---
 {% set crumbs = [{ nom: "Tarifs" }] %}
 {% include "partials/crumbs.njk" %}
 <section class="page-head"><div class="wrap">
 <span class="eyebrow">Prix transparents</span>
-<h1>Tarifs du livre d'or audio et vidéo</h1>
+<h1>Tarifs de location d'un livre d'or audio et vidéo</h1>
 <p class="lede">Livraison et installation comprises à Paris et en Île-de-France. Frais de déplacement indiqués sur le devis, avant toute réservation.</p>
 <div class="btns"><a class="btn primary" href="/devis/" data-track="devis">Vérifier ma date</a><a class="btn" href="/configurateur/">Simuler mon budget</a></div>
 </div></section>
@@ -16,6 +16,28 @@ meta: "Tarifs du livre d'or audio et vidéo : 200 € audio, 300 € audio + vid
 <div class="section-title"><span class="eyebrow">Livre d'or</span><h2>Trois formules, un seul téléphone</h2></div>
 {% include "partials/formules-livre.njk" %}
 <div class="btns" style="justify-content:center;"><a class="btn" href="/livre-d-or-audio-video/">Tout savoir sur le livre d'or</a></div>
+</div></section>
+
+<section class="section"><div class="wrap split-lead">
+<h2>Prix d'un livre d'or audio : ce qui fait varier le tarif</h2>
+<div><p>Trois choses : la formule (audio, audio + vidéo ou avec animateur), la durée et votre lieu en Île-de-France pour les frais de déplacement.</p>
+<p>Deux durées au choix : un forfait de 3 heures (par exemple de 18 h à 21 h), prolongeable à l'heure, ou un forfait soirée complète sans limite d'heure : le téléphone reste toute la nuit et nous le récupérons le lendemain.</p></div>
+</div></section>
+
+<section class="section alt"><div class="wrap split-lead">
+<h2>Ce qui est inclus dans tous les tarifs</h2>
+<ul class="check" style="font-size:var(--fs-lead);font-weight:300;">
+<li>Le téléphone vintage, son combiné et son affiche</li>
+<li>Votre message d'accueil personnalisé</li>
+<li>La livraison, l'installation et la récupération du matériel</li>
+<li>La vérification sur place avant l'arrivée des invités</li>
+<li>Des messages illimités, remis par lien numérique</li>
+</ul>
+</div></section>
+
+<section class="section"><div class="wrap split-lead">
+<h2>Réservation et paiement</h2>
+<div><p>Un acompte de 50 % bloque votre date, le solde est réglé avant l'événement. Si vous réglez la totalité à la réservation, vous bénéficiez de 10 % de remise.</p><p>Jusqu'à 30 jours avant l'événement, vous pouvez reporter votre date sans frais (selon nos disponibilités) ; en cas d'annulation, l'acompte reste acquis et le reste vous est remboursé. À moins de 30 jours, la prestation est due en totalité.</p></div>
 </div></section>
 
 <section class="section"><div class="wrap">
@@ -47,9 +69,12 @@ meta: "Tarifs du livre d'or audio et vidéo : 200 € audio, 300 € audio + vid
 <section class="section alt"><div class="wrap faq-center">
 <div class="section-title"><span class="eyebrow">Bon à savoir</span><h2>Vos questions</h2></div>
 {% set faq = [
+  { q: "Combien coûte un livre d'or ?", a: "Un carnet papier coûte quelques dizaines d'euros. Un livre d'or audio sur téléphone vintage, livré et installé, coûte chez nous 200 € ; 300 € avec la vidéo ; 400 € avec un animateur." },
   { q: "Combien coûte un livre d'or audio ?", a: "200 € pour la formule audio, 300 € avec la vidéo, 400 € avec un animateur. Livraison et installation comprises à Paris et en Île-de-France. Options : clé USB (+25 €), décoration florale (+50 €)." },
   { q: "Les frais de déplacement sont-ils inclus ?", a: "Ils sont calculés selon votre lieu en Île-de-France et indiqués clairement sur votre devis, avant toute réservation." },
-  { q: "Comment réserver ma date ?", a: "Un acompte confirme la réservation. Le solde est réglé avant l'événement." },
+  { q: "Combien de temps dure la location ?", a: "Deux durées au choix : un forfait de 3 heures (par exemple de 18 h à 21 h), prolongeable à l'heure, ou un forfait soirée complète sans limite d'heure : le téléphone reste toute la nuit et nous le récupérons le lendemain." },
+  { q: "Comment réserver ma date ?", a: "Un acompte de 50 % bloque votre date, le solde est réglé avant l'événement. Si vous réglez la totalité à la réservation, vous bénéficiez de 10 % de remise." },
+  { q: "Et en cas d'annulation ?", a: "Jusqu'à 30 jours avant l'événement, vous pouvez reporter votre date sans frais (selon nos disponibilités) ; en cas d'annulation, l'acompte reste acquis et le reste vous est remboursé. À moins de 30 jours, la prestation est due en totalité." },
   { q: "Et si j'ai moins d'invités que le minimum ?", a: "Demandez-nous un devis : nous adaptons le forfait aux petits comités." }
 ] %}{% include "partials/faq.njk" %}
 <script type="application/ld+json">

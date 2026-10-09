@@ -1,6 +1,6 @@
 ---
-title: "Comment fonctionne un livre d'or audio ? | Agence Lily"
-h1: "Comment fonctionne un livre d'or audio ?"
+title: "Comment fonctionne un livre d'or audio ? Guide complet"
+h1: "Comment fonctionne un livre d'or audio ? Le guide complet"
 meta: "Comment fonctionne un livre d'or audio (audio guest book) : téléphone vintage, message d'accueil, enregistrement, récupération des messages."
 extrait: "Un téléphone vintage, un message d'accueil, un bip : le livre d'or audio est simple à utiliser. Voici comment il fonctionne, de l'installation à la récupération des messages."
 date: 2026-09-26

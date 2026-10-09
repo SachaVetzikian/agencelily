@@ -1,6 +1,6 @@
 ---
 layout: layouts/base.njk
-title: "Livre d'or audio et vidéo à Paris et en IDF | Agence Lily"
+title: "Agence Lily : livre d'or audio et vidéo à Paris et en IDF"
 meta: "Location de livre d'or audio et vidéo sur téléphone vintage, livré et installé à Paris et en Île-de-France. Mariage, anniversaire, baptême. Dès 200 €."
 faqHome:
   - q: "Comment fonctionne le livre d'or audio ?"
@@ -9,6 +9,8 @@ faqHome:
     a: "200 € pour l'audio, 300 € pour l'audio et la vidéo, 400 € avec un animateur. Livraison et installation comprises à Paris et en Île-de-France."
   - q: "Dans quelle zone intervenez-vous ?"
     a: "À Paris et dans toute l'Île-de-France : 75, 77, 78, 91, 92, 93, 94 et 95."
+  - q: "Combien de temps dure la location ?"
+    a: "Deux durées au choix : un forfait de 3 heures (par exemple de 18 h à 21 h), prolongeable à l'heure, ou un forfait soirée complète sans limite d'heure : le téléphone reste toute la nuit et nous le récupérons le lendemain."
   - q: "Combien de temps à l'avance réserver ?"
     a: "Quelques semaines suffisent en général. Pour un samedi entre mai et septembre, réservez plusieurs mois avant."
 ---
@@ -16,14 +18,14 @@ faqHome:
 {% set livre = services | findBySlug("livre-dor-audio-video") %}
 {% set heroImg = livre.image %}{% set heroImgMobile = livre.imageMobile %}{% set heroAlt = "Téléphone vintage de livre d'or audio" %}
 {% set heroEyebrow = "Paris & Île-de-France" %}
-{% set heroTitle = "Location de livre d'or audio et vidéo" %}
+{% set heroTitle = "Le livre d'or audio et vidéo, à Paris et en Île-de-France" %}
 {% set heroIntro = "Un téléphone vintage, un message après le bip. Livré et installé chez vous, dès 200 €." %}
 {% set heroAside %}<a class="btn" href="/devis/?service=livre-dor-audio-video" data-track="devis">Vérifier ma date</a>{% endset %}
 {% include "partials/hero-full.njk" %}
 
 <section class="section"><div class="wrap intro-center">
 {% include "partials/logo-mark.njk" %}
-<p>Les fleurs fanent. Les voix restent. <span>Pendant votre fête, vos invités décrochent un téléphone vintage et vous laissent un message. Vous le gardez pour toujours.</span></p>
+<p>Les fleurs fanent. Les voix restent. <span>Pendant votre fête, vos invités décrochent le combiné d'un téléphone vintage, écoutent votre message d'accueil personnalisé et laissent témoignage, vœux ou anecdote drôle après le bip. Nous l'installons chez vous, à Paris et en Île-de-France, dès 200 €.</span></p>
 <div class="btns"><a class="btn" href="{{ livre.url }}">Découvrir le livre d’or</a></div>
 </div></section>
 
