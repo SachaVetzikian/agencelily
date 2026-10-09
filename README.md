@@ -31,12 +31,12 @@ Search Console : coller le code de vérification dans `googleVerification` (mêm
 Le formulaire de `/devis/` envoie la demande à `api/devis.js` (fonction Vercel), qui la transmet par e-mail via Resend. Le bouton « Répondre » de l'e-mail répond directement au client.
 
 Mise en service (une fois) :
-1. Créer un compte gratuit sur resend.com avec l'adresse qui doit recevoir les demandes
+1. Créer un compte gratuit sur resend.com avec l'adresse contact@agencelily.fr (sans domaine vérifié, Resend n'envoie qu'à l'adresse du compte)
 2. Resend > API Keys > Create API Key (droit « Sending access »), copier la clé
-3. Vercel > projet > Settings > Environment Variables, ajouter :
-   - `RESEND_API_KEY` : la clé
-   - `DEVIS_TO` : l'adresse du compte Resend
+3. Vercel > projet > Settings > Environment Variables, ajouter `RESEND_API_KEY` (Production) : la clé
 4. Redéployer (Deployments > ⋯ > Redeploy)
+
+Les demandes arrivent sur contact@agencelily.fr (modifiable avec la variable `DEVIS_TO`).
 
 Optionnel : vérifier le domaine agencelily.fr dans Resend (DNS chez OVH) puis définir `DEVIS_FROM` (ex. `Agence Lily <devis@agencelily.fr>`) pour envoyer à n'importe quelle adresse.
 

@@ -1,7 +1,7 @@
 // Formulaire de devis : reçoit la demande et l'envoie par e-mail via Resend (resend.com).
 // Variables d'environnement à définir dans Vercel (Settings > Environment Variables) :
 //   RESEND_API_KEY  clé API Resend (obligatoire)
-//   DEVIS_TO        adresse qui reçoit les demandes (obligatoire)
+//   DEVIS_TO        adresse qui reçoit les demandes (par défaut contact@agencelily.fr)
 //   DEVIS_FROM      expéditeur, par défaut "Agence Lily <onboarding@resend.dev>"
 //                   (sans domaine vérifié, Resend n'envoie qu'à l'adresse du compte)
 
@@ -53,8 +53,8 @@ module.exports = async function handler(req, res) {
   }
 
   const cle = process.env.RESEND_API_KEY;
-  const destinataire = process.env.DEVIS_TO;
-  if (!cle || !destinataire) return repondre(500, { ok: false, erreur: "config" });
+  const destinataire = process.env.DEVIS_TO || "contact@agencelily.fr";
+  if (!cle) return repondre(500, { ok: false, erreur: "config" });
 
   // Date au format français (12/06/2027)
   const m = d.date.match(/^(\d{4})-(\d{2})-(\d{2})$/);
