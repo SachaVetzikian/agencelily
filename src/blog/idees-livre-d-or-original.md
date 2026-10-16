@@ -4,23 +4,51 @@ h1: "Idées de livre d'or original : 12 alternatives au carnet papier"
 meta: "12 idées de livre d'or original pour un mariage, un anniversaire ou un baptême : livre d'or audio, vidéo, sonore, numérique. Comparatif et conseils."
 extrait: "Le livre d'or papier finit souvent au fond d'un placard avec trois « Félicitations ». Voici 12 idées plus originales, avec leurs avantages et leurs limites."
 date: 2026-09-25
+enBref: "Pour remplacer le livre d'or papier, l'idée la plus originale est le livre d'or audio sur téléphone vintage : vos invités décrochent le combiné et laissent témoignage, vœux ou anecdote drôle après le bip. La version vidéo garde aussi les visages. Les autres idées (polaroid, arbre à empreintes, bocal, lettres à ouvrir plus tard) sont plus décoratives, mais recueillent des messages plus courts."
+image: "/assets/photos/formule-audio.webp"
+modifie: 2026-10-16
+quiz: formule
+faq:
+  - q: "Quelle est l'alternative la plus originale au livre d'or papier ?"
+    a: "<strong>Le livre d'or audio sur téléphone vintage.</strong> Les invités parlent au lieu d'écrire : les messages sont plus longs, plus sincères, et se réécoutent des années plus tard."
+  - q: "Quel livre d'or original pour un mariage ?"
+    a: "<strong>Le livre d'or audio et vidéo</strong>, pour garder à la fois la voix et le visage de chaque invité. C'est notre formule la plus choisie, à 300 €."
+  - q: "Le livre d'or audio convient-il aux personnes âgées ?"
+    a: "<strong>Oui, c'est même son point fort.</strong> Tout le monde sait décrocher un téléphone et parler : aucune application, aucun QR code."
+  - q: "Combien coûte un livre d'or audio ?"
+    a: "<strong>200 € pour l'audio, 300 € avec la vidéo, 400 € avec un animateur</strong>, livraison et installation comprises à Paris et en Île-de-France."
+ressources:
+  - titre: "Comment fonctionne un livre d'or audio"
+    url: "/blog/comment-fonctionne-livre-d-or-audio/"
+  - titre: "Livre d'or audio et vidéo sur téléphone vintage"
+    url: "/livre-d-or-audio-video/"
+  - titre: "Livre d'or anniversaire sur téléphone vintage"
+    url: "/livre-d-or-anniversaire/"
+  - titre: "Livre d'or baptême sur téléphone vintage"
+    url: "/livre-d-or-bapteme/"
+  - titre: "Tarifs de location d'un livre d'or audio"
+    url: "/tarifs/"
 ---
 
-## Pourquoi remplacer le livre d'or papier ?
+## 🔍 Pourquoi remplacer le livre d'or papier ?
 
-Le livre d'or papier a deux défauts : les invités ne savent pas quoi écrire, et on le relit rarement. Les 12 idées ci-dessous gardent le principe (un souvenir laissé par chaque invité) avec un format plus vivant. C'est l'alternative au livre d'or papier que cherchent la plupart des couples et des familles.
+**Le livre d'or papier a deux défauts : les invités ne savent pas quoi écrire, et on le relit rarement.** Les 12 idées ci-dessous gardent le principe (un souvenir laissé par chaque invité) avec un format plus vivant. C'est l'alternative au livre d'or papier que cherchent la plupart des couples et des familles.
 
-## Les 12 idées de livre d'or original
+## 🏆 Les 12 idées de livre d'or original
 
 ### 1. Le livre d'or audio sur téléphone vintage
 
-Les invités décrochent le combiné d'un téléphone vintage, écoutent votre message d'accueil personnalisé et laissent témoignage, vœux ou anecdote drôle après le bip. C'est l'idée qui recueille les messages les plus sincères : à l'oral, on raconte, on rit, on chante. Aucune technique à maîtriser, même pour les grands-parents.
+<figure><img src="/assets/photos/formule-audio.webp" alt="Livre d'or audio sur téléphone vintage pendant un mariage" loading="lazy"></figure>
+
+**Les invités décrochent le combiné d'un téléphone vintage, écoutent votre message d'accueil personnalisé et laissent témoignage, vœux ou anecdote drôle après le bip.** C'est l'idée qui recueille les messages les plus sincères : à l'oral, on raconte, on rit, on chante. Aucune technique à maîtriser, même pour les grands-parents.
 
 **Le plus :** la voix de vos proches, à réécouter dans vingt ans. **La limite :** il faut un endroit un peu au calme. Voir notre [livre d'or audio et vidéo sur téléphone vintage](/livre-d-or-audio-video/).
 
 ### 2. Le livre d'or vidéo
 
-La même idée avec l'image : les invités sont filmés pendant qu'ils parlent. C'est le souvenir le plus complet, voix et visages réunis.
+<figure><img src="/assets/photos/formule-video.webp" alt="Livre d'or vidéo : invités filmés pendant leur message" loading="lazy"></figure>
+
+**La même idée avec l'image : les invités sont filmés pendant qu'ils parlent.** C'est le souvenir le plus complet, voix et visages réunis.
 
 **Le plus :** l'émotion des visages. **La limite :** certains invités sont intimidés par la caméra. D'où l'intérêt de l'associer au téléphone, qui met à l'aise.
 
@@ -84,7 +112,9 @@ Les invités écrivent une lettre à ouvrir à une date précise : premier anniv
 
 **Le plus :** un souvenir qui revient dans le temps. **La limite :** il faut penser à les ouvrir.
 
-## Comparatif : papier, audio, vidéo, numérique
+{% set avisIndex = 3 %}{% include "partials/blog-avis.njk" %}
+
+## 📊 Comparatif : papier, audio, vidéo, numérique
 
 | Idée | Sincérité des messages | Facilité pour les invités | Souvenir à long terme |
 |---|---|---|---|
@@ -98,13 +128,20 @@ Les invités écrivent une lettre à ouvrir à une date précise : premier anniv
 | Lettres à ouvrir | ★★★ | ★ | ★★★ |
 | Livre d'or papier | ★ | ★★ | ★ |
 
-## Quelle idée choisir selon votre événement ?
+{% include "partials/blog-cta.njk" %}
 
-- **Mariage :** le livre d'or audio et vidéo, pour garder la voix et le visage de chaque invité. Voir le [livre d'or audio de mariage](/livre-d-or-mariage/).
-- **Anniversaire :** le téléphone vintage, qui libère les anecdotes drôles. Voir le [livre d'or anniversaire](/livre-d-or-anniversaire/).
-- **Baptême :** les messages audio adressés à l'enfant, à lui faire écouter quand il sera grand. Voir le [livre d'or baptême](/livre-d-or-bapteme/).
-- **Départ à la retraite :** un livre d'or audio où chaque collègue dit au revoir à sa façon. Voir le [livre d'or entreprise](/livre-d-or-entreprise/).
+## ⚖️ Quelle idée choisir selon votre événement ?
 
-## Notre recommandation : le livre d'or audio et vidéo
+<ul class="post-check">
+<li>✅ Mariage <span>→ le <a href="/livre-d-or-mariage/">livre d'or audio et vidéo de mariage</a>, voix et visages</span></li>
+<li>✅ Anniversaire <span>→ le <a href="/livre-d-or-anniversaire/">livre d'or anniversaire</a> sur téléphone vintage</span></li>
+<li>✅ Baptême <span>→ des messages à l'enfant avec le <a href="/livre-d-or-bapteme/">livre d'or baptême</a></span></li>
+<li>✅ Départ à la retraite <span>→ le <a href="/livre-d-or-entreprise/">livre d'or entreprise</a></span></li>
+<li>✅ Décoration avant tout <span>→ l'arbre à empreintes ou le puzzle</span></li>
+</ul>
+
+<div class="post-callout"><p class="post-callout-title">⚠️ Attention</p><p><strong>N'empilez pas trois livres d'or différents.</strong> Vos invités se dispersent et chaque support reçoit moins de messages. Choisissez-en un, et mettez-le en valeur.</p></div>
+
+## 🏁 Notre recommandation : le livre d'or audio et vidéo
 
 Pour garder à la fois la voix et le visage de vos proches, le livre d'or audio et vidéo est l'option la plus complète. Nous le livrons et l'installons à Paris et en Île-de-France : voir nos [tarifs](/tarifs/) ou [comment fonctionne un livre d'or audio](/blog/comment-fonctionne-livre-d-or-audio/).

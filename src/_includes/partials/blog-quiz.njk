@@ -1,0 +1,57 @@
+{# Quiz interactif : données dans src/_data/quizData.json (clé = "quiz" dans le front matter de l'article) #}
+<div class="quiz">
+<script type="application/json" class="quiz-data">{{ qz | json | safe }}</script>
+<p class="quiz-eyebrow">Quiz interactif</p>
+<p class="quiz-title">{{ qz.titre }}</p>
+<p class="quiz-sub">{{ qz.sousTitre }}</p>
+<div class="quiz-body">
+<div class="quiz-progress"><span data-step>Question 1 sur {{ qz.questions.length }}</span><span data-pct>{{ (100 / qz.questions.length) | round }} %</span></div>
+<div class="quiz-bar"><i style="width:{{ 100 / qz.questions.length }}%"></i></div>
+<fieldset class="quiz-q"><legend data-q>{{ qz.questions[0].q }}</legend><div data-opts>{% for o in qz.questions[0].options %}<label><input type="radio" name="quiz-opt" value="{{ loop.index0 }}"> <span>{{ o.label }}</span></label>{% endfor %}</div></fieldset>
+<button class="quiz-prev" type="button" hidden>← Précédent</button>
+</div>
+<div class="quiz-result" hidden>
+<p class="quiz-eyebrow">Notre recommandation pour vous</p>
+<p class="quiz-result-name" data-r-nom></p>
+<p class="quiz-result-price"><span data-r-prix></span> €</p>
+<p class="quiz-result-text" data-r-texte></p>
+<div class="btns" style="justify-content:center;"><a class="btn primary" data-r-cta href="/devis/" data-track="devis-quiz">Vérifier ma date</a><button class="btn" type="button" data-restart>Recommencer</button></div>
+<p class="quiz-meta">Réponse sous {{ site.delaiReponse }} · Livraison et installation comprises</p>
+</div>
+</div>
+<script>
+(function () {
+  document.querySelectorAll(".quiz").forEach(function (box) {
+    var d = JSON.parse(box.querySelector(".quiz-data").textContent), n = d.questions.length, i = 0, answers = [];
+    var $ = function (s) { return box.querySelector(s); };
+    function render() {
+      var q = d.questions[i];
+      $("[data-step]").textContent = "Question " + (i + 1) + " sur " + n;
+      $("[data-pct]").textContent = Math.round((i + 1) / n * 100) + " %";
+      $(".quiz-bar i").style.width = ((i + 1) / n * 100) + "%";
+      $("[data-q]").textContent = q.q;
+      var opts = $("[data-opts]"); opts.innerHTML = "";
+      q.options.forEach(function (o, k) {
+        var l = document.createElement("label"); l.innerHTML = '<input type="radio" name="quiz-opt" value="' + k + '"> <span></span>';
+        l.querySelector("span").textContent = o.label; if (answers[i] === k) l.querySelector("input").checked = true; opts.appendChild(l);
+      });
+      $(".quiz-prev").hidden = i === 0;
+    }
+    function result() {
+      var score = {}; answers.forEach(function (k, qi) { var p = d.questions[qi].options[k].points; for (var key in p) score[key] = (score[key] || 0) + p[key]; });
+      var best = Object.keys(d.resultats).sort(function (a, b) { return (score[b] || 0) - (score[a] || 0); })[0], r = d.resultats[best];
+      $("[data-r-nom]").textContent = r.nom; $("[data-r-prix]").textContent = r.prix; $("[data-r-texte]").textContent = r.texte;
+      $("[data-r-cta]").href = "/devis/?service=livre-dor-audio-video&formule=" + encodeURIComponent(r.nom);
+      $(".quiz-body").hidden = true; $(".quiz-result").hidden = false;
+      if (window.lilyTrack) window.lilyTrack("quiz_termine", { formule: r.nom });
+    }
+    box.addEventListener("change", function (e) {
+      if (e.target.name !== "quiz-opt") return;
+      answers[i] = parseInt(e.target.value, 10);
+      setTimeout(function () { if (i < n - 1) { i++; render(); } else result(); }, 250);
+    });
+    $(".quiz-prev").addEventListener("click", function () { if (i > 0) { i--; render(); } });
+    $("[data-restart]").addEventListener("click", function () { i = 0; answers = []; $(".quiz-body").hidden = false; $(".quiz-result").hidden = true; render(); });
+  });
+})();
+</script>

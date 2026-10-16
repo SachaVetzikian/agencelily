@@ -1,0 +1,14 @@
+{# Articles similaires : les autres guides publiés, complétés par les pages occasion #}
+{%- set rel = [] -%}
+{%- for p in collections.posts %}{% if p.url != page.url and rel.length < 3 %}{% set rel = (rel.push({ titre: p.data.h1, url: p.url, img: p.data.image or "/assets/photos/hero-livre-dor.webp", date: p.date | dateFr }), rel) %}{% endif %}{% endfor -%}
+{%- for o in occasions %}{% if rel.length < 3 %}{% set ev = evenements | findBySlug(o.evenement) %}{% set rel = (rel.push({ titre: o.h1, url: o.url, img: (ev.image if ev else "/assets/photos/hero-livre-dor.webp"), date: "" }), rel) %}{% endif %}{% endfor -%}
+<section class="post-related">
+<h2>Articles similaires</h2>
+<div class="post-related-grid">
+{% for r in rel %}<a class="post-card" href="{{ r.url }}">
+<div class="post-card-img"><img src="{{ r.img }}" alt="" loading="lazy"></div>
+<p class="post-card-title">{{ r.titre }}</p>
+<p class="post-card-meta">Agence Lily{% if r.date %} · {{ r.date }}{% endif %}</p>
+</a>{% endfor %}
+</div>
+</section>

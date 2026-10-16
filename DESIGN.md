@@ -100,6 +100,8 @@ Deux familles, auto-hébergées dans `src/assets/fonts/` :
 
 **Fil d'Ariane** : posé en haut de la photo du hero. **Visuel manquant** : fond neutre seul, sans étiquette. **Carrousel mobile** (`.m-rail`) pour les grilles qui rallongent la page.
 
+**Article de blog** (`layouts/article.njk`) : colonne de 712 px. Fil d'Ariane, H1, auteur (avatar, nom, rôle) + date + temps de lecture, encadré « En bref » (`enBref`), boutons « Résumer cet article avec » (ChatGPT, Perplexity, Claude, Grok), quiz interactif (`quiz`, données dans `_data/quizData.json`), H2 avec emoji, paragraphes « phrase d'attaque en gras, suite en gris », figures à bords arrondis, tableaux en carte, encart CTA (`partials/blog-cta.njk`), avis client (`partials/blog-avis.njk`), liste ✅ (`ul.post-check`), alerte (`div.post-callout`), FAQ (`faq`) balisée FAQPage, encadrés Sources / Ressources utiles (`sources`, `ressources`), articles similaires, grand bandeau final avec champ date, carte flottante (ordinateur), sommaire latéral au survol et barre de lecture.
+
 ## 7. Images
 - Lumière naturelle, tons chauds et neutres, jamais saturés.
 - Scènes réelles plutôt que posées : invités, mains, détails de table.

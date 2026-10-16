@@ -1,0 +1,8 @@
+{# Bloc « résultat client » : un vrai avis Google (avis.json), choisi par son index #}
+{%- set av = avis[avisIndex or 0] -%}
+{% if av %}<figure class="post-proof">
+<p class="post-proof-title">L'avis d'un client {% include "partials/logo-mark.njk" %} Agence Lily</p>
+<p class="post-proof-sub">{{ av.evenement or "Événement" }}{% if av.date %} · {{ av.date }}{% endif %} · ★★★★★ sur Google</p>
+<blockquote>« {{ av.texte }} »</blockquote>
+<figcaption><span class="post-proof-avatar">{{ av.prenom | first }}</span><strong>{{ av.prenom }}</strong> · client Agence Lily</figcaption>
+</figure>{% endif %}

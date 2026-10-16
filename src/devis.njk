@@ -81,6 +81,9 @@ faqDevis:
     document.getElementById("recap").hidden = false;
   }
   form.elements.date.min = new Date().toISOString().slice(0, 10);
+  if (/^\d{4}-\d{2}-\d{2}$/.test(q.get("date") || "")) form.elements.date.value = q.get("date");
+  var fq = q.get("formule");
+  if (fq) [].forEach.call(form.elements.formule.options, function (o) { if (o.value.indexOf(fq + " (") === 0) form.elements.formule.value = o.value; });
   if (q.get("erreur")) erreur("L'envoi n'a pas fonctionné. Réessayez, ou " + contact);
 
   form.addEventListener("submit", function (e) {
