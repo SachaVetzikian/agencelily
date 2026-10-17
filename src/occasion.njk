@@ -36,7 +36,7 @@ permalink: "{{ o.url }}"
 <section class="section"><div class="wrap split-lead">
 <h2>{{ o.ideesTitre or "Idées de messages" }}</h2>
 <div><ul class="inline-list" style="flex-direction:column;">{% for i in o.idees %}<li>{{ i }}</li>{% endfor %}</ul>
-<p style="margin-top:var(--s5);font-size:var(--fs-small);"><a href="/blog/idees-livre-d-or-original/">Plus d'idées de livre d'or original</a></p></div>
+<p style="margin-top:var(--s5);font-size:var(--fs-small);"><a href="/blog/idees-livre-d-or-original/">Plus d'idées de livre d'or original</a>{% if o.slug == "mariage" %} · <a href="/blog/idees-animation-mariage/">15 idées d'animation mariage originales</a>{% endif %}</p></div>
 </div></section>
 
 <section class="section alt" id="formules"><div class="wrap">
