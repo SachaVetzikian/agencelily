@@ -4,15 +4,13 @@ eleventyExcludeFromCollections: true
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-{%- for p in collections.all %}{% if p.url and not p.data.pagination and not p.data.eleventyExcludeFromCollections %}
+{%- for p in collections.all %}{% if p.url and not p.data.pagination and not p.data.eleventyExcludeFromCollections and not p.data.robots %}
 <url><loc>{{ site.url }}{{ p.url }}</loc></url>
 {%- endif %}{% endfor %}
 {%- for s in servicesPages %}
 <url><loc>{{ site.url }}{{ s | serviceUrl }}</loc></url>
 {%- endfor %}
-{%- for e in evenements %}
-<url><loc>{{ site.url }}/evenements/{{ e.slug }}/</loc></url>
-{%- endfor %}
+
 {%- for o in occasions %}
 <url><loc>{{ site.url }}{{ o.url }}</loc></url>
 {%- endfor %}
