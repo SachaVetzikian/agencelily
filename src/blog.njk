@@ -15,7 +15,7 @@ meta: "Guides pour choisir et réussir votre livre d'or audio et vidéo : foncti
 <div class="post-card-img"><img src="{{ p.data.image or '/assets/photos/hero-livre-dor.webp' }}" alt="" loading="lazy"></div>
 <h2 class="post-card-title">{{ p.data.h1 }}</h2>
 <p class="post-card-excerpt">{{ p.data.extrait }}</p>
-<p class="post-card-meta">Agence Lily · {{ (p.data.modifie or p.date) | dateFr }}</p>
+<p class="post-card-meta">{{ site.fondateur.prenom }} {{ site.fondateur.nom }} · {{ (p.data.modifie or p.date) | dateFr }}</p>
 </a>{% endfor %}
 </section>
 {% include "partials/cta.njk" %}

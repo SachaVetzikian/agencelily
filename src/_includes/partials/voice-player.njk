@@ -1,0 +1,25 @@
+{# Lecteur vocal. Variable : voix (entrée de temoignages.json) ; voixClair = true pour fond clair #}
+<div class="voice{% if voixClair %} voice-light{% endif %}" data-voice>
+<button class="voice-play" type="button" aria-label="Écouter le message de {{ voix.prenom }}"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="i-play" d="M8 5v14l11-7z"/><path class="i-pause" d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg></button>
+<div class="voice-body">
+<span class="voice-name">{{ voix.prenom }}{% if voix.evenement %} · {{ voix.evenement }}{% endif %}</span>
+<div class="voice-bar" aria-hidden="true"><i></i></div>
+<span class="voice-time"><span data-cur>0:00</span> / {{ voix.duree }}</span>
+</div>
+<audio preload="none" src="{{ voix.audio }}"></audio>
+</div>
+<script>
+(function () {
+  document.querySelectorAll("[data-voice]:not([data-ready])").forEach(function (v) {
+    v.setAttribute("data-ready", "");
+    var a = v.querySelector("audio"), b = v.querySelector(".voice-play"), bar = v.querySelector(".voice-bar"), fill = bar.querySelector("i"), cur = v.querySelector("[data-cur]");
+    var fmt = function (t) { t = Math.floor(t || 0); return Math.floor(t / 60) + ":" + String(t % 60).padStart(2, "0"); };
+    b.addEventListener("click", function () { a.paused ? a.play() : a.pause(); });
+    a.addEventListener("play", function () { v.classList.add("is-playing"); if (window.lilyTrack) window.lilyTrack("temoignage_ecoute", { page: location.pathname }); });
+    a.addEventListener("pause", function () { v.classList.remove("is-playing"); });
+    a.addEventListener("ended", function () { v.classList.remove("is-playing"); a.currentTime = 0; });
+    a.addEventListener("timeupdate", function () { fill.style.width = (a.duration ? a.currentTime / a.duration * 100 : 0) + "%"; cur.textContent = fmt(a.currentTime); });
+    bar.addEventListener("click", function (e) { if (!a.duration) return; var r = bar.getBoundingClientRect(); a.currentTime = (e.clientX - r.left) / r.width * a.duration; });
+  });
+})();
+</script>

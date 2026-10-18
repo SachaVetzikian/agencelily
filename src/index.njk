@@ -20,7 +20,7 @@ faqHome:
 {% set heroEyebrow = "Sur téléphone vintage" %}
 {% set heroTitle = "Le livre d'or audio et vidéo, à Paris et en Île-de-France" %}
 {% set heroIntro = "Un téléphone vintage, un message après le bip. Livré et installé chez vous, dès 200 €." %}
-{% set heroAside %}<a class="btn" href="/devis/?service=livre-dor-audio-video" data-track="devis">Vérifier ma date</a>{% endset %}
+{% set heroAside %}{% include "partials/hero-date.njk" %}{% endset %}
 {% include "partials/hero-full.njk" %}
 
 <section class="section"><div class="wrap intro-center">
@@ -50,33 +50,12 @@ faqHome:
 <div class="wrap">
 <div><span class="eyebrow">{% if ta or qa %}Témoignage{% else %}Notre promesse{% endif %}</span><h2>{% if ta %}Écoutez {{ ta.prenom }}{% elif qa %}Ils nous ont fait confiance{% else %}Installé, vérifié, suivi.{% endif %}</h2></div>
 <div class="testimonial-card">
-{% if ta %}<div class="voice" data-voice>
-<button class="voice-play" type="button" aria-label="Écouter le témoignage de {{ ta.prenom }}"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="i-play" d="M8 5v14l11-7z"/><path class="i-pause" d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg></button>
-<div class="voice-body">
-<span class="voice-name">{{ ta.prenom }}{% if ta.evenement %} · {{ ta.evenement }}{% endif %}</span>
-<div class="voice-bar" aria-hidden="true"><i></i></div>
-<span class="voice-time"><span data-cur>0:00</span> / {{ ta.duree }}</span>
-</div>
-<audio preload="none" src="{{ ta.audio }}"></audio>
-</div>
-{% elif qa %}<p>« {{ qa.texte }} »</p><span>{{ qa.prenom }}{% if qa.evenement %} · {{ qa.evenement }}{% endif %}</span>
+{% if ta %}{% set voix = ta %}{% include "partials/voice-player.njk" %}{% elif qa %}<p>« {{ qa.texte }} »</p><span>{{ qa.prenom }}{% if qa.evenement %} · {{ qa.evenement }}{% endif %}</span>
 {% else %}<p>Nous livrons le téléphone, l’installons, le vérifions avant l’arrivée de vos invités et restons joignables pendant toute la fête.</p><span>Pas un colis : une équipe.</span>{% endif %}
 </div>
 </div>
 </section>
-{% if ta %}<script>
-// Lecteur du témoignage vocal : lecture / pause, progression, clic sur la barre pour avancer
-document.querySelectorAll("[data-voice]").forEach(function (v) {
-  var a = v.querySelector("audio"), b = v.querySelector(".voice-play"), bar = v.querySelector(".voice-bar"), fill = bar.querySelector("i"), cur = v.querySelector("[data-cur]");
-  var fmt = function (t) { t = Math.floor(t || 0); return Math.floor(t / 60) + ":" + String(t % 60).padStart(2, "0"); };
-  b.addEventListener("click", function () { a.paused ? a.play() : a.pause(); });
-  a.addEventListener("play", function () { v.classList.add("is-playing"); if (window.lilyTrack) window.lilyTrack("temoignage_ecoute"); });
-  a.addEventListener("pause", function () { v.classList.remove("is-playing"); });
-  a.addEventListener("ended", function () { v.classList.remove("is-playing"); a.currentTime = 0; });
-  a.addEventListener("timeupdate", function () { fill.style.width = (a.duration ? a.currentTime / a.duration * 100 : 0) + "%"; cur.textContent = fmt(a.currentTime); });
-  bar.addEventListener("click", function (e) { if (!a.duration) return; var r = bar.getBoundingClientRect(); a.currentTime = (e.clientX - r.left) / r.width * a.duration; });
-});
-</script>{% endif %}
+
 
 {% set avisService = "livre-dor-audio-video" %}{% include "partials/avis.njk" %}
 
@@ -99,3 +78,5 @@ document.querySelectorAll("[data-voice]").forEach(function (v) {
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{% for f in faqHome %}{"@type":"Question","name":{{ f.q | json | safe }},"acceptedAnswer":{"@type":"Answer","text":{{ f.a | json | safe }}}}{% if not loop.last %},{% endif %}{% endfor %}]}
 </script>
+
+{% include "partials/moments.njk" %}

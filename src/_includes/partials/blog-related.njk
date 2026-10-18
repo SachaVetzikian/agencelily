@@ -8,7 +8,7 @@
 {% for r in rel %}<a class="post-card" href="{{ r.url }}">
 <div class="post-card-img"><img src="{{ r.img }}" alt="" loading="lazy"></div>
 <p class="post-card-title">{{ r.titre }}</p>
-<p class="post-card-meta">Agence Lily{% if r.date %} · {{ r.date }}{% endif %}</p>
+<p class="post-card-meta">{{ (site.fondateur.prenom + " " + site.fondateur.nom) if site.fondateur.prenom else "Agence Lily" }}{% if r.date %} · {{ r.date }}{% endif %}</p>
 </a>{% endfor %}
 </div>
 </section>

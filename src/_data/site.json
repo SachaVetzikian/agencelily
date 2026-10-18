@@ -13,13 +13,15 @@
     "seuilAffichage": 4
   },
   "delaiReponse": "24h",
-  "whatsapp": "",
+  "whatsapp": "33665704220",
   "whatsappMessage": "Bonjour, je souhaite un devis pour mon événement.",
   "googleBusiness": "https://maps.app.goo.gl/kBRec8DW11M3wWih8",
   "fondateur": {
-    "prenom": "",
-    "photo": "",
-    "bio": ""
+    "prenom": "Sacha",
+    "nom": "Vetzikian",
+    "photo": "/assets/photos/sacha-vetzikian.webp",
+    "role": "Fondateur d'Agence Lily",
+    "bio": "Je m'appelle Sacha Vetzikian et j'ai fondé Agence Lily à Paris.\n\nMon idée est simple : qu'à la fin de votre fête, vos invités vous laissent autre chose qu'une signature dans un carnet. Leur voix, leur rire, leurs mots. Nous installons le livre d'or audio et vidéo chez vous, partout en Île-de-France, et nous restons joignables pendant toute la soirée."
   },
   "googleVerification": "",
   "ga4Id": "",

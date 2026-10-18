@@ -8,7 +8,7 @@ meta: "Agence Lily, c'est un seul interlocuteur pour les bars gourmands et la lo
 <section class="hero"><div class="wrap{% if site.fondateur.bio %} two-cols{% endif %}" style="align-items:center;">
 <div>
 <span class="eyebrow">À propos</span>
-<h1>{% if site.fondateur.prenom %}Bonjour, moi c'est {{ site.fondateur.prenom }}{% else %}Un seul interlocuteur pour votre fête{% endif %}</h1>
+<h1>{% if site.fondateur.prenom %}Bonjour, je suis {{ site.fondateur.prenom }} {{ site.fondateur.nom }}{% else %}Un seul interlocuteur pour votre fête{% endif %}</h1>
 {% if site.fondateur.bio %}{% for p in site.fondateur.bio.split("\n\n") %}<p class="lede">{{ p }}</p>{% endfor %}
 {% else %}<p class="lede">Agence Lily réunit ce qui rend une fête mémorable : des bars gourmands préparés devant vos invités et le matériel qui garde les souvenirs. Une seule équipe, un seul devis, une seule personne à appeler.</p>{% endif %}
 </div>

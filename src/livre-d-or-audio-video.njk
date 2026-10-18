@@ -26,7 +26,7 @@ faqProduit:
 {% set heroImg = livre.image %}{% set heroImgMobile = livre.imageMobile %}{% set heroAlt = "Téléphone vintage de livre d'or audio" %}{% set heroEyebrow = "Paris & Île-de-France" %}
 {% set heroTitle = "Livre d'or audio et vidéo sur téléphone vintage" %}
 {% set heroIntro = "Vos invités décrochent et vous laissent un message. Avec la vidéo, vous gardez aussi leurs visages." %}
-{% set heroAside %}<div class="price-box"><strong>Dès 200 €</strong><span>livraison et installation comprises</span></div><div class="btns"><a class="btn primary" href="/devis/?service=livre-dor-audio-video" data-track="devis">Vérifier ma date</a></div>{% endset %}
+{% set heroAside %}<div class="price-box"><strong>Dès 200 €</strong><span>livraison et installation comprises</span></div>{% include "partials/hero-date.njk" %}{% endset %}
 {% include "partials/hero-full.njk" %}
 
 <section class="section"><div class="wrap split-lead">
@@ -71,6 +71,7 @@ faqProduit:
 
 <section class="section"><div class="wrap">
 <h2>Exemples de messages d'accueil</h2>
+{% if temoignages[0] %}<div class="voice-sample"><p class="voice-sample-label">Écoutez un vrai message laissé sur le téléphone</p>{% set voix = temoignages[0] %}{% set voixClair = true %}{% include "partials/voice-player.njk" %}</div>{% endif %}
 <div class="quotes">{% for x in occasions %}<blockquote>{{ x.messagesAccueil[0] }}</blockquote>{% endfor %}</div>
 </div></section>
 
