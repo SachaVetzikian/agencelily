@@ -16,9 +16,9 @@ faq:
   - q: "Combien de temps dure la location ?"
     a: "<strong>Deux durées au choix :</strong> un forfait de 3 heures, prolongeable à l'heure, ou un forfait soirée complète sans limite d'heure, récupéré le lendemain."
   - q: "Quand récupère-t-on les messages ?"
-    a: "<strong>Après l'événement, par lien en ligne.</strong> Avec l'option clé USB (+25 €), vous les avez aussi sur un support à ranger avec vos photos."
+    a: "<strong>Après l'événement, par lien en ligne.</strong> Avec l'option clé USB, vous les avez aussi sur un support à ranger avec vos photos."
   - q: "Combien coûte un livre d'or audio ?"
-    a: "<strong>200 € pour l'audio, 300 € avec la vidéo, 400 € avec un animateur.</strong> Livraison et installation comprises à Paris et en Île-de-France."
+    a: "<strong>À partir de 200 €</strong>, livraison et installation comprises à Paris et en Île-de-France. Le prix exact dépend de la formule et de la durée : vous le recevez sur devis sous 24 h."
 ressources:
   - titre: "Livre d'or audio et vidéo sur téléphone vintage"
     url: "/livre-d-or-audio-video/"
@@ -68,15 +68,15 @@ ressources:
 
 **Après l'événement, vous recevez tous les messages par lien en ligne.** Vous les écoutez sur votre téléphone ou votre ordinateur, et vous les partagez avec qui vous voulez.
 
-**Avec l'option clé USB (+25 €), vous avez aussi un souvenir physique** à ranger avec vos photos de famille.
+**Avec l'option clé USB, vous avez aussi un souvenir physique** à ranger avec vos photos de famille.
 
 ## 📊 Audio ou vidéo : que choisir ?
 
-| Formule | Ce que vous gardez | Pour qui | Prix |
-|---|---|---|---|
-| Audio | Les voix de vos invités | Petits comités, budget serré | 200 € |
-| Audio + vidéo | Les voix et les visages | La plupart des mariages et grandes fêtes | 300 € |
-| Audio + vidéo avec animateur | Le plus de messages, même des timides | Plus de 120 invités, invités réservés | 400 € |
+| Formule | Ce que vous gardez | Pour qui |
+|---|---|---|
+| Audio | Les voix de vos invités | Petits comités, budget serré |
+| Audio + vidéo | Les voix et les visages | La plupart des mariages et grandes fêtes |
+| Audio + vidéo avec animateur | Le plus de messages, même des timides | Plus de 120 invités, invités réservés |
 
 {% set ctaTitre = "Trouvez la bonne formule pour votre date" %}{% include "partials/blog-cta.njk" %}
 

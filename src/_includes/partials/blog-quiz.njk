@@ -13,10 +13,10 @@
 <div class="quiz-result" hidden>
 <p class="quiz-eyebrow">Notre recommandation pour vous</p>
 <p class="quiz-result-name" data-r-nom></p>
-<p class="quiz-result-price"><span data-r-prix></span> €</p>
+<p class="quiz-result-price">Sur devis · réponse sous {{ site.delaiReponse }}</p>
 <p class="quiz-result-text" data-r-texte></p>
 <div class="btns" style="justify-content:center;"><a class="btn primary" data-r-cta href="/devis/" data-track="devis-quiz">Vérifier ma date</a><button class="btn" type="button" data-restart>Recommencer</button></div>
-<p class="quiz-meta">Réponse sous {{ site.delaiReponse }} · Livraison et installation comprises</p>
+<p class="quiz-meta">Livraison et installation comprises à Paris et en Île-de-France</p>
 </div>
 </div>
 <script>
@@ -40,7 +40,7 @@
     function result() {
       var score = {}; answers.forEach(function (k, qi) { var p = d.questions[qi].options[k].points; for (var key in p) score[key] = (score[key] || 0) + p[key]; });
       var best = Object.keys(d.resultats).sort(function (a, b) { return (score[b] || 0) - (score[a] || 0); })[0], r = d.resultats[best];
-      $("[data-r-nom]").textContent = r.nom; $("[data-r-prix]").textContent = r.prix; $("[data-r-texte]").textContent = r.texte;
+      $("[data-r-nom]").textContent = r.nom; $("[data-r-texte]").textContent = r.texte;
       $("[data-r-cta]").href = "/devis/?service=livre-dor-audio-video&formule=" + encodeURIComponent(r.nom);
       $(".quiz-body").hidden = true; $(".quiz-result").hidden = false;
       if (window.lilyTrack) window.lilyTrack("quiz_termine", { formule: r.nom });

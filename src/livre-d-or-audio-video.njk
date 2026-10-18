@@ -2,16 +2,16 @@
 layout: layouts/base.njk
 permalink: /livre-d-or-audio-video/
 title: "Livre d'or audio et vidéo sur téléphone vintage | Agence Lily"
-meta: "Livre d'or audio et vidéo sur téléphone vintage : message d'accueil personnalisé, installé à Paris et en Île-de-France. De 200 à 400 €. Devis gratuit."
+meta: "Livre d'or audio et vidéo sur téléphone vintage : message d'accueil personnalisé, installé à Paris et en Île-de-France. Dès 200 €. Devis gratuit."
 faqProduit:
   - q: "Qu'est-ce qu'un livre d'or audio et vidéo ?"
     a: "C'est un téléphone vintage sur lequel vos invités laissent un message vocal pendant votre événement. Avec la formule vidéo, un espace filmé enregistre aussi leur visage. Vous récupérez tous les messages après la fête."
   - q: "Combien coûte un livre d'or audio et vidéo ?"
-    a: "Chez Agence Lily : 200 € pour l'audio, 300 € pour l'audio et la vidéo, 400 € avec un animateur. La livraison et l'installation à Paris et en Île-de-France sont comprises."
+    a: "Chez Agence Lily : à partir de 200 €, livraison et installation comprises à Paris et en Île-de-France. Le prix exact dépend de la formule, de la durée et du lieu : vous le recevez sur devis sous 24 h."
   - q: "Combien de temps les invités peuvent-ils parler ?"
     a: "Le temps qu'il leur faut : la plupart des messages durent de 30 secondes à 2 minutes."
   - q: "Peut-on avoir l'audio et la vidéo ?"
-    a: "Oui, c'est la formule Audio + vidéo à 300 €, la plus choisie. Vos invités parlent au téléphone et sont filmés en même temps."
+    a: "Oui, c'est la formule Audio + vidéo, la plus choisie. Vos invités parlent au téléphone et sont filmés en même temps."
   - q: "Que se passe-t-il si le téléphone ne fonctionne pas ?"
     a: "Le matériel est vérifié avant chaque prestation et installé par nos soins sur place. Si un souci survient pendant l'événement, vous avez un contact direct pour nous joindre."
   - q: "Quelle différence entre un livre d'or audio, vidéo et numérique ?"
@@ -96,7 +96,7 @@ faqProduit:
   "brand": {"@type": "Brand", "name": "{{ site.name }}"},
   "seller": {"@id": "{{ site.url }}/#business"},
   "image": "{{ site.url }}/assets/og/og-default.png",
-  "offers": [{% for f in livre.formules %}{"@type": "Offer", "name": {{ f.nom | json | safe }}, "price": "{{ f.prix }}", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "{{ site.url }}{{ page.url }}"}{% if not loop.last %},{% endif %}{% endfor %}]
+  "offers": {"@type": "AggregateOffer", "lowPrice": "200", "priceCurrency": "EUR", "offerCount": "3", "availability": "https://schema.org/InStock", "url": "{{ site.url }}{{ page.url }}"}
 }
 </script>
 <script type="application/ld+json">

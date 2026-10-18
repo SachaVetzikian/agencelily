@@ -68,6 +68,10 @@ module.exports = function (eleventyConfig) {
   // Note sur 5 au format français : 5 → « 5,0 »
   eleventyConfig.addFilter("noteFr", (n) => Number(n).toFixed(1).replace(".", ","));
   eleventyConfig.addFilter("json", (v) => JSON.stringify(v));
+  // Services sans les prix détaillés du livre d'or (affichés « sur devis »)
+  eleventyConfig.addFilter("sansPrixLivre", (services) =>
+    services.map((s) => (s.formules ? { ...s, formules: s.formules.map(({ prix, ...f }) => f), options: (s.options || []).map(({ prix, ...o }) => o) } : s))
+  );
 
   eleventyConfig.addTransform("images-webp", async function (content, outputPath) {
     if (!outputPath || !outputPath.endsWith(".html")) return content;

@@ -62,15 +62,15 @@ meta: "Tarifs de location d'un livre d'or audio et vidéo sur téléphone vintag
 <div class="section-title" style="margin-top:var(--s8);"><span class="eyebrow">Plus avantageux</span><h2>Packs par événement</h2></div>
 <div class="table-wrap"><table class="table">
 <thead><tr><th>Pack</th><th>Contenu</th><th>Prix</th></tr></thead>
-<tbody>{% for e in evenements %}<tr><td><a href="/evenements/{{ e.slug }}/#pack"><strong>{{ e.pack.nom }}</strong></a></td><td>{{ e.pack.contenu | join(" + ") }}</td><td>{{ e.pack.prix | euros }} <small style="color:var(--muted);font-weight:400;"><s>{{ e.pack.valeur | euros }}</s></small></td></tr>{% endfor %}</tbody>
+<tbody>{% for e in evenements %}<tr><td><a href="/evenements/{{ e.slug }}/#pack"><strong>{{ e.pack.nom }}</strong></a></td><td>{{ e.pack.contenu | join(" + ") }}</td><td>Sur devis</td></tr>{% endfor %}</tbody>
 </table></div>
 </div></section>
 
 <section class="section alt"><div class="wrap faq-center">
 <div class="section-title"><span class="eyebrow">Bon à savoir</span><h2>Vos questions</h2></div>
 {% set faq = [
-  { q: "Combien coûte un livre d'or ?", a: "Un carnet papier coûte quelques dizaines d'euros. Un livre d'or audio sur téléphone vintage, livré et installé, coûte chez nous 200 € ; 300 € avec la vidéo ; 400 € avec un animateur." },
-  { q: "Combien coûte un livre d'or audio ?", a: "200 € pour la formule audio, 300 € avec la vidéo, 400 € avec un animateur. Livraison et installation comprises à Paris et en Île-de-France. Options : clé USB (+25 €), décoration florale (+50 €)." },
+  { q: "Combien coûte un livre d'or ?", a: "Un carnet papier coûte quelques dizaines d'euros. Un livre d'or audio et vidéo sur téléphone vintage, livré et installé, démarre chez nous à 200 € ; le prix exact dépend de la formule et de la durée." },
+  { q: "Combien coûte un livre d'or audio ?", a: "À partir de 200 €, livraison et installation comprises à Paris et en Île-de-France. Le prix exact dépend de la formule, de la durée et du lieu : vous le recevez sur devis sous 24 h." },
   { q: "Les frais de déplacement sont-ils inclus ?", a: "Ils sont calculés selon votre lieu en Île-de-France et indiqués clairement sur votre devis, avant toute réservation." },
   { q: "Combien de temps dure la location ?", a: "Deux durées au choix : un forfait de 3 heures (par exemple de 18 h à 21 h), prolongeable à l'heure, ou un forfait soirée complète sans limite d'heure : le téléphone reste toute la nuit et nous le récupérons le lendemain." },
   { q: "Comment réserver ma date ?", a: "Un acompte de 50 % bloque votre date, le solde est réglé avant l'événement. Si vous réglez la totalité à la réservation, vous bénéficiez de 10 % de remise." },

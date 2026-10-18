@@ -12,11 +12,11 @@ faq:
   - q: "Quelle est l'alternative la plus originale au livre d'or papier ?"
     a: "<strong>Le livre d'or audio sur téléphone vintage.</strong> Les invités parlent au lieu d'écrire : les messages sont plus longs, plus sincères, et se réécoutent des années plus tard."
   - q: "Quel livre d'or original pour un mariage ?"
-    a: "<strong>Le livre d'or audio et vidéo</strong>, pour garder à la fois la voix et le visage de chaque invité. C'est notre formule la plus choisie, à 300 €."
+    a: "<strong>Le livre d'or audio et vidéo</strong>, pour garder à la fois la voix et le visage de chaque invité. C'est notre formule la plus choisie."
   - q: "Le livre d'or audio convient-il aux personnes âgées ?"
     a: "<strong>Oui, c'est même son point fort.</strong> Tout le monde sait décrocher un téléphone et parler : aucune application, aucun QR code."
   - q: "Combien coûte un livre d'or audio ?"
-    a: "<strong>200 € pour l'audio, 300 € avec la vidéo, 400 € avec un animateur</strong>, livraison et installation comprises à Paris et en Île-de-France."
+    a: "<strong>À partir de 200 €</strong>, livraison et installation comprises à Paris et en Île-de-France. Le prix exact dépend de la formule et de la durée."
 ressources:
   - titre: "Comment fonctionne un livre d'or audio"
     url: "/blog/comment-fonctionne-livre-d-or-audio/"

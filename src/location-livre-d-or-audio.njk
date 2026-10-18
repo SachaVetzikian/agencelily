@@ -2,10 +2,10 @@
 layout: layouts/base.njk
 permalink: /location-livre-d-or-audio/
 title: "Location livre d'or audio à Paris et en IDF | Agence Lily"
-meta: "Location de livre d'or audio et vidéo à Paris et en Île-de-France : téléphone vintage livré, installé et récupéré par nos soins. De 200 à 400 €."
+meta: "Location de livre d'or audio et vidéo à Paris et en Île-de-France : téléphone vintage livré, installé et récupéré par nos soins. Dès 200 €, devis sous 24 h."
 faqLocation:
   - q: "Combien coûte la location d'un livre d'or audio ?"
-    a: "200 € pour la formule audio, 300 € avec la vidéo, 400 € avec un animateur. La livraison et l'installation à Paris et en Île-de-France sont comprises."
+    a: "À partir de 200 €, livraison et installation comprises à Paris et en Île-de-France. Le prix exact dépend de la formule, de la durée et du lieu : vous le recevez sur devis sous 24 h."
   - q: "Intervenez-vous en dehors de l'Île-de-France ?"
     a: "Nous intervenons à Paris et dans toute l'Île-de-France. Pour un événement ailleurs, demandez-nous un devis."
   - q: "Faut-il une prise électrique ?"
@@ -73,7 +73,7 @@ faqLocation:
 {% include "partials/cta.njk" %}
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Service","name":"Location de livre d'or audio et vidéo","serviceType":"Location de livre d'or audio","url":"{{ site.url }}{{ page.url }}","areaServed":{"@type":"AdministrativeArea","name":"Île-de-France"},"provider":{"@id":"{{ site.url }}/#business"},"offers":[{% for f in livre.formules %}{"@type":"Offer","name":{{ f.nom | json | safe }},"price":"{{ f.prix }}","priceCurrency":"EUR"}{% if not loop.last %},{% endif %}{% endfor %}]}
+{"@context":"https://schema.org","@type":"Service","name":"Location de livre d'or audio et vidéo","serviceType":"Location de livre d'or audio","url":"{{ site.url }}{{ page.url }}","areaServed":{"@type":"AdministrativeArea","name":"Île-de-France"},"provider":{"@id":"{{ site.url }}/#business"},"offers":{"@type":"AggregateOffer","lowPrice":"200","priceCurrency":"EUR","offerCount":"3"}}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{% for f in faqLocation %}{"@type":"Question","name":{{ f.q | json | safe }},"acceptedAnswer":{"@type":"Answer","text":{{ f.a | json | safe }}}}{% if not loop.last %},{% endif %}{% endfor %}]}

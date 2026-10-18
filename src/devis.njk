@@ -43,7 +43,7 @@ faqDevis:
 <div class="f-row">
 <label class="f-field"><span>Formule</span><select name="formule">
 <option value="Je ne sais pas encore">Je ne sais pas encore</option>
-{% for f in livre.formules %}<option value="{{ f.nom }} ({{ f.prix }} €)">{{ f.nom }} · {{ f.prix }} €</option>{% endfor %}
+{% for f in livre.formules %}<option value="{{ f.nom }} (formule)">{{ f.nom }}</option>{% endfor %}
 <option value="Autre prestation">Autre prestation (bar, photobooth…)</option>
 </select></label>
 <label class="f-field"><span>Nombre d'invités <small>environ</small></span><input name="invites" type="number" min="1" max="2000" inputmode="numeric"></label>

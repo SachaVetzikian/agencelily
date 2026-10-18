@@ -6,7 +6,7 @@ faqHome:
   - q: "Comment fonctionne le livre d'or audio ?"
     a: "Vos invités décrochent un téléphone vintage, écoutent votre message d'accueil et vous laissent un message après le bip. Vous recevez tous les messages par lien en ligne après la fête."
   - q: "Combien coûte la location ?"
-    a: "200 € pour l'audio, 300 € pour l'audio et la vidéo, 400 € avec un animateur. Livraison et installation comprises à Paris et en Île-de-France."
+    a: "À partir de 200 €, livraison et installation comprises à Paris et en Île-de-France. Le prix exact dépend de la formule, de la durée et du lieu : vous le recevez sur devis sous 24 h."
   - q: "Dans quelle zone intervenez-vous ?"
     a: "À Paris et dans toute l'Île-de-France : 75, 77, 78, 91, 92, 93, 94 et 95."
   - q: "Combien de temps dure la location ?"
@@ -78,5 +78,3 @@ faqHome:
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{% for f in faqHome %}{"@type":"Question","name":{{ f.q | json | safe }},"acceptedAnswer":{"@type":"Answer","text":{{ f.a | json | safe }}}}{% if not loop.last %},{% endif %}{% endfor %}]}
 </script>
-
-{% include "partials/moments.njk" %}

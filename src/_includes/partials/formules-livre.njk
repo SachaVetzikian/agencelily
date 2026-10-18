@@ -5,12 +5,12 @@
 {% if f.populaire %}<span class="badge">La plus choisie</span>{% endif %}
 {% set label = "Formule " + f.nom %}{% set img = f.image %}{% set tall = false %}<div class="formule-visual">{% include "partials/visual.njk" %}</div>
 <h3>{{ f.nom }}</h3>
-<div class="amount">{{ f.prix | euros }}</div>
+
 <ul class="check">{% for d in f.detail %}<li>{{ d }}</li>{% endfor %}</ul>
 </div>{% endfor %}
 </div>
 <span class="rail-hint">Faites glisser pour comparer →</span>
 <div class="box" style="margin-top:24px;">
 <h3>Options</h3>
-<ul class="options">{% for o in livre.options %}<li><span>{{ o.nom }}</span><b>+ {{ o.prix }}</b></li>{% endfor %}</ul>
+<ul class="options">{% for o in livre.options %}<li><span>{{ o.nom }}</span><b>En option</b></li>{% endfor %}</ul>
 </div>

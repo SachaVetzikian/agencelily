@@ -25,13 +25,13 @@ meta: "Simulez votre budget en 1 minute : livre d'or audio et vidéo, bars gourm
 {% set livre = services | findBySlug("livre-dor-audio-video") %}
 <div class="config-grid">
 {% for f in livre.formules %}
-<label class="config-item"><input type="radio" name="livre" value="{{ loop.index0 }}"><span class="ci-body"><strong>{{ f.nom }}</strong><span>{{ f.prix }} €</span></span></label>
+<label class="config-item"><input type="radio" name="livre" value="{{ loop.index0 }}"><span class="ci-body"><strong>{{ f.nom }}</strong><span>Sur devis</span></span></label>
 {% endfor %}
 <label class="config-item"><input type="radio" name="livre" value="" checked><span class="ci-body"><strong>Pas de livre d'or</strong></span></label>
 </div>
 <div class="config-grid config-options" id="c-livre-options" hidden>
 {% for o in livre.options %}
-<label class="config-item small"><input type="checkbox" name="livre-option" value="{{ loop.index0 }}"><span class="ci-body"><strong>{{ o.nom }}</strong><span>+ {{ o.prix }}</span></span></label>
+<label class="config-item small"><input type="checkbox" name="livre-option" value="{{ loop.index0 }}"><span class="ci-body"><strong>{{ o.nom }}</strong><span>En option</span></span></label>
 {% endfor %}
 </div>
 
@@ -71,7 +71,7 @@ meta: "Simulez votre budget en 1 minute : livre d'or audio et vidéo, bars gourm
 
 <script>
 (function () {
-  var services = {{ services | json | safe }};
+  var services = {{ services | sansPrixLivre | json | safe }};
   var bySlug = {};
   services.forEach(function (s) { bySlug[s.slug] = s; });
   var livre = bySlug["livre-dor-audio-video"];
@@ -97,11 +97,10 @@ meta: "Simulez votre budget en 1 minute : livre d'or audio et vidéo, bars gourm
     optionsBox.hidden = lv === "";
     if (lv !== "") {
       var f = livre.formules[parseInt(lv, 10)];
-      lines.push(["Livre d'or : " + f.nom, f.prix]); total += f.prix; hasLoc = true;
+      lines.push(["Livre d'or : " + f.nom, null]); hasLoc = true;
       form.querySelectorAll('input[name="livre-option"]:checked').forEach(function (i) {
         var o = livre.options[parseInt(i.value, 10)];
-        var p = toNumber(o.prix);
-        lines.push([o.nom, p]); total += p;
+        lines.push([o.nom, null]);
       });
     }
     form.querySelectorAll('input[name="location"]:checked').forEach(function (i) {
@@ -109,7 +108,7 @@ meta: "Simulez votre budget en 1 minute : livre d'or audio et vidéo, bars gourm
       lines.push([s.nom, s.prix]); total += s.prix; hasLoc = true;
     });
     linesEl.innerHTML = lines.length
-      ? lines.map(function (l) { return "<li><span>" + l[0] + "</span><b>" + fmt(l[1]) + "</b></li>"; }).join("")
+      ? lines.map(function (l) { return "<li><span>" + l[0] + "</span><b>" + (l[1] === null ? "Sur devis" : fmt(l[1])) + "</b></li>"; }).join("")
       : "<li><span>Rien de sélectionné pour l'instant</span><b></b></li>";
     totalEl.textContent = fmt(total);
     document.getElementById("c-total-m").textContent = fmt(total);
