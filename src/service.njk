@@ -55,7 +55,7 @@ permalink: "/{{ s.categorie }}/{{ s.slug }}/"
 <div class="wrap">
 <h2>Idéal pour</h2>
 <div class="reco" style="margin-top:24px;">
-{% for e in evts %}{% for r in e.services %}{% if r.slug == s.slug %}<a href="/evenements/{{ e.slug }}/"><div><h3 style="margin:0;">{{ e.nom }}</h3><p>{{ r.pourquoi }}</p></div><span class="tag">Voir →</span></a>{% endif %}{% endfor %}{% endfor %}
+{% for e in evts %}{% for r in e.services %}{% if r.slug == s.slug %}{% if site.evenementsIndexes %}<a href="/evenements/{{ e.slug }}/"><div><h3 style="margin:0;">{{ e.nom }}</h3><p>{{ r.pourquoi }}</p></div><span class="tag">Voir →</span></a>{% else %}<div><div><h3 style="margin:0;">{{ e.nom }}</h3><p>{{ r.pourquoi }}</p></div></div>{% endif %}{% endif %}{% endfor %}{% endfor %}
 </div>
 </div>
 </section>

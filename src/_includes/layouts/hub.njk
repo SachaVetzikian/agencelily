@@ -16,10 +16,13 @@ layout: layouts/base.njk
 {{ content | safe }}
 </div>
 </section>
+{# Pages événements en noindex : on ne fait pas de lien vers elles tant que site.evenementsIndexes est à false #}
+{% if site.evenementsIndexes %}
 <section class="section alt">
 <div class="wrap">
 <h2>Pour quel événement ?</h2>
 <div class="pills" style="margin-top:20px;">{% for e in evenements %}<a class="pill" href="/evenements/{{ e.slug }}/">{{ e.nom }}</a>{% endfor %}</div>
 </div>
 </section>
+{% endif %}
 {% include "partials/cta.njk" %}

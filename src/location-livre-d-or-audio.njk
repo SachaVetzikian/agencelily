@@ -39,7 +39,8 @@ faqLocation:
 
 <section class="section"><div class="wrap split-lead">
 <h2>Louer plutôt qu'acheter</h2>
-<div><p>Un livre d'or audio sert une fois. En location, vous n'avez rien à installer, rien à stocker, rien à renvoyer.</p></div>
+<div><p>Un livre d'or audio sert une fois. En location, vous n'avez rien à installer, rien à stocker, rien à renvoyer.</p>
+<p>Pour tout savoir sur le téléphone, le message d'accueil et la version vidéo, voyez notre page <a href="{{ livre.url }}">livre d'or audio et vidéo</a>.</p></div>
 </div></section>
 
 <section class="section alt"><div class="wrap">
@@ -65,6 +66,12 @@ faqLocation:
 <h2>Disponibilités et réservation</h2>
 <div><p>Nous intervenons 7 jours sur 7. Un nombre limité de téléphones par date. Pour un samedi entre mai et septembre, réservez plusieurs mois à l'avance.</p>
 <a class="link" href="/devis/?service=livre-dor-audio-video">Vérifier ma date</a></div>
+</div></section>
+
+<section class="section alt"><div class="wrap">
+<h2>Selon votre événement</h2>
+<div class="pills" style="margin-top:20px;">{% for o in occasions %}<a class="pill" href="{{ o.url }}">Livre d'or {{ o.nom | lower }}</a>{% endfor %}</div>
+<p style="margin-top:20px;">Formules, options et ce qui est inclus : consultez nos <a href="/tarifs/">tarifs de location</a>.</p>
 </div></section>
 
 {% set faq = faqLocation %}{% include "partials/faq-section.njk" %}

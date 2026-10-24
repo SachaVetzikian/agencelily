@@ -62,7 +62,7 @@ meta: "Tarifs de location d'un livre d'or audio et vidéo sur téléphone vintag
 <div class="section-title" style="margin-top:var(--s8);"><span class="eyebrow">Plus avantageux</span><h2>Packs par événement</h2></div>
 <div class="table-wrap"><table class="table">
 <thead><tr><th>Pack</th><th>Contenu</th><th>Prix</th></tr></thead>
-<tbody>{% for e in evenements %}<tr><td><a href="/evenements/{{ e.slug }}/#pack"><strong>{{ e.pack.nom }}</strong></a></td><td>{{ e.pack.contenu | join(" + ") }}</td><td>Sur devis</td></tr>{% endfor %}</tbody>
+<tbody>{% for e in evenements %}<tr><td>{% if site.evenementsIndexes %}<a href="/evenements/{{ e.slug }}/#pack"><strong>{{ e.pack.nom }}</strong></a>{% else %}<strong>{{ e.pack.nom }}</strong>{% endif %}</td><td>{{ e.pack.contenu | join(" + ") }}</td><td>Sur devis</td></tr>{% endfor %}</tbody>
 </table></div>
 </div></section>
 
