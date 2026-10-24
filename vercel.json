@@ -32,11 +32,6 @@
       "source": "/blog/animation-vin-dhonneur/",
       "destination": "/blog/",
       "permanent": false
-    },
-    {
-      "source": "/blog/photobooth-ou-livre-dor-audio/",
-      "destination": "/blog/",
-      "permanent": false
     }
   ]
 }
