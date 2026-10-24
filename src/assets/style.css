@@ -581,7 +581,7 @@ p, li { text-wrap: pretty; }
   .masonry .m-cap { font-size: var(--fs-body); left: var(--s3); bottom: var(--s3); }
 }
 /* Lisibilité du titre sur photo chargée */
-.hero-full::after { background: linear-gradient(to bottom, rgba(30,22,18,.62), rgba(30,22,18,.18) 45%, rgba(30,22,18,.05) 60%, rgba(30,22,18,.55)); }
+.hero-full::after { background: rgba(30,22,18,.45); }
 
 /* ---------- Audit UX/UI ---------- */
 /* Navigation au clavier : contour taupe visible, jamais au clic souris */
@@ -896,6 +896,9 @@ h2.eyebrow { font-family: var(--font); font-size: var(--fs-label); line-height: 
 .hero-full .btn.primary { background: var(--accent); border-color: var(--accent); color: var(--white); }
 .hero-full .btn.primary:hover { background: var(--accent-dark); border-color: var(--accent-dark); color: var(--white); }
 @media (max-width: 420px) { .hero-date-row { flex-direction: column; } .hero-date-row .btn { width: 100%; } }
+.hero-date-row input::placeholder { color: var(--muted); opacity: 1; }
+/* Barre mobile masquée tant que le champ date du hero est visible (évite deux « Vérifier ma date ») */
+@media (max-width: 760px) { .contact-bar { transition: transform .25s; } .contact-bar.is-hidden { transform: translateY(110%); } }
 
 /* Lecteur vocal sur fond clair (page produit) */
 .voice-sample { margin: var(--s5) 0 var(--s6); padding: var(--s5); background: var(--white); border: 1px solid var(--line); border-radius: 8px; max-width: 520px; }
