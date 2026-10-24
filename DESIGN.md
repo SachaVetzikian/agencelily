@@ -23,13 +23,14 @@ Toutes les valeurs vivent dans `src/assets/style.css` (bloc `:root` et couche «
 | `--muted` | `#6f655e` | Texte secondaire, seconde moitié des paragraphes deux tons (contraste 5,3 sur ivoire, 4,8 sur sable) |
 | `--accent` | `#7a6558` | Taupe : bouton principal, surtitres, puces |
 | `--accent-dark` | `#5f4d42` | Survol du bouton principal |
+| `--faint` | `#cfc5bb` | Mots pas encore lus de l'effet de lecture, jamais pour un texte final |
 
 ## 3. Typographie
 Deux familles, auto-hébergées dans `src/assets/fonts/` :
 - **Instrument Serif** (titres) : grand serif éditorial en bas de casse ; en capitales pour le seul H1 du hero.
 - **Manrope** (texte, étiquettes, boutons) : sans-serif humaniste, discret.
 
-**Échelle : 7 tailles, et aucune autre.** Chaque `font-size` du CSS utilise un de ces tokens.
+**Échelle : 8 tailles, et aucune autre.** Chaque `font-size` du CSS utilise un de ces tokens.
 
 | Token | Valeur | Usage |
 |---|---|---|
@@ -37,7 +38,8 @@ Deux familles, auto-hébergées dans `src/assets/fonts/` :
 | `--fs-small` | 13 px | Boutons (bas de casse), notes, légendes, liens, texte des cartes |
 | `--fs-body` | 16 px | Texte courant, h3 en capitales |
 | `--fs-lead` | 18 à 21 px | Paragraphe d'intro centré en deux tons |
-| `--fs-h2` | 32 à 52 px | H2 (Instrument Serif) |
+| `--fs-h3` | 22 à 32 px | Titres de cartes et d'étapes, H3 des articles, légendes des occasions (Instrument Serif) |
+| `--fs-h2` | 32 à 52 px | H2, titre des articles, intro de l'accueil (Instrument Serif) |
 | `--fs-h1` | 46 à 96 px | H1 (Instrument Serif) |
 | `--fs-display` | 48 à 88 px | Phrase manifeste, prix des formules (Instrument Serif) |
 
@@ -48,7 +50,7 @@ Deux familles, auto-hébergées dans `src/assets/fonts/` :
 
 **Règle des mots :** une idée par section, une phrase par idée. L'accueil reste sous 150 mots ; le texte détaillé (étapes, FAQ, logistique) vit sur les pages produit et location.
 
-**Un seul verbe d'action sur tout le site :** « Vérifier ma date ».
+**Un seul verbe d'action sur tout le site :** « Réserver ma date ». Sous les formules, « Choisir cette formule ». Au maximum 3 fois par écran de page.
 
 ## 4. Espacements
 Échelle de 4 px : `--s1` 4 · `--s2` 8 · `--s3` 12 · `--s4` 16 · `--s5` 24 · `--s6` 32 · `--s7` 48 · `--s8` 72 · `--s9` 112.
@@ -60,7 +62,8 @@ Deux familles, auto-hébergées dans `src/assets/fonts/` :
 
 ## 5. Formes et interactions
 - Cibles tactiles : 44 px minimum pour tout lien isolé (liens du footer, fil d'Ariane, liens « Comment ça marche », questions de FAQ).
-- La barre de contact mobile est masquée sur les pages Devis et Merci. Sur le Simulateur, elle est remplacée par une barre « total estimé + Vérifier ma date ».
+- La barre de contact mobile (bouton WhatsApp « Discuter » + « Réserver ma date ») est masquée sur les pages Devis et Merci, et tant que le champ date du hero est visible. Sur le Simulateur, elle est remplacée par une barre « total estimé + Réserver ma date ».
+- Pas de style en ligne dans les gabarits : utiliser les utilitaires `.u-*` (marges et alignements sur tokens).
 - Chaque page a un bouton d'action dans le premier écran mobile.
 - Photos, cartes, encarts, tuiles, boutons, badges : **rayon 2 px** (`--radius`). Aucune pilule.
 - Focus clavier : contour taupe de 2 px (`:focus-visible`), blanc sur photo et sur le footer.
@@ -70,37 +73,37 @@ Deux familles, auto-hébergées dans `src/assets/fonts/` :
 
 ## 6. Composants
 
-**En-tête** : fond ivoire, filet bas. Liens à gauche (Livre d'or, Location, Mariage, Tarifs), logo LILY centré (`assets/logo-lily.svg`, 26 px de haut, 22 px sur mobile ; version blanche `logo-lily-blanc.svg` dans le footer), bouton taupe « Vérifier ma date » à droite. Mobile : logo à gauche, menu à droite.
+**En-tête** : fond ivoire, filet bas. Liens à gauche (Le livre d'or, Mariage, Tarifs, Avis), pensés pour la conversion : Location et les autres occasions vivent dans le footer et les liens internes, logo LILY centré (`assets/logo-lily.svg`, 26 px de haut, 22 px sur mobile ; version blanche `logo-lily-blanc.svg` dans le footer), bouton taupe « Réserver ma date » à droite. Mobile : logo à gauche, menu à droite.
 
-**Hero encadré** (`partials/hero-full.njk`) : photo en retrait de 20 px dans la page, voile sombre en haut et en bas. H1 en capitales serif en haut à gauche. En bas à gauche : bouton contour blanc (et prix si utile). En bas à droite : légende courte (`heroIntro`).
+**Hero encadré** (`partials/hero-full.njk`) : photo en retrait de 20 px dans la page, voile brun uniforme à 45 % sur toute la photo (contraste du texte blanc). Toutes les pages principales en ont un, avec une photo libre de droits si besoin (Unsplash, Pexels, Pixabay), hébergée dans `assets/photos/`. H1 en capitales serif en haut à gauche. En bas à gauche : bouton contour blanc (et prix si utile). En bas à droite : légende courte (`heroIntro`).
 
-**Intro centrée** (`.intro-center`) : pictogramme, paragraphe en deux tons (première phrase en `--ink`, suite en `--muted` dans un `<span>`), bouton contour.
+**Intro centrée** (`.intro-center`) : pictogramme, une phrase courte en serif (`.reveal`, `--fs-h2`) dont les mots passent de `--faint` à `--ink` au défilement (suivi de lecture, désactivé si l'utilisateur réduit les animations), bouton contour « Découvrir le service ».
 
 **Titre de section** (`.section-title`) : surtitre taupe en capitales espacées, H2 serif centré, phrase courte grise optionnelle.
 
-**Trio décalé** (`.trio`) : trois colonnes de photos verticales, la colonne du milieu descend et place son titre au-dessus de la photo.
+**Trio numéroté** (`.trio`) : « L'expérience » en trois temps, numéros 01 02 03 en serif taupe (`.trio-num`), titres en `--fs-h3`.
 
 **Offres en zigzag** (`partials/formules-zigzag.njk`) : photo et texte alternés gauche/droite. Texte : badge éventuel, nom en serif, description grise, puces rondes taupe, « Prix » puis montant en serif, bouton contour.
 
 **Bandeau témoignage** (`.testimonial`) : photo pleine largeur, surtitre et titre en haut à gauche, carte translucide en bas à droite. Un vrai avis uniquement ; à défaut, la promesse de marque.
 
-**Galerie** (`.masonry`) : mosaïque à hauteurs variées, légende serif sur la photo.
+**Grille des occasions** (`.masonry`) : cartes de même format (4 colonnes, 2 sur mobile), dégradé sombre en bas, nom de l'occasion en serif et « Découvrir → » souligné pour signaler le clic.
 
 **FAQ** (`.faq-center`) : colonne centrée étroite, filets fins, chevrons, bouton contour centré dessous.
 
-**Footer** (`.footer-xl`) : fond brun très foncé (`--ink`). À gauche, phrase de marque en serif, téléphone, e-mail, zone et icônes rondes ; à droite, trois colonnes de liens (Livre d'or, Occasions, Agence) sous des surtitres. Filet fin terminé par le bouton blanc « Vérifier ma date », ligne légale, puis logo LILY géant à 14 % d'opacité, coupé en bas.
+**Footer** (`.footer-xl`) : fond brun très foncé (`--ink`). À gauche, phrase de marque en serif, téléphone, e-mail, zone et icônes rondes ; à droite, trois colonnes de liens (Livre d'or, Occasions, Agence) sous des surtitres. Filet fin, ligne légale, puis logo LILY géant à 14 % d'opacité, coupé en bas.
 
 **Boutons**
 - `.btn` : contour 1 px brun, fond transparent, bas de casse. Action secondaire et standard.
 - `.btn.primary` : taupe plein, texte blanc. Action principale (en-tête, barre mobile).
 - Sur photo ou fond taupe : contour blanc (automatique dans le hero, le bandeau, le footer).
-- Un seul libellé d'action principale sur tout le site : « Vérifier ma date ».
+- Un seul libellé d'action principale sur tout le site : « Réserver ma date ».
 
 **En-tête de page sans photo** (`.page-head`) : surtitre, H1 et phrase grise centrés, boutons dessous (Tarifs, Devis, Simulateur).
 
 **Fil d'Ariane** : posé en haut de la photo du hero. **Visuel manquant** : fond neutre seul, sans étiquette. **Carrousel mobile** (`.m-rail`) pour les grilles qui rallongent la page.
 
-**Article de blog** (`layouts/article.njk`) : colonne de 712 px. Fil d'Ariane, H1, auteur (avatar, nom, rôle) + date + temps de lecture, encadré « En bref » (`enBref`), boutons « Résumer cet article avec » (ChatGPT, Perplexity, Claude, Grok), quiz interactif (`quiz`, données dans `_data/quizData.json`), H2 avec emoji, paragraphes « phrase d'attaque en gras, suite en gris », figures à bords arrondis, tableaux en carte, encart CTA (`partials/blog-cta.njk`), avis client (`partials/blog-avis.njk`), liste ✅ (`ul.post-check`), alerte (`div.post-callout`), FAQ (`faq`) balisée FAQPage, encadrés Sources / Ressources utiles (`sources`, `ressources`), articles similaires, grand bandeau final avec champ date, carte flottante (ordinateur), sommaire latéral au survol et barre de lecture.
+**Article de blog** (`layouts/article.njk`) : bannière photo (champ `banniere`, sinon `image`) avec fil d'Ariane, « Guide · X min de lecture », H1 en bas de casse et résumé. Puis colonne de 712 px : auteur (avatar, nom, rôle) + date + temps de lecture, encadré « En bref » (`enBref`), boutons « Résumer cet article avec » (ChatGPT, Perplexity, Claude, Grok), quiz interactif (`quiz`, données dans `_data/quizData.json`), H2 avec emoji, paragraphes « phrase d'attaque en gras, suite en gris », figures à bords arrondis, tableaux en carte, encart CTA (`partials/blog-cta.njk`), avis client (`partials/blog-avis.njk`), liste ✅ (`ul.post-check`), alerte (`div.post-callout`), FAQ (`faq`) balisée FAQPage, encadrés Sources / Ressources utiles (`sources`, `ressources`), articles similaires, grand bandeau final avec champ date, carte flottante (ordinateur), sommaire latéral au survol et barre de lecture.
 
 ## 7. Images
 - Lumière naturelle, tons chauds et neutres, jamais saturés.
@@ -115,3 +118,7 @@ Deux familles, auto-hébergées dans `src/assets/fonts/` :
 - Aucune autre couleur que la palette ivoire, sable, brun et taupe.
 - Pas de titre en capitales, sauf le H1 du hero et les h3 étiquettes.
 - Pas de tiret long (—) dans les textes.
+
+## 9. Exceptions assumées
+- **Vert WhatsApp `#25D366`** pour le logo officiel (barre mobile et bulle ordinateur) : c'est le seul logo reconnu d'un coup d'œil. Aucun autre usage de ce vert.
+- **Effet verre** (fond translucide flouté, filet `--line`, sans ombre) sur la barre mobile et la bulle WhatsApp.

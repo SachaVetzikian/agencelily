@@ -12,19 +12,19 @@ faqDevis:
 ---
 {% set crumbs = [{ nom: "Contact et devis" }] %}
 {% include "partials/crumbs.njk" %}
-<section class="page-head" style="padding-bottom:0;"><div class="wrap">
+<section class="page-head u-pb0"><div class="wrap">
 <span class="eyebrow">Réserver ma date</span>
 <h1>Demandez votre devis livre d'or audio</h1>
 <p class="lede">Disponibilité et devis précis sous {{ site.delaiReponse }}, frais de déplacement compris.</p>
 </div></section>
-<section class="section" style="padding-top:var(--s6);"><div class="wrap two-cols">
+<section class="section u-pt6"><div class="wrap two-cols">
 <div>
 
 {# Formulaire maison : envoyé à /api/devis (fonction Vercel), qui transmet la demande par e-mail.
    Configuration : variables RESEND_API_KEY et DEVIS_TO dans Vercel (voir README). #}
 {% set livre = services | findBySlug("livre-dor-audio-video") %}
 <form class="devis-form" id="devis-form" action="/api/devis" method="post" novalidate>
-<div class="box" id="recap" hidden><span class="eyebrow">Votre sélection</span><p id="recap-text" style="margin:0;"></p></div>
+<div class="box" id="recap" hidden><span class="eyebrow">Votre sélection</span><p class="u-m0" id="recap-text"></p></div>
 <div class="f-row">
 <label class="f-field"><span>Prénom</span><input name="prenom" autocomplete="given-name" required></label>
 <label class="f-field"><span>Date de l'événement</span><input name="date" type="date" required></label>
@@ -44,6 +44,8 @@ faqDevis:
 <label class="f-field"><span>Formule</span><select name="formule">
 <option value="Je ne sais pas encore">Je ne sais pas encore</option>
 {% for f in livre.formules %}<option value="{{ f.nom }} (formule)">{{ f.nom }}</option>{% endfor %}
+<option value="Bon cadeau Essentiel">Bon cadeau Essentiel (200 €)</option>
+<option value="Bon cadeau Signature">Bon cadeau Signature (500 €)</option>
 <option value="Autre prestation">Autre prestation (bar, photobooth…)</option>
 </select></label>
 <label class="f-field"><span>Nombre d'invités <small>environ</small></span><input name="invites" type="number" min="1" max="2000" inputmode="numeric"></label>
@@ -68,7 +70,14 @@ faqDevis:
   var ev = q.get("evenement");
   if (ev) [].forEach.call(form.elements.evenement.options, function (o) { if (o.dataset.slug === ev) o.selected = true; });
   var service = q.get("service");
-  if (service && service !== "livre-dor-audio-video") form.elements.formule.value = "Autre prestation";
+  if (service === "bon-cadeau") {
+    // Bon cadeau : pas de date obligatoire, formule du bon, prénoms des bénéficiaires dans le message
+    form.elements.formule.value = "Bon cadeau Signature";
+    form.elements.date.required = false;
+    form.elements.date.closest(".f-field").querySelector("span").textContent = "Date de l'événement (si connue)";
+    form.elements.message.placeholder = "Prénoms des bénéficiaires, occasion, petit mot à inscrire sur le bon…";
+    form.querySelector(".f-submit").textContent = "Commander le bon cadeau";
+  } else if (service && service !== "livre-dor-audio-video") form.elements.formule.value = "Autre prestation";
   var c = q.get("config");
   if (c) {
     // Formule choisie dans le simulateur : la plus longue qui correspond
@@ -95,7 +104,7 @@ faqDevis:
       form.elements[manquants[0]].focus();
       return;
     }
-    var btn = form.querySelector(".f-submit");
+    var btn = form.querySelector(".f-submit"), libelle = btn.textContent;
     btn.disabled = true; btn.textContent = "Envoi…";
     fetch(form.action, {
       method: "POST",
@@ -112,7 +121,7 @@ faqDevis:
         {% else %}if (window.gtag) { window.gtag("event", "generate_lead", { event_callback: once, event_timeout: 800, evenement: form.elements.evenement.value, formule: form.elements.formule.value }); setTimeout(once, 900); } else once();{% endif %}
       })
       .catch(function () {
-        btn.disabled = false; btn.textContent = "Réserver ma date";
+        btn.disabled = false; btn.textContent = libelle;
         erreur("L'envoi n'a pas fonctionné. Réessayez, ou " + contact);
       });
   });
@@ -128,7 +137,7 @@ faqDevis:
 <div class="step"><p><strong>Le jour J</strong>, on installe, on anime, on range.</p></div>
 </div>
 {# Le nombre d'avis ne s'affiche qu'à partir du seuil défini dans site.json #}
-{% if site.avis.nombre >= site.avis.seuilAffichage %}<p style="margin-top:20px;color:var(--muted);"><span class="stars">★★★★★</span> {{ site.avis.nombre }} avis Google</p>{% elif site.avis.lien %}<p style="margin-top:20px;"><a href="{{ site.avis.lien }}" rel="noopener" target="_blank">Voir notre fiche Google</a></p>{% endif %}
+{% if site.avis.nombre >= site.avis.seuilAffichage %}<p style="margin-top:20px;color:var(--muted);"><span class="stars">★★★★★</span> {{ site.avis.nombre }} avis Google</p>{% elif site.avis.lien %}<p class="u-mt5"><a href="{{ site.avis.lien }}" rel="noopener" target="_blank">Voir notre fiche Google</a></p>{% endif %}
 </div>
 </div>
 </div></section>

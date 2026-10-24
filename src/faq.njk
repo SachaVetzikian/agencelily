@@ -1,0 +1,80 @@
+---
+layout: layouts/base.njk
+permalink: /faq/
+title: "FAQ livre d'or audio et vidéo : prix, fonctionnement, location | Agence Lily"
+meta: "Toutes les réponses sur le livre d'or audio et vidéo d'Agence Lily : fonctionnement, prix, réservation, installation, récupération des messages, Paris et Île-de-France."
+faqThemes:
+  - titre: "Le fonctionnement"
+    questions:
+      - q: "C'est quoi, un livre d'or audio ?"
+        a: "Un téléphone vintage transformé en enregistreur. Vos invités décrochent, écoutent votre message d'accueil et vous laissent un message vocal après le bip. On l'appelle aussi livre d'or sonore, livre d'or vocal ou audio guest book."
+      - q: "Comment ça marche, concrètement ?"
+        a: "Nous installons le téléphone sur votre lieu, puis nous enregistrons votre message d'accueil avec vous au début de la fête, avant l'arrivée des invités. Ils décrochent, parlent, raccrochent. Après la fête, vous recevez tous les messages."
+      - q: "Et le livre d'or vidéo ?"
+        a: "Avec la formule Signature, une caméra discrète filme vos invités pendant qu'ils parlent au téléphone. Vous gardez la voix et le visage. Tout est expliqué sur la page livre d'or vidéo."
+      - q: "Pourquoi un téléphone plutôt qu'un QR code ou une application ?"
+        a: "Parce que personne n'a besoin de sortir son smartphone, de scanner ou de télécharger quoi que ce soit. Décrocher un combiné, tout le monde sait faire, des enfants aux arrière-grands-parents. Et un objet posé dans la salle attire bien plus de monde qu'un QR code sur une table."
+      - q: "Combien de temps les invités peuvent-ils parler ?"
+        a: "Le temps qu'il leur faut. La plupart des messages durent de 30 secondes à 2 minutes, et le nombre de messages est illimité."
+  - titre: "Les prix et la réservation"
+    questions:
+      - q: "Combien coûte la location ?"
+        a: "Formule Essentiel (audio, 3 heures) à 200 €. Formule Signature (audio et vidéo, 1 heure d'animation, toute la soirée) à 500 €. Livraison et installation comprises à Paris et en petite couronne."
+      - q: "Quelles sont les options ?"
+        a: "Coffret souvenir avec clé USB dans un écrin (50 €), touche florale en fleurs blanches (50 €), heure d'animation avec l'Essentiel (100 €), livraison express des messages sous 48 h (30 €)."
+      - q: "Comment réserver ma date ?"
+        a: "Envoyez-nous votre date et votre lieu, nous répondons sous 24 h. Un acompte de 50 % bloque la date, le solde est réglé avant l'événement. En réglant la totalité à la réservation, vous bénéficiez de 15 % de remise."
+      - q: "Combien de temps à l'avance faut-il réserver ?"
+        a: "Quelques semaines suffisent en général. Pour un samedi entre mai et septembre, réservez plusieurs mois avant."
+      - q: "Et en cas d'annulation ?"
+        a: "Jusqu'à 30 jours avant l'événement, vous pouvez reporter sans frais selon nos disponibilités. En cas d'annulation, l'acompte reste acquis. À moins de 30 jours, la prestation est due en totalité."
+  - titre: "L'installation et le jour J"
+    questions:
+      - q: "Dans quelle zone intervenez-vous ?"
+        a: "Paris et toute l'Île-de-France, 7 jours sur 7. Livraison offerte à Paris et en petite couronne, frais de déplacement indiqués sur le devis au-delà."
+      - q: "De quoi a-t-on besoin sur place ?"
+        a: "Une prise électrique et une petite table, dans un coin un peu à l'écart de la musique pour que les invités s'entendent."
+      - q: "Peut-on l'installer en extérieur ?"
+        a: "Oui, en jardin, sous une tente ou en terrasse, à l'abri de la pluie et du vent."
+      - q: "Quelqu'un reste-t-il sur place ?"
+        a: "Avec la formule Signature, un membre de l'équipe anime pendant une heure au cocktail. Avec l'Essentiel, vous avez un contact joignable pendant toute la durée de l'événement."
+  - titre: "Les messages après la fête"
+    questions:
+      - q: "Quand reçoit-on les messages ?"
+        a: "Sous 2 semaines, par lien de téléchargement. En 48 h avec l'option express."
+      - q: "Sous quelle forme ?"
+        a: "Des fichiers audio (et vidéo avec la Signature) à écouter sur votre téléphone ou votre ordinateur, à garder et à partager. Avec le coffret souvenir, vous les avez aussi sur une clé USB."
+      - q: "Pourquoi louer plutôt qu'acheter un téléphone livre d'or ?"
+        a: "Un livre d'or sert une fois. En location, vous n'avez rien à régler, rien à installer, rien à stocker, et quelqu'un s'assure que tout fonctionne le jour J."
+---
+{% set crumbs = [{ nom: "Questions fréquentes" }] %}
+{% set heroImg = "/assets/photos/hero-blog.webp" %}{% set heroAlt = "Téléphone vintage en cuivre posé sur une table" %}{% set heroEyebrow = "Questions fréquentes" %}
+{% set heroTitle = "Tout savoir sur le livre d'or audio" %}
+{% set heroIntro = "Fonctionnement, prix, installation, messages. Et si votre question n'y est pas, écrivez-nous." %}
+{% set heroAside %}<div class="btns"><a class="btn primary" href="/devis/" data-track="devis">Réserver ma date</a></div>{% endset %}
+{% include "partials/hero-full.njk" %}
+
+{% set toutes = [] %}
+{% for t in faqThemes %}
+<section class="section{% if loop.index is even %} alt{% endif %}"><div class="wrap split-lead">
+<h2>{{ t.titre }}</h2>
+<div>{% set faq = t.questions %}{% include "partials/faq.njk" %}</div>
+</div></section>
+{% for f in t.questions %}{% set toutes = (toutes.push(f), toutes) %}{% endfor %}
+{% endfor %}
+
+<section class="section"><div class="wrap split-lead">
+<h2>Pour aller plus loin</h2>
+<div><ul class="inline-list">
+<li><a href="/livre-d-or-audio-video/">Le livre d'or audio et vidéo</a></li>
+<li><a href="/livre-d-or-video/">Le livre d'or vidéo</a></li>
+<li><a href="/tarifs/">Les tarifs</a></li>
+<li><a href="/blog/comment-fonctionne-livre-d-or-audio/">Le guide complet</a></li>
+</ul></div>
+</div></section>
+
+{% include "partials/cta.njk" %}
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{% for f in toutes %}{"@type":"Question","name":{{ f.q | json | safe }},"acceptedAnswer":{"@type":"Answer","text":{{ f.a | json | safe }}}}{% if not loop.last %},{% endif %}{% endfor %}]}
+</script>

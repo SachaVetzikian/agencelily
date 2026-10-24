@@ -32,7 +32,7 @@ faqProduit:
 <section class="section"><div class="wrap split-lead">
 <h2>Qu'est-ce qu'un livre d'or audio et vidéo ?</h2>
 <div>
-<p>Un téléphone vintage installé pendant votre événement. Vos invités décrochent le combiné, écoutent votre message d'accueil personnalisé et laissent témoignage, vœux ou anecdote drôle après le bip. La version vidéo filme aussi leur visage.</p>
+<p>Un téléphone vintage installé pendant votre événement. Vos invités décrochent le combiné, écoutent votre message d'accueil personnalisé et laissent témoignage, vœux ou anecdote drôle après le bip. La <a href="/livre-d-or-video/">version vidéo</a> filme aussi leur visage.</p>
 <p>Après la fête, vous recevez tous les messages en téléchargement sous 2 semaines (48 h en express). Coffret souvenir avec clé USB en option.</p>
 <p>On l'appelle aussi livre d'or sonore, livre d'or numérique ou audio guest book : c'est l'alternative vivante au livre d'or papier.</p>
 </div>
@@ -41,11 +41,11 @@ faqProduit:
 <section class="section alt"><div class="wrap">
 <h2>Comment ça marche</h2>
 <ol class="steps-min">
-<li>Vous enregistrez votre message d'accueil.</li>
 <li>Nous installons le téléphone sur votre lieu.</li>
+<li>Vous enregistrez votre message d'accueil avec nous, au début de la fête.</li>
 <li>Vos invités décrochent, parlent, raccrochent.</li>
 </ol>
-<p style="margin-top:var(--s6);font-size:var(--fs-small);"><a class="link" href="/blog/comment-fonctionne-livre-d-or-audio/">Le guide : comment fonctionne un livre d'or audio</a></p>
+<p class="u-mt6 u-small"><a class="link" href="/blog/comment-fonctionne-livre-d-or-audio/">Le guide : comment fonctionne un livre d'or audio</a></p>
 </div></section>
 
 <section class="section alt" id="formules"><div class="wrap">
@@ -53,7 +53,7 @@ faqProduit:
 {% include "partials/formules-zigzag.njk" %}
 </div></section>
 
-<section class="section statement" style="padding-top:0;"><div class="wrap">
+<section class="section statement u-pt0"><div class="wrap">
 <p>Installé, vérifié, suivi.<br><em>Pas un colis.</em></p>
 </div></section>
 
@@ -66,7 +66,7 @@ faqProduit:
 <li>Un contact joignable pendant l'événement</li>
 <li>Vos messages en téléchargement sous 2 semaines</li>
 </ul>
-<p style="margin:var(--s5) 0 0;font-size:var(--fs-small);"><a class="link" href="/location-livre-d-or-audio/">Location de livre d'or audio en Île-de-France : zone et réservation</a></p></div>
+<p class="u-mt5 u-m0 u-small"><a class="link" href="/location-livre-d-or-audio/">Location de livre d'or audio en Île-de-France : zone et réservation</a></p></div>
 </div></section>
 
 <section class="section"><div class="wrap">
@@ -82,6 +82,7 @@ faqProduit:
 </div></section>
 
 {% set faq = faqProduit.concat(livre.faq) %}{% include "partials/faq-section.njk" %}
+<p class="center u-small"><a class="link" href="/faq/">Toutes les questions fréquentes</a></p>
 
 {% set avisService = "livre-dor-audio-video" %}{% include "partials/avis.njk" %}
 {% set devisParam = "service=livre-dor-audio-video" %}

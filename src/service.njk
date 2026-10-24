@@ -21,7 +21,7 @@ permalink: "/{{ s.categorie }}/{{ s.slug }}/"
 <section class="section">
 <div class="wrap">
 <h2>Nos formules</h2>
-<div class="formules" style="margin-top:28px;">
+<div class="formules u-mt6">
 {% for f in s.formules %}<div class="formule{% if f.populaire %} pop{% endif %}">
 {% if f.populaire %}<span class="badge">La plus choisie</span>{% endif %}
 {% set label = "Formule " + f.nom %}{% set img = f.image %}{% set tall = false %}<div class="formule-visual">{% include "partials/visual.njk" %}</div>
@@ -54,8 +54,8 @@ permalink: "/{{ s.categorie }}/{{ s.slug }}/"
 <section class="section alt">
 <div class="wrap">
 <h2>Idéal pour</h2>
-<div class="reco" style="margin-top:24px;">
-{% for e in evts %}{% for r in e.services %}{% if r.slug == s.slug %}{% if site.evenementsIndexes %}<a href="/evenements/{{ e.slug }}/"><div><h3 style="margin:0;">{{ e.nom }}</h3><p>{{ r.pourquoi }}</p></div><span class="tag">Voir →</span></a>{% else %}<div><div><h3 style="margin:0;">{{ e.nom }}</h3><p>{{ r.pourquoi }}</p></div></div>{% endif %}{% endif %}{% endfor %}{% endfor %}
+<div class="reco u-mt5">
+{% for e in evts %}{% for r in e.services %}{% if r.slug == s.slug %}{% if site.evenementsIndexes %}<a href="/evenements/{{ e.slug }}/"><div><h3 class="u-m0">{{ e.nom }}</h3><p>{{ r.pourquoi }}</p></div><span class="tag">Voir →</span></a>{% else %}<div><div><h3 class="u-m0">{{ e.nom }}</h3><p>{{ r.pourquoi }}</p></div></div>{% endif %}{% endif %}{% endfor %}{% endfor %}
 </div>
 </div>
 </section>
@@ -64,7 +64,7 @@ permalink: "/{{ s.categorie }}/{{ s.slug }}/"
 {% set avisService = s.slug %}{% include "partials/avis.njk" %}
 
 <section class="section">
-<div class="wrap" style="max-width:820px;">
+<div class="wrap u-narrow">
 <h2>Vos questions sur le {{ s.nom | lower }}</h2>
 {% set faq = s.faq %}{% include "partials/faq.njk" %}
 </div>
@@ -73,7 +73,7 @@ permalink: "/{{ s.categorie }}/{{ s.slug }}/"
 <section class="section alt">
 <div class="wrap">
 <h2>À combiner avec</h2>
-<div class="cards" style="margin-top:28px;">{% for x in services %}{% if x.slug != s.slug and x.categorie != s.categorie %}{% set c = x %}{% include "partials/card-service.njk" %}{% endif %}{% endfor %}</div>
+<div class="cards u-mt6">{% for x in services %}{% if x.slug != s.slug and x.categorie != s.categorie %}{% set c = x %}{% include "partials/card-service.njk" %}{% endif %}{% endfor %}</div>
 </div>
 </section>
 

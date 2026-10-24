@@ -19,7 +19,7 @@ permalink: "/evenements/{{ e.slug }}/"
 {% include "partials/hero-full.njk" %}
 
 <section class="section">
-<div class="wrap" style="max-width:820px;">
+<div class="wrap u-narrow">
 <h2>Ce qui compte pour {{ e.unNom }}</h2>
 <p class="lede" style="max-width:none;">{{ e.enjeu }}</p>
 </div>
@@ -28,7 +28,7 @@ permalink: "/evenements/{{ e.slug }}/"
 <section class="section alt">
 <div class="wrap">
 <h2>Nos recommandations</h2>
-<div class="reco" style="margin-top:24px;">
+<div class="reco u-mt5">
 {% for r in e.services %}{% set x = services | findBySlug(r.slug) %}<a href="{{ x | serviceUrl }}"><div><span class="tag">{% if x.categorie == 'animations' %}Bar gourmand{% else %}Location{% endif %}</span><h3 style="margin:4px 0 0;">{{ x.nom }}</h3><p>{{ r.pourquoi }}</p></div><span class="price" style="padding:0;white-space:nowrap;">Dès {{ x.prix | euros }}</span></a>
 {% endfor %}
 </div>
@@ -53,7 +53,7 @@ permalink: "/evenements/{{ e.slug }}/"
 </section>
 
 <section class="section alt">
-<div class="wrap" style="max-width:820px;">
+<div class="wrap u-narrow">
 <h2>Vos questions</h2>
 {% set faq = e.faq %}{% include "partials/faq.njk" %}
 </div>
@@ -67,7 +67,7 @@ permalink: "/evenements/{{ e.slug }}/"
 <section class="section">
 <div class="wrap">
 <h2>Autres événements</h2>
-<div class="pills" style="margin-top:20px;">{% for o in evenements %}{% if o.slug != e.slug %}<a class="pill" href="/evenements/{{ o.slug }}/">{{ o.nom }}</a>{% endif %}{% endfor %}</div>
+<div class="pills u-mt5">{% for o in evenements %}{% if o.slug != e.slug %}<a class="pill" href="/evenements/{{ o.slug }}/">{{ o.nom }}</a>{% endif %}{% endfor %}</div>
 </div>
 </section>
 

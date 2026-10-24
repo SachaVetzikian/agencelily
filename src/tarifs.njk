@@ -14,7 +14,7 @@ meta: "Tarifs de location d'un livre d'or audio et vidéo sur téléphone vintag
 <section class="section alt"><div class="wrap">
 <div class="section-title"><span class="eyebrow">Livre d'or</span><h2>Deux formules, un seul téléphone</h2></div>
 {% include "partials/formules-livre.njk" %}
-<div class="btns" style="justify-content:center;"><a class="btn" href="/livre-d-or-audio-video/">Tout savoir sur le livre d'or</a></div>
+<div class="btns u-center"><a class="btn" href="/livre-d-or-audio-video/">Tout savoir sur le livre d'or</a></div>
 </div></section>
 
 <section class="section"><div class="wrap split-lead">
@@ -46,7 +46,7 @@ meta: "Tarifs de location d'un livre d'or audio et vidéo sur téléphone vintag
 <tbody>{% for s in services | byCategorie('animations') %}<tr><td><a href="/animations/{{ s.slug }}/"><strong>{{ s.nom }}</strong></a></td><td>{{ s.prixDetail }}, animateur 2h, matériel et ingrédients</td><td>{{ s.prix | euros }}</td></tr>{% endfor %}</tbody>
 </table></div>
 
-<div class="section-title" style="margin-top:var(--s8);"><span class="eyebrow">Livré et installé</span><h2>Location de matériel</h2></div>
+<div class="section-title u-mt8"><span class="eyebrow">Livré et installé</span><h2>Location de matériel</h2></div>
 <div class="table-wrap"><table class="table">
 <thead><tr><th>Prestation</th><th>Détail</th><th>Prix</th></tr></thead>
 <tbody>
@@ -58,7 +58,7 @@ meta: "Tarifs de location d'un livre d'or audio et vidéo sur téléphone vintag
 </tbody>
 </table></div>
 
-<div class="section-title" style="margin-top:var(--s8);"><span class="eyebrow">Plus avantageux</span><h2>Packs par événement</h2></div>
+<div class="section-title u-mt8"><span class="eyebrow">Plus avantageux</span><h2>Packs par événement</h2></div>
 <div class="table-wrap"><table class="table">
 <thead><tr><th>Pack</th><th>Contenu</th><th>Prix</th></tr></thead>
 <tbody>{% for e in evenements %}<tr><td>{% if site.evenementsIndexes %}<a href="/evenements/{{ e.slug }}/#pack"><strong>{{ e.pack.nom }}</strong></a>{% else %}<strong>{{ e.pack.nom }}</strong>{% endif %}</td><td>{{ e.pack.contenu | join(" + ") }}</td><td>Sur devis</td></tr>{% endfor %}</tbody>

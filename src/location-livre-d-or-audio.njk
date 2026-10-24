@@ -59,7 +59,7 @@ faqLocation:
 
 <section class="section alt"><div class="wrap split-lead">
 <h2>Zone d'intervention : Paris et toute l'Île-de-France</h2>
-<ul class="inline-list"><li>Paris (75)</li><li>Hauts-de-Seine (92)</li><li>Seine-Saint-Denis (93)</li><li>Val-de-Marne (94)</li><li>Seine-et-Marne (77)</li><li>Yvelines (78)</li><li>Essonne (91)</li><li>Val-d'Oise (95)</li></ul>
+<ul class="inline-list"><li><a href="/livre-d-or-audio-paris/">Paris (75)</a></li><li>Hauts-de-Seine (92)</li><li>Seine-Saint-Denis (93)</li><li>Val-de-Marne (94)</li><li>Seine-et-Marne (77)</li><li>Yvelines (78)</li><li>Essonne (91)</li><li>Val-d'Oise (95)</li></ul>
 </div></section>
 
 <section class="section"><div class="wrap split-lead">
@@ -70,8 +70,8 @@ faqLocation:
 
 <section class="section alt"><div class="wrap">
 <h2>Selon votre événement</h2>
-<div class="pills" style="margin-top:20px;">{% for o in occasions %}<a class="pill" href="{{ o.url }}">Livre d'or {{ o.nom | lower }}</a>{% endfor %}</div>
-<p style="margin-top:20px;">Formules, options et ce qui est inclus : consultez nos <a href="/tarifs/">tarifs de location</a>.</p>
+<div class="pills u-mt5">{% for o in occasions %}<a class="pill" href="{{ o.url }}">Livre d'or {{ o.nom | lower }}</a>{% endfor %}</div>
+<p class="u-mt5">Formules, options et ce qui est inclus : consultez nos <a href="/tarifs/">tarifs de location</a>.</p>
 </div></section>
 
 {% set faq = faqLocation %}{% include "partials/faq-section.njk" %}

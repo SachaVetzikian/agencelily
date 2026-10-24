@@ -242,11 +242,11 @@
         "prix": "50 €"
       },
       {
-        "nom": "Touche florale assortie à votre décor",
+        "nom": "Touche florale, fleurs blanches assorties à votre décor",
         "prix": "50 €"
       },
       {
-        "nom": "Heure d'animation supplémentaire",
+        "nom": "Heure d'animation (formule Essentiel)",
         "prix": "100 €"
       },
       {
@@ -265,7 +265,7 @@
       },
       {
         "q": "Pourquoi prendre un animateur ?",
-        "a": "Sans animateur, seuls les invités les plus à l'aise se lancent. La formule Signature inclut une heure d'animation pendant le cocktail, et vous pouvez ajouter des heures (100 € l'heure) : la plupart des invités laissent alors un message, y compris les plus timides."
+        "a": "Sans animateur, seuls les invités les plus à l'aise se lancent. La formule Signature inclut une heure d'animation pendant le cocktail, et l'Essentiel peut en recevoir une en option (100 €) : la plupart des invités laissent alors un message, y compris les plus timides."
       }
     ],
     "image": "/assets/photos/hero-livre-dor.webp",
