@@ -70,8 +70,8 @@ faqLocation:
 
 <section class="section alt"><div class="wrap">
 <h2>Selon votre événement</h2>
-<div class="pills" style="margin-top:20px;">{% for o in occasions %}<a class="pill" href="{{ o.url }}">Livre d'or {{ o.nom | lower }}</a>{% endfor %}</div>
-<p style="margin-top:20px;">Formules, options et ce qui est inclus : consultez nos <a href="/tarifs/">tarifs de location</a>.</p>
+<div class="pills u-mt5">{% for o in occasions %}<a class="pill" href="{{ o.url }}">Livre d'or {{ o.nom | lower }}</a>{% endfor %}</div>
+<p class="u-mt5">Formules, options et ce qui est inclus : consultez nos <a href="/tarifs/">tarifs de location</a>.</p>
 </div></section>
 
 {% set faq = faqLocation %}{% include "partials/faq-section.njk" %}

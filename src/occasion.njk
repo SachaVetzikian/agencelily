@@ -11,19 +11,19 @@ permalink: "{{ o.url }}"
 {% set crumbs = [{ nom: "Livre d'or audio et vidéo", url: livre.url }, { nom: o.nom }] %}
 {% set heroImg = evt.image if evt else livre.image %}{% set heroAlt = o.h1 %}{% set heroEyebrow = "Livre d'or audio & vidéo · " + o.nom %}
 {% set heroTitle = o.h1 %}{% set heroIntro = o.intro %}
-{% set heroAside %}<div class="btns" style="margin-top:0;"><a class="btn primary" href="/devis/?service=livre-dor-audio-video&evenement={{ o.evenement }}" data-track="devis">Réserver ma date</a></div>{% endset %}
+{% set heroAside %}<div class="btns u-mt0"><a class="btn primary" href="/devis/?service=livre-dor-audio-video&evenement={{ o.evenement }}" data-track="devis">Réserver ma date</a></div>{% endset %}
 {% include "partials/hero-full.njk" %}
 
 <section class="section statement"><div class="wrap">
 <p>{{ o.punchline }}</p>
 </div></section>
 
-<section class="section" style="padding-top:0;"><div class="wrap split-lead">
+<section class="section u-pt0"><div class="wrap split-lead">
 <h2>Pourquoi un livre d'or audio pour {{ "un mariage" if o.slug == "mariage" else ("un anniversaire" if o.slug == "anniversaire" else ("un baptême" if o.slug == "bapteme" else "votre entreprise")) }} ?</h2>
 <div><p>{{ o.enBref }}</p></div>
 </div></section>
 
-<section class="section" style="padding-top:0;"><div class="wrap split-lead">
+<section class="section u-pt0"><div class="wrap split-lead">
 <h2>Le jour J</h2>
 <div><p>{{ o.usage }}</p><p>{{ o.logistique }}</p></div>
 </div></section>
@@ -36,7 +36,7 @@ permalink: "{{ o.url }}"
 <section class="section"><div class="wrap split-lead">
 <h2>{{ o.ideesTitre or "Idées de messages" }}</h2>
 <div><ul class="inline-list" style="flex-direction:column;">{% for i in o.idees %}<li>{{ i }}</li>{% endfor %}</ul>
-<p style="margin-top:var(--s5);font-size:var(--fs-small);"><a href="/blog/idees-livre-d-or-original/">Plus d'idées de livre d'or original</a>{% if o.slug == "mariage" %} · <a href="/blog/idees-animation-mariage/">15 idées d'animation mariage originales</a>{% endif %}</p></div>
+<p class="u-mt5 u-small"><a href="/blog/idees-livre-d-or-original/">Plus d'idées de livre d'or original</a>{% if o.slug == "mariage" %} · <a href="/blog/idees-animation-mariage/">15 idées d'animation mariage originales</a>{% endif %}</p></div>
 </div></section>
 
 <section class="section alt" id="formules"><div class="wrap">
@@ -48,7 +48,7 @@ permalink: "{{ o.url }}"
 
 {% set avisService = "livre-dor-audio-video" %}{% include "partials/avis.njk" %}
 
-<section class="section" style="padding-top:0;"><div class="wrap">
+<section class="section u-pt0"><div class="wrap">
 <ul class="inline-list">{% for x in occasions %}{% if x.slug != o.slug %}<li><a href="{{ x.url }}">Livre d'or {{ x.nom | lower }}</a></li>{% endif %}{% endfor %}<li><a href="/location-livre-d-or-audio/">Location de livre d'or audio en Île-de-France</a></li></ul>
 </div></section>
 

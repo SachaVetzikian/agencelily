@@ -1,0 +1,31 @@
+---
+layout: layouts/base.njk
+permalink: /avis/
+title: "Avis clients sur notre livre d'or audio et vidéo | Agence Lily"
+meta: "Les avis de nos clients sur le livre d'or audio et vidéo d'Agence Lily : mariages, baptêmes et anniversaires à Paris et en Île-de-France. Avis Google vérifiés."
+---
+{% set crumbs = [{ nom: "Avis clients" }] %}
+{% set heroImg = "/assets/photos/blog-animation-mariage.webp" %}{% set heroAlt = "Invités qui dansent pendant une soirée de mariage" %}
+{% set heroEyebrow = ("★★★★★ " + (site.avis.note | noteFr) + " · " + site.avis.nombre + " avis Google") if site.avis.nombre >= site.avis.seuilAffichage else "Avis Google" %}
+{% set heroTitle = "Ce que nos clients en disent" %}
+{% set heroIntro = "Des mariés, des parents, des amis. Leurs mots, copiés tels quels depuis Google." %}
+{% set heroAside %}<div class="btns"><a class="btn primary" href="/devis/" data-track="devis">Réserver ma date</a>{% if site.avis.lien %}<a class="btn" href="{{ site.avis.lien }}" rel="noopener" target="_blank">Voir sur Google</a>{% endif %}</div>{% endset %}
+{% include "partials/hero-full.njk" %}
+
+<section class="section"><div class="wrap">
+<div class="avis-grid">
+{% for a in avis %}<figure class="avis">
+<div class="stars" aria-label="{{ a.note or 5 }} sur 5">{% for i in range(0, a.note or 5) %}★{% endfor %}</div>
+<blockquote>{{ a.texte }}</blockquote>
+<figcaption><strong>{{ a.prenom }}</strong>{% if a.evenement %} · {{ a.evenement }}{% endif %}{% if a.date %} · {{ a.date }}{% endif %}</figcaption>
+</figure>{% endfor %}
+</div>
+</div></section>
+
+<section class="section alt"><div class="wrap split-lead">
+<h2>Vous avez fait appel à nous ?</h2>
+<div><p>Votre avis aide les prochains couples à se décider. Deux minutes suffisent.</p>
+{% if site.avis.lien %}<a class="link" href="{{ site.avis.lien }}" rel="noopener" target="_blank">Laisser un avis sur Google</a>{% endif %}</div>
+</div></section>
+
+{% include "partials/cta.njk" %}

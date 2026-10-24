@@ -13,7 +13,7 @@ meta: "Simulez votre budget en 1 minute : livre d'or audio et vidéo, bars gourm
 <p class="lede">Cochez, l'estimation se calcule en direct. Prix exact confirmé sous {{ site.delaiReponse }}.</p>
 </div></section>
 
-<section class="section" style="padding-top:0;"><div class="wrap config">
+<section class="section u-pt0"><div class="wrap config">
 <form class="config-form" id="config" onsubmit="return false;">
 <div class="box">
 <label class="config-guests">Nombre d'invités
@@ -21,7 +21,7 @@ meta: "Simulez votre budget en 1 minute : livre d'or audio et vidéo, bars gourm
 </label>
 </div>
 
-<h2 class="config-title" style="margin-top:var(--s6);">Livre d'or <small>audio &amp; vidéo</small></h2>
+<h2 class="config-title u-mt6">Livre d'or <small>audio &amp; vidéo</small></h2>
 {% set livre = services | findBySlug("livre-dor-audio-video") %}
 <div class="config-grid">
 {% for f in livre.formules %}

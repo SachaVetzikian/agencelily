@@ -12,7 +12,7 @@ layout: layouts/base.njk
 </div>
 </section>
 <section class="section">
-<div class="wrap" style="max-width:820px;">
+<div class="wrap u-narrow">
 {{ content | safe }}
 </div>
 </section>
@@ -21,7 +21,7 @@ layout: layouts/base.njk
 <section class="section alt">
 <div class="wrap">
 <h2>Pour quel événement ?</h2>
-<div class="pills" style="margin-top:20px;">{% for e in evenements %}<a class="pill" href="/evenements/{{ e.slug }}/">{{ e.nom }}</a>{% endfor %}</div>
+<div class="pills u-mt5">{% for e in evenements %}<a class="pill" href="/evenements/{{ e.slug }}/">{{ e.nom }}</a>{% endfor %}</div>
 </div>
 </section>
 {% endif %}

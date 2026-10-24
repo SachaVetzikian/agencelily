@@ -15,8 +15,8 @@ categoriesPrestataires: ["Lieux de réception", "Wedding planners", "Photographe
 {% for cat in categoriesPrestataires %}{% set liste = prestataires | byCategorie(cat) %}{% if liste | length %}
 <section class="section{% if loop.index is even %} alt{% endif %}"><div class="wrap">
 <h2>{{ cat }}</h2>
-<div class="reco" style="margin-top:24px;">
-{% for p in liste %}<a href="{{ p.site }}" rel="noopener" target="_blank"><div><h3 style="margin:0;">{{ p.nom }}</h3><p>{{ p.texte }}{% if p.ville %} · {{ p.ville }}{% endif %}</p></div><span class="tag">Voir le site →</span></a>{% endfor %}
+<div class="reco u-mt5">
+{% for p in liste %}<a href="{{ p.site }}" rel="noopener" target="_blank"><div><h3 class="u-m0">{{ p.nom }}</h3><p>{{ p.texte }}{% if p.ville %} · {{ p.ville }}{% endif %}</p></div><span class="tag">Voir le site →</span></a>{% endfor %}
 </div>
 </div></section>
 {% endif %}{% endfor %}
