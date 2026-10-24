@@ -4,12 +4,10 @@ title: "Guides du livre d'or audio et vidéo | Agence Lily"
 meta: "Guides pour choisir et réussir votre livre d'or audio et vidéo : fonctionnement, idées originales, prix, conseils pour mariage, anniversaire et baptême."
 ---
 {% set crumbs = [{ nom: "Guides" }] %}
-{% include "partials/crumbs.njk" %}
-<section class="blog-head">
-<span class="eyebrow">Guides et conseils</span>
-<h1>Guides du livre d’or audio et vidéo</h1>
-<p>Fonctionnement, idées, prix : tout pour choisir et réussir votre livre d’or audio.</p>
-</section>
+{% set heroImg = "/assets/photos/hero-blog.webp" %}{% set heroAlt = "Téléphone vintage en cuivre posé sur une table" %}{% set heroEyebrow = "Guides et conseils" %}
+{% set heroTitle = "Guides du livre d’or audio et vidéo" %}
+{% set heroIntro = "Fonctionnement, idées, prix. Tout pour choisir et réussir votre livre d’or audio." %}
+{% include "partials/hero-full.njk" %}
 <section class="blog-list">
 {% for p in collections.posts %}<a class="post-card" href="{{ p.url }}">
 <div class="post-card-img"><img src="{{ p.data.image or '/assets/photos/hero-livre-dor.webp' }}" alt="" loading="lazy"></div>

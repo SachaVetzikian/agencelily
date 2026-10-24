@@ -460,7 +460,7 @@ p, li { text-wrap: pretty; }
 
 /* Hero encadré : photo en retrait, titre en capitales en haut, action et légende en bas */
 .hero-full { width: calc(100% - 40px); max-width: 1320px; margin: 20px auto 0; min-height: min(80vh, 760px); align-items: stretch; }
-.hero-full::after { background: linear-gradient(to bottom, rgba(30,22,18,.42), rgba(30,22,18,0) 42%, rgba(30,22,18,0) 58%, rgba(30,22,18,.5)); }
+.hero-full::after { background: linear-gradient(to bottom, rgba(30,22,18,.5), rgba(30,22,18,.12) 42%, rgba(30,22,18,.12) 58%, rgba(30,22,18,.62)), rgba(30,22,18,.18); }
 .hero-inner { position: relative; width: 100%; display: flex; flex-direction: column; justify-content: space-between; padding: var(--s8) var(--s7) var(--s7); gap: var(--s7); }
 .hero-full h1 { text-transform: uppercase; letter-spacing: .005em; line-height: .96; max-width: 760px; }
 .hero-full .eyebrow { color: rgba(255,255,255,.85); }

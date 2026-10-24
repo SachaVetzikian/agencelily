@@ -316,7 +316,8 @@
         "q": "Peut-on personnaliser le cadre des photos ?",
         "a": "Oui, avec vos prénoms, la date, un logo ou les couleurs de votre événement. Nous vous envoyons une maquette avant."
       }
-    ]
+    ],
+    "image": "/assets/photos/photobooth.webp"
   },
   {
     "slug": "mur-cascade",

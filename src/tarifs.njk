@@ -4,13 +4,12 @@ title: "Tarifs location livre d'or audio | Agence Lily"
 meta: "Tarifs de location d'un livre d'or audio et vidéo sur téléphone vintage : formules, options, ce qui est inclus. Paris et IDF. Devis gratuit en 24 h."
 ---
 {% set crumbs = [{ nom: "Tarifs" }] %}
-{% include "partials/crumbs.njk" %}
-<section class="page-head"><div class="wrap">
-<span class="eyebrow">Prix transparents</span>
-<h1>Tarifs de location d'un livre d'or audio et vidéo</h1>
-<p class="lede">Livraison et installation comprises à Paris et en Île-de-France. Frais de déplacement indiqués sur le devis, avant toute réservation.</p>
-<div class="btns"><a class="btn primary" href="/devis/" data-track="devis">Vérifier ma date</a><a class="btn" href="/configurateur/">Simuler mon budget</a></div>
-</div></section>
+{% set heroImg = "/assets/photos/hero-tarifs.webp" %}{% set heroAlt = "Téléphone vintage de livre d'or audio posé sur une table en bois" %}{% set heroEyebrow = "Prix transparents" %}
+{% set heroTitle = "Tarifs de location d'un livre d'or audio et vidéo" %}
+{% set heroIntro = "Livraison et installation comprises à Paris et en Île-de-France. Frais de déplacement indiqués sur le devis, avant toute réservation." %}
+{% set heroAside %}<div class="price-box"><strong>Dès 200 €</strong><span>formule Essentiel, livraison comprise</span></div>
+<div class="btns"><a class="btn primary" href="/devis/" data-track="devis">Vérifier ma date</a><a class="btn" href="/configurateur/">Simuler mon budget</a></div>{% endset %}
+{% include "partials/hero-full.njk" %}
 
 <section class="section alt"><div class="wrap">
 <div class="section-title"><span class="eyebrow">Livre d'or</span><h2>Deux formules, un seul téléphone</h2></div>

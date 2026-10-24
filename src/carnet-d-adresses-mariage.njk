@@ -6,12 +6,10 @@ meta: "Photographes, vidéastes, wedding planners, DJ, fleuristes et lieux de r�
 categoriesPrestataires: ["Lieux de réception", "Wedding planners", "Photographes", "Vidéastes", "DJ et musiciens", "Fleuristes et décorateurs", "Traiteurs", "Officiants"]
 ---
 {% set crumbs = [{ nom: "Carnet d'adresses" }] %}
-{% include "partials/crumbs.njk" %}
-<section class="hero"><div class="wrap">
-<span class="eyebrow">Nos prestataires coup de cœur</span>
-<h1>Notre carnet d'adresses mariage</h1>
-<p class="lede">On les a vus travailler, on leur confierait notre propre mariage. Voici les lieux et les prestataires d'Île-de-France avec qui nous aimons partager une date.</p>
-</div></section>
+{% set heroImg = "/assets/photos/hero-carnet.webp" %}{% set heroAlt = "Réception de mariage dressée dans une bibliothèque" %}{% set heroEyebrow = "Nos prestataires coup de cœur" %}
+{% set heroTitle = "Notre carnet d'adresses mariage" %}
+{% set heroIntro = "On les a vus travailler, on leur confierait notre propre mariage. Les lieux et prestataires d'Île-de-France avec qui nous aimons partager une date." %}
+{% include "partials/hero-full.njk" %}
 
 {% if prestataires.length %}
 {% for cat in categoriesPrestataires %}{% set liste = prestataires | byCategorie(cat) %}{% if liste | length %}
