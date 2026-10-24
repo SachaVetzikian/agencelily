@@ -1,0 +1,79 @@
+---
+layout: layouts/base.njk
+permalink: /presse/
+title: "Espace presse et partenaires : textes, logos, contact | Agence Lily"
+meta: "Textes de présentation, logos, photo du fondateur et contact presse d'Agence Lily, location de livre d'or audio et vidéo à Paris et en Île-de-France."
+---
+{% set livre = services | findBySlug("livre-dor-audio-video") %}
+{% set crumbs = [{ nom: "Presse" }] %}
+{% include "partials/crumbs.njk" %}
+<section class="page-head"><div class="wrap">
+<span class="eyebrow">Presse · Blogs · Podcasts · Partenaires</span>
+<h1>Espace presse</h1>
+<p class="lede">Vous écrivez sur le mariage ou la fête ? Tout ce qu'il faut pour parler d'Agence Lily est ici, libre de droits.</p>
+<div class="btns" style="margin-top:var(--s5);"><a class="btn primary" href="mailto:{{ site.email }}?subject=Presse%20Agence%20Lily">Écrire à Sacha</a></div>
+</div></section>
+
+<section class="section alt"><div class="wrap split-lead">
+<h2>En quelques mots</h2>
+<div>
+<p>Agence Lily loue un livre d'or audio et vidéo sur téléphone vintage, à Paris et en Île-de-France.</p>
+<p>Les invités décrochent le combiné, écoutent le message d'accueil des mariés et laissent le leur après le bip. Une confidence, un fou rire, la voix d'une grand-mère.</p>
+<p>Fondée par {{ site.fondateur.prenom }} {{ site.fondateur.nom }}. Mariages, anniversaires, baptêmes, départs en retraite. À partir de 200 €, livré et installé.</p>
+</div>
+</div></section>
+
+<section class="section"><div class="wrap">
+<div class="section-title"><span class="eyebrow">À copier-coller</span><h2>Textes de présentation</h2></div>
+<div class="press-copy">
+<h3>Version courte</h3>
+<p>Location de livre d'or audio et vidéo sur téléphone vintage pour mariages et événements à Paris et en Île-de-France. Livré, installé, dès 200 €.</p>
+</div>
+<div class="press-copy">
+<h3>Version longue</h3>
+<p>Agence Lily loue un livre d'or audio et vidéo pour les mariages, anniversaires, baptêmes et événements d'entreprise à Paris et en Île-de-France.</p>
+<p>Les invités décrochent le combiné d'un téléphone vintage, écoutent un message d'accueil personnalisé et laissent un message après le bip. Avec la formule vidéo, ils sont filmés en même temps. Après la fête, les mariés reçoivent tous les messages par lien en ligne.</p>
+<p>L'équipe livre, installe et récupère le téléphone. Messages illimités, forfait 3 heures ou soirée complète, à partir de 200 €.</p>
+</div>
+<div class="press-copy">
+<h3>Lien à citer</h3>
+<p>Si vous parlez de nous, voici l'adresse la plus utile pour vos lecteurs.</p>
+<p><code>&lt;a href="{{ site.url }}{{ livre.url }}"&gt;livre d'or audio Agence Lily&lt;/a&gt;</code></p>
+</div>
+</div></section>
+
+<section class="section alt"><div class="wrap">
+<div class="section-title"><span class="eyebrow">Fichiers</span><h2>Logos et photo</h2></div>
+<div class="table-wrap"><table class="table">
+<thead><tr><th>Fichier</th><th>Usage</th><th>Télécharger</th></tr></thead>
+<tbody>
+<tr><td><strong>Logo LILY (SVG)</strong></td><td>Fond clair, toutes tailles</td><td><a href="/assets/logo-lily.svg" download>logo-lily.svg</a></td></tr>
+<tr><td><strong>Logo LILY blanc (SVG)</strong></td><td>Fond foncé ou photo</td><td><a href="/assets/logo-lily-blanc.svg" download>logo-lily-blanc.svg</a></td></tr>
+<tr><td><strong>Logo Agence Lily (PNG)</strong></td><td>Annuaires, réseaux</td><td><a href="/assets/logo.png" download>logo.png</a></td></tr>
+<tr><td><strong>Photo du fondateur</strong></td><td>Interview, portrait</td><td><a href="{{ site.fondateur.photo }}" download>sacha-vetzikian.webp</a></td></tr>
+</tbody>
+</table></div>
+<p style="margin-top:var(--s5);font-size:var(--fs-small);">Photos du livre d'or en situation sur demande, en haute définition.</p>
+</div></section>
+
+<section class="section"><div class="wrap split-lead">
+<h2>Sujets que je peux raconter</h2>
+<div>
+<p><strong>Ce que les invités disent vraiment au téléphone.</strong> Les messages qui font pleurer, ceux qui font rire, et ceux qu'on n'attendait pas.</p>
+<p><strong>Faire parler les invités timides.</strong> Ce qui marche pour qu'oncles et grands-parents décrochent eux aussi.</p>
+<p><strong>Photobooth ou livre d'or audio ?</strong> Deux souvenirs très différents, et comment choisir.</p>
+<p><strong>Monter une activité de mariage en Île-de-France.</strong> Les coulisses d'une petite agence.</p>
+</div>
+</div></section>
+
+<section class="section"><div class="wrap"><div class="enquiry">
+<div>
+<h2>Contact presse</h2>
+<p>{{ site.fondateur.prenom }} {{ site.fondateur.nom }}, fondateur. Réponse sous {{ site.delaiReponse }}, interviews en visio ou à Paris.</p>
+</div>
+<div class="btns"><a class="btn primary" href="mailto:{{ site.email }}?subject=Presse%20Agence%20Lily">{{ site.email }}</a>{% if site.phone %}<a class="btn ghost" href="tel:{{ site.phone | replace(' ', '') }}" data-track="appel">{{ site.phone }}</a>{% endif %}</div>
+</div></div></section>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"{{ site.url }}/"},{"@type":"ListItem","position":2,"name":"Presse"}]}
+</script>

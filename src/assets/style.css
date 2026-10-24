@@ -944,3 +944,10 @@ h2.eyebrow { font-family: var(--font); font-size: var(--fs-label); line-height: 
   .cb-btn.cb-icon { flex: 0 0 auto; display: inline-flex; align-items: center; gap: 8px; padding: 0 16px; background: rgba(255,255,255,.55); border: 1px solid rgba(255,255,255,.8); box-shadow: 0 4px 16px rgba(42,36,32,.08), inset 0 1px 0 rgba(255,255,255,.7); color: var(--ink); font-weight: 600; }
 }
 .wa-float { background: rgba(255,255,255,.6); -webkit-backdrop-filter: blur(16px) saturate(1.4); backdrop-filter: blur(16px) saturate(1.4); border: 1px solid rgba(255,255,255,.8); box-shadow: 0 8px 24px rgba(42,36,32,.15), inset 0 1px 0 rgba(255,255,255,.7); }
+
+/* Espace presse : blocs de texte à copier */
+.press-copy { max-width: 720px; margin: var(--s6) auto 0; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); padding: var(--s5); }
+.press-copy h3 { margin: 0 0 var(--s3); }
+.press-copy p { margin: 0 0 var(--s3); }
+.press-copy p:last-child { margin-bottom: 0; }
+.press-copy code { font-size: var(--fs-small); word-break: break-all; }
