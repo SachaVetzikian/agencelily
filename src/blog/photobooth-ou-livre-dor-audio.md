@@ -5,6 +5,7 @@ meta: "Photobooth ou livre d'or audio pour un mariage, un anniversaire ou un bap
 extrait: "On loue les deux. Alors on peut vous dire sans détour lequel choisir selon votre événement, votre budget et le souvenir que vous voulez garder dans vingt ans."
 enBref: "Le photobooth anime la soirée et fait repartir vos invités avec des photos. Le livre d'or audio garde la voix de vos proches, pour vous, pendant des années. Le premier sert le moment, le second sert le souvenir. Chez Agence Lily, le livre d'or audio démarre à 200 € et le photobooth à 290 €, livrés et installés à Paris et en Île-de-France."
 image: "/assets/photos/trio-souvenirs.webp"
+banniere: "/assets/photos/photobooth.webp"
 date: 2026-10-24
 faq:
   - q: "Lequel coûte le moins cher ?"

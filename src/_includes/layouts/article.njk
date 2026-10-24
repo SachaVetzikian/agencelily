@@ -10,9 +10,12 @@ layout: layouts/base.njk
 <div class="read-progress" aria-hidden="true"><i></i></div>
 
 <article class="post">
+{# Bannière photo : champ « banniere » de l'article (paysage), sinon « image » #}
+{% set crumbs = [{ nom: "Guides", url: "/blog/" }] %}
+{% set heroImg = banniere or image or "/assets/photos/hero-blog.webp" %}{% set heroAlt = "" %}{% set heroEyebrow = "Guide · " + minutes + " min de lecture" %}
+{% set heroTitle = h1 %}{% set heroIntro = extrait %}{% set heroClass = "hero-post" %}
+{% include "partials/hero-full.njk" %}
 <div class="post-wrap">
-<nav class="crumbs post-crumbs" aria-label="Fil d'Ariane"><a href="/blog/">Guides</a> <span aria-hidden="true">›</span> <span>{{ h1 }}</span></nav>
-<h1 class="post-title">{{ h1 }}</h1>
 
 <div class="post-meta">
 <div class="post-author"><img src="{{ auteurPhoto }}" alt="" width="44" height="44"><div><a href="/a-propos/">{{ auteurNom }}</a><span>{{ auteurRole }}</span></div></div>

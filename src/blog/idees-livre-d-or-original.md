@@ -6,6 +6,7 @@ extrait: "Le livre d'or papier finit souvent au fond d'un placard avec trois « 
 date: 2026-09-25
 enBref: "Pour remplacer le livre d'or papier, l'idée la plus originale est le livre d'or audio sur téléphone vintage : vos invités décrochent le combiné et laissent témoignage, vœux ou anecdote drôle après le bip. La version vidéo garde aussi les visages. Les autres idées (polaroid, arbre à empreintes, bocal, lettres à ouvrir plus tard) sont plus décoratives, mais recueillent des messages plus courts."
 image: "/assets/photos/formule-audio.webp"
+banniere: "/assets/photos/blog-livre-dor-original.webp"
 modifie: 2026-10-16
 quiz: formule
 faq:

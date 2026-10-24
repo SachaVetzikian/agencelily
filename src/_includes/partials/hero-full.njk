@@ -1,5 +1,5 @@
 {# Hero encadré. Variables : heroImg, heroImgMobile (4:5, optionnelle), heroAlt, heroEyebrow, heroTitle, heroIntro (légende en bas à droite), heroAside (HTML en bas à gauche : prix, boutons) #}
-<section class="hero-full">
+<section class="hero-full{% if heroClass %} {{ heroClass }}{% endif %}">
 {% if heroImg %}<picture>
 {% if heroImgMobile %}<source media="(max-width: 700px)" srcset="{{ heroImgMobile }}">{% endif %}
 <img src="{{ heroImg }}" alt="{{ heroAlt or heroTitle }}" sizes="100vw" fetchpriority="high" onerror="this.closest('picture').remove()">

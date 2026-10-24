@@ -5,6 +5,7 @@ meta: "15 idées d'animation mariage originales, du vin d'honneur à la soirée 
 extrait: "Vin d'honneur, dîner, soirée : 15 idées d'animation mariage originales pour occuper vos invités sans transformer la journée en kermesse."
 enBref: "Une bonne animation de mariage occupe les invités aux moments creux : le vin d'honneur, l'attente entre les plats, le début de soirée. Les plus appréciées sont celles qui demandent peu d'effort aux invités : un livre d'or audio sur téléphone vintage, un bar gourmand animé, un photobooth, un blind test. Choisissez-en deux ou trois, une par moment de la journée, pas plus."
 image: "/assets/photos/mariage-soir.webp"
+banniere: "/assets/photos/blog-animation-mariage.webp"
 date: 2026-10-16
 quiz: formule
 faq:

@@ -5,6 +5,7 @@ meta: "Comment fonctionne un livre d'or audio (audio guest book) : téléphone v
 extrait: "Un téléphone vintage, un message d'accueil, un bip : le livre d'or audio est simple à utiliser. Voici comment il fonctionne, de l'installation à la récupération des messages."
 enBref: "Un livre d'or audio, ou audio guest book, est un téléphone vintage transformé en enregistreur. Vos invités décrochent le combiné, écoutent votre message d'accueil personnalisé et laissent témoignage, vœux ou anecdote drôle après le bip. Après la fête, vous recevez tous les messages par lien en ligne. Chez Agence Lily, il est livré et installé à Paris et en Île-de-France, dès 200 €."
 image: "/assets/photos/trio-message.webp"
+banniere: "/assets/photos/hero-livre-dor.webp"
 date: 2026-09-26
 modifie: 2026-10-16
 quiz: formule
