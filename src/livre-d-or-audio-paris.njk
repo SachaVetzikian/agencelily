@@ -1,0 +1,80 @@
+---
+layout: layouts/base.njk
+permalink: /livre-d-or-audio-paris/
+title: "Livre d'or audio à Paris : location de téléphone livre d'or | Agence Lily"
+meta: "Location de livre d'or audio et vidéo à Paris : téléphone vintage livré, installé et animé dans les 20 arrondissements. Livraison offerte. Dès 200 €, réponse sous 24 h."
+faqParis:
+  - q: "La livraison est-elle vraiment offerte dans Paris ?"
+    a: "Oui, dans les 20 arrondissements et en petite couronne (92, 93, 94). Livraison, installation et reprise du téléphone sont comprises dans le prix."
+  - q: "Comment gérez-vous l'accès dans Paris ?"
+    a: "On repère l'adresse avant le jour J, on cale l'horaire avec le lieu (monte-charge, cour intérieure, quai de chargement) et on arrive en avance. Le téléphone tient dans un sac, rien d'encombrant."
+  - q: "Vous intervenez sur une péniche ou un rooftop ?"
+    a: "Oui. Il faut seulement une prise électrique et un coin abrité du vent et de la musique, pour que les invités s'entendent."
+  - q: "Combien coûte un livre d'or audio à Paris ?"
+    a: "200 € avec la formule Essentiel (audio, 3 heures), 500 € avec la formule Signature (audio et vidéo, une heure d'animation, toute la soirée)."
+  - q: "Peut-on réserver pour un mariage à la mairie ?"
+    a: "Le téléphone s'installe sur le lieu de réception plutôt qu'en mairie, où le temps est compté. C'est au vin d'honneur qu'il recueille le plus de messages."
+---
+{% set livre = services | findBySlug("livre-dor-audio-video") %}
+{% set crumbs = [{ nom: "Location", url: "/location-livre-d-or-audio/" }, { nom: "Paris" }] %}
+{% set heroImg = "/assets/photos/hero-paris.webp" %}{% set heroAlt = "Jeunes mariés dans une rue de Paris, la tour Eiffel au loin" %}{% set heroEyebrow = "Paris · 20 arrondissements" %}
+{% set heroTitle = "Le livre d'or audio à Paris" %}
+{% set heroIntro = "Un téléphone vintage livré, installé et animé chez vous, de la péniche à l'hôtel particulier." %}
+{% set heroAside %}<div class="price-box"><strong>Dès 200 €</strong><span>livraison offerte dans Paris</span></div>{% include "partials/hero-date.njk" %}{% endset %}
+{% include "partials/hero-full.njk" %}
+
+<section class="section"><div class="wrap split-lead">
+<h2>Pensé pour les réceptions parisiennes</h2>
+<div>
+<p>À Paris, une réception se joue souvent dans des lieux contraints. Un salon d'hôtel particulier au troisième étage, une péniche amarrée quai de la Gare, un rooftop où le vent souffle fort.</p>
+<p>Le livre d'or audio s'y installe sans difficulté. Un téléphone, une petite table, une prise. On repère l'accès avant le jour J, on arrive en avance et on vérifie tout avant le premier invité.</p>
+<p>Le principe complet est sur notre page <a href="{{ livre.url }}">livre d'or audio et vidéo</a>.</p>
+</div>
+</div></section>
+
+<section class="section alt"><div class="wrap">
+<div class="section-title"><span class="eyebrow">Les lieux parisiens</span><h2>Où on l'installe</h2></div>
+<div class="steps u-mt6">
+<div class="step"><h3>Hôtels particuliers et salons</h3><p>Le téléphone trouve sa place dans un coin du salon, près du vin d'honneur.</p></div>
+<div class="step"><h3>Péniches</h3><p>À l'intérieur ou sur le pont abrité, loin de la sono pour que les messages restent clairs.</p></div>
+<div class="step"><h3>Rooftops et terrasses</h3><p>À l'abri du vent, sinon personne ne s'entend parler.</p></div>
+<div class="step"><h3>Restaurants privatisés</h3><p>Une table d'appoint suffit, l'équipe de salle n'a rien à gérer.</p></div>
+</div>
+</div></section>
+
+<section class="section statement u-pt0"><div class="wrap">
+<p>On vient, on installe, on anime.<br><em>Pas un colis.</em></p>
+</div></section>
+
+<section class="section"><div class="wrap split-lead">
+<h2>Livraison offerte dans tout Paris</h2>
+<div>
+<p>Les 20 arrondissements, et la petite couronne (Hauts-de-Seine, Seine-Saint-Denis, Val-de-Marne), sans frais de déplacement. Pour un domaine dans les Yvelines ou en Seine-et-Marne, le déplacement est indiqué sur le devis, avant toute réservation.</p>
+<p>On intervient 7 jours sur 7. Les samedis de mai à septembre partent vite à Paris, réservez tôt.</p>
+<a class="link" href="/location-livre-d-or-audio/">Toute la zone d'intervention en Île-de-France</a>
+</div>
+</div></section>
+
+<section class="section alt" id="formules"><div class="wrap">
+<div class="section-title"><span class="eyebrow">Tarifs</span><h2>Deux formules</h2></div>
+{% include "partials/formules-zigzag.njk" %}
+<p class="center u-small u-mt6">Envie de garder les visages ? Découvrez le <a href="/livre-d-or-video/">livre d'or vidéo à Paris</a>.</p>
+</div></section>
+
+<section class="section"><div class="wrap split-lead">
+<h2>Pour quelle occasion ?</h2>
+<div><ul class="inline-list">{% for x in occasions %}<li><a href="{{ x.url }}">Livre d'or {{ x.nom.split(",")[0] | lower }}</a></li>{% endfor %}</ul></div>
+</div></section>
+
+{% set faq = faqParis %}{% include "partials/faq-section.njk" %}
+
+{% set avisService = "livre-dor-audio-video" %}{% include "partials/avis.njk" %}
+{% set devisParam = "service=livre-dor-audio-video" %}
+{% include "partials/cta.njk" %}
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Service","name":"Location de livre d'or audio à Paris","serviceType":"Location de livre d'or audio","url":"{{ site.url }}{{ page.url }}","areaServed":{"@type":"City","name":"Paris"},"provider":{"@id":"{{ site.url }}/#business"},"offers":{"@type":"AggregateOffer","lowPrice":"200","highPrice":"500","priceCurrency":"EUR","offerCount":"2"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{% for f in faqParis %}{"@type":"Question","name":{{ f.q | json | safe }},"acceptedAnswer":{"@type":"Answer","text":{{ f.a | json | safe }}}}{% if not loop.last %},{% endif %}{% endfor %}]}
+</script>
