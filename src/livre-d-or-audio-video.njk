@@ -32,7 +32,7 @@ faqProduit:
 <section class="section"><div class="wrap split-lead">
 <h2>Qu'est-ce qu'un livre d'or audio et vidéo ?</h2>
 <div>
-<p>Un téléphone vintage installé pendant votre événement. Vos invités décrochent le combiné, écoutent votre message d'accueil personnalisé et laissent témoignage, vœux ou anecdote drôle après le bip. La version vidéo filme aussi leur visage.</p>
+<p>Un téléphone vintage installé pendant votre événement. Vos invités décrochent le combiné, écoutent votre message d'accueil personnalisé et laissent témoignage, vœux ou anecdote drôle après le bip. La <a href="/livre-d-or-video/">version vidéo</a> filme aussi leur visage.</p>
 <p>Après la fête, vous recevez tous les messages en téléchargement sous 2 semaines (48 h en express). Coffret souvenir avec clé USB en option.</p>
 <p>On l'appelle aussi livre d'or sonore, livre d'or numérique ou audio guest book : c'est l'alternative vivante au livre d'or papier.</p>
 </div>
@@ -82,6 +82,7 @@ faqProduit:
 </div></section>
 
 {% set faq = faqProduit.concat(livre.faq) %}{% include "partials/faq-section.njk" %}
+<p class="center u-small"><a class="link" href="/faq/">Toutes les questions fréquentes</a></p>
 
 {% set avisService = "livre-dor-audio-video" %}{% include "partials/avis.njk" %}
 {% set devisParam = "service=livre-dor-audio-video" %}

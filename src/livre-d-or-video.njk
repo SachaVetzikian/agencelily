@@ -1,0 +1,82 @@
+---
+layout: layouts/base.njk
+permalink: /livre-d-or-video/
+title: "Location livre d'or vidéo à Paris et en Île-de-France | Agence Lily"
+meta: "Livre d'or vidéo pour votre mariage à Paris et en Île-de-France : vos invités parlent au téléphone vintage et sont filmés. Installé et animé, 500 € TTC tout compris."
+faqVideo:
+  - q: "Combien coûte un livre d'or vidéo à Paris ?"
+    a: "500 € TTC avec la formule Signature, livraison, installation et une heure d'animation comprises à Paris et en petite couronne. Au-delà, les frais de déplacement sont indiqués sur le devis."
+  - q: "Les invités doivent-ils parler face à une caméra ?"
+    a: "Non, et c'est tout l'intérêt. Ils parlent au téléphone, comme à un proche, et la caméra les filme discrètement. On obtient des visages naturels, pas des invités figés devant un objectif."
+  - q: "En quoi c'est différent d'un vidéaste ?"
+    a: "Le vidéaste filme votre journée. Le livre d'or vidéo recueille ce que vos invités ont à vous dire, un par un. Les deux se complètent très bien."
+  - q: "Combien de messages peut-on espérer ?"
+    a: "Avec l'heure d'animation pendant le cocktail, la plupart des invités passent au téléphone. Sur un mariage de 100 personnes, comptez plusieurs dizaines de messages, souvent en groupe."
+  - q: "Quand reçoit-on les vidéos ?"
+    a: "Sous 2 semaines, en téléchargement, audio et vidéo séparés. En 48 h avec l'option express (30 €)."
+  - q: "Peut-on avoir seulement l'audio ?"
+    a: "Oui, c'est la formule Essentiel à 200 €. Le téléphone reste 3 heures et vous recevez les messages vocaux."
+---
+{% set livre = services | findBySlug("livre-dor-audio-video") %}
+{% set crumbs = [{ nom: "Livre d'or audio et vidéo", url: livre.url }, { nom: "Vidéo" }] %}
+{% set heroImg = "/assets/photos/hero-video.webp" %}{% set heroAlt = "Invités qui lèvent leur verre pendant un dîner de mariage" %}{% set heroEyebrow = "Formule Signature · Paris & Île-de-France" %}
+{% set heroTitle = "Le livre d'or vidéo, installé et animé" %}
+{% set heroIntro = "Vos invités décrochent, vous parlent, et la caméra garde leurs visages. Vous, vous profitez." %}
+{% set heroAside %}<div class="price-box"><strong>500 €</strong><span>vidéo, animation et installation comprises</span></div>{% include "partials/hero-date.njk" %}{% endset %}
+{% include "partials/hero-full.njk" %}
+
+<section class="section"><div class="wrap split-lead">
+<h2>La voix ne suffit pas toujours</h2>
+<div>
+<p>Dans vingt ans, vous voudrez réentendre votre grand-père. Et le revoir sourire en vous parlant.</p>
+<p>Le livre d'or vidéo garde les deux. Vos invités décrochent un téléphone vintage, écoutent votre message d'accueil et vous parlent après le bip, pendant qu'une caméra discrète les filme. Personne ne pose. Tout le monde parle comme au téléphone (c'est-à-dire avec naturel, et souvent un peu trop longtemps).</p>
+<p>Tout le fonctionnement est détaillé sur notre page <a href="{{ livre.url }}">livre d'or audio et vidéo</a>.</p>
+</div>
+</div></section>
+
+<section class="section alt"><div class="wrap">
+<div class="section-title"><span class="eyebrow">Formule Signature</span><h2>Ce qui est inclus</h2></div>
+<div class="steps u-mt6">
+<div class="step"><h3>La vidéo</h3><p>Chaque message filmé, la voix et le visage, en plus de l'audio.</p></div>
+<div class="step"><h3>Une heure d'animation</h3><p>Pendant le cocktail, on va chercher vos invités, même les plus timides.</p></div>
+<div class="step"><h3>Toute la soirée</h3><p>La borne reste jusqu'au bout de la nuit. On la récupère le lendemain.</p></div>
+<div class="step"><h3>Installé chez vous</h3><p>Livraison, installation et vérification à Paris et en Île-de-France.</p></div>
+</div>
+</div></section>
+
+<section class="section statement u-pt0"><div class="wrap">
+<p>On vient, on installe, on anime.<br><em>Pas un colis.</em></p>
+</div></section>
+
+<section class="section"><div class="wrap split-lead">
+<h2>Pourquoi pas un téléphone envoyé par la poste ?</h2>
+<div>
+<p>On trouve des téléphones livre d'or expédiés en colis, à installer soi-même. Ça marche, pour un anniversaire à la maison.</p>
+<p>Pour un mariage, c'est une tâche de plus le jour J, sans personne pour aller chercher les invités. Et la vidéo demande un vrai réglage (lumière, cadrage, son). Chez nous, un membre de l'équipe s'en occupe, et vous n'y pensez plus.</p>
+<p class="u-mt5 u-m0 u-small"><a class="link" href="/blog/photobooth-ou-livre-dor-audio/">Photobooth ou livre d'or audio : le comparatif</a></p>
+</div>
+</div></section>
+
+<section class="section alt" id="formules"><div class="wrap">
+<div class="section-title"><span class="eyebrow">Tarifs</span><h2>Deux formules</h2></div>
+{% include "partials/formules-zigzag.njk" %}
+</div></section>
+
+<section class="section"><div class="wrap split-lead">
+<h2>Où intervenons-nous ?</h2>
+<div><p>Paris et toute l'Île-de-France, 7 jours sur 7. Livraison offerte à Paris et en petite couronne. Pour un château dans les Yvelines ou un domaine en Seine-et-Marne, les frais de déplacement figurent sur le devis.</p>
+<a class="link" href="/location-livre-d-or-audio/">Zone d'intervention et réservation</a></div>
+</div></section>
+
+{% set faq = faqVideo %}{% include "partials/faq-section.njk" %}
+
+{% set avisService = "livre-dor-audio-video" %}{% include "partials/avis.njk" %}
+{% set devisParam = "service=livre-dor-audio-video" %}
+{% include "partials/cta.njk" %}
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Service","name":"Location de livre d'or vidéo","serviceType":"Livre d'or vidéo","url":"{{ site.url }}{{ page.url }}","areaServed":{"@type":"AdministrativeArea","name":"Île-de-France"},"provider":{"@id":"{{ site.url }}/#business"},"offers":{"@type":"Offer","price":"500","priceCurrency":"EUR"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{% for f in faqVideo %}{"@type":"Question","name":{{ f.q | json | safe }},"acceptedAnswer":{"@type":"Answer","text":{{ f.a | json | safe }}}}{% if not loop.last %},{% endif %}{% endfor %}]}
+</script>
