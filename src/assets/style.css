@@ -483,6 +483,10 @@ p, li { text-wrap: pretty; }
 .intro-center svg { width: 40px; height: 40px; color: var(--ink); margin: 0 auto var(--s5); display: block; }
 .intro-center p { font-size: var(--fs-lead); line-height: 1.55; color: var(--ink); margin: 0; }
 .intro-center p span { color: var(--muted); }
+.intro-center .reveal { font-family: var(--serif); font-size: clamp(34px, 5.4vw, 60px); line-height: 1.12; letter-spacing: -0.01em; color: var(--ink); }
+.intro-center .reveal.is-split span { color: #cfc5bb; transition: color .25s; }
+.intro-center .reveal.is-split span.on { color: var(--ink); }
+.intro-center .reveal + .btns { margin-top: var(--s6); }
 .intro-center .btns { justify-content: center; }
 
 /* Trio décalé : trois colonnes, celle du milieu descend et met le titre au-dessus */
