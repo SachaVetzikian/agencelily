@@ -495,8 +495,9 @@ p, li { text-wrap: pretty; }
 .trio-item .ph { aspect-ratio: 4 / 5; }
 .trio-item:nth-child(2) { flex-direction: column-reverse; margin-top: var(--s8); }
 .trio-item:nth-child(2) .ph { aspect-ratio: 3 / 4; }
-.trio-item h3 { margin: 0 0 var(--s2); font-size: var(--fs-small); letter-spacing: .04em; text-transform: none; font-weight: 600; }
-.trio-item p { margin: 0; color: var(--muted); font-size: var(--fs-small); max-width: 320px; }
+.trio-item h3 { margin: 0 0 var(--s2); font-family: var(--serif); font-size: clamp(28px, 2.8vw, 36px); line-height: 1.1; letter-spacing: 0; text-transform: none; font-weight: 400; }
+.trio-num { display: block; font-family: var(--serif); font-size: clamp(40px, 3.6vw, 52px); line-height: 1; color: var(--accent); margin-bottom: var(--s3); }
+.trio-item p { margin: 0; color: var(--muted); font-size: var(--fs-body); max-width: 340px; }
 @media (max-width: 760px) { .trio { grid-template-columns: 1fr; gap: var(--s7); } .trio-item:nth-child(2) { margin-top: 0; flex-direction: column; } }
 
 /* Offres en zigzag : photo d'un côté, texte de l'autre */
