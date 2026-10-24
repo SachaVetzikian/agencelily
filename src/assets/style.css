@@ -925,3 +925,15 @@ h2.eyebrow { font-family: var(--font); font-size: var(--fs-label); line-height: 
 
 /* Carte flottante du blog au-dessus de la bulle WhatsApp */
 .post-float { bottom: 92px; }
+
+/* Occasions de l'accueil : grille alignée, cartes cliquables explicites */
+.masonry { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--s4); columns: auto; }
+.masonry a, .masonry a:nth-child(2) { margin: 0; }
+.masonry .ph, .masonry a:nth-child(3n+2) .ph, .masonry a:nth-child(4n) .ph { aspect-ratio: 3 / 4; }
+.masonry a::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(30,22,18,.7), rgba(30,22,18,0) 55%); pointer-events: none; }
+.masonry .m-cap { z-index: 1; left: var(--s4); right: var(--s4); bottom: var(--s4); display: grid; gap: 6px; font-size: clamp(22px, 2vw, 28px); line-height: 1.1; text-shadow: none; }
+.masonry .m-more { font-family: var(--font); font-size: var(--fs-small); letter-spacing: .04em; color: rgba(255,255,255,.9); text-decoration: underline; text-underline-offset: 4px; }
+@media (max-width: 760px) {
+  .masonry { grid-template-columns: repeat(2, 1fr); gap: var(--s3); }
+  .masonry .m-cap { left: var(--s3); right: var(--s3); bottom: var(--s3); font-size: 22px; }
+}

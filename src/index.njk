@@ -84,9 +84,9 @@ faqHome:
 
 
 <section class="section"><div class="wrap">
-<div class="section-title"><span class="eyebrow">Occasions</span><h2>Pour chaque occasion</h2></div>
+<div class="section-title"><span class="eyebrow">Occasions</span><h2>Pour chaque occasion</h2><p>Touchez une occasion pour voir comment on l'organise.</p></div>
 <div class="masonry">
-{% for o in occasions %}{% set evt = evenements | findBySlug(o.evenement) %}<a href="{{ o.url }}">{% set label = o.nom %}{% set img = evt.image if evt else "" %}{% set tall = false %}{% include "partials/visual.njk" %}<span class="m-cap">{{ o.nom }}</span></a>{% endfor %}
+{% for o in occasions %}{% set evt = evenements | findBySlug(o.evenement) %}<a href="{{ o.url }}">{% set label = o.nom %}{% set img = evt.image if evt else "" %}{% set tall = false %}{% include "partials/visual.njk" %}<span class="m-cap">{{ o.nom.split(",")[0] }}<span class="m-more">Découvrir →</span></span></a>{% endfor %}
 </div>
 </div></section>
 
