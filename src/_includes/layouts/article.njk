@@ -97,6 +97,8 @@ layout: layouts/base.njk
   function onScroll() {
     var d = document.documentElement, max = d.scrollHeight - innerHeight, p = max > 0 ? scrollY / max : 0;
     bar.style.width = (p * 100) + "%";
+    // Le sommaire n'apparaît qu'une fois la bannière photo passée
+    var hero = document.querySelector(".hero-post"); if (hero) toc.classList.toggle("off", hero.getBoundingClientRect().bottom > 140);
     var cur = 0; heads.forEach(function (h, i) { if (h.getBoundingClientRect().top < 140) cur = i; });
     links.forEach(function (a, i) { a.classList.toggle("on", i === cur); }); marks.forEach(function (m, i) { m.classList.toggle("on", i === cur); });
     if (flo && !closed) flo.hidden = !(p > 0.2 && p < 0.92);
