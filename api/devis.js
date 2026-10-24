@@ -48,7 +48,9 @@ module.exports = async function handler(req, res) {
   const d = {};
   for (const k of Object.keys(CHAMPS)) d[k] = nettoyer(corps[k]);
 
-  if (!d.prenom || !d.date || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(d.email)) {
+  // Commande de bon cadeau : la date de l'événement n'est pas encore connue
+  const cadeau = d.service === "bon-cadeau";
+  if (!d.prenom || (!d.date && !cadeau) || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(d.email)) {
     return repondre(400, { ok: false, erreur: "champs" });
   }
 
@@ -74,7 +76,7 @@ module.exports = async function handler(req, res) {
         from: process.env.DEVIS_FROM || "Agence Lily <onboarding@resend.dev>",
         to: destinataire.split(",").map((s) => s.trim()),
         reply_to: d.email,
-        subject: `Demande de devis : ${d.evenement || "événement"} le ${d.date} (${d.prenom})`,
+        subject: cadeau ? `Commande de bon cadeau : ${d.formule || "formule à préciser"} (${d.prenom})` : `Demande de devis : ${d.evenement || "événement"} le ${d.date} (${d.prenom})`,
         text: texte,
         html,
       }),
