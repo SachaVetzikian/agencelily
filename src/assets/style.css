@@ -953,3 +953,10 @@ h2.eyebrow { font-family: var(--font); font-size: var(--fs-label); line-height: 
 .u-center { justify-content: center; } .u-narrow { max-width: 820px; } .u-small { font-size: var(--fs-small); }
 .u-align-center { align-items: center; }
 .affiche-apercu { width: 100%; max-width: 460px; justify-self: center; border: 1px solid var(--line); }
+
+/* Espace presse : blocs de texte à copier */
+.press-copy { max-width: 720px; margin: var(--s6) auto 0; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); padding: var(--s5); }
+.press-copy h3 { margin: 0 0 var(--s3); }
+.press-copy p { margin: 0 0 var(--s3); }
+.press-copy p:last-child { margin-bottom: 0; }
+.press-copy code { font-size: var(--fs-small); word-break: break-all; }
