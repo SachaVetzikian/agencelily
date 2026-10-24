@@ -1,0 +1,38 @@
+---
+layout: layouts/base.njk
+permalink: /prestataires-recommandes/
+title: "Prestataires mariage recommandés en Île-de-France | Agence Lily"
+meta: "Photographes, vidéastes, wedding planners, DJ, fleuristes et lieux de réception avec qui nous aimons travailler à Paris et en Île-de-France."
+categoriesPrestataires: ["Lieux de réception", "Wedding planners", "Photographes", "Vidéastes", "DJ et musiciens", "Fleuristes et décorateurs", "Traiteurs", "Officiants"]
+---
+{% set crumbs = [{ nom: "Prestataires recommandés" }] %}
+{% include "partials/crumbs.njk" %}
+<section class="hero"><div class="wrap">
+<span class="eyebrow">Nos confrères</span>
+<h1>Les prestataires que nous recommandons</h1>
+<p class="lede">On les a vus travailler, on leur confierait notre propre mariage. Voici les lieux et les prestataires d'Île-de-France avec qui nous aimons partager une date.</p>
+</div></section>
+
+{% if prestataires.length %}
+{% for cat in categoriesPrestataires %}{% set liste = prestataires | byCategorie(cat) %}{% if liste | length %}
+<section class="section{% if loop.index is even %} alt{% endif %}"><div class="wrap">
+<h2>{{ cat }}</h2>
+<div class="reco" style="margin-top:24px;">
+{% for p in liste %}<a href="{{ p.site }}" rel="noopener" target="_blank"><div><h3 style="margin:0;">{{ p.nom }}</h3><p>{{ p.texte }}{% if p.ville %} · {{ p.ville }}{% endif %}</p></div><span class="tag">Voir le site →</span></a>{% endfor %}
+</div>
+</div></section>
+{% endif %}{% endfor %}
+{% else %}
+<section class="section"><div class="wrap split-lead">
+<h2>La liste arrive</h2>
+<div><p>Nous sélectionnons nos premiers partenaires. Revenez bientôt.</p></div>
+</div></section>
+{% endif %}
+
+<section class="section"><div class="wrap"><div class="enquiry">
+<div>
+<h2>Vous êtes prestataire mariage ?</h2>
+<p>Photographe, wedding planner, lieu, DJ ou fleuriste en Île-de-France. Si nos couples peuvent vous faire confiance, écrivez-nous et parlons-en.</p>
+</div>
+<div class="btns"><a class="btn primary" href="/partenaires/">Travailler ensemble</a></div>
+</div></div></section>

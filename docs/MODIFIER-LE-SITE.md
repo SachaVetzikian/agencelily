@@ -21,6 +21,7 @@ Tout le contenu est dans des fichiers texte. Tu les modifies sur GitHub, Vercel 
 | Ajouter un avis client | `src/_data/avis.json` | voir modèle ci-dessous |
 | Mettre à jour le nombre d'avis Google | `src/_data/site.json` | `"avis"` > `"nombre"` (le compteur s’affiche à partir de 4 avis) |
 | Ajouter une réalisation | `src/_data/realisations.json` | voir modèle ci-dessous |
+| Ajouter un prestataire recommandé | `src/_data/prestataires.json` | voir modèle ci-dessous |
 
 ## Règles pour ne rien casser
 - Les prix sont des nombres **sans guillemets** : `"prix": 400` et pas `"prix": "400"`.
@@ -60,3 +61,18 @@ La page Réalisations apparaît automatiquement dès la première réalisation a
 
 ## Ajouter une photo
 Dépose le fichier dans `src/assets/photos/` (format `.webp` ou `.jpg`, 1600 px de large max), puis renseigne son chemin dans le champ `"image"` du service ou de l'événement : `"image": "/assets/photos/bar-a-crepes.webp"`.
+
+## Modèle de prestataire recommandé (`prestataires.json`)
+```json
+[
+  {
+    "nom": "Studio Lumière",
+    "categorie": "Photographes",
+    "site": "https://www.studio-lumiere.fr",
+    "texte": "Reportage de mariage naturel et lumineux.",
+    "ville": "Versailles"
+  }
+]
+```
+`categorie` doit être l'une de celles-ci : Lieux de réception, Wedding planners, Photographes, Vidéastes, DJ et musiciens, Fleuristes et décorateurs, Traiteurs, Officiants.
+La page `/prestataires-recommandes/` reste invisible pour Google tant que la liste est vide, et s'indexe toute seule dès le premier prestataire. N'y mets que des gens avec qui tu as vraiment travaillé ou que tu recommandes sincèrement.
