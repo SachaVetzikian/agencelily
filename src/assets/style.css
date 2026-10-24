@@ -937,3 +937,10 @@ h2.eyebrow { font-family: var(--font); font-size: var(--fs-label); line-height: 
   .masonry { grid-template-columns: repeat(2, 1fr); gap: var(--s3); }
   .masonry .m-cap { left: var(--s3); right: var(--s3); bottom: var(--s3); font-size: 22px; }
 }
+
+/* WhatsApp : logo officiel, effet verre */
+@media (max-width: 760px) {
+  .contact-bar { background: rgba(248,246,242,.72); -webkit-backdrop-filter: blur(16px) saturate(1.4); backdrop-filter: blur(16px) saturate(1.4); border-top: 1px solid rgba(255,255,255,.6); }
+  .cb-btn.cb-icon { flex: 0 0 auto; display: inline-flex; align-items: center; gap: 8px; padding: 0 16px; background: rgba(255,255,255,.55); border: 1px solid rgba(255,255,255,.8); box-shadow: 0 4px 16px rgba(42,36,32,.08), inset 0 1px 0 rgba(255,255,255,.7); color: var(--ink); font-weight: 600; }
+}
+.wa-float { background: rgba(255,255,255,.6); -webkit-backdrop-filter: blur(16px) saturate(1.4); backdrop-filter: blur(16px) saturate(1.4); border: 1px solid rgba(255,255,255,.8); box-shadow: 0 8px 24px rgba(42,36,32,.15), inset 0 1px 0 rgba(255,255,255,.7); }
