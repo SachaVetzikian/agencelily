@@ -46,7 +46,7 @@
         "a": "Le bar à crêpes démarre à 50 invités. En dessous, nous vous proposons un forfait adapté."
       }
     ],
-    "image": "https://unsplash.com/photos/1ZTccDpF71k/download?w=1600",
+    "image": "/assets/photos/bar-a-crepes.webp",
     "parPersonne": 8.0
   },
   {
@@ -92,7 +92,7 @@
         "a": "Le bar à mini pancakes démarre à 50 invités. En dessous, demandez-nous un forfait adapté."
       }
     ],
-    "image": "https://unsplash.com/photos/TkzdkVn1AyA/download?w=1600",
+    "image": "/assets/photos/bar-a-mini-pancakes.webp",
     "parPersonne": 7.0
   },
   {
@@ -142,7 +142,7 @@
         "a": "Le bar à tiramisu démarre à 40 invités."
       }
     ],
-    "image": "https://unsplash.com/photos/-gCl5waFE5U/download?w=1600",
+    "image": "/assets/photos/bar-a-tiramisu.webp",
     "parPersonne": 7.0
   },
   {
@@ -188,7 +188,7 @@
         "a": "Le bar à gaufres démarre à 50 invités."
       }
     ],
-    "image": "https://unsplash.com/photos/dEUyLofZe5o/download?w=1600",
+    "image": "/assets/photos/bar-a-gaufres.webp",
     "parPersonne": 7.0
   },
   {
@@ -363,6 +363,6 @@
         "a": "Oui, avec votre logo et vos couleurs pour un salon, une inauguration ou une soirée d'entreprise."
       }
     ],
-    "image": "https://unsplash.com/photos/CQEunDe3im0/download?w=1600"
+    "image": "/assets/photos/mur-cascade.webp"
   }
 ]
