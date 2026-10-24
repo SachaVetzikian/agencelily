@@ -552,6 +552,7 @@ p, li { text-wrap: pretty; }
   .contact-bar { background: var(--bg); border-top: 1px solid var(--line); }
   .cb-btn { color: var(--ink); border-color: var(--line); text-transform: none; letter-spacing: .01em; font-size: var(--fs-small); border-radius: var(--radius); }
   .cb-btn.cb-main { background: var(--accent); color: var(--white); border-color: var(--accent); }
+  .cb-btn.cb-icon { flex: 0 0 52px; display: grid; place-items: center; padding: 0; }
 }
 .wa-float { background: var(--accent); }
 
