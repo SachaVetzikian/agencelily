@@ -65,7 +65,7 @@ Ensuite, deux choses à préparer de votre côté.
 
 ## 🛠️ Le jour J, installation et animation
 
-Nous arrivons avant vos invités. On installe le téléphone, la caméra, l'éclairage si besoin, et l'affiche. On teste le son et le cadrage. Vous n'avez rien à brancher ni à surveiller.
+Nous arrivons avant vos invités. On installe le téléphone, la borne vidéo (avec son néon intégré, qui éclaire les visages) et l'affiche. On teste le son et le cadrage. Vous n'avez rien à brancher ni à surveiller.
 
 Puis le cocktail commence.
 

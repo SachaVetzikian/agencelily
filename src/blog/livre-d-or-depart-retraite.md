@@ -122,7 +122,7 @@ Le coffret souvenir, à 50 €, contient une clé USB dans un écrin. Un vrai ca
 
 L'Essentiel, à 200 €, couvre la plupart des pots de départ. Le livre d'or audio, la borne pendant 3 h, les messages illimités, la livraison et l'installation.
 
-Pour une vraie soirée de départ, avec dîner et discours, la Signature à 500 € ajoute le livre d'or vidéo, une heure d'animation pendant le cocktail et la borne toute la soirée. L'animateur va chercher les collègues un par un, y compris ceux qui jurent qu'ils n'ont « rien d'intéressant à raconter ». Et si l'ambiance s'y prête, chaque heure d'animation supplémentaire coûte 100 €.
+Pour une vraie soirée de départ, avec dîner et discours, la Signature à 500 € ajoute le livre d'or vidéo, une heure d'animation pendant le cocktail et la borne toute la soirée. L'animateur va chercher les collègues un par un, y compris ceux qui jurent qu'ils n'ont « rien d'intéressant à raconter ». Et avec l'Essentiel, une heure d'animation en option coûte 100 €.
 
 Tous les détails sont sur notre page [tarifs](/tarifs/).
 

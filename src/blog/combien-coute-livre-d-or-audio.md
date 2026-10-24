@@ -75,8 +75,8 @@ Les formules suffisent à la plupart des événements. Les options servent à aj
 
 <ul class="post-check">
 <li>✅ Coffret souvenir, 50 € <span>→ une clé USB avec vos messages, rangée dans un écrin</span></li>
-<li>✅ Touche florale, 50 € <span>→ pour habiller le téléphone aux couleurs de votre déco</span></li>
-<li>✅ Heure d'animation supplémentaire, 100 € <span>→ utile pour un grand nombre d'invités ou un cocktail qui s'étire</span></li>
+<li>✅ Touche florale, 50 € <span>→ des fleurs blanches autour du téléphone</span></li>
+<li>✅ Heure d'animation avec l'Essentiel, 100 € <span>→ utile pour un grand nombre d'invités ou des invités timides</span></li>
 <li>✅ Livraison express des messages, 30 € <span>→ vos fichiers sous 48 h au lieu de 2 semaines</span></li>
 </ul>
 
@@ -108,7 +108,7 @@ Pour rendre tout ça concret, voici des combinaisons que l'on voit souvent.
 
 **Le juste milieu.** Formule Essentiel avec le coffret souvenir, soit 250 €. Vous gardez un objet physique, ce qui compte beaucoup quand on veut offrir les messages à une grand-mère qui n'a jamais ouvert un lien de téléchargement de sa vie.
 
-**Le mariage complet.** Formule Signature avec la touche florale et le coffret, soit 600 €. Audio, vidéo, une heure d'animation et un téléphone assorti à vos fleurs.
+**Le mariage complet.** Formule Signature avec la touche florale et le coffret, soit 600 €. Audio, vidéo, une heure d'animation et un téléphone habillé de fleurs blanches.
 
 **Le mariage impatient.** Formule Signature avec la livraison express des messages, soit 530 €. Pour ceux qui ne tiendront pas deux semaines sans réécouter la fête.
 

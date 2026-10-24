@@ -17,7 +17,7 @@ faq:
   - q: "Peut-on installer le livre d'or audio en extérieur ?"
     a: "<strong>Oui, à l'abri.</strong> Une tonnelle, un barnum ou un auvent protègent le téléphone de la pluie et du plein soleil. Prévoyez une solution de repli à l'intérieur si la météo tourne."
   - q: "Faut-il déplacer le téléphone entre le cocktail et la soirée ?"
-    a: "<strong>Souvent, oui.</strong> Avec la formule Signature, la borne reste toute la soirée, et si le cocktail et le dîner n'ont pas lieu dans la même pièce, nous en parlons ensemble avant le jour J."
+    a: "<strong>Non, il reste au même endroit.</strong> C'est pour ça qu'on choisit l'emplacement ensemble avant le jour J, sur le passage entre le cocktail et le dîner quand ils ont lieu dans deux pièces."
   - q: "Où trouver une affiche à poser à côté du téléphone ?"
     a: "<strong>Notre affiche est gratuite</strong>, en PDF A4, avec le mode d'emploi en quatre étapes. Elle fonctionne avec n'importe quel téléphone livre d'or."
 ressources:

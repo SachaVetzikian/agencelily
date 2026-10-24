@@ -15,11 +15,11 @@ faq:
   - q: "Qui doit enregistrer le message d'accueil ?"
     a: "<strong>Le plus souvent, les personnes fêtées elles-mêmes.</strong> Entendre la voix des mariés ou de l'enfant du baptême donne tout de suite envie de répondre. Pour une retraite, un collègue complice fait aussi très bien l'affaire."
   - q: "Peut-on changer le message d'accueil pendant la fête ?"
-    a: "<strong>Ce n'est pas nécessaire et on le déconseille.</strong> Mieux vaut un message bien enregistré et testé avant l'arrivée des invités, que l'on règle avec vous à l'installation."
+    a: "<strong>Ce n'est pas nécessaire et on le déconseille.</strong> Mieux vaut un message bien enregistré au début de la fête, avec nous, et testé avant l'arrivée des invités."
   - q: "Faut-il mettre de l'humour dans le message ?"
     a: "<strong>Un peu, oui, si cela vous ressemble.</strong> Une pointe d'humour détend les invités timides. Gardez quand même une consigne claire pour qu'ils sachent quoi faire après le bip."
   - q: "Le message d'accueil est-il inclus dans la location ?"
-    a: "<strong>Oui, dans l'Essentiel comme dans la Signature.</strong> Vous nous envoyez votre enregistrement, et nous l'installons sur le téléphone avant la fête."
+    a: "<strong>Oui, dans l'Essentiel comme dans la Signature.</strong> On l'enregistre avec vous sur place, au début de la fête, directement sur le téléphone."
 ressources:
   - titre: "Livre d'or audio et vidéo sur téléphone vintage"
     url: "/livre-d-or-audio-video/"
@@ -142,7 +142,7 @@ Gardez deux éléments. À qui l'invité parle, et ce que vous aimeriez entendre
 <li>✅ Faites écouter le résultat à un proche <span>→ il vous dira si vous parlez trop vite</span></li>
 </ul>
 
-<div class="post-callout"><p class="post-callout-title">💡 Bon à savoir</p><p><strong>Le message d'accueil est personnalisé dans nos deux formules.</strong> Vous nous envoyez votre fichier, et nous le réglons sur le téléphone avant l'arrivée des invités.</p></div>
+<div class="post-callout"><p class="post-callout-title">💡 Bon à savoir</p><p><strong>Le message d'accueil est personnalisé dans nos deux formules.</strong> On l'enregistre avec vous sur place, au début de la fête, juste avant l'arrivée des invités. Préparez votre texte, on s'occupe du reste.</p></div>
 
 ## 🙈 Les erreurs les plus fréquentes
 

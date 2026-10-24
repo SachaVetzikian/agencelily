@@ -98,7 +98,7 @@ Les plus bricoleurs emballeront un vieux combiné trouvé dans un vide-grenier (
 
 **La Signature, à 500 €.** Tout l'Essentiel, plus le livre d'or vidéo, une heure d'animation pendant le cocktail et la borne toute la soirée. Si vous êtes plusieurs à vous cotiser, c'est la formule que je recommande. L'animateur va chercher les invités un par un, y compris l'oncle qui jure qu'il « n'a rien à dire » et qui finit par parler quatre minutes.
 
-Côté options, le couple pourra ajouter ce qu'il veut au moment de réserver sa date. Le coffret souvenir (une clé USB dans un écrin) à 50 €, la touche florale à 50 €, une heure d'animation supplémentaire à 100 € ou la livraison express des messages sous 48 h à 30 €. La livraison est offerte à Paris et en petite couronne.
+Côté options, le couple pourra ajouter ce qu'il veut au moment de réserver sa date. Le coffret souvenir (une clé USB dans un écrin) à 50 €, la touche florale à 50 €, une heure d'animation à 100 € avec l'Essentiel ou la livraison express des messages sous 48 h à 30 €. La livraison est offerte à Paris et en petite couronne.
 
 Toutes les formules sont détaillées sur la page [tarifs](/tarifs/).
 

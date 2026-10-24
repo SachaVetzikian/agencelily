@@ -19,7 +19,7 @@ faq:
   - q: "L'animation change-t-elle vraiment le nombre de messages ?"
     a: "<strong>Oui, c'est le levier le plus efficace.</strong> L'animateur va chercher les invités qui n'auraient jamais osé, et ce sont souvent eux qui laissent les plus beaux messages."
   - q: "Peut-on ajouter du temps d'animation ?"
-    a: "<strong>Oui, avec l'option à 100 € l'heure supplémentaire.</strong> Elle est utile pour un grand nombre d'invités ou un cocktail qui dure longtemps."
+    a: "<strong>Oui, avec l'Essentiel, l'heure d'animation est en option à 100 €.</strong> La Signature, elle, en comprend déjà une pendant le cocktail."
 ressources:
   - titre: "Location de livre d'or vidéo à Paris et en Île-de-France"
     url: "/livre-d-or-video/"
@@ -97,7 +97,7 @@ Un animateur va les chercher.
 
 Il fait le tour des groupes pendant le cocktail, explique en deux mots, tend le combiné, rassure. Il propose une idée quand l'invité sèche (« Racontez-leur comment vous les avez rencontrés »). Il sent aussi quand un groupe est prêt à y aller ensemble. Sans pression, avec le sourire, il transforme un objet de décoration en vraie animation.
 
-La formule Signature, à 500 €, comprend cette heure d'animation pendant le cocktail, ainsi que le livre d'or vidéo et la borne toute la soirée. Pour un grand mariage, vous pouvez ajouter une heure d'animation supplémentaire à 100 €. Tout le fonctionnement est décrit sur notre page [livre d'or vidéo](/livre-d-or-video/).
+La formule Signature, à 500 €, comprend cette heure d'animation pendant le cocktail, ainsi que le livre d'or vidéo et la borne toute la soirée. Avec l'Essentiel, vous pouvez ajouter une heure d'animation à 100 €. Tout le fonctionnement est décrit sur notre page [livre d'or vidéo](/livre-d-or-video/).
 
 <div class="post-callout"><p class="post-callout-title">💡 Bon à savoir</p><p><strong>Les messages recueillis grâce à l'animateur sont souvent les plus précieux.</strong> L'invité qui disait « Ah non, pas moi » finit parfois par parler plusieurs minutes.</p></div>
 

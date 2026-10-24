@@ -114,7 +114,7 @@ Les messages arrivent en téléchargement sous 2 semaines, ou sous 48 h avec l'o
 
 Pour un baptême, je conseille souvent le coffret souvenir à 50 €. Une clé USB dans un écrin, qu'on range avec la robe de baptême, les faire-part, les photos et la gourmette. Le jour où l'enfant sera assez grand, vous aurez un vrai objet à lui remettre, qu'aucune boîte mail ne risque d'engloutir.
 
-La touche florale, à 50 € également, habille la table du téléphone avec des fleurs assorties à votre décoration. Joli sur les photos de famille.
+La touche florale, à 50 € également, habille la table du téléphone de fleurs blanches. Joli sur les photos de famille.
 
 ## 💶 Quelle formule pour un baptême ?
 

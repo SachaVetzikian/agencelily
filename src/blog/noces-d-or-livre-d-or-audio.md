@@ -55,7 +55,7 @@ Le plus souvent, ce sont les enfants qui organisent. Ils réservent la salle ou 
 
 Concrètement, il vous faut une date, un lieu en Île-de-France, une petite table et une prise électrique. Nous livrons, installons et testons le téléphone avant l'arrivée des invités, puis nous le récupérons à la fin.
 
-Le message d'accueil, c'est vous qui le choisissez. Il peut être enregistré par un petit-enfant, ce qui fait toujours son effet.
+Le message d'accueil, c'est vous qui le choisissez. On l'enregistre sur place au début de la fête, et il peut être dit par un petit-enfant, ce qui fait toujours son effet.
 
 « Bonjour, ici Jules, le petit-fils de Monique et Bernard. Ils fêtent leurs 50 ans de mariage aujourd'hui. Racontez-leur un souvenir avec eux après le bip, ils l'écouteront avec nous plus tard. »
 
@@ -114,7 +114,7 @@ Une idée simple pour la suite. Organisez une séance d'écoute en famille, auto
 
 **La Signature, à 500 €.** L'Essentiel, plus le livre d'or vidéo, une heure d'animation pendant le cocktail et la borne toute la soirée. Pour une grande fête avec beaucoup d'invités, la vidéo permet de garder aussi les visages, et l'animateur s'assure que les plus discrets passent par le téléphone.
 
-La touche florale à 50 € habille le téléphone, et pourquoi pas dans des tons dorés pour l'occasion. Une heure d'animation supplémentaire coûte 100 €. La livraison est offerte à Paris et en petite couronne, et le paiement intégral à la réservation donne droit à 15 % de remise.
+La touche florale à 50 € habille le téléphone de fleurs blanches. Avec l'Essentiel, une heure d'animation en option coûte 100 €. La livraison est offerte à Paris et en petite couronne, et le paiement intégral à la réservation donne droit à 15 % de remise.
 
 Pour tout le détail, consultez notre page [livre d'or d'anniversaire](/livre-d-or-anniversaire/).
 

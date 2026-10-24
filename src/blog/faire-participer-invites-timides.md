@@ -19,7 +19,7 @@ faq:
   - q: "À quoi sert l'heure d'animation de la formule Signature ?"
     a: "<strong>À aller chercher les invités pendant le cocktail.</strong> L'animateur explique le principe, rassure ceux qui hésitent et forme des petits groupes autour du téléphone."
   - q: "Peut-on prolonger l'animation ?"
-    a: "<strong>Oui, l'heure d'animation supplémentaire coûte 100 €.</strong> Elle s'ajoute à la formule Signature, qui en comprend déjà une pendant le cocktail."
+    a: "<strong>La Signature en comprend déjà une pendant le cocktail.</strong> Avec l'Essentiel, vous pouvez ajouter une heure d'animation en option, à 100 €."
 ressources:
   - titre: "Livre d'or vidéo installé et animé"
     url: "/livre-d-or-video/"
@@ -104,7 +104,7 @@ Avec notre formule Signature, un membre de l'équipe passe une heure au cocktail
 
 Les messages de ces invités-là sont souvent parmi les plus touchants. Ceux qui parlent peu choisissent leurs mots.
 
-Si votre cocktail dure longtemps, ou si vous voulez prolonger l'effet en soirée, une heure d'animation supplémentaire coûte 100 €. Tout le fonctionnement est détaillé sur notre page [livre d'or vidéo](/livre-d-or-video/).
+Avec l'Essentiel, une heure d'animation en option coûte 100 €. Tout le fonctionnement est détaillé sur notre page [livre d'or vidéo](/livre-d-or-video/).
 
 ## 🎥 Et la vidéo, pour les timides ?
 

@@ -123,7 +123,7 @@ Nous avons consacré un article entier à la question de [l'emplacement du tél�
 
 **La Signature, à 500 €**, prend tout son sens pour une grande fête de 40 ou 50 ans. Vous gardez la voix et le visage grâce au livre d'or vidéo, un animateur passe une heure à aller chercher les invités pendant le cocktail, et la borne reste en place toute la soirée.
 
-En option, le coffret souvenir (une clé USB dans un écrin) à 50 € fait un joli cadeau à remettre ensuite à la personne fêtée. La touche florale, également à 50 €, habille le téléphone. Une heure d'animation supplémentaire coûte 100 €.
+En option, le coffret souvenir (une clé USB dans un écrin) à 50 € fait un joli cadeau à remettre ensuite à la personne fêtée. La touche florale, également à 50 €, habille le téléphone. Avec l'Essentiel, une heure d'animation en option coûte 100 €.
 
 La livraison est offerte à Paris et en petite couronne. Tout le détail se trouve sur notre page [livre d'or d'anniversaire](/livre-d-or-anniversaire/).
 
