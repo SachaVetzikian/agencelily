@@ -11,7 +11,7 @@ permalink: "{{ o.url }}"
 {% set crumbs = [{ nom: "Livre d'or audio et vidéo", url: livre.url }, { nom: o.nom }] %}
 {% set heroImg = evt.image if evt else livre.image %}{% set heroAlt = o.h1 %}{% set heroEyebrow = "Livre d'or audio & vidéo · " + o.nom %}
 {% set heroTitle = o.h1 %}{% set heroIntro = o.intro %}
-{% set heroAside %}<div class="btns" style="margin-top:0;"><a class="btn primary" href="/devis/?service=livre-dor-audio-video&evenement={{ o.evenement }}" data-track="devis">Vérifier ma date</a></div>{% endset %}
+{% set heroAside %}<div class="btns" style="margin-top:0;"><a class="btn primary" href="/devis/?service=livre-dor-audio-video&evenement={{ o.evenement }}" data-track="devis">Réserver ma date</a></div>{% endset %}
 {% include "partials/hero-full.njk" %}
 
 <section class="section statement"><div class="wrap">

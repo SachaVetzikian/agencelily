@@ -902,7 +902,7 @@ h2.eyebrow { font-family: var(--font); font-size: var(--fs-label); line-height: 
 .hero-full .btn.primary:hover { background: var(--accent-dark); border-color: var(--accent-dark); color: var(--white); }
 @media (max-width: 420px) { .hero-date-row { flex-direction: column; } .hero-date-row .btn { width: 100%; } }
 .hero-date-row input::placeholder { color: var(--muted); opacity: 1; }
-/* Barre mobile masquée tant que le champ date du hero est visible (évite deux « Vérifier ma date ») */
+/* Barre mobile masquée tant que le champ date du hero est visible (évite deux « Réserver ma date ») */
 @media (max-width: 760px) { .contact-bar { transition: transform .25s; } .contact-bar.is-hidden { transform: translateY(110%); } }
 
 /* Lecteur vocal sur fond clair (page produit) */

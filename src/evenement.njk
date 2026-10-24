@@ -14,7 +14,7 @@ permalink: "/evenements/{{ e.slug }}/"
 {% set heroTitle = e.h1 %}{% set heroIntro = e.accroche %}
 {% set heroAside %}
 <a href="mailto:{{ site.email }}">{{ site.email }}</a>
-<div class="btns"><a class="btn primary" href="/devis/?evenement={{ e.slug }}" data-track="devis">Vérifier ma date</a><a class="btn ghost" href="#pack">Voir le pack</a></div>
+<div class="btns"><a class="btn primary" href="/devis/?evenement={{ e.slug }}" data-track="devis">Réserver ma date</a><a class="btn ghost" href="#pack">Voir le pack</a></div>
 {% endset %}
 {% include "partials/hero-full.njk" %}
 
@@ -46,7 +46,7 @@ permalink: "/evenements/{{ e.slug }}/"
 <div>
 <div class="amount">Sur devis</div>
 <p>Un seul devis, une seule équipe, un prix plus avantageux que chaque prestation séparée.</p>
-<a class="btn" href="/devis/?evenement={{ e.slug }}&pack=1">Vérifier ma date</a>
+<a class="btn" href="/devis/?evenement={{ e.slug }}&pack=1">Réserver ma date</a>
 </div>
 </div>
 </div>
