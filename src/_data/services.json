@@ -201,57 +201,57 @@
     "h1": "Livre d'or audio et vidéo à Paris et en Île-de-France",
     "accroche": "Vos invités décrochent un téléphone vintage et vous laissent un message. Avec la vidéo, vous gardez aussi leurs visages. Dans dix ans, c'est ce que vous réécouterez.",
     "prix": 200,
-    "prixDetail": "formule audio, livraison et installation comprises",
+    "prixDetail": "formule Essentiel, livraison et installation comprises",
     "description": [
       "Le principe est simple : un téléphone rétro trône sur une table, vos invités décrochent, écoutent votre message d'accueil personnalisé et laissent le leur après le bip. Aucun smartphone, aucune appli : même les grands-parents s'en servent.",
-      "Avec la formule vidéo, un espace filmé capte aussi les messages face caméra. Avec la formule animateur, quelqu'un de notre équipe va chercher vos invités tout au long de la soirée : c'est la différence entre 15 messages et 80."
+      "La formule Signature ajoute la vidéo et une heure d'animation pendant le cocktail : quelqu'un de notre équipe va chercher vos invités, même les plus timides. C'est la différence entre 15 messages et 80."
     ],
     "formules": [
       {
-        "nom": "Audio",
+        "nom": "Essentiel",
         "prix": 200,
         "detail": [
-          "Téléphone vintage",
+          "Téléphone d'époque et décor",
           "Message d'accueil personnalisé",
+          "Borne disponible 3 h",
           "Messages illimités",
-          "Fichiers envoyés en ligne",
+          "Messages en téléchargement sous 2 semaines",
           "Livraison et installation"
         ],
         "image": "/assets/photos/formule-audio.webp",
-        "desc": "Le téléphone, votre message d’accueil et tous les messages de vos invités, remis par lien en ligne."
+        "desc": "Le téléphone d'époque, votre message d'accueil et tous les messages vocaux de vos invités."
       },
       {
-        "nom": "Audio + vidéo",
-        "prix": 300,
+        "nom": "Signature",
+        "prix": 500,
         "detail": [
-          "Tout le pack Audio",
-          "Espace vidéo pour les messages face caméra",
-          "Vidéos envoyées en ligne"
+          "Tout l'Essentiel",
+          "Livre d'or vidéo, la voix et le visage",
+          "1 h d'animation pendant le cocktail",
+          "Borne disponible toute la soirée",
+          "Audio et vidéo en téléchargement"
         ],
         "populaire": true,
         "image": "/assets/photos/formule-video.webp",
-        "desc": "La voix et le visage : vos invités parlent au téléphone et sont filmés en même temps."
-      },
-      {
-        "nom": "Audio + vidéo avec animateur",
-        "prix": 400,
-        "detail": [
-          "Tout le pack Audio + vidéo",
-          "Un animateur qui va chercher vos invités",
-          "Plus de messages, même des invités les plus timides"
-        ],
-        "image": "/assets/photos/formule-animateur.webp",
-        "desc": "Quelqu’un de notre équipe va chercher vos invités tout au long de la soirée, même les plus timides."
+        "desc": "La voix et le visage, une heure d'animation pour aller chercher vos invités, et la borne jusqu'au bout de la soirée."
       }
     ],
     "options": [
       {
-        "nom": "Clé USB souvenir avec tous les messages",
-        "prix": "25 €"
+        "nom": "Coffret souvenir, tous les messages sur une clé USB dans un écrin",
+        "prix": "50 €"
       },
       {
-        "nom": "Décoration florale du téléphone",
+        "nom": "Touche florale assortie à votre décor",
         "prix": "50 €"
+      },
+      {
+        "nom": "Heure d'animation supplémentaire",
+        "prix": "100 €"
+      },
+      {
+        "nom": "Livraison express des messages sous 48 h",
+        "prix": "30 €"
       }
     ],
     "faq": [
@@ -261,11 +261,11 @@
       },
       {
         "q": "Comment récupère-t-on les messages ?",
-        "a": "Vous les recevez en ligne sous quelques jours. Avec l'option clé USB, vous avez aussi un souvenir physique à garder ou à offrir."
+        "a": "Par lien de téléchargement, sous 2 semaines (48 h avec l'option express). Avec le coffret souvenir, vous les avez aussi sur une clé USB, dans un écrin à garder ou à offrir."
       },
       {
         "q": "Pourquoi prendre un animateur ?",
-        "a": "Sans animateur, seuls les invités les plus à l'aise se lancent. Avec quelqu'un qui les accompagne, la plupart des invités laissent un message, y compris les plus timides."
+        "a": "Sans animateur, seuls les invités les plus à l'aise se lancent. La formule Signature inclut une heure d'animation pendant le cocktail, et vous pouvez ajouter des heures (100 € l'heure) : la plupart des invités laissent alors un message, y compris les plus timides."
       }
     ],
     "image": "/assets/photos/hero-livre-dor.webp",

@@ -1,6 +1,6 @@
 {# Formules minimalistes : nom, prix, une ligne. Lien vers la page produit. #}
 {% set livre = services | findBySlug("livre-dor-audio-video") %}
-{% set lignes = ["Messages vocaux", "Voix et visages", "On va chercher vos invités"] %}
+{% set lignes = ["Messages vocaux, 3 h", "Voix, visages et animation"] %}
 <div class="formules-min">
 {% for f in livre.formules %}<a class="fm{% if f.populaire %} pop{% endif %}" href="/devis/?service=livre-dor-audio-video" data-track="devis">
 <span class="tag">{{ f.nom }}</span>
@@ -8,4 +8,4 @@
 <span class="fm-line">{{ lignes[loop.index0] }}</span>
 </a>{% endfor %}
 </div>
-<p class="center fm-note">Lien en ligne inclus · clé USB en option · livraison et installation comprises</p>
+<p class="center fm-note">Messages sous 2 semaines · coffret souvenir en option · livraison et installation comprises</p>

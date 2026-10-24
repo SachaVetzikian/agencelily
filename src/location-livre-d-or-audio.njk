@@ -11,7 +11,7 @@ faqLocation:
   - q: "Faut-il une prise électrique ?"
     a: "Une simple prise électrique dans la salle suffit. Le téléphone peut aussi être installé en extérieur : nous nous occupons du branchement."
   - q: "Combien de temps dure la location ?"
-    a: "Deux durées au choix : un forfait de 3 heures (par exemple de 18 h à 21 h), prolongeable à l'heure, ou un forfait soirée complète sans limite d'heure : le téléphone reste toute la nuit et nous le récupérons le lendemain."
+    a: "Avec la formule Essentiel, le téléphone est disponible 3 heures (par exemple de 18 h à 21 h), et vous pouvez ajouter des heures. Avec la formule Signature, il reste toute la soirée, sans limite d'heure, et nous le récupérons le lendemain."
   - q: "Peut-on installer le téléphone en extérieur ?"
     a: "Oui, en jardin, sous une tente ou en terrasse. Prévoyez simplement un endroit à l'abri de la pluie et du vent pour que vos invités s'entendent bien."
   - q: "Comment réserver ma date ?"
@@ -19,7 +19,7 @@ faqLocation:
   - q: "Et en cas d'annulation ?"
     a: "Jusqu'à 30 jours avant l'événement, vous pouvez reporter votre date sans frais (selon nos disponibilités) ; en cas d'annulation, l'acompte reste acquis et le reste vous est remboursé. À moins de 30 jours, la prestation est due en totalité."
   - q: "Quand récupère-t-on les messages ?"
-    a: "Après l'événement, vous recevez vos messages en ligne. Avec l'option clé USB, vous les avez aussi sur un support physique."
+    a: "Après l'événement, vous recevez vos messages en ligne. Avec le coffret souvenir (clé USB dans un écrin), vous les avez aussi sur un support physique."
   - q: "Que comprend la location d'un livre d'or audio ?"
     a: "Le téléphone vintage et son affiche, la livraison et l'installation sur votre lieu, la vérification avant l'arrivée des invités, un contact joignable pendant l'événement, la récupération du matériel et vos messages par lien en ligne."
   - q: "Y a-t-il des frais de déplacement ?"
@@ -80,7 +80,7 @@ faqLocation:
 {% include "partials/cta.njk" %}
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Service","name":"Location de livre d'or audio et vidéo","serviceType":"Location de livre d'or audio","url":"{{ site.url }}{{ page.url }}","areaServed":{"@type":"AdministrativeArea","name":"Île-de-France"},"provider":{"@id":"{{ site.url }}/#business"},"offers":{"@type":"AggregateOffer","lowPrice":"200","priceCurrency":"EUR","offerCount":"3"}}
+{"@context":"https://schema.org","@type":"Service","name":"Location de livre d'or audio et vidéo","serviceType":"Location de livre d'or audio","url":"{{ site.url }}{{ page.url }}","areaServed":{"@type":"AdministrativeArea","name":"Île-de-France"},"provider":{"@id":"{{ site.url }}/#business"},"offers":{"@type":"AggregateOffer","lowPrice":"200","priceCurrency":"EUR","offerCount":"2","highPrice":"500"}}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{% for f in faqLocation %}{"@type":"Question","name":{{ f.q | json | safe }},"acceptedAnswer":{"@type":"Answer","text":{{ f.a | json | safe }}}}{% if not loop.last %},{% endif %}{% endfor %}]}

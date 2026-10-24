@@ -32,6 +32,11 @@
       "source": "/blog/animation-vin-dhonneur/",
       "destination": "/blog/",
       "permanent": false
+    },
+    {
+      "source": "/prestataires-recommandes/",
+      "destination": "/carnet-d-adresses-mariage/",
+      "permanent": true
     }
   ]
 }

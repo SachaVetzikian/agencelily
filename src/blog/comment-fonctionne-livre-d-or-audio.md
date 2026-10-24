@@ -14,9 +14,9 @@ faq:
   - q: "Faut-il une prise électrique ?"
     a: "<strong>Une simple prise dans la salle suffit.</strong> Le téléphone peut aussi être installé en extérieur : nous nous occupons du branchement."
   - q: "Combien de temps dure la location ?"
-    a: "<strong>Deux durées au choix :</strong> un forfait de 3 heures, prolongeable à l'heure, ou un forfait soirée complète sans limite d'heure, récupéré le lendemain."
+    a: "<strong>3 heures avec l'Essentiel, toute la soirée avec la Signature.</strong> Vous pouvez ajouter des heures à l'Essentiel, et nous récupérons le téléphone le lendemain."
   - q: "Quand récupère-t-on les messages ?"
-    a: "<strong>Après l'événement, par lien en ligne.</strong> Avec l'option clé USB, vous les avez aussi sur un support à ranger avec vos photos."
+    a: "<strong>Sous 2 semaines, par lien de téléchargement</strong> (48 h avec l'option express). Avec le coffret souvenir (clé USB dans un écrin), vous les avez aussi sur un support à ranger avec vos photos."
   - q: "Combien coûte un livre d'or audio ?"
     a: "<strong>À partir de 200 €</strong>, livraison et installation comprises à Paris et en Île-de-France. Le prix exact dépend de la formule et de la durée : vous le recevez sur devis sous 24 h."
 ressources:
@@ -56,11 +56,11 @@ ressources:
 
 ## 2️⃣ Étape 2 : vos invités décrochent et parlent après le bip
 
-<figure><img src="/assets/photos/formule-video.webp" alt="Invités laissant un message sur le livre d'or audio et vidéo" loading="lazy"><figcaption>Avec la formule vidéo, vos invités sont filmés pendant qu'ils parlent.</figcaption></figure>
+<figure><img src="/assets/photos/formule-video.webp" alt="Invités laissant un message sur le livre d'or audio et vidéo" loading="lazy"><figcaption>Avec la formule Signature, vos invités sont filmés pendant qu'ils parlent.</figcaption></figure>
 
 **La plupart des messages durent de 30 secondes à 2 minutes.** Certains invités reviennent plusieurs fois dans la soirée, souvent en groupe. Les messages sont illimités.
 
-**Avec la formule vidéo, un espace filmé enregistre aussi leur visage.** Vous gardez la voix et l'expression de chacun. C'est notre formule la plus choisie.
+**Avec la formule Signature, un espace filmé enregistre aussi leur visage.** Vous gardez la voix et l'expression de chacun. C'est notre formule la plus choisie.
 
 {% set avisIndex = 0 %}{% include "partials/blog-avis.njk" %}
 
@@ -68,26 +68,27 @@ ressources:
 
 **Après l'événement, vous recevez tous les messages par lien en ligne.** Vous les écoutez sur votre téléphone ou votre ordinateur, et vous les partagez avec qui vous voulez.
 
-**Avec l'option clé USB, vous avez aussi un souvenir physique** à ranger avec vos photos de famille.
+**Avec le coffret souvenir (clé USB dans un écrin), vous avez aussi un souvenir physique** à ranger avec vos photos de famille.
 
-## 📊 Audio ou vidéo : que choisir ?
+## 📊 Essentiel ou Signature : que choisir ?
 
 | Formule | Ce que vous gardez | Pour qui |
 |---|---|---|
-| Audio | Les voix de vos invités | Petits comités, budget serré |
-| Audio + vidéo | Les voix et les visages | La plupart des mariages et grandes fêtes |
-| Audio + vidéo avec animateur | Le plus de messages, même des timides | Plus de 120 invités, invités réservés |
+| Essentiel (200 €) | Les voix de vos invités, pendant 3 h | Petits comités, anniversaires, baptêmes |
+| Signature (500 €) | Les voix et les visages, toute la soirée, avec 1 h d'animation | La plupart des mariages et grandes fêtes |
+
+Besoin de plus de messages encore ? Ajoutez une heure d'animation (100 €) à la Signature.
 
 {% set ctaTitre = "Trouvez la bonne formule pour votre date" %}{% include "partials/blog-cta.njk" %}
 
 ## ⭐ Tableau de notes
 
-| Critère | Audio | Audio + vidéo | Avec animateur |
-|---|---|---|---|
-| Facilité pour les invités | ★★★★★ | ★★★★☆ | ★★★★★ |
-| Émotion du souvenir | ★★★★☆ | ★★★★★ | ★★★★★ |
-| Nombre de messages | ★★★☆☆ | ★★★★☆ | ★★★★★ |
-| Budget | ★★★★★ | ★★★★☆ | ★★★☆☆ |
+| Critère | Essentiel | Signature |
+|---|---|---|
+| Facilité pour les invités | ★★★★★ | ★★★★★ |
+| Émotion du souvenir | ★★★★☆ | ★★★★★ |
+| Nombre de messages | ★★★☆☆ | ★★★★★ |
+| Budget | ★★★★★ | ★★★☆☆ |
 
 ## ⚖️ Comment avoir un maximum de messages ?
 

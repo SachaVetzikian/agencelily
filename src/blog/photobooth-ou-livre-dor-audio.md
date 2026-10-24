@@ -16,7 +16,7 @@ faq:
   - q: "Lequel marche le mieux avec les personnes âgées ?"
     a: "<strong>Le livre d'or audio, sans hésiter.</strong> Décrocher un téléphone, tout le monde sait faire. Les grands-parents laissent souvent les messages les plus touchants de la soirée."
   - q: "Existe-t-il une version vidéo du livre d'or ?"
-    a: "<strong>Oui, dès 300 €.</strong> Vos invités parlent au téléphone et sont filmés en même temps. Vous gardez la voix et le visage."
+    a: "<strong>Oui, avec la formule Signature à 500 €.</strong> Vos invités parlent au téléphone et sont filmés en même temps, avec une heure d'animation pendant le cocktail. Vous gardez la voix et le visage."
 ressources:
   - titre: "Livre d'or audio et vidéo sur téléphone vintage"
     url: "/livre-d-or-audio-video/"
@@ -40,7 +40,7 @@ On loue les deux, donc on n'a aucune raison de vous pousser vers l'un plutôt qu
 
 | | Photobooth | Livre d'or audio |
 |---|---|---|
-| Prix chez nous | Dès 290 € | Dès 200 € (300 € avec la vidéo) |
+| Prix chez nous | Dès 290 € | Dès 200 € (500 € avec vidéo et animation) |
 | Ce que vous gardez | Des centaines de photos | Des dizaines de messages vocaux |
 | À qui ça profite | Surtout aux invités | Surtout à vous |
 | L'ambiance | Festive, grimaces, fous rires | Émotion, confidences, anecdotes |
@@ -93,7 +93,7 @@ Pour tout comprendre du fonctionnement, lisez notre guide [comment fonctionne un
 
 Chez nous, le livre d'or audio démarre à 200 € et le photobooth à 290 €, livraison et installation comprises en Île-de-France. Sur le marché, un photobooth avec impressions illimitées se loue souvent entre 400 et 900 € selon les options.
 
-Le livre d'or reste donc la solution la plus abordable des deux. Et ajouter la vidéo (300 €) vous donne des images en plus, avec une émotion que le photobooth n'atteint pas.
+Le livre d'or reste donc la solution la plus abordable des deux. Et la formule Signature (500 €) ajoute la vidéo et une heure d'animation, avec une émotion que le photobooth n'atteint pas.
 
 Tous les détails sont sur notre page [tarifs](/tarifs/).
 
