@@ -1,0 +1,30 @@
+{# Capture d'e-mail : check-list des animations de mariage en PDF + 2 relances (api/checklist.js) #}
+<section class="section lead-check"><div class="wrap"><div class="lead-box">
+<div>
+<span class="eyebrow">Guide gratuit · PDF</span>
+<h2>La check-list des animations de mariage</h2>
+<p>Ce qu'il faut prévoir, et quand, pour que vos invités ne s'ennuient jamais. Deux pages à cocher, reçues par e-mail.</p>
+</div>
+<form class="lead-form" action="/api/checklist" method="post" novalidate>
+<label class="f-field"><span>Prénom</span><input name="prenom" autocomplete="given-name"></label>
+<label class="f-field"><span>E-mail</span><input name="email" type="email" autocomplete="email" inputmode="email" required></label>
+<label class="f-field"><span>Date du mariage <small>si connue</small></span><input name="date" placeholder="ex. juin 2027" autocomplete="off"></label>
+<label class="f-trap" aria-hidden="true">Site web<input name="site_web" tabindex="-1" autocomplete="off"></label>
+<button class="btn primary" type="submit" data-track="checklist">Recevoir la check-list</button>
+<p class="f-note">Deux conseils par mail ensuite, puis plus rien. Pas de revente de vos données.</p>
+<p class="lead-ok" role="status" hidden>C'est envoyé. Regardez votre boîte mail (et les spams, au cas où).</p>
+</form>
+</div></div></section>
+<script>
+document.querySelectorAll(".lead-form").forEach(function (f) {
+  f.addEventListener("submit", function (e) {
+    e.preventDefault();
+    if (!f.elements.email.checkValidity()) { f.elements.email.focus(); return; }
+    var b = f.querySelector("button"); b.disabled = true; b.textContent = "Envoi…";
+    fetch(f.action, { method: "POST", headers: { "Content-Type": "application/json", "Accept": "application/json" }, body: JSON.stringify(Object.fromEntries(new FormData(f))) })
+      .then(function (r) { return r.json(); })
+      .then(function (d) { if (!d.ok) throw 0; f.querySelector(".lead-ok").hidden = false; b.hidden = true; if (window.lilyTrack) window.lilyTrack("generate_lead_checklist", { page: location.pathname }); })
+      .catch(function () { b.disabled = false; b.textContent = "Réessayer"; });
+  });
+});
+</script>

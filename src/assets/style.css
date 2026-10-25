@@ -959,3 +959,13 @@ h2.eyebrow { font-family: var(--font); font-size: var(--fs-label); line-height: 
 .facts dt { font-size: var(--fs-label); letter-spacing: .14em; text-transform: uppercase; color: var(--accent); padding-top: 4px; }
 .facts dd { margin: 0; padding-bottom: var(--s3); border-bottom: 1px solid var(--line); }
 @media (max-width: 760px) { .facts { grid-template-columns: 1fr; gap: var(--s1); } .facts dd { margin-bottom: var(--s3); } }
+
+/* Encart check-list (capture d'e-mail) */
+.lead-box { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s7); align-items: center; padding: var(--s7); background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); }
+.lead-box h2 { margin: var(--s2) 0 var(--s3); }
+.lead-box p { color: var(--muted); margin: 0; }
+.lead-form { display: grid; gap: var(--s3); }
+.lead-form .btn { justify-self: start; }
+.lead-ok { color: var(--ink); font-weight: 600; }
+@media (max-width: 760px) { .lead-box { grid-template-columns: 1fr; gap: var(--s5); padding: var(--s5); } }
+.post-wrap .lead-box { grid-template-columns: 1fr; gap: var(--s5); padding: var(--s6); } .post-wrap .lead-check { padding-left: 0; padding-right: 0; } .post-wrap .lead-check .wrap { padding: 0; }

@@ -59,6 +59,7 @@ layout: layouts/base.njk
 <aside class="post-box"><p class="post-box-title">📚 Ressources utiles</p><ul>{% for r in ressources %}<li><a href="{{ r.url }}">{{ r.titre }}</a></li>{% endfor %}</ul></aside>
 {% endif %}
 
+{% include "partials/lead-checklist.njk" %}
 {% include "partials/blog-related.njk" %}
 </div>
 

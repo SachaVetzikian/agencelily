@@ -53,6 +53,7 @@ permalink: "{{ o.url }}"
 </div></section>
 
 {% set devisParam = "service=livre-dor-audio-video&evenement=" + o.evenement %}
+{% if o.slug == "mariage" %}{% include "partials/lead-checklist.njk" %}{% endif %}
 {% include "partials/cta.njk" %}
 
 <script type="application/ld+json">
