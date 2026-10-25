@@ -4,7 +4,8 @@
 // ranger le contact dans une audience Resend (envois groupés plus tard).
 
 const SITE = "https://www.agencelily.fr";
-const PDF = `${SITE}/assets/check-list-animations-mariage.pdf`;
+const PDF = `${SITE}/assets/guide-animations-mariage.pdf`;
+const SHEET = "https://docs.google.com/spreadsheets/d/1JUfG6o6rRMDwtRtxGoRiBFPDbstGshsjnVIHUN3A4to/copy";
 
 function lireCorps(req) {
   if (req.body && typeof req.body === "object") return req.body;
@@ -19,13 +20,17 @@ const echapper = (s) => s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;"
 const SERIE = [
   {
     delaiJours: 0,
-    objet: "Votre check-list des animations de mariage",
+    objet: "Votre guide des animations de mariage",
     texte: `Bonjour {prenom},
 
-Voici votre check-list, à garder sous la main jusqu'au jour J :
+Voici votre guide, à garder sous la main jusqu'au jour J :
 ${PDF}
 
-Elle tient sur deux pages. Imprimez-la, cochez au fur et à mesure, et ne laissez pas le vin d'honneur pour la fin (c'est le moment le plus long de la journée, et le plus souvent oublié).
+Quatorze pages. Rétroplanning, budget des prestataires en Île-de-France, pièges des contrats, déroulé à remplir, textes prêts et plans B.
+
+Et le tableau qui calcule toutes vos échéances à partir de votre date (cliquez sur « Créer une copie ») ${SHEET}
+
+Commencez par la page 3. Et ne laissez pas le vin d'honneur pour la fin (c'est le moment le plus long de la journée, et le plus souvent oublié).
 
 Si une question vous trotte dans la tête, répondez simplement à ce mail. C'est moi qui lis.
 
@@ -48,7 +53,7 @@ ${SITE}/livre-d-or-audio-video/
 
 Sacha
 
-(Vous recevez ce mail car vous avez téléchargé la check-list. Un dernier suivra dans une semaine. Pour l'arrêter, répondez STOP.)`,
+(Vous recevez ce mail car vous avez téléchargé le guide. Un dernier suivra dans une semaine. Pour l'arrêter, répondez STOP.)`,
   },
   {
     delaiJours: 10,
@@ -65,7 +70,7 @@ Essentiel à 200 €, Signature à 500 € avec la vidéo et une heure d'animati
 Belle préparation,
 Sacha
 
-(Vous recevez ce mail car vous avez téléchargé la check-list sur agencelily.fr. C'est le dernier de la série.)`,
+(Vous recevez ce mail car vous avez téléchargé le guide sur agencelily.fr. C'est le dernier de la série.)`,
   },
 ];
 
@@ -111,7 +116,7 @@ module.exports = async function handler(req, res) {
     annexes.push(
       envoyer({
         from, to: equipe, reply_to: email,
-        subject: `Nouveau contact check-list : ${prenom || email}${date ? ` (mariage le ${date})` : ""}`,
+        subject: `Nouveau contact guide mariage : ${prenom || email}${date ? ` (mariage le ${date})` : ""}`,
         text: `Prénom : ${prenom}\nE-mail : ${email}\nDate du mariage : ${date || "non précisée"}\n\nIl ou elle recevra 2 relances automatiques (J+3 et J+10).`,
         html: `<p>Prénom : <strong>${echapper(prenom)}</strong><br>E-mail : <strong>${echapper(email)}</strong><br>Date du mariage : <strong>${echapper(date || "non précisée")}</strong></p><p>2 relances automatiques programmées (J+3 et J+10).</p>`,
       })
