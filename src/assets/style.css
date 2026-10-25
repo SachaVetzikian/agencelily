@@ -10,7 +10,7 @@
   --black: #2a2420;       /* alias historique : jamais de noir pur */
   --accent: #7a6558;      /* taupe : action principale, surtitres, footer */
   --accent-dark: #5f4d42;
-  --faint: #cfc5bb;       /* texte pas encore lu (effet de lecture), jamais pour du texte final */
+  --faint: #8f837a;       /* texte pas encore lu (effet de lecture), jamais pour du texte final */
   --font: "Manrope", "Helvetica Neue", system-ui, sans-serif;
 
   /* Échelle typographique : 7 tailles, pas une de plus (voir DESIGN.md) */
@@ -953,3 +953,9 @@ h2.eyebrow { font-family: var(--font); font-size: var(--fs-label); line-height: 
 .u-center { justify-content: center; } .u-narrow { max-width: 820px; } .u-small { font-size: var(--fs-small); }
 .u-align-center { align-items: center; }
 .affiche-apercu { width: 100%; max-width: 460px; justify-self: center; border: 1px solid var(--line); }
+
+/* Faits clés (« en bref », lisibles par les moteurs et les IA) */
+.facts { display: grid; grid-template-columns: max-content 1fr; gap: var(--s3) var(--s5); margin: 0; }
+.facts dt { font-size: var(--fs-label); letter-spacing: .14em; text-transform: uppercase; color: var(--accent); padding-top: 4px; }
+.facts dd { margin: 0; padding-bottom: var(--s3); border-bottom: 1px solid var(--line); }
+@media (max-width: 760px) { .facts { grid-template-columns: 1fr; gap: var(--s1); } .facts dd { margin-bottom: var(--s3); } }

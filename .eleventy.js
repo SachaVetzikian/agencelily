@@ -39,7 +39,15 @@ function optimize(src) {
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets");
   eleventyConfig.addPassthroughCopy("src/robots.txt");
+  eleventyConfig.addPassthroughCopy("src/llms.txt");
 
+  // Variante mobile (800 px) d'une photo locale, si elle existe : photo.webp -> photo-800.webp
+  const fs = require("fs");
+  eleventyConfig.addFilter("mobileVariant", (src) => {
+    if (!src || !/^\/assets\/photos\/.+\.webp$/.test(src)) return "";
+    const v = src.replace(/\.webp$/, "-800.webp");
+    return fs.existsSync(path.join(__dirname, "src", v)) ? v : "";
+  });
   // Services d'une catégorie ("animations" ou "location")
   eleventyConfig.addFilter("byCategorie", (services, cat) =>
     services.filter((s) => s.categorie === cat)

@@ -25,7 +25,13 @@ document.addEventListener("click", function (e) {
   var KEY = "lily-consent", box = document.getElementById("consent");
   function get() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
   function set(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
+  // Microsoft Clarity (cartes de clics, enregistrements de sessions) : seulement après accord
+  function clarity() {
+    {% if site.clarityId %}if (window.clarity) return;
+    (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","{{ site.clarityId }}");{% endif %}
+  }
   function accept() {
+    clarity();
     {% if site.gtmId %}gtag("consent", "update", { analytics_storage: "granted" });
     window.dataLayer.push({ event: "consent_granted" });
     {% else %}if (window.gtag) return;
@@ -40,7 +46,7 @@ document.addEventListener("click", function (e) {
     {% if site.gtmId %}gtag("consent", "update", { analytics_storage: "denied" });{% endif %}
   }
   var c = get();
-  if (c === "oui") { {% if not site.gtmId %}accept();{% endif %} } else if (c !== "non") box.hidden = false;
+  if (c === "oui") { {% if not site.gtmId %}accept();{% else %}clarity();{% endif %} } else if (c !== "non") box.hidden = false;
   box.addEventListener("click", function (e) {
     var b = e.target.closest("[data-consent]"); if (!b) return;
     set(b.dataset.consent); box.hidden = true;

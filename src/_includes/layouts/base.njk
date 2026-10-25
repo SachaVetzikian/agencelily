@@ -10,10 +10,13 @@ gtag("consent", "default", { ad_storage: "denied", ad_user_data: "denied", ad_pe
 try { if (localStorage.getItem("lily-consent") === "oui") gtag("consent", "update", { analytics_storage: "granted" }); } catch (e) {}
 </script>
 <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+<script>/* Chargé au premier geste du visiteur (ou après 3,5 s) pour ne pas ralentir l'affichage */
+(function(w,d,s,l,i){var done=false;function go(){if(done)return;done=true;w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);}
+['scroll','pointerdown','keydown','touchstart'].forEach(function(e){w.addEventListener(e,go,{once:true,passive:true});});
+w.addEventListener('load',function(){setTimeout(go,3500);});
 })(window,document,'script','dataLayer','{{ site.gtmId }}');</script>
 <!-- End Google Tag Manager -->{% endif %}
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -38,7 +41,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta name="theme-color" content="#f8f6f2">
 <link rel="preload" href="/assets/fonts/instrument-serif-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/fonts/fonts.css">
+<style>@font-face { font-family: 'Instrument Serif'; font-style: italic; font-weight: 400; font-display: swap; src: url(/assets/fonts/instrument-serif-italic.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; } @font-face { font-family: 'Instrument Serif'; font-style: normal; font-weight: 400; font-display: swap; src: url(/assets/fonts/instrument-serif-normal.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; } @font-face { font-family: 'Manrope'; font-style: normal; font-weight: 300 600; font-display: swap; src: url(/assets/fonts/manrope.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }</style>
 <link rel="stylesheet" href="/assets/style.css">
 <script type="application/ld+json">
 {

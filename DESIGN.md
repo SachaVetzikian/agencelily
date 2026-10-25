@@ -23,7 +23,7 @@ Toutes les valeurs vivent dans `src/assets/style.css` (bloc `:root` et couche «
 | `--muted` | `#6f655e` | Texte secondaire, seconde moitié des paragraphes deux tons (contraste 5,3 sur ivoire, 4,8 sur sable) |
 | `--accent` | `#7a6558` | Taupe : bouton principal, surtitres, puces |
 | `--accent-dark` | `#5f4d42` | Survol du bouton principal |
-| `--faint` | `#cfc5bb` | Mots pas encore lus de l'effet de lecture, jamais pour un texte final |
+| `--faint` | `#8f837a` | Mots pas encore lus de l'effet de lecture, jamais pour un texte final |
 
 ## 3. Typographie
 Deux familles, auto-hébergées dans `src/assets/fonts/` :
