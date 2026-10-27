@@ -8,7 +8,6 @@ image: "/assets/photos/formule-audio.webp"
 banniere: "/assets/photos/hero-tarifs.webp"
 date: 2026-10-27
 publication: 2026-10-27
-draft: true
 faq:
   - q: "Combien coûte un livre d'or audio à l'achat ?"
     a: "<strong>Souvent entre 100 et 300 € pour un kit neuf</strong>, selon le modèle et la qualité de l'enregistreur. Il faut y ajouter le temps d'installation et de test."
