@@ -8,7 +8,6 @@ image: "/assets/photos/trio-message.webp"
 banniere: "/assets/photos/hero-livre-dor.webp"
 date: 2026-10-30
 publication: 2026-10-30
-draft: true
 faq:
   - q: "Peut-on transformer n'importe quel vieux téléphone en livre d'or audio ?"
     a: "<strong>La plupart des téléphones à combiné conviennent.</strong> Il faut un combiné en bon état et un interrupteur de crochet accessible. Sur les modèles très anciens, le micro est souvent à remplacer."
