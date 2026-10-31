@@ -28,6 +28,14 @@ permalink: "{{ o.url }}"
 <div><p>{{ o.usage }}</p><p>{{ o.logistique }}</p></div>
 </div></section>
 
+<section class="section u-pt0"><div class="wrap">
+<div class="trio">
+<div class="trio-item">{% set label = "Le téléphone vintage" %}{% set img = livre.image %}{% set imgAlt = livre.imageAlt %}{% set tall = false %}{% include "partials/visual.njk" %}{% set imgAlt = false %}<div><span class="trio-num">01</span><h3>On installe</h3><p>Le téléphone vintage, posé là où vos invités passent, vérifié avant leur arrivée.</p></div></div>
+<div class="trio-item">{% set label = "Le message d'accueil" %}{% set img = livre.imageMessage %}{% set imgAlt = livre.imageMessageAlt %}{% include "partials/visual.njk" %}{% set imgAlt = false %}<div><span class="trio-num">02</span><h3>Vos invités décrochent</h3><p>Votre message d'accueil, le bip, et ils vous parlent.</p></div></div>
+<div class="trio-item">{% set label = "Vos souvenirs" %}{% set img = livre.imageSouvenirs %}{% set imgAlt = livre.imageSouvenirsAlt %}{% include "partials/visual.njk" %}{% set imgAlt = false %}<div><span class="trio-num">03</span><h3>Vous réécoutez</h3><p>Tous les messages en téléchargement sous 2 semaines.</p></div></div>
+</div>
+</div></section>
+
 <section class="section alt"><div class="wrap">
 <h2>Exemples de messages d'accueil</h2>
 <div class="quotes">{% for m in o.messagesAccueil %}<blockquote>{{ m }}</blockquote>{% endfor %}</div>
@@ -36,12 +44,12 @@ permalink: "{{ o.url }}"
 <section class="section"><div class="wrap split-lead">
 <h2>{{ o.ideesTitre or "Idées de messages" }}</h2>
 <div><ul class="inline-list" style="flex-direction:column;">{% for i in o.idees %}<li>{{ i }}</li>{% endfor %}</ul>
-<p class="u-mt5 u-small"><a href="/blog/idees-livre-d-or-original/">Plus d'idées de livre d'or original</a>{% if o.slug == "mariage" %} · <a href="/blog/idees-animation-mariage/">15 idées d'animation mariage originales</a>{% endif %}</p></div>
+<p class="u-mt5 u-small"><a href="/blog/idees-livre-d-or-original/">Plus d'idées de livre d'or original</a>{% if o.slug == "mariage" %} · <a href="/blog/idees-animation-mariage/">18 idées d'animation mariage</a>{% endif %}</p></div>
 </div></section>
 
 <section class="section alt" id="formules"><div class="wrap">
-<h2 class="center">Formules et tarifs</h2>
-{% include "partials/formules-min.njk" %}
+<div class="section-title"><span class="eyebrow">À partir de 200 €</span><h2>Formules et tarifs</h2><p>Livraison et installation comprises à Paris et en Île-de-France.</p></div>
+{% include "partials/formules-zigzag.njk" %}
 </div></section>
 
 {% set faq = o.faq %}{% include "partials/faq-section.njk" %}
