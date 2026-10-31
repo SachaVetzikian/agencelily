@@ -176,7 +176,7 @@ La plupart des animations s'arrêtent avec la fête. Ces trois-là continuent ap
 
 **Vos invités décrochent le combiné d'un téléphone vintage, écoutent votre message d'accueil et vous parlent après le bip.** Des vœux, une anecdote, parfois une chanson. Toutes les générations y vont, des enfants aux grands-parents.
 
-« Allô ? C'est ton cousin. Et non, je n'ai toujours pas digéré que tu m'aies battu au mölkky. » Le genre de message qu'on réécoute en boucle.
+« Au début, personne n'osait trop se lancer et finalement tout le monde voulait laisser son petit message. » Assad, invité à un mariage, dans son avis Google.
 
 *Durée toute la soirée · Tous les invités · 200 € · Écrire le message d'accueil*
 
