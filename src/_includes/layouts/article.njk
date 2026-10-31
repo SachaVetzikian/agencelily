@@ -15,6 +15,18 @@ layout: layouts/base.njk
 {% set heroImg = banniere or image or "/assets/photos/hero-blog.webp" %}{% set heroAlt = "" %}{% set heroEyebrow = "Guide · " + minutes + " min de lecture" %}
 {% set heroTitle = h1 %}{% set heroIntro = extrait %}{% set heroClass = "hero-post" %}
 {% include "partials/hero-full.njk" %}
+<div class="post-layout">
+<aside class="post-side" aria-label="Sommaire et réservation">
+<nav class="post-toc" aria-label="Sommaire" hidden>
+<p class="post-label">Sommaire</p><ol></ol>
+</nav>
+<div class="post-side-cta">
+{% if site.avis.nombre >= site.avis.seuilAffichage %}<div class="post-float-stars"><span>★★★★★</span> {{ site.avis.note | noteFr }} · {{ site.avis.nombre }} avis Google</div>{% endif %}
+<p class="post-float-title">Votre date est libre ?</p>
+<p class="post-float-text">Livre d'or audio et vidéo livré et installé à Paris et en Île-de-France, dès 200 €.</p>
+<a class="btn primary" href="/devis/?service=livre-dor-audio-video" data-track="devis-blog-side">Réserver ma date</a>
+</div>
+</aside>
 <div class="post-wrap">
 
 <div class="post-meta">
@@ -62,17 +74,13 @@ layout: layouts/base.njk
 {% include "partials/lead-checklist.njk" %}
 {% include "partials/blog-related.njk" %}
 </div>
-
-<nav class="post-toc" aria-label="Sommaire" hidden>
-<div class="post-toc-lines" aria-hidden="true"></div>
-<div class="post-toc-panel"><p class="post-label">Sommaire</p><ol></ol></div>
-</nav>
+</div>
 </article>
 
 {% include "partials/blog-banner.njk" %}
 
 <aside class="post-float" aria-label="Réserver ma date" hidden>
-<div class="post-float-stars"><span>★★★★★</span> {{ site.avis.note | noteFr }} · {{ site.avis.nombre }} avis Google</div>
+{% if site.avis.nombre >= site.avis.seuilAffichage %}<div class="post-float-stars"><span>★★★★★</span> {{ site.avis.note | noteFr }} · {{ site.avis.nombre }} avis Google</div>{% endif %}
 <p class="post-float-title">Votre livre d'or audio et vidéo</p>
 <p class="post-float-text">Livré et installé à Paris et en Île-de-France, dès 200 €.</p>
 <a class="btn primary" href="/devis/?service=livre-dor-audio-video" data-track="devis-blog">Réserver ma date</a>
@@ -84,25 +92,23 @@ layout: layouts/base.njk
   var prose = document.querySelector(".post-prose"), toc = document.querySelector(".post-toc");
   var heads = [].slice.call(document.querySelectorAll(".post-prose h2, .post-prose h3, .post-faq > h2"));
   var slug = function (t) { return t.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 60); };
-  var ol = toc.querySelector("ol"), lines = toc.querySelector(".post-toc-lines");
+  var ol = toc.querySelector("ol");
   heads.forEach(function (h) {
     if (!h.id) h.id = slug(h.textContent);
     var li = document.createElement("li"); li.className = h.tagName === "H3" ? "sub" : "";
-    li.innerHTML = '<a href="#' + h.id + '"></a>'; li.firstChild.textContent = h.textContent; ol.appendChild(li);
-    var l = document.createElement("i"); l.className = li.className; lines.appendChild(l);
+    li.innerHTML = '<a href="#' + h.id + '"></a>'; li.firstChild.textContent = h.textContent.replace(/^[^\p{L}\p{N}]+/u, "").trim(); ol.appendChild(li);
   });
   if (heads.length > 2) toc.hidden = false;
-  var links = [].slice.call(ol.querySelectorAll("a")), marks = [].slice.call(lines.children);
-  var bar = document.querySelector(".read-progress i"), flo = document.querySelector(".post-float"), closed = false;
+  var links = [].slice.call(ol.querySelectorAll("a"));
+  var last = -1, bar = document.querySelector(".read-progress i"), flo = document.querySelector(".post-float"), closed = false;
   try { closed = sessionStorage.getItem("lily-float") === "0"; } catch (e) {}
   function onScroll() {
     var d = document.documentElement, max = d.scrollHeight - innerHeight, p = max > 0 ? scrollY / max : 0;
     bar.style.width = (p * 100) + "%";
-    // Le sommaire n'apparaît qu'une fois la bannière photo passée
-    var hero = document.querySelector(".hero-post"); if (hero) toc.classList.toggle("off", hero.getBoundingClientRect().bottom > 140);
     var cur = 0; heads.forEach(function (h, i) { if (h.getBoundingClientRect().top < 140) cur = i; });
-    links.forEach(function (a, i) { a.classList.toggle("on", i === cur); }); marks.forEach(function (m, i) { m.classList.toggle("on", i === cur); });
-    if (flo && !closed) flo.hidden = !(p > 0.2 && p < 0.92);
+    links.forEach(function (a, i) { a.classList.toggle("on", i === cur); });
+    if (cur !== last && links[cur] && toc.scrollHeight > toc.clientHeight) { last = cur; var a = links[cur]; toc.scrollTop = a.offsetTop - toc.clientHeight / 2; }
+    if (flo && !closed) flo.hidden = !(p > 0.2 && p < 0.92) || matchMedia("(min-width: 1100px)").matches;
   }
   addEventListener("scroll", onScroll, { passive: true }); onScroll();
   if (flo) flo.querySelector(".post-float-close").addEventListener("click", function () { closed = true; flo.hidden = true; try { sessionStorage.setItem("lily-float", "0"); } catch (e) {} });
