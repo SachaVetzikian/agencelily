@@ -90,7 +90,7 @@ Voir le [mur cascade](/location/mur-cascade/).
 
 *Durée libre · Familles et enfants · Environ 50 à 150 € en location · Prévoir un plan B intérieur*
 
-{% set avisIndex = 3 %}{% include "partials/blog-avis.njk" %}
+{% set avisIndex = 5 %}{% include "partials/blog-avis.njk" %}
 
 ## 🍽️ Les animations pendant le dîner
 
