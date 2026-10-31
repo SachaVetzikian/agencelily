@@ -969,3 +969,8 @@ h2.eyebrow { font-family: var(--font); font-size: var(--fs-label); line-height: 
 .lead-ok { color: var(--ink); font-weight: 600; }
 @media (max-width: 760px) { .lead-box { grid-template-columns: 1fr; gap: var(--s5); padding: var(--s5); } }
 .post-wrap .lead-box { grid-template-columns: 1fr; gap: var(--s5); padding: var(--s6); } .post-wrap .lead-check { padding-left: 0; padding-right: 0; } .post-wrap .lead-check .wrap { padding: 0; }
+
+/* Tableau comparatif (page livre d'or vidéo) */
+.split-lead > div { min-width: 0; }
+.table-cmp td:last-child { white-space: normal; }
+@media (max-width: 600px) { .table-cmp th, .table-cmp td { padding: var(--s3); } }

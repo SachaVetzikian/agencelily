@@ -1,7 +1,7 @@
 {# Formules en zigzag : photo d'un côté, texte, puces, prix « dès », bouton contour #}
 {% set livre = services | findBySlug("livre-dor-audio-video") %}
 <div class="zigzag">
-{% for f in livre.formules %}<div class="zz">
+{% for f in livre.formules %}{% if not onlyFormule or f.nom == onlyFormule %}<div class="zz">
 <div class="zz-media">{% set label = "Formule " + f.nom %}{% set img = f.image %}{% set tall = false %}{% include "partials/visual.njk" %}</div>
 <div class="zz-text">
 {% if f.populaire %}<span class="zz-badge">La plus choisie</span>{% endif %}
@@ -10,6 +10,6 @@
 <ul class="check">{% for d in f.detail %}<li>{{ d }}</li>{% endfor %}</ul>
 <div class="btns"><a class="btn" href="/devis/?service=livre-dor-audio-video" data-track="devis">Choisir cette formule</a></div>
 </div>
-</div>{% endfor %}
+</div>{% endif %}{% endfor %}
 </div>
 <p class="center fm-note u-mt7">Coffret souvenir, touche florale, animation et livraison express en option · livraison et installation comprises</p>
