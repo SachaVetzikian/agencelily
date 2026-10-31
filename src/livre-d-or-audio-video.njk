@@ -1,8 +1,8 @@
 ---
 layout: layouts/base.njk
 permalink: /livre-d-or-audio-video/
-title: "Livre d'or audio et vidéo, téléphone vintage installé | Agence Lily"
-meta: "Livre d'or audio et vidéo sur téléphone vintage : message d'accueil personnalisé, installé à Paris et en Île-de-France. Dès 200 €. Devis gratuit."
+title: "Livre d'or audio, téléphone vintage installé sur place | Agence Lily"
+meta: "Livre d'or audio sur téléphone vintage, en audio seul ou en audio et vidéo. Message d'accueil personnalisé, installé sur place à Paris et en Île-de-France. Dès 200 €."
 faqProduit:
   - q: "Qu'est-ce qu'un livre d'or audio et vidéo ?"
     a: "C'est un téléphone vintage sur lequel vos invités laissent un message vocal pendant votre événement. Avec la formule Signature, un espace filmé enregistre aussi leur visage. Vous récupérez tous les messages après la fête."
@@ -24,13 +24,13 @@ faqProduit:
 {% set livre = services | findBySlug("livre-dor-audio-video") %}
 {% set crumbs = [{ nom: "Livre d'or audio et vidéo" }] %}
 {% set heroImg = livre.image %}{% set heroImgMobile = livre.imageMobile %}{% set heroAlt = "Téléphone vintage de livre d'or audio" %}{% set heroEyebrow = "Paris & Île-de-France" %}
-{% set heroTitle = "Livre d'or audio et vidéo sur téléphone vintage" %}
+{% set heroTitle = "Livre d'or audio, le téléphone vintage installé chez vous" %}
 {% set heroIntro = "Vos invités décrochent et vous laissent un message. Avec la vidéo, vous gardez aussi leurs visages." %}
 {% set heroAside %}<div class="price-box"><strong>Dès 200 €</strong><span>livraison et installation comprises</span></div>{% include "partials/hero-date.njk" %}{% endset %}
 {% include "partials/hero-full.njk" %}
 
 <section class="section"><div class="wrap split-lead">
-<h2>Qu'est-ce qu'un livre d'or audio et vidéo ?</h2>
+<h2>Qu'est-ce qu'un livre d'or audio ?</h2>
 <div>
 <p>Un téléphone vintage installé pendant votre événement. Vos invités décrochent le combiné, écoutent votre message d'accueil personnalisé et laissent témoignage, vœux ou anecdote drôle après le bip. La <a href="/livre-d-or-video/">version vidéo</a> filme aussi leur visage.</p>
 <p>Après la fête, vous recevez tous les messages en téléchargement sous 2 semaines (48 h en express). Coffret souvenir avec clé USB en option.</p>
@@ -40,12 +40,54 @@ faqProduit:
 
 <section class="section alt"><div class="wrap">
 <h2>Comment ça marche</h2>
-<ol class="steps-min">
-<li>Nous installons le téléphone sur votre lieu.</li>
-<li>Vous enregistrez votre message d'accueil avec nous, au début de la fête.</li>
-<li>Vos invités décrochent, parlent, raccrochent.</li>
-</ol>
+<div class="trio u-mt6">
+<div class="trio-item">{% set label = "Le téléphone vintage" %}{% set img = livre.image %}{% set imgAlt = livre.imageAlt %}{% set tall = false %}{% include "partials/visual.njk" %}{% set imgAlt = false %}<div><span class="trio-num">01</span><h3>On installe le téléphone</h3><p>Sur une petite table, là où vos invités passent. On vérifie le son avant leur arrivée.</p></div></div>
+<div class="trio-item">{% set label = "Le message d'accueil" %}{% set img = livre.imageMessage %}{% set imgAlt = livre.imageMessageAlt %}{% include "partials/visual.njk" %}{% set imgAlt = false %}<div><span class="trio-num">02</span><h3>Vos invités décrochent et parlent</h3><p>Ils écoutent votre message d'accueil, attendent le bip et vous laissent leurs mots.</p></div></div>
+<div class="trio-item">{% set label = "Vos souvenirs" %}{% set img = livre.imageSouvenirs %}{% set imgAlt = livre.imageSouvenirsAlt %}{% include "partials/visual.njk" %}{% set imgAlt = false %}<div><span class="trio-num">03</span><h3>Vous recevez les messages</h3><p>Tous les fichiers en téléchargement sous 2 semaines, ou 48 h avec l'option express.</p></div></div>
+</div>
 <p class="u-mt6 u-small"><a class="link" href="/blog/comment-fonctionne-livre-d-or-audio/">Le guide : comment fonctionne un livre d'or audio</a></p>
+</div></section>
+
+<section class="section"><div class="wrap split-lead">
+<h2>À qui s'adresse le livre d'or audio ?</h2>
+<div>
+<h3 class="u-mt0">Pour un mariage</h3>
+<p>Le vin d'honneur est le moment idéal. Les invités circulent, ont du temps, et les grands-parents y vont autant que les amis. Voir le <a href="/livre-d-or-mariage/">livre d'or de mariage</a>.</p>
+<h3>Pour un baptême</h3>
+<p>Les messages s'adressent autant à l'enfant qu'aux parents. Il les découvrira dans quinze ans. Voir le <a href="/livre-d-or-bapteme/">livre d'or de baptême</a>.</p>
+<h3>Pour un anniversaire</h3>
+<p>Trente, cinquante ou quatre-vingts ans, chacun raconte un souvenir avec la personne fêtée. Voir le <a href="/livre-d-or-anniversaire/">livre d'or d'anniversaire</a>.</p>
+<h3>Pour un départ ou un événement d'entreprise</h3>
+<p>Un pot de départ en retraite, une soirée d'équipe. Les collègues parlent plus volontiers qu'ils n'écrivent. Voir le <a href="/livre-d-or-entreprise/">livre d'or d'entreprise</a>.</p>
+</div>
+</div></section>
+
+<section class="section alt"><div class="wrap split-lead">
+<h2>Audio ou vidéo, que choisir ?</h2>
+<div>
+<p>Le téléphone est le même. La différence, c'est ce que vous gardez.</p>
+<div class="table-wrap u-mt5"><table class="table table-cmp">
+<thead><tr><th></th><th>Audio (Essentiel)</th><th>Audio et vidéo (Signature)</th></tr></thead>
+<tbody>
+<tr><td>Ce que vous gardez</td><td>Les voix</td><td>Les voix et les visages</td></tr>
+<tr><td>Durée sur place</td><td>3 heures</td><td>Toute la soirée</td></tr>
+<tr><td>Animation</td><td>Aucune</td><td>1 h pendant le cocktail</td></tr>
+<tr><td>Prix</td><td>200 €</td><td>500 €</td></tr>
+</tbody></table></div>
+<p class="u-mt5">L'audio suffit pour un anniversaire ou un baptême en petit comité. Pour un mariage, l'heure d'animation va chercher les invités qui n'osent pas se lancer. Voir le <a href="/livre-d-or-video/">livre d'or vidéo</a>.</p>
+</div>
+</div></section>
+
+<section class="section"><div class="wrap split-lead">
+<h2>Livre d'or papier, virtuel ou audio ?</h2>
+<div>
+<h3 class="u-mt0">Le livre d'or papier</h3>
+<p>Il coûte peu et se feuillette. Mais les invités écrivent debout, un verre à la main, et la plupart se contentent de « Félicitations ».</p>
+<h3>Le livre d'or audio virtuel</h3>
+<p>Un numéro de téléphone ou un lien que les invités appellent depuis leur portable. Aucun matériel à installer, mais chacun doit penser à appeler, une fois la fête lancée.</p>
+<h3>Le livre d'or audio installé sur place</h3>
+<p>Le téléphone est là, sous les yeux des invités. Ils décrochent par curiosité, souvent en groupe. Pas besoin de penser à appeler un numéro.</p>
+</div>
 </div></section>
 
 <section class="section alt" id="formules"><div class="wrap">
@@ -55,6 +97,14 @@ faqProduit:
 
 <section class="section statement u-pt0"><div class="wrap">
 <p>Installé, vérifié, suivi.<br><em>Pas un colis.</em></p>
+</div></section>
+
+<section class="section"><div class="wrap split-lead">
+<h2>Combien de messages peut-on enregistrer ?</h2>
+<div>
+<p>Autant que vos invités en ont envie. Les messages sont illimités dans les deux formules.</p>
+<p>La plupart durent de 30 secondes à 2 minutes, et beaucoup sont enregistrés à plusieurs. Après la fête, vous recevez chaque message en fichier séparé, à écouter, à partager ou à garder sur une clé USB avec le coffret souvenir en option.</p>
+</div>
 </div></section>
 
 <section class="section alt"><div class="wrap split-lead">
@@ -97,7 +147,7 @@ faqProduit:
   "brand": {"@type": "Brand", "name": "{{ site.name }}"},
   "seller": {"@id": "{{ site.url }}/#business"},
   "image": "{{ site.url }}/assets/og/og-default.png",
-  "offers": {"@type": "AggregateOffer", "lowPrice": "200", "priceCurrency": "EUR", "offerCount": "3", "availability": "https://schema.org/InStock", "url": "{{ site.url }}{{ page.url }}"}
+  "offers": {"@type": "AggregateOffer", "lowPrice": "200", "priceCurrency": "EUR", "offerCount": "2", "availability": "https://schema.org/InStock", "url": "{{ site.url }}{{ page.url }}"}
 }
 </script>
 <script type="application/ld+json">
