@@ -3,7 +3,7 @@
 <div class="formules">
 {% for f in livre.formules %}<div class="formule{% if f.populaire %} pop{% endif %}">
 {% if f.populaire %}<span class="badge">La plus choisie</span>{% endif %}
-{% set label = "Formule " + f.nom %}{% set img = f.image %}{% set tall = false %}<div class="formule-visual">{% include "partials/visual.njk" %}</div>
+{% set label = "Formule " + f.nom %}{% set img = f.image %}{% set imgAlt = f.imageAlt %}{% set tall = false %}<div class="formule-visual">{% include "partials/visual.njk" %}{% set imgAlt = false %}</div>
 <h3>{{ f.nom }}</h3>
 <p class="price"><strong>{{ f.prix }} €</strong></p>
 

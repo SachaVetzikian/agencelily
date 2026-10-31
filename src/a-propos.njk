@@ -12,7 +12,7 @@ meta: "Agence Lily, fondée par Sacha Vetzikian, loue un livre d'or audio et vid
 {% if site.fondateur.bio %}{% for p in site.fondateur.bio.split("\n\n") %}<p class="lede">{{ p }}</p>{% endfor %}
 {% else %}<p class="lede">Agence Lily réunit ce qui rend une fête mémorable : des bars gourmands préparés devant vos invités et le matériel qui garde les souvenirs. Une seule équipe, un seul devis, une seule personne à appeler.</p>{% endif %}
 </div>
-{% if site.fondateur.bio %}{% set label = site.fondateur.prenom %}{% set img = site.fondateur.photo %}{% set tall = true %}{% include "partials/visual.njk" %}{% endif %}
+{% if site.fondateur.bio %}{% set label = site.fondateur.prenom %}{% set img = site.fondateur.photo %}{% set tall = true %}{% include "partials/visual.njk" %}{% set imgAlt = false %}{% endif %}
 </div></section>
 
 <section class="section alt"><div class="wrap">

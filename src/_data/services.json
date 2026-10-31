@@ -219,7 +219,8 @@
           "Livraison et installation"
         ],
         "image": "/assets/photos/formule-audio.webp",
-        "desc": "Le téléphone d'époque, votre message d'accueil et tous les messages vocaux de vos invités."
+        "desc": "Le téléphone d'époque, votre message d'accueil et tous les messages vocaux de vos invités.",
+        "imageAlt": "Invitée qui écoute le message d'accueil du livre d'or audio sur un téléphone vintage"
       },
       {
         "nom": "Signature",
@@ -233,7 +234,8 @@
         ],
         "populaire": true,
         "image": "/assets/photos/formule-video.webp",
-        "desc": "La voix et le visage, une heure d'animation pour aller chercher vos invités, et la borne jusqu'au bout de la soirée."
+        "desc": "La voix et le visage, une heure d'animation pour aller chercher vos invités, et la borne jusqu'au bout de la soirée.",
+        "imageAlt": "Invitée qui parle au téléphone livre d'or pendant qu'une caméra filme son message vidéo"
       }
     ],
     "options": [
@@ -272,7 +274,10 @@
     "url": "/livre-d-or-audio-video/",
     "imageMobile": "",
     "imageMessage": "/assets/photos/trio-message.webp",
-    "imageSouvenirs": "/assets/photos/trio-souvenirs.webp"
+    "imageSouvenirs": "/assets/photos/trio-souvenirs.webp",
+    "imageAlt": "Téléphone vintage livre d'or posé sur une table nappée dans un salon de réception",
+    "imageMessageAlt": "Mariée qui enregistre son message d'accueil sur le téléphone livre d'or audio",
+    "imageSouvenirsAlt": "Combiné du téléphone livre d'or audio vintage décroché au milieu de pétales"
   },
   {
     "slug": "photobooth",

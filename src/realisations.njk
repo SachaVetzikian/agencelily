@@ -13,7 +13,7 @@ meta: "Découvrez nos bars gourmands, livres d'or audio et photobooths en situat
 <section class="section alt"><div class="wrap">
 <div class="cards">
 {% for r in realisations %}<article class="card">
-{% set label = r.titre %}{% set img = r.photos[0] if r.photos else "" %}{% set tall = false %}{% include "partials/visual.njk" %}
+{% set label = r.titre %}{% set img = r.photos[0] if r.photos else "" %}{% set tall = false %}{% include "partials/visual.njk" %}{% set imgAlt = false %}
 <div class="body">
 <span class="tag">{{ r.evenement }}{% if r.ville %} · {{ r.ville }}{% endif %}{% if r.date %} · {{ r.date }}{% endif %}</span>
 <h3>{{ r.titre }}</h3>

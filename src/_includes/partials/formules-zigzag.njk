@@ -2,7 +2,7 @@
 {% set livre = services | findBySlug("livre-dor-audio-video") %}
 <div class="zigzag">
 {% for f in livre.formules %}{% if not onlyFormule or f.nom == onlyFormule %}<div class="zz">
-<div class="zz-media">{% set label = "Formule " + f.nom %}{% set img = f.image %}{% set tall = false %}{% include "partials/visual.njk" %}</div>
+<div class="zz-media">{% set label = "Formule " + f.nom %}{% set img = f.image %}{% set imgAlt = f.imageAlt %}{% set tall = false %}{% include "partials/visual.njk" %}{% set imgAlt = false %}</div>
 <div class="zz-text">
 {% if f.populaire %}<span class="zz-badge">La plus choisie</span>{% endif %}
 <h3>{{ f.nom }}</h3>

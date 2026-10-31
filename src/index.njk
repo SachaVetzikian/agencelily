@@ -54,9 +54,9 @@ faqHome:
 <section class="section u-pt0"><div class="wrap">
 <div class="section-title"><span class="eyebrow">En trois temps</span><h2>L’expérience</h2></div>
 <div class="trio">
-<div class="trio-item">{% set label = "Le téléphone vintage" %}{% set img = livre.image %}{% set tall = false %}{% include "partials/visual.njk" %}<div><span class="trio-num">01</span><h3>Le téléphone</h3><p>Un téléphone vintage à cadran, posé là où vos invités passent.</p></div></div>
-<div class="trio-item">{% set label = "Le message d'accueil" %}{% set img = livre.imageMessage %}{% include "partials/visual.njk" %}<div><span class="trio-num">02</span><h3>Le message d’accueil</h3><p>Votre voix accueille chaque invité qui décroche. Il donne le ton.</p></div></div>
-<div class="trio-item">{% set label = "Vos souvenirs" %}{% set img = livre.imageSouvenirs %}{% include "partials/visual.njk" %}<div><span class="trio-num">03</span><h3>Vos souvenirs</h3><p>Tous les messages, audio et vidéo, en téléchargement sous 2 semaines.</p></div></div>
+<div class="trio-item">{% set label = "Le téléphone vintage" %}{% set img = livre.image %}{% set imgAlt = livre.imageAlt %}{% set tall = false %}{% include "partials/visual.njk" %}{% set imgAlt = false %}<div><span class="trio-num">01</span><h3>Le téléphone</h3><p>Un téléphone vintage à cadran, posé là où vos invités passent.</p></div></div>
+<div class="trio-item">{% set label = "Le message d'accueil" %}{% set img = livre.imageMessage %}{% set imgAlt = livre.imageMessageAlt %}{% include "partials/visual.njk" %}{% set imgAlt = false %}<div><span class="trio-num">02</span><h3>Le message d’accueil</h3><p>Votre voix accueille chaque invité qui décroche. Il donne le ton.</p></div></div>
+<div class="trio-item">{% set label = "Vos souvenirs" %}{% set img = livre.imageSouvenirs %}{% set imgAlt = livre.imageSouvenirsAlt %}{% include "partials/visual.njk" %}{% set imgAlt = false %}<div><span class="trio-num">03</span><h3>Vos souvenirs</h3><p>Tous les messages, audio et vidéo, en téléchargement sous 2 semaines.</p></div></div>
 </div>
 </div></section>
 
@@ -86,7 +86,7 @@ faqHome:
 <section class="section"><div class="wrap">
 <div class="section-title"><span class="eyebrow">Occasions</span><h2>Pour chaque occasion</h2><p>Touchez une occasion pour voir comment on l'organise.</p></div>
 <div class="masonry">
-{% for o in occasions %}{% set evt = evenements | findBySlug(o.evenement) %}<a href="{{ o.url }}">{% set label = o.nom %}{% set img = evt.image if evt else "" %}{% set tall = false %}{% include "partials/visual.njk" %}<span class="m-cap">{{ o.nom.split(",")[0] }}<span class="m-more">Découvrir →</span></span></a>{% endfor %}
+{% for o in occasions %}{% set evt = evenements | findBySlug(o.evenement) %}<a href="{{ o.url }}">{% set label = o.nom %}{% set img = evt.image if evt else "" %}{% set tall = false %}{% include "partials/visual.njk" %}{% set imgAlt = false %}<span class="m-cap">{{ o.nom.split(",")[0] }}<span class="m-more">Découvrir →</span></span></a>{% endfor %}
 </div>
 </div></section>
 
