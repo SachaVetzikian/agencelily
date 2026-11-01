@@ -4,7 +4,7 @@
 <div class="formules-min">
 {% for f in livre.formules %}<a class="fm{% if f.populaire %} pop{% endif %}" href="/devis/?service=livre-dor-audio-video" data-track="devis">
 <span class="tag">{{ f.nom }}</span>
-
+<span class="fm-price">{{ f.prix }} €</span>
 <span class="fm-line">{{ lignes[loop.index0] }}</span>
 </a>{% endfor %}
 </div>

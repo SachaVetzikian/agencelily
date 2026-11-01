@@ -41,6 +41,11 @@ faqDevis:
 <label class="f-field"><span>Ville ou lieu</span><input name="lieu" autocomplete="address-level2" placeholder="Ex. Vincennes"></label>
 </div>
 <div class="f-row">
+<label class="f-field"><span>Nombre d'invités <small>environ</small></span><input name="invites" type="number" min="1" max="2000" inputmode="numeric"></label>
+</div>
+<details class="f-more">
+<summary>Préciser la formule ou laisser un message <small>facultatif</small></summary>
+<div class="f-more-body">
 <label class="f-field"><span>Formule</span><select name="formule">
 <option value="Je ne sais pas encore">Je ne sais pas encore</option>
 {% for f in livre.formules %}<option value="{{ f.nom }} (formule)">{{ f.nom }}</option>{% endfor %}
@@ -48,9 +53,9 @@ faqDevis:
 <option value="Bon cadeau Signature">Bon cadeau Signature (500 €)</option>
 <option value="Autre prestation">Autre prestation (bar, photobooth…)</option>
 </select></label>
-<label class="f-field"><span>Nombre d'invités <small>environ</small></span><input name="invites" type="number" min="1" max="2000" inputmode="numeric"></label>
+<label class="f-field"><span>Message</span><textarea name="message" rows="3" placeholder="Une question, une envie particulière…"></textarea></label>
 </div>
-<label class="f-field"><span>Message <small>facultatif</small></span><textarea name="message" rows="3" placeholder="Une question, une envie particulière…"></textarea></label>
+</details>
 <input type="hidden" name="config"><input type="hidden" name="estimation"><input type="hidden" name="service"><input type="hidden" name="pack">
 <label class="f-trap" aria-hidden="true">Site web<input name="site_web" tabindex="-1" autocomplete="off"></label>
 <p class="f-error" id="f-error" role="alert" hidden></p>
@@ -150,4 +155,5 @@ faqDevis:
 {% set faq = faqDevis %}{% include "partials/faq-section.njk" %}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{% for f in faqDevis %}{"@type":"Question","name":{{ f.q | json | safe }},"acceptedAnswer":{"@type":"Answer","text":{{ f.a | json | safe }}}}{% if not loop.last %},{% endif %}{% endfor %}]}
+  (function () { var d = document.querySelector(".f-more"); if (d && (form.elements.formule.value !== "Je ne sais pas encore" || form.elements.message.value)) d.open = true; })();
 </script>

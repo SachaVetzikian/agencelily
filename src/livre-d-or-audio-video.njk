@@ -125,11 +125,6 @@ faqProduit:
 <div class="quotes">{% for x in occasions %}<blockquote>{{ x.messagesAccueil[0] }}</blockquote>{% endfor %}</div>
 </div></section>
 
-<section class="section alt"><div class="wrap split-lead">
-<h2>Pour quel événement ?</h2>
-<div><p>Mariage, anniversaire, baptême, départ à la retraite : le livre d'or audio s'adapte à chaque événement, il suffit de changer le message d'accueil.</p>
-<ul class="inline-list">{% for x in occasions %}<li><a href="{{ x.url }}">Livre d'or {{ x.nom.split(",")[0] | lower }}</a></li>{% endfor %}</ul></div>
-</div></section>
 
 {% set faq = faqProduit.concat(livre.faq) %}{% include "partials/faq-section.njk" %}
 <p class="center u-small"><a class="link" href="/faq/">Toutes les questions fréquentes</a></p>

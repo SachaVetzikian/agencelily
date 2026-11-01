@@ -14,7 +14,7 @@
   --font: "Manrope", "Helvetica Neue", system-ui, sans-serif;
 
   /* Échelle typographique : 7 tailles, pas une de plus (voir DESIGN.md) */
-  --fs-label: 11px;
+  --fs-label: 12px;
   --fs-small: 13px;
   --fs-body: 16px;
   --fs-lead: clamp(18px, 1.6vw, 21px);
@@ -988,3 +988,16 @@ h2.eyebrow { font-family: var(--font); font-size: var(--fs-label); line-height: 
 }
 .quotes { scrollbar-width: none; }
 .quotes::-webkit-scrollbar { display: none; }
+
+/* Audit UX 01/11 */
+@media (min-width: 900px) { .avis-grid { grid-template-columns: repeat(3, 1fr); } }
+.zz-text .zz-price { display: block; margin: 0 0 var(--s4); color: var(--ink); max-width: none; font-size: var(--fs-h3); }
+.fm .fm-price { font-size: var(--fs-h2); }
+.f-more { border: 1px solid var(--line); border-radius: var(--radius); background: var(--white); }
+.f-more summary { cursor: pointer; padding: 14px; font-size: var(--fs-small); font-weight: 500; color: var(--ink); list-style-position: inside; }
+.f-more summary small { color: var(--muted); font-weight: 400; margin-left: var(--s1); }
+.f-more-body { display: grid; gap: var(--s5); padding: 0 14px 14px; }
+/* Tableaux du blog : ombre à droite tant qu'il reste des colonnes à faire glisser */
+@media (max-width: 600px) {
+  .post-prose table { background: linear-gradient(to right, var(--white) 30%, rgba(255,255,255,0)) left center / 32px 100% no-repeat local, linear-gradient(to left, var(--white) 30%, rgba(255,255,255,0)) right center / 32px 100% no-repeat local, radial-gradient(farthest-side at 100% 50%, rgba(0,0,0,.16), rgba(0,0,0,0)) right center / 12px 100% no-repeat scroll, var(--white); }
+}

@@ -25,13 +25,13 @@ meta: "Simulez votre budget en 1 minute : livre d'or audio et vidéo, bars gourm
 {% set livre = services | findBySlug("livre-dor-audio-video") %}
 <div class="config-grid">
 {% for f in livre.formules %}
-<label class="config-item"><input type="radio" name="livre" value="{{ loop.index0 }}"><span class="ci-body"><strong>{{ f.nom }}</strong><span>Sur devis</span></span></label>
+<label class="config-item"><input type="radio" name="livre" value="{{ loop.index0 }}"{% if f.populaire %} checked{% endif %}><span class="ci-body"><strong>{{ f.nom }}</strong><span>{{ f.prix }} €</span></span></label>
 {% endfor %}
-<label class="config-item"><input type="radio" name="livre" value="" checked><span class="ci-body"><strong>Pas de livre d'or</strong></span></label>
+<label class="config-item"><input type="radio" name="livre" value=""><span class="ci-body"><strong>Pas de livre d'or</strong></span></label>
 </div>
 <div class="config-grid config-options" id="c-livre-options" hidden>
 {% for o in livre.options %}
-<label class="config-item small"><input type="checkbox" name="livre-option" value="{{ loop.index0 }}"><span class="ci-body"><strong>{{ o.nom }}</strong><span>En option</span></span></label>
+<label class="config-item small"><input type="checkbox" name="livre-option" value="{{ loop.index0 }}"><span class="ci-body"><strong>{{ o.nom }}</strong><span>+ {{ o.prix }}</span></span></label>
 {% endfor %}
 </div>
 
@@ -71,7 +71,7 @@ meta: "Simulez votre budget en 1 minute : livre d'or audio et vidéo, bars gourm
 
 <script>
 (function () {
-  var services = {{ services | sansPrixLivre | json | safe }};
+  var services = {{ services | json | safe }};
   var bySlug = {};
   services.forEach(function (s) { bySlug[s.slug] = s; });
   var livre = bySlug["livre-dor-audio-video"];
@@ -97,10 +97,10 @@ meta: "Simulez votre budget en 1 minute : livre d'or audio et vidéo, bars gourm
     optionsBox.hidden = lv === "";
     if (lv !== "") {
       var f = livre.formules[parseInt(lv, 10)];
-      lines.push(["Livre d'or : " + f.nom, null]); hasLoc = true;
+      lines.push(["Livre d'or : " + f.nom, f.prix]); total += f.prix; hasLoc = true;
       form.querySelectorAll('input[name="livre-option"]:checked').forEach(function (i) {
         var o = livre.options[parseInt(i.value, 10)];
-        lines.push([o.nom, null]);
+        var op = toNumber(o.prix); lines.push([o.nom, op]); total += op;
       });
     }
     form.querySelectorAll('input[name="location"]:checked').forEach(function (i) {
