@@ -8,7 +8,6 @@ image: "/assets/photos/trio-souvenirs.webp"
 banniere: "/assets/photos/occasion-bapteme.webp"
 date: 2026-11-03
 publication: 2026-11-03
-draft: true
 faq:
   - q: "Quel livre d'or original choisir pour un baptême ?"
     a: "<strong>Le livre d'or audio sur téléphone vintage.</strong> Les invités parlent directement à l'enfant, qui pourra réécouter leurs voix des années plus tard."
