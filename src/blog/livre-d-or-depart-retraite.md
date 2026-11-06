@@ -8,7 +8,6 @@ image: "/assets/photos/formule-animateur.webp"
 banniere: "/assets/photos/occasion-entreprise.webp"
 date: 2026-11-06
 publication: 2026-11-06
-draft: true
 faq:
   - q: "Quel livre d'or original pour un départ à la retraite ?"
     a: "<strong>Le livre d'or audio sur téléphone vintage.</strong> Les collègues laissent un message vocal pendant le pot de départ, et le retraité repart avec toutes leurs voix."
