@@ -8,7 +8,6 @@ image: "/assets/photos/formule-video.webp"
 banniere: "/assets/photos/hero-tarifs.webp"
 date: 2026-11-10
 publication: 2026-11-10
-draft: true
 faq:
   - q: "Quel est le prix d'un livre d'or audio en location ?"
     a: "<strong>200 € avec la formule Essentiel chez Agence Lily</strong>, livraison et installation comprises. Les offres par colis, sans installation, tournent en général entre 89 et 249 €."
