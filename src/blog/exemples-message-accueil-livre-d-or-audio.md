@@ -8,7 +8,6 @@ image: "/assets/photos/trio-message.webp"
 banniere: "/assets/photos/hero-livre-dor.webp"
 date: 2026-11-13
 publication: 2026-11-13
-draft: true
 faq:
   - q: "Combien de temps doit durer le message d'accueil ?"
     a: "<strong>Quelques phrases, pas plus.</strong> L'invité tient le combiné à l'oreille et a envie de parler. Si l'accueil s'éternise, il raccroche avant le bip."
