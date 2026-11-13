@@ -25,7 +25,7 @@ faqPartenaires:
 ---
 {% set livre = services | findBySlug("livre-dor-audio-video") %}
 {% set crumbs = [{ nom: "Partenaires" }] %}
-{% set heroImg = livre.image %}{% set heroImgMobile = livre.imageMobile %}{% set heroAlt = "Borne de livre d'or audio installée dans un lieu de réception" %}{% set heroEyebrow = "Programme partenaires · Saison 2027" %}
+{% set heroImg = "/assets/photos/pt-salon.webp" %}{% set heroImgMobile = "/assets/photos/pt-salon-800.webp" %}{% set heroAlt = "Borne de livre d'or audio installée dans un lieu de réception" %}{% set heroEyebrow = "Programme partenaires · Saison 2027" %}
 {% set heroTitle = "Le livre d'or audio, à votre nom" %}
 {% set heroIntro = "Proposez à vos couples le livre d'or audio et vidéo sur téléphone vintage, en marque blanche. La logistique, on s'en charge." %}
 {% set heroAside %}<div class="btns"><a class="btn primary" href="#devenir-partenaire" data-track="partenaire-hero">Devenir partenaire</a>{% if site.plaquettePartenaires %}<a class="btn ghost" href="{{ site.plaquettePartenaires }}" target="_blank" rel="noopener" download data-track="plaquette">Télécharger la plaquette</a>{% endif %}</div>
@@ -33,10 +33,14 @@ faqPartenaires:
 {% include "partials/hero-full.njk" %}
 
 <section class="section pt-for"><div class="wrap">
-<span class="eyebrow">Pour qui</span>
-<ul class="pills pt-pills" aria-label="Partenaires concernés">
-<li class="pill">Lieux de réception</li><li class="pill">Châteaux et domaines</li><li class="pill">Wedding planners</li><li class="pill">Photographes et vidéastes</li><li class="pill">Traiteurs</li><li class="pill">DJ</li>
-</ul>
+<div class="section-title"><span class="eyebrow">Pour qui</span><h2>Pour tous ceux qui font les mariages</h2></div>
+<div class="pt-tiles">
+<figure class="pt-tile"><img src="/assets/photos/pt-salon-800.webp" alt="Salon de réception haussmannien avec un téléphone vintage sur un guéridon" loading="lazy"><figcaption>Lieux de réception</figcaption></figure>
+<figure class="pt-tile"><img src="/assets/photos/hero-carnet-800.webp" alt="Salle de réception dressée pour un dîner de mariage" loading="lazy"><figcaption>Châteaux et domaines</figcaption></figure>
+<figure class="pt-tile"><img src="/assets/photos/pt-jardin-800.webp" alt="Mariés dans un jardin pendant la réception" loading="lazy"><figcaption>Wedding planners</figcaption></figure>
+<figure class="pt-tile"><img src="/assets/photos/formule-video-800.webp" alt="Invitée au téléphone devant un vidéaste" loading="lazy"><figcaption>Photographes et vidéastes</figcaption></figure>
+<figure class="pt-tile"><img src="/assets/photos/pt-grange-800.webp" alt="Invités qui dansent dans une grange en soirée" loading="lazy"><figcaption>Traiteurs et DJ</figcaption></figure>
+</div>
 </div></section>
 
 <section class="section alt"><div class="wrap pt-listen">
@@ -44,11 +48,21 @@ faqPartenaires:
 <span class="eyebrow">Ce que vos couples reçoivent</span>
 <h2>Une voix que l'on réécoute toute une vie</h2>
 <p class="pt-lead">Les invités décrochent un téléphone d'époque et laissent quelques mots aux mariés. Sur le papier, deux lignes. Au bout du fil, une confidence, un fou rire, la voix d'une grand-mère. Avec la Signature, les visages en plus.</p>
+<ul class="pt-stats">
+<li><strong>0</strong><span>application à installer</span></li>
+<li><strong>∞</strong><span>messages par soirée</span></li>
+<li><strong>{{ site.avis.note | noteFr }}/5</strong><span>sur Google</span></li>
+</ul>
 <a class="pt-link" href="{{ livre.url }}">Tout le détail du livre d'or audio et vidéo →</a>
 </div>
-<div class="pt-listen-player">
-{% if temoignages[0] %}<p class="pt-micro-dark">Écoutez un vrai message laissé sur le téléphone</p>{% set voix = temoignages[0] %}{% set voixClair = true %}{% include "partials/voice-player.njk" %}{% endif %}
-<p class="pt-micro-dark">{{ site.avis.note | noteFr }}/5 sur Google · Aucune application · Messages illimités</p>
+<div class="pt-collage">
+<img class="pt-collage-main" src="/assets/photos/formule-animateur-800.webp" alt="Une invitée tend le combiné du téléphone vintage à une grand-mère" loading="lazy">
+<img class="pt-collage-side" src="/assets/photos/pt-borne.webp" alt="Un invité laisse un message sur la borne Lily" loading="lazy">
+{% if temoignages[0] %}<div class="pt-call">
+<div class="pt-call-head"><span class="pt-dot"></span>Message reçu · {{ temoignages[0].duree }}</div>
+{% set voix = temoignages[0] %}{% set voixClair = true %}{% include "partials/voice-player.njk" %}
+<div class="pt-wave" aria-hidden="true">{% for h in [6,14,22,10,28,18,8,24,30,12,20,26,9,16,22,11,27,15,7,19,25,13,21,10] %}<i style="height:{{ h }}px"></i>{% endfor %}</div>
+</div>{% endif %}
 </div>
 </div></section>
 
@@ -65,15 +79,25 @@ faqPartenaires:
 <li><strong>Un interlocuteur dédié</strong>, pour vous comme pour vos couples.</li>
 <li><strong>La plaquette PDF</strong>, prête à transmettre à vos clients.</li>
 </ul>
-</div>
-<div class="pt-deal-col pt-deal-ask">
-<h3>Ce qu'on vous demande</h3>
+<h3 class="u-mt6">Ce qu'on vous demande</h3>
 <ul class="pt-checks">
 <li>Ajouter le livre d'or à votre catalogue ou à vos propositions.</li>
 <li>Nous transmettre la date, l'horaire et le contact du jour J.</li>
 <li>Une prise électrique et un coin un peu au calme.</li>
 </ul>
-<p class="pt-micro-dark">C'est tout. Pas de formation, pas d'outil à installer.</p>
+</div>
+<div class="pt-mock" aria-label="Exemple : le livre d'or dans le catalogue d'un lieu">
+<div class="pt-mock-bar"><i></i><i></i><i></i><span>Votre catalogue mariage</span></div>
+<div class="pt-mock-body">
+<p class="pt-mock-lieu">Votre lieu · Options mariage 2027</p>
+<div class="pt-mock-row"><span>Cocktail et vin d'honneur</span><span>sur devis</span></div>
+<div class="pt-mock-row"><span>Décoration florale</span><span>sur devis</span></div>
+<div class="pt-mock-row pt-mock-new"><span><em>Nouveau</em> Livre d'or audio et vidéo<small>Téléphone vintage, vidéo, soirée complète</small></span><span>500 €</span></div>
+<div class="pt-mock-row"><span>Brunch du lendemain</span><span>sur devis</span></div>
+<div class="pt-mock-foot"><span>Votre marge</span><strong>+ 100 €</strong><small>par mariage, au prix conseillé</small></div>
+</div>
+<img class="pt-mock-affiche" src="/assets/photos/affiche-apercu.webp" alt="Affiche d'accueil posée à côté du téléphone" loading="lazy">
+<p class="pt-mock-label">Exemple d'intégration à votre offre</p>
 </div>
 </div>
 </div></section>
@@ -83,6 +107,7 @@ faqPartenaires:
 <span class="eyebrow">Simulez votre marge</span>
 <h2>Ce que le livre d'or peut vous rapporter</h2>
 <p class="pt-lead">Exemple avec la Signature, notre formule recommandée : la soirée complète, la vidéo et une heure d'animation.</p>
+<img class="pt-calc-img" src="/assets/photos/trio-message-800.webp" alt="Une mariée écoute le téléphone vintage" loading="lazy">
 </div>
 <form class="pt-calc" id="pt-calc" onsubmit="return false">
 <label class="f-field"><span>Mariages par an chez vous</span><input type="range" name="mariages" min="5" max="150" step="5" value="40"><output data-out="mariages">40</output></label>
@@ -99,11 +124,11 @@ faqPartenaires:
 
 <section class="section"><div class="wrap">
 <div class="section-title"><span class="eyebrow">Comment ça marche</span><h2>Devenir partenaire en 4 étapes</h2></div>
-<ol class="steps-min pt-steps">
-<li><strong>On s'appelle 10 minutes.</strong> Vous découvrez le produit, on répond à vos questions.</li>
-<li><strong>Vous l'ajoutez à votre catalogue.</strong> Vous fixez votre prix et facturez vos couples.</li>
-<li><strong>Le jour J, on s'occupe de tout.</strong> Installation, animation si besoin, reprise.</li>
-<li><strong>Les mariés reçoivent leurs messages</strong> sous 2 semaines, par lien de téléchargement.</li>
+<ol class="pt-steps-img">
+<li><img src="/assets/photos/hero-carnet-800.webp" alt="" loading="lazy"><span>01</span><strong>On s'appelle 10 minutes</strong><p>Vous découvrez le produit, on répond à vos questions.</p></li>
+<li><img src="/assets/photos/pt-salon-800.webp" alt="" loading="lazy"><span>02</span><strong>Vous l'ajoutez à votre catalogue</strong><p>Vous fixez votre prix et facturez vos couples.</p></li>
+<li><img src="/assets/photos/formule-video-800.webp" alt="" loading="lazy"><span>03</span><strong>Le jour J, on s'occupe de tout</strong><p>Installation, animation si besoin, reprise.</p></li>
+<li><img src="/assets/photos/trio-souvenirs-800.webp" alt="" loading="lazy"><span>04</span><strong>Les mariés reçoivent leurs messages</strong><p>Sous 2 semaines, par lien de téléchargement.</p></li>
 </ol>
 </div></section>
 
@@ -111,16 +136,19 @@ faqPartenaires:
 <div class="section-title"><span class="eyebrow">Selon votre métier</span><h2>Un partenariat pensé pour chacun</h2></div>
 <div class="pt-profils">
 <article class="pt-profil">
-<h3>Lieux de réception, châteaux et domaines</h3>
-<p>Une prestation de plus dans votre offre mariage, qui vous distingue des autres lieux. La borne se place là où elle s'intègre le mieux, vos équipes n'ont rien à gérer.</p>
+<img src="/assets/photos/pt-salon-800.webp" alt="Salon de réception avec le téléphone vintage" loading="lazy">
+<div><h3>Lieux de réception, châteaux et domaines</h3>
+<p>Une prestation de plus dans votre offre mariage, qui vous distingue des autres lieux. La borne se place là où elle s'intègre le mieux, vos équipes n'ont rien à gérer.</p></div>
 </article>
 <article class="pt-profil">
-<h3>Wedding planners</h3>
-<p>Une animation qui marque les invités, à ajouter à vos propositions. Vous gardez la relation avec vos couples, nous gérons le matériel et le timing avec vous.</p>
+<img src="/assets/photos/pt-jardin-800.webp" alt="Mariés dans un jardin de réception" loading="lazy">
+<div><h3>Wedding planners</h3>
+<p>Une animation qui marque les invités, à ajouter à vos propositions. Vous gardez la relation avec vos couples, nous gérons le matériel et le timing avec vous.</p></div>
 </article>
 <article class="pt-profil">
-<h3>Photographes, vidéastes, traiteurs et DJ</h3>
-<p>Un complément naturel à votre prestation : les voix des invités, en plus des images, du repas ou de la musique. Même prix partenaire, même simplicité.</p>
+<img src="/assets/photos/pt-grange-800.webp" alt="Soirée de mariage dans une grange" loading="lazy">
+<div><h3>Photographes, vidéastes, traiteurs et DJ</h3>
+<p>Un complément naturel à votre prestation : les voix des invités, en plus des images, du repas ou de la musique. Même prix partenaire, même simplicité.</p></div>
 </article>
 </div>
 </div></section>
@@ -129,6 +157,8 @@ faqPartenaires:
 <div class="section-title"><span class="eyebrow">Formules partenaires</span><h2>Deux formules, un seul interlocuteur</h2></div>
 <div class="pt-formules">
 <div class="pt-formule">
+<img src="/assets/photos/formule-audio-800.webp" alt="Invitée qui laisse un message audio" loading="lazy">
+<div class="pt-formule-body">
 <span class="eyebrow">Essentiel</span>
 <p class="pt-prix">200 €<small>prix partenaire</small></p>
 <ul class="pt-checks">
@@ -138,8 +168,11 @@ faqPartenaires:
 <li>Installation et reprise</li>
 </ul>
 </div>
+</div>
 <div class="pt-formule pt-formule-reco">
 <span class="pt-badge">Recommandée</span>
+<img src="/assets/photos/formule-video-800.webp" alt="Invitée filmée pendant son message" loading="lazy">
+<div class="pt-formule-body">
 <span class="eyebrow">Signature</span>
 <p class="pt-prix">400 €<small>prix partenaire · revente conseillée 500 €</small></p>
 <ul class="pt-checks">
@@ -150,12 +183,17 @@ faqPartenaires:
 </ul>
 </div>
 </div>
+</div>
 <p class="u-mt5 u-small">Livraison offerte à Paris et en petite couronne. TVA non applicable, art. 293 B du CGI. Options et conditions détaillées dans la plaquette.</p>
 </div></section>
 
+<div class="pt-strip" aria-hidden="true"><div class="pt-strip-track">
+{% for p in ["trio-message","pt-grange","formule-animateur","hero-video","pt-jardin","trio-souvenirs","pt-salon","blog-animation-mariage","trio-message","pt-grange","formule-animateur","hero-video","pt-jardin","trio-souvenirs","pt-salon","blog-animation-mariage"] %}<img src="/assets/photos/{{ p }}-800.webp" alt="" loading="lazy">{% endfor %}
+</div></div>
+
 {% set avisPartenaires = [] %}{% for a in avis %}{% if a.prenom == "Arnaud D." or a.prenom == "Assad M." %}{% set avisPartenaires = (avisPartenaires.push(a), avisPartenaires) %}{% endif %}{% endfor %}
 {% if avisPartenaires.length %}
-<section class="section alt"><div class="wrap">
+<section class="section"><div class="wrap">
 <div class="section-title"><span class="eyebrow"><span class="stars">★★★★★</span> {{ site.avis.note | noteFr }} sur Google</span><h2>Ce qu'en disent les invités</h2></div>
 <div class="avis-grid">
 {% for a in avisPartenaires %}<figure class="avis">
@@ -169,7 +207,7 @@ faqPartenaires:
 
 {% set faq = faqPartenaires %}{% include "partials/faq-section.njk" %}
 
-<section class="section alt" id="devenir-partenaire"><div class="wrap pt-join">
+<section class="section pt-join-sec" id="devenir-partenaire"><img class="pt-join-bg" src="/assets/photos/pt-grange.webp" alt="" loading="lazy"><div class="wrap pt-join">
 <div>
 <span class="eyebrow">Saison 2027</span>
 <h2>Devenez partenaire</h2>
