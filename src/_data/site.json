@@ -10,7 +10,8 @@
     "nombre": 7,
     "note": 5.0,
     "lien": "https://maps.app.goo.gl/kBRec8DW11M3wWih8",
-    "seuilAffichage": 4
+    "seuilAffichage": 4,
+    "exclus": ["Tania Y.", "Allan R."]
   },
   "delaiReponse": "24h",
   "whatsapp": "33665704220",

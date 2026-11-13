@@ -1141,3 +1141,26 @@ h2.eyebrow { font-family: var(--font); font-size: var(--fs-label); line-height: 
 @media (max-width: 600px) { .pt-mock-affiche { right: 4px; top: -40px; width: 92px; } .pt-mock-lieu { padding-right: 84px; } }
 @media (max-width: 900px) { .pt-deal { grid-template-columns: 1fr; } .pt-mock { margin-top: var(--s6); } }
 .pt-mock-row > span:last-child { white-space: nowrap; }
+/* Avis Google au style Google Maps */
+.gstars { color: #FBBC04; letter-spacing: 2px; font-size: 18px; line-height: 1; }
+.gavis-head { display: grid; grid-template-columns: auto 1fr auto; gap: var(--s6); align-items: center; margin-bottom: var(--s6); }
+.gavis-title { text-align: center; }
+.gavis-title h2 { margin: 0; }
+.gavis-brand { display: flex; gap: var(--s4); align-items: center; background: var(--white); border: 1px solid var(--line); padding: var(--s4) var(--s5); }
+.gavis-maps { width: 30px; height: 42px; flex: none; }
+.gavis-label { display: block; font-size: var(--fs-label); font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.gavis-score { display: flex; align-items: center; gap: var(--s3); }
+.gavis-score strong { font-family: var(--serif); font-weight: 400; font-size: 40px; line-height: 1.1; }
+.gavis-count { font-size: var(--fs-small); color: var(--muted); }
+.gavis-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: var(--s5); }
+.gavis { margin: 0; background: var(--white); border: 1px solid var(--line); padding: var(--s5); display: grid; gap: var(--s3); align-content: start; }
+.alt .gavis { border-color: transparent; }
+.gavis-top { display: grid; grid-template-columns: 40px 1fr 20px; gap: var(--s3); align-items: center; }
+.gavis-avatar { width: 40px; height: 40px; border-radius: 50%; color: #fff; display: grid; place-items: center; font-weight: 600; }
+.gavis-top strong { display: block; font-size: 15px; }
+.gavis-top div span { display: block; font-size: var(--fs-small); color: var(--muted); }
+.gavis-g { width: 20px; height: 20px; }
+.gavis blockquote { margin: 0; font-size: 15px; line-height: 1.6; }
+@media (max-width: 900px) { .gavis-head { grid-template-columns: 1fr; text-align: left; } .gavis-title { text-align: left; order: -1; } .gavis-btn { justify-self: start; } }
+@media (max-width: 700px) { .gavis-grid { grid-auto-flow: column; grid-template-columns: none; grid-auto-columns: 85%; overflow-x: auto; scroll-snap-type: x mandatory; } .gavis { scroll-snap-align: start; } }
+.gavis-avatar { color: #fff !important; font-size: 16px; }

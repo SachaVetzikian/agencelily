@@ -191,19 +191,7 @@ faqPartenaires:
 {% for p in ["trio-message","pt-grange","formule-animateur","hero-video","pt-jardin","trio-souvenirs","pt-salon","blog-animation-mariage","trio-message","pt-grange","formule-animateur","hero-video","pt-jardin","trio-souvenirs","pt-salon","blog-animation-mariage"] %}<img src="/assets/photos/{{ p }}-800.webp" alt="" loading="lazy">{% endfor %}
 </div></div>
 
-{% set avisPartenaires = [] %}{% for a in avis %}{% if a.prenom == "Arnaud D." or a.prenom == "Assad M." %}{% set avisPartenaires = (avisPartenaires.push(a), avisPartenaires) %}{% endif %}{% endfor %}
-{% if avisPartenaires.length %}
-<section class="section"><div class="wrap">
-<div class="section-title"><span class="eyebrow"><span class="stars">★★★★★</span> {{ site.avis.note | noteFr }} sur Google</span><h2>Ce qu'en disent les invités</h2></div>
-<div class="avis-grid">
-{% for a in avisPartenaires %}<figure class="avis">
-<div class="stars" aria-label="{{ a.note or 5 }} sur 5">{% for i in range(0, a.note or 5) %}★{% endfor %}</div>
-<blockquote>{{ a.texte }}</blockquote>
-<figcaption><strong>{{ a.prenom }}</strong>{% if a.evenement %} · {{ a.evenement }}{% endif %}{% if a.date %} · {{ a.date }}{% endif %}</figcaption>
-</figure>{% endfor %}
-</div>
-</div></section>
-{% endif %}
+{% include "partials/avis-google.njk" %}
 
 {% set faq = faqPartenaires %}{% include "partials/faq-section.njk" %}
 
