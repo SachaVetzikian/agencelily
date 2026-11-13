@@ -1,104 +1,258 @@
 ---
 layout: layouts/base.njk
 permalink: /partenaires/
-robots: "noindex, follow"
 cbLabel: "Devenir partenaire"
-cbHref: "/devis/?service=partenariat"
-title: "Livre d'or audio pour lieux de réception et wedding planners | Agence Lily"
-meta: "Lieux de réception, wedding planners et prestataires mariage en Île-de-France. Ajoutez le livre d'or audio et vidéo à votre offre, en marque blanche, sans aucune logistique."
+cbHref: "#devenir-partenaire"
+title: "Partenariat livre d'or audio pour lieux de réception et wedding planners | Agence Lily"
+meta: "Lieux de réception, wedding planners, photographes : ajoutez le livre d'or audio et vidéo à votre catalogue, en marque blanche. Prix partenaire 200 € ou 400 €, vous fixez votre prix. Paris et Île-de-France."
 faqPartenaires:
   - q: "Combien coûte le partenariat ?"
-    a: "Rien à l'entrée. Nous vous facturons la prestation 200 € (Essentiel) ou 400 € (Signature) quand vous la vendez, et vous la revendez au prix que vous fixez. Nos prix publics sont de 200 € et 500 € : nous vous conseillons de revendre la Signature, soirée complète, 500 €."
+    a: "Rien à l'entrée. Nous vous facturons la prestation 200 € (Essentiel) ou 400 € (Signature) uniquement quand vous la vendez, et vous la revendez au prix que vous fixez. Nos prix publics sont de 200 € et 500 € : nous vous conseillons de revendre la Signature, soirée complète, 500 €."
   - q: "Qui facture les mariés ?"
     a: "Vous. La prestation apparaît dans votre catalogue et sur votre facture, à votre nom. Nous facturons uniquement votre lieu ou votre agence."
+  - q: "Que veut dire « en marque blanche » ?"
+    a: "Vos couples achètent le livre d'or audio chez vous, comme une prestation de votre lieu ou de votre agence. Nous restons en coulisses : nous livrons, installons et reprenons la borne le jour J."
   - q: "Vos équipes doivent-elles s'occuper du matériel ?"
     a: "Non. Nous livrons, installons et reprenons la borne en accord avec vos horaires. Il suffit d'une prise électrique et d'un coin un peu à l'écart du bruit."
   - q: "Dans quelle zone intervenez-vous ?"
     a: "Paris et toute l'Île-de-France, 7 jours sur 7. La livraison est offerte à Paris et en petite couronne, au-delà elle est indiquée sur devis."
   - q: "Quand les mariés reçoivent-ils leurs messages ?"
     a: "Sous 2 semaines, par lien de téléchargement. Une livraison express et un coffret souvenir avec clé USB sont proposés en option."
-  - q: "Vous travaillez aussi avec les wedding planners et les photographes ?"
-    a: "Oui. Wedding planners, photographes, vidéastes et DJ fonctionnent comme les lieux. Vous payez le prix partenaire (200 € ou 400 €) et vous facturez à vos couples le prix total que vous fixez."
+  - q: "Vous travaillez aussi avec les wedding planners, photographes et DJ ?"
+    a: "Oui. Wedding planners, photographes, vidéastes, traiteurs et DJ fonctionnent comme les lieux : vous payez le prix partenaire (200 € ou 400 €) et vous facturez à vos couples le prix total que vous fixez."
+  - q: "Comment devenir partenaire ?"
+    a: "Remplissez le formulaire de cette page ou écrivez-nous sur WhatsApp. Nous vous rappelons sous 24 h pour un échange de 10 minutes, puis nous vous envoyons la plaquette à transmettre à vos couples."
 ---
 {% set livre = services | findBySlug("livre-dor-audio-video") %}
 {% set crumbs = [{ nom: "Partenaires" }] %}
-{% set heroImg = livre.image %}{% set heroImgMobile = livre.imageMobile %}{% set heroAlt = "Borne de livre d'or audio installée dans un lieu de réception" %}{% set heroEyebrow = "Lieux de réception · Wedding planners" %}
-{% set heroTitle = "Le livre d'or audio, dans votre catalogue" %}
-{% set heroIntro = "Une prestation de plus pour vos couples. Aucune charge en plus pour vos équipes." %}
-{% set heroAside %}<div class="price-box"><strong>200 € ou 400 €</strong><span>facturés au lieu, revendus à votre prix</span></div>
-<div class="btns">{% if site.plaquettePartenaires %}<a class="btn primary" href="{{ site.plaquettePartenaires }}" target="_blank" rel="noopener" download data-track="plaquette">Voir la plaquette</a>{% endif %}<a class="btn ghost" href="/devis/?service=partenariat" data-track="devis">Devenir partenaire</a></div>{% endset %}
+{% set heroImg = livre.image %}{% set heroImgMobile = livre.imageMobile %}{% set heroAlt = "Borne de livre d'or audio installée dans un lieu de réception" %}{% set heroEyebrow = "Programme partenaires · Saison 2027" %}
+{% set heroTitle = "Le livre d'or audio, à votre nom" %}
+{% set heroIntro = "Proposez à vos couples le livre d'or audio et vidéo sur téléphone vintage, en marque blanche. La logistique, on s'en charge." %}
+{% set heroAside %}<div class="btns"><a class="btn primary" href="#devenir-partenaire" data-track="partenaire-hero">Devenir partenaire</a>{% if site.plaquettePartenaires %}<a class="btn ghost" href="{{ site.plaquettePartenaires }}" target="_blank" rel="noopener" download data-track="plaquette">Télécharger la plaquette</a>{% endif %}</div>
+<p class="pt-micro">Sans frais d'entrée · Vous fixez votre prix · Zéro logistique</p>{% endset %}
 {% include "partials/hero-full.njk" %}
 
-<section class="section"><div class="wrap split-lead">
-<h2>Un livre d'or que l'on écoute</h2>
-<div>
-<p>Les invités décrochent un téléphone d'époque et laissent quelques mots aux mariés. Parfois une confidence. Parfois la voix d'une grand-mère que personne n'attendait.</p>
-<p>Sur le papier, deux lignes. Au bout du fil, une voix que l'on réécoute toute une vie (et avec la vidéo, les visages en plus).</p>
-<p>Tout le détail du produit est sur notre page <a href="{{ livre.url }}">livre d'or audio et vidéo</a>.</p>
-</div>
+<section class="section pt-for"><div class="wrap">
+<span class="eyebrow">Pour qui</span>
+<ul class="pills pt-pills" aria-label="Partenaires concernés">
+<li class="pill">Lieux de réception</li><li class="pill">Châteaux et domaines</li><li class="pill">Wedding planners</li><li class="pill">Photographes et vidéastes</li><li class="pill">Traiteurs</li><li class="pill">DJ</li>
+</ul>
 </div></section>
 
-<section class="section alt"><div class="wrap">
-<h2>Pourquoi l'ajouter à votre offre</h2>
-<div class="steps u-mt6">
-<div class="step"><h3>Une offre qui vous distingue</h3><p>Une prestation que vos couples ne trouvent pas ailleurs, proposée par votre lieu.</p></div>
-<div class="step"><h3>Une marge pour vous</h3><p>Nous vous facturons 200 € ou 400 €. Vous revendez au prix que vous fixez (prix conseillé pour la Signature, soirée complète : 500 €).</p></div>
-<div class="step"><h3>En marque blanche</h3><p>La prestation est présentée à votre nom, sur votre catalogue et votre facture.</p></div>
-<div class="step"><h3>Zéro logistique</h3><p>On installe, on anime si besoin, on reprend. Vos équipes restent concentrées sur la réception.</p></div>
+<section class="section alt"><div class="wrap pt-listen">
+<div>
+<span class="eyebrow">Ce que vos couples reçoivent</span>
+<h2>Une voix que l'on réécoute toute une vie</h2>
+<p class="pt-lead">Les invités décrochent un téléphone d'époque et laissent quelques mots aux mariés. Sur le papier, deux lignes. Au bout du fil, une confidence, un fou rire, la voix d'une grand-mère. Avec la Signature, les visages en plus.</p>
+<a class="pt-link" href="{{ livre.url }}">Tout le détail du livre d'or audio et vidéo →</a>
+</div>
+<div class="pt-listen-player">
+{% if temoignages[0] %}<p class="pt-micro-dark">Écoutez un vrai message laissé sur le téléphone</p>{% set voix = temoignages[0] %}{% set voixClair = true %}{% include "partials/voice-player.njk" %}{% endif %}
+<p class="pt-micro-dark">{{ site.avis.note | noteFr }}/5 sur Google · Aucune application · Messages illimités</p>
 </div>
 </div></section>
 
 <section class="section"><div class="wrap">
-<h2>Comment on travaille ensemble</h2>
-<ol class="steps-min">
-<li>Vous ajoutez nos deux formules à votre catalogue.</li>
-<li>Vous fixez votre prix et facturez vos couples directement.</li>
-<li>Le jour J, nous installons la borne avec vos équipes, puis la reprenons.</li>
-<li>Les mariés reçoivent leurs messages sous 2 semaines.</li>
+<div class="section-title"><span class="eyebrow">L'offre partenaire</span><h2>Simple pour vous, mémorable pour vos couples</h2></div>
+<div class="pt-deal">
+<div class="pt-deal-col">
+<h3>Ce que vous recevez</h3>
+<ul class="pt-checks">
+<li><strong>Un prix partenaire fixe</strong> : 200 € l'Essentiel, 400 € la Signature.</li>
+<li><strong>Votre marge</strong> : vous revendez au prix que vous voulez.</li>
+<li><strong>La marque blanche</strong> : la prestation est vendue à votre nom.</li>
+<li><strong>Zéro logistique</strong> : livraison, installation et reprise par nos soins.</li>
+<li><strong>Un interlocuteur dédié</strong>, pour vous comme pour vos couples.</li>
+<li><strong>La plaquette PDF</strong>, prête à transmettre à vos clients.</li>
+</ul>
+</div>
+<div class="pt-deal-col pt-deal-ask">
+<h3>Ce qu'on vous demande</h3>
+<ul class="pt-checks">
+<li>Ajouter le livre d'or à votre catalogue ou à vos propositions.</li>
+<li>Nous transmettre la date, l'horaire et le contact du jour J.</li>
+<li>Une prise électrique et un coin un peu au calme.</li>
+</ul>
+<p class="pt-micro-dark">C'est tout. Pas de formation, pas d'outil à installer.</p>
+</div>
+</div>
+</div></section>
+
+<section class="section alt" id="simulateur"><div class="wrap pt-calc-wrap">
+<div>
+<span class="eyebrow">Simulez votre marge</span>
+<h2>Ce que le livre d'or peut vous rapporter</h2>
+<p class="pt-lead">Exemple avec la Signature, notre formule recommandée : la soirée complète, la vidéo et une heure d'animation.</p>
+</div>
+<form class="pt-calc" id="pt-calc" onsubmit="return false">
+<label class="f-field"><span>Mariages par an chez vous</span><input type="range" name="mariages" min="5" max="150" step="5" value="40"><output data-out="mariages">40</output></label>
+<label class="f-field"><span>Part des couples qui le choisissent</span><input type="range" name="part" min="5" max="100" step="5" value="25"><output data-out="part">25 %</output></label>
+<label class="f-field"><span>Votre prix de revente <small>Signature</small></span><input type="number" name="prix" min="400" max="2000" step="10" value="500" inputmode="numeric"></label>
+<div class="pt-calc-result" aria-live="polite">
+<span>Votre marge estimée</span>
+<strong data-out="marge">1 000 €</strong>
+<small data-out="detail">10 mariages × 100 € par an</small>
+</div>
+<p class="pt-micro-dark">Simulation indicative : prix partenaire Signature 400 €, hors options.</p>
+</form>
+</div></section>
+
+<section class="section"><div class="wrap">
+<div class="section-title"><span class="eyebrow">Comment ça marche</span><h2>Devenir partenaire en 4 étapes</h2></div>
+<ol class="steps-min pt-steps">
+<li><strong>On s'appelle 10 minutes.</strong> Vous découvrez le produit, on répond à vos questions.</li>
+<li><strong>Vous l'ajoutez à votre catalogue.</strong> Vous fixez votre prix et facturez vos couples.</li>
+<li><strong>Le jour J, on s'occupe de tout.</strong> Installation, animation si besoin, reprise.</li>
+<li><strong>Les mariés reçoivent leurs messages</strong> sous 2 semaines, par lien de téléchargement.</li>
 </ol>
 </div></section>
 
 <section class="section alt"><div class="wrap">
-<div class="section-title"><span class="eyebrow">Formules partenaires</span><h2>Deux formules, un seul interlocuteur</h2></div>
-<div class="table-wrap"><table class="table">
-<thead><tr><th>Formule</th><th>Ce qui est inclus</th><th>Prix partenaire</th></tr></thead>
-<tbody>
-<tr><td><strong>Essentiel</strong></td><td>Téléphone d'époque et décor, message d'accueil personnalisé, borne disponible 3 h, messages illimités, installation et reprise</td><td>200 €</td></tr>
-<tr><td><strong>Signature</strong></td><td>Tout l'Essentiel, plus le livre d'or vidéo, 1 h d'animation pendant le cocktail et la borne toute la soirée</td><td>400 €</td></tr>
-</tbody>
-</table></div>
-<p class="u-mt5 u-small">Livraison offerte à Paris et en petite couronne. TVA non applicable, art. 293 B du CGI. Options, conditions et visuels détaillés dans la plaquette.</p>
-</div></section>
-
-<section class="section"><div class="wrap split-lead">
-<h2>Nos engagements</h2>
-<div>
-<p><strong>Aucune contrainte technique.</strong> Installation et reprise calées sur vos horaires.</p>
-<p><strong>Accordé à votre lieu.</strong> Une borne discrète, placée là où elle s'intègre le mieux.</p>
-<p><strong>Chaque message préservé.</strong> Sauvegarde automatique et contrôle avant remise.</p>
-<p><strong>Un interlocuteur dédié.</strong> Un seul contact, pour vous comme pour vos couples.</p>
+<div class="section-title"><span class="eyebrow">Selon votre métier</span><h2>Un partenariat pensé pour chacun</h2></div>
+<div class="pt-profils">
+<article class="pt-profil">
+<h3>Lieux de réception, châteaux et domaines</h3>
+<p>Une prestation de plus dans votre offre mariage, qui vous distingue des autres lieux. La borne se place là où elle s'intègre le mieux, vos équipes n'ont rien à gérer.</p>
+</article>
+<article class="pt-profil">
+<h3>Wedding planners</h3>
+<p>Une animation qui marque les invités, à ajouter à vos propositions. Vous gardez la relation avec vos couples, nous gérons le matériel et le timing avec vous.</p>
+</article>
+<article class="pt-profil">
+<h3>Photographes, vidéastes, traiteurs et DJ</h3>
+<p>Un complément naturel à votre prestation : les voix des invités, en plus des images, du repas ou de la musique. Même prix partenaire, même simplicité.</p>
+</article>
 </div>
 </div></section>
 
-{% if site.plaquettePartenaires %}
-<section class="section statement u-pt0"><div class="wrap">
-<p>Formules, options, photos.<br><em>Tout est dans la plaquette.</em></p>
-<div class="btns u-center u-mt6"><a class="btn primary" href="{{ site.plaquettePartenaires }}" target="_blank" rel="noopener" download data-track="plaquette">Voir la plaquette partenaires</a></div>
+<section class="section"><div class="wrap">
+<div class="section-title"><span class="eyebrow">Formules partenaires</span><h2>Deux formules, un seul interlocuteur</h2></div>
+<div class="pt-formules">
+<div class="pt-formule">
+<span class="eyebrow">Essentiel</span>
+<p class="pt-prix">200 €<small>prix partenaire</small></p>
+<ul class="pt-checks">
+<li>Téléphone d'époque et décor</li>
+<li>Message d'accueil personnalisé</li>
+<li>Borne disponible 3 h, messages illimités</li>
+<li>Installation et reprise</li>
+</ul>
+</div>
+<div class="pt-formule pt-formule-reco">
+<span class="pt-badge">Recommandée</span>
+<span class="eyebrow">Signature</span>
+<p class="pt-prix">400 €<small>prix partenaire · revente conseillée 500 €</small></p>
+<ul class="pt-checks">
+<li>Tout l'Essentiel</li>
+<li>Livre d'or vidéo</li>
+<li>1 h d'animation pendant le cocktail</li>
+<li>Borne disponible toute la soirée</li>
+</ul>
+</div>
+</div>
+<p class="u-mt5 u-small">Livraison offerte à Paris et en petite couronne. TVA non applicable, art. 293 B du CGI. Options et conditions détaillées dans la plaquette.</p>
+</div></section>
+
+{% set avisPartenaires = [] %}{% for a in avis %}{% if a.prenom == "Arnaud D." or a.prenom == "Assad M." %}{% set avisPartenaires = (avisPartenaires.push(a), avisPartenaires) %}{% endif %}{% endfor %}
+{% if avisPartenaires.length %}
+<section class="section alt"><div class="wrap">
+<div class="section-title"><span class="eyebrow"><span class="stars">★★★★★</span> {{ site.avis.note | noteFr }} sur Google</span><h2>Ce qu'en disent les invités</h2></div>
+<div class="avis-grid">
+{% for a in avisPartenaires %}<figure class="avis">
+<div class="stars" aria-label="{{ a.note or 5 }} sur 5">{% for i in range(0, a.note or 5) %}★{% endfor %}</div>
+<blockquote>{{ a.texte }}</blockquote>
+<figcaption><strong>{{ a.prenom }}</strong>{% if a.evenement %} · {{ a.evenement }}{% endif %}{% if a.date %} · {{ a.date }}{% endif %}</figcaption>
+</figure>{% endfor %}
+</div>
 </div></section>
 {% endif %}
 
 {% set faq = faqPartenaires %}{% include "partials/faq-section.njk" %}
 
-<section class="section"><div class="wrap"><div class="enquiry">
+<section class="section alt" id="devenir-partenaire"><div class="wrap pt-join">
 <div>
-<h2>Devenons partenaires</h2>
-<p>Un appel de 10 minutes suffit pour voir si le livre d'or a sa place chez vous. Réponse sous {{ site.delaiReponse }}.</p>
+<span class="eyebrow">Saison 2027</span>
+<h2>Devenez partenaire</h2>
+<p class="pt-lead">Laissez-nous vos coordonnées : on vous rappelle sous {{ site.delaiReponse }} pour un échange de 10 minutes.</p>
+<ul class="pt-checks">
+<li>Sans frais d'entrée</li>
+<li>Vous fixez votre prix</li>
+<li>Zéro logistique pour vos équipes</li>
+</ul>
+{% if site.whatsapp %}<p class="u-mt5"><a class="btn ghost" href="https://wa.me/{{ site.whatsapp }}?text={{ 'Bonjour, je souhaite en savoir plus sur le partenariat livre d\'or.' | urlencode }}" rel="noopener" target="_blank" data-track="whatsapp">Écrire sur WhatsApp</a></p>{% endif %}
 </div>
-<div class="btns"><a class="btn primary" href="/devis/?service=partenariat" data-track="devis">Prendre contact</a>{% if site.whatsapp %}<a class="btn ghost" href="https://wa.me/{{ site.whatsapp }}?text={{ 'Bonjour, je souhaite en savoir plus sur le partenariat livre d\'or.' | urlencode }}" rel="noopener" target="_blank" data-track="whatsapp">WhatsApp</a>{% endif %}</div>
-</div></div></section>
+<form class="devis-form pt-form" id="pt-form" action="/api/devis" method="post" novalidate>
+<div class="f-row">
+<label class="f-field"><span>Prénom</span><input name="prenom" autocomplete="given-name" required></label>
+<label class="f-field"><span>Nom du lieu ou de l'agence</span><input name="lieu" autocomplete="organization" required></label>
+</div>
+<div class="f-row">
+<label class="f-field"><span>E-mail</span><input name="email" type="email" autocomplete="email" inputmode="email" required></label>
+<label class="f-field"><span>Téléphone <small>facultatif</small></span><input name="telephone" type="tel" autocomplete="tel" inputmode="tel"></label>
+</div>
+<div class="f-row">
+<label class="f-field"><span>Vous êtes</span><select name="profil">
+<option>Lieu de réception</option><option>Wedding planner</option><option>Photographe ou vidéaste</option><option>Traiteur</option><option>DJ</option><option>Autre</option>
+</select></label>
+<label class="f-field"><span>Mariages par an <small>environ</small></span><select name="volume">
+<option>Moins de 10</option><option>10 à 30</option><option>30 à 60</option><option>Plus de 60</option>
+</select></label>
+</div>
+<label class="f-field"><span>Message <small>facultatif</small></span><textarea name="message" rows="3" placeholder="Vos questions, vos disponibilités pour un appel…"></textarea></label>
+<input type="hidden" name="service" value="partenariat">
+<label class="f-trap" aria-hidden="true">Site web<input name="site_web" tabindex="-1" autocomplete="off"></label>
+<p class="f-error" id="pt-error" role="alert" hidden></p>
+<button class="btn primary f-submit" type="submit" data-track="partenaire-envoi">Devenir partenaire</button>
+<p class="f-note">Réponse sous {{ site.delaiReponse }}. Sans engagement.</p>
+</form>
+</div></section>
+
+<script>
+(function () {
+  // Simulateur de marge (Signature, prix partenaire 400 €)
+  var c = document.getElementById("pt-calc");
+  if (c) {
+    var eur = function (n) { return Math.round(n).toLocaleString("fr-FR") + " €"; };
+    var maj = function () {
+      var m = +c.elements.mariages.value, p = +c.elements.part.value, prix = Math.max(400, +c.elements.prix.value || 400);
+      var n = Math.round(m * p / 100), unit = prix - 400;
+      c.querySelector('[data-out="mariages"]').textContent = m;
+      c.querySelector('[data-out="part"]').textContent = p + " %";
+      c.querySelector('[data-out="marge"]').textContent = eur(n * unit);
+      c.querySelector('[data-out="detail"]').textContent = n + " mariage" + (n > 1 ? "s" : "") + " × " + eur(unit) + " par an";
+    };
+    c.addEventListener("input", maj); maj();
+  }
+  // Formulaire partenaire : même envoi que la page devis
+  var f = document.getElementById("pt-form"), err = document.getElementById("pt-error");
+  if (!f) return;
+  f.addEventListener("submit", function (e) {
+    e.preventDefault();
+    err.hidden = true;
+    var manquants = ["prenom", "lieu", "email"].filter(function (k) { return !f.elements[k].checkValidity() || !f.elements[k].value.trim(); });
+    if (manquants.length) { err.textContent = "Merci d'indiquer votre prénom, le nom de votre lieu et un e-mail valide."; err.hidden = false; f.elements[manquants[0]].focus(); return; }
+    var btn = f.querySelector(".f-submit"), libelle = btn.textContent;
+    btn.disabled = true; btn.textContent = "Envoi…";
+    fetch(f.action, { method: "POST", headers: { "Content-Type": "application/json", "Accept": "application/json" }, body: JSON.stringify(Object.fromEntries(new FormData(f))) })
+      .then(function (r) { return r.json().catch(function () { return { ok: false }; }); })
+      .then(function (d) {
+        if (!d.ok) throw new Error("envoi");
+        var done = false, go = function () { if (!done) { done = true; location.href = "/merci/"; } };
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ event: "generate_lead", evenement: "Partenariat", formule: f.elements.profil.value, eventCallback: go, eventTimeout: 800 });
+        setTimeout(go, 900);
+      })
+      .catch(function () {
+        btn.disabled = false; btn.textContent = libelle;
+        err.innerHTML = 'L\'envoi n\'a pas fonctionné. Réessayez, ou écrivez-nous à <a href="mailto:{{ site.email }}">{{ site.email }}</a>.';
+        err.hidden = false;
+      });
+  });
+})();
+</script>
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"{{ site.url }}/"},{"@type":"ListItem","position":2,"name":"Partenaires"}]}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"{{ site.url }}/"},{"@type":"ListItem","position":2,"name":"Partenaires","item":"{{ site.url }}/partenaires/"}]}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{% for f in faqPartenaires %}{"@type":"Question","name":{{ f.q | json | safe }},"acceptedAnswer":{"@type":"Answer","text":{{ f.a | json | safe }}}}{% if not loop.last %},{% endif %}{% endfor %}]}

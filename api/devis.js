@@ -12,6 +12,8 @@ const CHAMPS = {
   date: "Date de l'événement",
   evenement: "Événement",
   lieu: "Ville ou lieu",
+  profil: "Profil (partenaire)",
+  volume: "Mariages par an",
   invites: "Nombre d'invités",
   formule: "Formule",
   message: "Message",
