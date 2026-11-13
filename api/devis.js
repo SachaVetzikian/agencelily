@@ -50,7 +50,9 @@ module.exports = async function handler(req, res) {
 
   // Commande de bon cadeau : la date de l'événement n'est pas encore connue
   const cadeau = d.service === "bon-cadeau";
-  if (!d.prenom || (!d.date && !cadeau) || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(d.email)) {
+  // Demande de partenariat (lieu, wedding planner) : pas d'événement précis
+  const partenaire = d.service === "partenariat";
+  if (!d.prenom || (!d.date && !cadeau && !partenaire) || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(d.email)) {
     return repondre(400, { ok: false, erreur: "champs" });
   }
 
@@ -76,7 +78,7 @@ module.exports = async function handler(req, res) {
         from: process.env.DEVIS_FROM || "Agence Lily <onboarding@resend.dev>",
         to: destinataire.split(",").map((s) => s.trim()),
         reply_to: d.email,
-        subject: cadeau ? `Commande de bon cadeau : ${d.formule || "formule à préciser"} (${d.prenom})` : `Demande de devis : ${d.evenement || "événement"} le ${d.date} (${d.prenom})`,
+        subject: cadeau ? `Commande de bon cadeau : ${d.formule || "formule à préciser"} (${d.prenom})` : partenaire ? `Demande de partenariat : ${d.lieu || "lieu à préciser"} (${d.prenom})` : `Demande de devis : ${d.evenement || "événement"} le ${d.date} (${d.prenom})`,
         text: texte,
         html,
       }),

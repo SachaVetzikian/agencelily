@@ -8,7 +8,7 @@ title: "Livre d'or audio pour lieux de réception et wedding planners | Agence L
 meta: "Lieux de réception, wedding planners et prestataires mariage en Île-de-France. Ajoutez le livre d'or audio et vidéo à votre offre, en marque blanche, sans aucune logistique."
 faqPartenaires:
   - q: "Combien coûte le partenariat ?"
-    a: "Rien à l'entrée. Nous vous facturons la prestation 200 € (Essentiel) ou 400 € (Signature) quand vous la vendez, et vous la revendez au prix que vous fixez. Nos prix publics sont de 200 € et 500 €."
+    a: "Rien à l'entrée. Nous vous facturons la prestation 200 € (Essentiel) ou 400 € (Signature) quand vous la vendez, et vous la revendez au prix que vous fixez. Nos prix publics sont de 200 € et 500 € : nous vous conseillons de revendre la Signature, soirée complète, 500 €."
   - q: "Qui facture les mariés ?"
     a: "Vous. La prestation apparaît dans votre catalogue et sur votre facture, à votre nom. Nous facturons uniquement votre lieu ou votre agence."
   - q: "Vos équipes doivent-elles s'occuper du matériel ?"
@@ -26,7 +26,7 @@ faqPartenaires:
 {% set heroTitle = "Le livre d'or audio, dans votre catalogue" %}
 {% set heroIntro = "Une prestation de plus pour vos couples. Aucune charge en plus pour vos équipes." %}
 {% set heroAside %}<div class="price-box"><strong>200 € ou 400 €</strong><span>facturés au lieu, revendus à votre prix</span></div>
-<div class="btns">{% if site.plaquettePartenaires %}<a class="btn primary" href="{{ site.plaquettePartenaires }}" target="_blank" rel="noopener" data-track="plaquette">Voir la plaquette</a>{% endif %}<a class="btn ghost" href="/devis/?service=partenariat" data-track="devis">Devenir partenaire</a></div>{% endset %}
+<div class="btns">{% if site.plaquettePartenaires %}<a class="btn primary" href="{{ site.plaquettePartenaires }}" target="_blank" rel="noopener" download data-track="plaquette">Voir la plaquette</a>{% endif %}<a class="btn ghost" href="/devis/?service=partenariat" data-track="devis">Devenir partenaire</a></div>{% endset %}
 {% include "partials/hero-full.njk" %}
 
 <section class="section"><div class="wrap split-lead">
@@ -42,7 +42,7 @@ faqPartenaires:
 <h2>Pourquoi l'ajouter à votre offre</h2>
 <div class="steps u-mt6">
 <div class="step"><h3>Une offre qui vous distingue</h3><p>Une prestation que vos couples ne trouvent pas ailleurs, proposée par votre lieu.</p></div>
-<div class="step"><h3>Une marge pour vous</h3><p>Nous vous facturons 200 € ou 400 €. Vous revendez au prix que vous fixez (la Signature est à 500 € chez nous).</p></div>
+<div class="step"><h3>Une marge pour vous</h3><p>Nous vous facturons 200 € ou 400 €. Vous revendez au prix que vous fixez (prix conseillé pour la Signature, soirée complète : 500 €).</p></div>
 <div class="step"><h3>En marque blanche</h3><p>La prestation est présentée à votre nom, sur votre catalogue et votre facture.</p></div>
 <div class="step"><h3>Zéro logistique</h3><p>On installe, on anime si besoin, on reprend. Vos équipes restent concentrées sur la réception.</p></div>
 </div>
@@ -83,7 +83,7 @@ faqPartenaires:
 {% if site.plaquettePartenaires %}
 <section class="section statement u-pt0"><div class="wrap">
 <p>Formules, options, photos.<br><em>Tout est dans la plaquette.</em></p>
-<div class="btns u-center u-mt6"><a class="btn primary" href="{{ site.plaquettePartenaires }}" target="_blank" rel="noopener" data-track="plaquette">Voir la plaquette partenaires</a></div>
+<div class="btns u-center u-mt6"><a class="btn primary" href="{{ site.plaquettePartenaires }}" target="_blank" rel="noopener" download data-track="plaquette">Voir la plaquette partenaires</a></div>
 </div></section>
 {% endif %}
 

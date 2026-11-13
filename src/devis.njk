@@ -82,6 +82,16 @@ faqDevis:
     form.elements.date.closest(".f-field").querySelector("span").textContent = "Date de l'événement (si connue)";
     form.elements.message.placeholder = "Prénoms des bénéficiaires, occasion, petit mot à inscrire sur le bon…";
     form.querySelector(".f-submit").textContent = "Commander le bon cadeau";
+  } else if (service === "partenariat") {
+    // Lieu ou wedding planner : pas d'événement précis, donc pas de date obligatoire
+    form.elements.date.required = false;
+    form.elements.date.closest(".f-field").querySelector("span").textContent = "Date d'un premier événement (si connue)";
+    form.elements.lieu.closest(".f-field").querySelector("span").textContent = "Nom du lieu ou de l'agence";
+    form.elements.message.placeholder = "Votre lieu, le nombre de réceptions par an, vos questions…";
+    form.querySelector(".f-more").open = true;
+    document.getElementById("recap-text").textContent = "Demande de partenariat (lieu de réception ou wedding planner)";
+    document.getElementById("recap").hidden = false;
+    form.querySelector(".f-submit").textContent = "Devenir partenaire";
   } else if (service && service !== "livre-dor-audio-video") form.elements.formule.value = "Autre prestation";
   var c = q.get("config");
   if (c) {
