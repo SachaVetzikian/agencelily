@@ -1,6 +1,6 @@
 {# Avis Google au style Google Maps (src/_data/avis.json). Les avis de l'équipe (site.avis.exclus) ne sont jamais affichés. Jamais d'avis inventés. #}
 {% set exclus = site.avis.exclus or [] %}
-{% set listeG = [] %}{% for a in avis %}{% if not (a.prenom in exclus) %}{% set listeG = (listeG.push(a), listeG) %}{% endif %}{% endfor %}
+{% set listeG = [] %}{% for a in avis %}{% if not (a.prenom in exclus) and (not avisService or (a.services and avisService in a.services)) %}{% set listeG = (listeG.push(a), listeG) %}{% endif %}{% endfor %}
 {% if listeG.length %}
 <section class="section{% if avisAlt %} alt{% endif %} gavis-sec"><div class="wrap">
 <div class="gavis-head">

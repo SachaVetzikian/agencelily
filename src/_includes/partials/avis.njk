@@ -1,18 +1,3 @@
-{# Avis clients réels (src/_data/avis.json). Filtrés par service si "avisService" est défini. Jamais d'avis inventés. #}
-{% set liste = [] %}
-{% for a in avis %}{% if not avisService or (a.services and avisService in a.services) %}{% set liste = (liste.push(a), liste) %}{% endif %}{% endfor %}
-{% if liste.length %}
-<section class="section avis-section">
-<div class="wrap">
-<div class="section-title"><span class="eyebrow">{% if site.avis.nombre >= site.avis.seuilAffichage %}<span class="stars">★★★★★</span> {{ site.avis.note | noteFr }} · {{ site.avis.nombre }} avis Google{% else %}Avis Google{% endif %}</span><h2>Ils ont choisi Agence Lily</h2></div>
-<div class="avis-grid m-rail">
-{% for a in liste | batch(6) | first %}<figure class="avis">
-<div class="stars" aria-label="{{ a.note or 5 }} sur 5">{% for i in range(0, a.note or 5) %}★{% endfor %}</div>
-<blockquote>{{ a.texte | replace(" !", " !") | replace(" ?", " ?") }}</blockquote>
-<figcaption><strong>{{ a.prenom }}</strong>{% if a.evenement %} · {{ a.evenement }}{% endif %}{% if a.date %} · {{ a.date }}{% endif %}</figcaption>
-</figure>{% endfor %}
-</div>
-{% if site.avis.lien %}<div class="btns u-center"><a class="btn" href="{{ site.avis.lien }}" rel="noopener" target="_blank">Tous les avis sur Google</a></div>{% endif %}
-</div>
-</section>
-{% endif %}
+{# Avis clients réels au style Google Maps (voir avis-google.njk). Filtrés par service si "avisService" est défini. Jamais d'avis inventés. #}
+{% set avisTitre = avisTitre or "Ils ont choisi Agence Lily" %}{% set avisEyebrow = avisEyebrow or "Avis vérifiés" %}
+{% include "partials/avis-google.njk" %}

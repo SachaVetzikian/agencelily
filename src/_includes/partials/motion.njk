@@ -1,0 +1,22 @@
+{# Animations légères communes au site : apparition au défilement et icônes illustrées. La page partenaires a sa propre version, plus complète. #}
+<script>
+(function () {
+  if (document.querySelector(".pt-hero") || !("IntersectionObserver" in window)) return;
+  var ill = document.querySelectorAll(".ill");
+  if (window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches) { ill.forEach(function (el) { el.classList.add("is-in"); }); return; }
+  document.documentElement.classList.add("pt-anim");
+  var vus = new IntersectionObserver(function (es) {
+    es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("pa-in", "is-in"); vus.unobserve(e.target); } });
+  }, { threshold: .15, rootMargin: "0px 0px -8% 0px" });
+  var cibles = ".section-title, .card, .gavis-brand, .steps-min li, .step, .split-lead > *, .pt-ilist li";
+  if (window.innerWidth >= 900) cibles += ", .gavis"; else cibles += ", .gavis-grid";
+  document.querySelectorAll(cibles).forEach(function (el) {
+    if (el.closest(".hero-full, .rail, .m-rail, header, footer")) return;
+    var i = el.parentElement ? [].indexOf.call(el.parentElement.children, el) : 0;
+    el.style.setProperty("--pa-d", Math.min(i, 5) * 80 + "ms");
+    el.classList.add("pa");
+    vus.observe(el);
+  });
+  ill.forEach(function (el, i) { el.style.setProperty("--d", (i % 6) * 70 + "ms"); vus.observe(el); });
+})();
+</script>

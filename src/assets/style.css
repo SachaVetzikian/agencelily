@@ -1269,3 +1269,9 @@ li:hover > .pt-ico .ill, .pt-tile:hover .ill, .pt-profil:hover .ill, .pt-badges 
   .pt-badge::after, .pt-mock-new { animation: none; }
   .pt-tilt, .pt-profil, .gavis, .pt-ilist li, .btn.primary { transition: none; }
 }
+/* Déclinaison sur le reste du site */
+.pt-ilist-lg li { font-size: var(--fs-lead); font-weight: 300; }
+.pt-ilist-lg .ill { width: 48px; height: 48px; }
+.card { transition: transform .4s cubic-bezier(.2, .7, .2, 1), box-shadow .4s ease; }
+.card:hover { transform: translateY(-5px); box-shadow: 0 22px 46px rgba(42,36,32,.12); }
+@media (prefers-reduced-motion: reduce) { .card { transition: none; } .card:hover { transform: none; } }

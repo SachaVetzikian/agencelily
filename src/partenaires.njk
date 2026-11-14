@@ -29,8 +29,7 @@ faqPartenaires:
 {% set heroImg = "/assets/photos/pt-salon.webp" %}{% set heroImgMobile = "/assets/photos/pt-salon-800.webp" %}{% set heroAlt = "Borne de livre d'or audio installée dans un lieu de réception" %}{% set heroClass = "pt-hero" %}
 {% set heroTitle = "Ajoutez le livre d'or audio à votre offre" %}
 {% set heroIntro = "Lieux de réception, wedding planners, photographes : vendez le livre d'or audio et vidéo à votre nom, à votre prix. La logistique, on s'en charge." %}
-{% set heroAside %}<div class="btns"><a class="btn primary" href="#devenir-partenaire" data-track="partenaire-hero">Devenir partenaire</a>{% if site.plaquettePartenaires %}<a class="btn ghost" href="{{ site.plaquettePartenaires }}" target="_blank" rel="noopener" download data-track="plaquette">Télécharger la plaquette</a>{% endif %}</div>
-<ul class="pt-badges"><li>Sans frais d'entrée</li><li>Votre prix</li><li>Zéro logistique</li></ul>{% endset %}
+{% set heroAside %}<div class="btns"><a class="btn primary" href="#devenir-partenaire" data-track="partenaire-hero">Devenir partenaire</a>{% if site.plaquettePartenaires %}<a class="btn ghost" href="{{ site.plaquettePartenaires }}" target="_blank" rel="noopener" download data-track="plaquette">Télécharger la plaquette</a>{% endif %}</div>{% endset %}
 {% include "partials/hero-full.njk" %}
 {{ iconDefs() }}
 

@@ -3,6 +3,7 @@ layout: layouts/base.njk
 title: "Tarifs location livre d'or audio | Agence Lily"
 meta: "Tarifs de location d'un livre d'or audio et vidéo sur téléphone vintage : formules, options, ce qui est inclus. Paris et IDF. Devis gratuit en 24 h."
 ---
+{% from "partials/icon.njk" import icon, iconDefs %}{{ iconDefs() }}
 {% set crumbs = [{ nom: "Tarifs" }] %}
 {% set heroImg = "/assets/photos/hero-tarifs.webp" %}{% set heroAlt = "Téléphone vintage de livre d'or audio posé sur une table en bois" %}{% set heroEyebrow = "Prix transparents" %}
 {% set heroTitle = "Tarifs de location d'un livre d'or audio et vidéo" %}
@@ -25,12 +26,12 @@ meta: "Tarifs de location d'un livre d'or audio et vidéo sur téléphone vintag
 
 <section class="section alt"><div class="wrap split-lead">
 <h2>Ce qui est inclus dans tous les tarifs</h2>
-<ul class="check" style="font-size:var(--fs-lead);font-weight:300;">
-<li>Le téléphone vintage, son combiné et son affiche</li>
-<li>Votre message d'accueil personnalisé</li>
-<li>La livraison, l'installation et la récupération du matériel</li>
-<li>La vérification sur place avant l'arrivée des invités</li>
-<li>Des messages illimités, remis par lien numérique</li>
+<ul class="pt-ilist pt-ilist-lg">
+<li><span class="pt-ico">{{ icon("phone") }}</span><span>Le téléphone vintage, son combiné et son affiche</span></li>
+<li><span class="pt-ico">{{ icon("mic") }}</span><span>Votre message d'accueil personnalisé</span></li>
+<li><span class="pt-ico">{{ icon("truck") }}</span><span>La livraison, l'installation et la récupération du matériel</span></li>
+<li><span class="pt-ico">{{ icon("check") }}</span><span>La vérification sur place avant l'arrivée des invités</span></li>
+<li><span class="pt-ico">{{ icon("calendar") }}</span><span>Des messages illimités, remis par lien numérique</span></li>
 </ul>
 </div></section>
 
