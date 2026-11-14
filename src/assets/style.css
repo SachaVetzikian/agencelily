@@ -1194,3 +1194,24 @@ h2.eyebrow { font-family: var(--font); font-size: var(--fs-label); line-height: 
 .pt-join-sec .pt-ilist li { color: var(--white); }
 .pt-profil .pt-ico { background: var(--surface); }
 .pt-deal-col .pt-ilist + h3 { margin-top: var(--s7); }
+/* Icônes illustrées (aplats + contour) et leur animation */
+.ill { width: 40px; height: 40px; overflow: visible; }
+.pt-ico, .alt .pt-ico, .pt-deal-col .pt-ico, .pt-profil .pt-ico, .pt-formule .pt-ilist .pt-ico, .pt-features .pt-ico { background: none; border: 0; border-radius: 0; width: auto; height: auto; }
+.pt-ilist .ill { width: 36px; height: 36px; }
+.pt-features .ill { width: 48px; height: 48px; }
+.pt-ico-lg .ill { width: 56px; height: 56px; }
+.pt-badges .ill { width: 22px; height: 22px; }
+.pt-tile-ico { background: rgba(255,253,249,.92); border: 0; width: 40px; height: 40px; }
+.pt-tile-ico .ill { width: 26px; height: 26px; }
+.pt-join-sec .pt-ico { background: none; border: 0; }
+.ill { opacity: 0; transform: scale(.6) rotate(-8deg); transition: opacity .45s ease var(--d, 0ms), transform .6s cubic-bezier(.34, 1.56, .64, 1) var(--d, 0ms); }
+.ill.is-in { opacity: 1; transform: none; }
+.ill-phone.is-in { animation: ill-ring 3.2s ease-in-out 1.2s infinite; transform-origin: 50% 70%; }
+.ill-heart.is-in, .ill-message.is-in { animation: ill-beat 2.4s ease-in-out 1s infinite; }
+.ill-star.is-in, .ill-sparkle.is-in { animation: ill-twinkle 3s ease-in-out 1s infinite; }
+li:hover > .pt-ico .ill, .pt-tile:hover .ill, .pt-profil:hover .ill, .pt-badges li:hover .ill { animation: ill-wiggle .6s ease; }
+@keyframes ill-ring { 0%, 70%, 100% { transform: rotate(0); } 74% { transform: rotate(-12deg); } 78% { transform: rotate(10deg); } 82% { transform: rotate(-8deg); } 86% { transform: rotate(6deg); } 90% { transform: rotate(0); } }
+@keyframes ill-beat { 0%, 60%, 100% { transform: scale(1); } 66% { transform: scale(1.12); } 72% { transform: scale(.98); } 78% { transform: scale(1.08); } }
+@keyframes ill-twinkle { 0%, 70%, 100% { transform: rotate(0) scale(1); } 80% { transform: rotate(14deg) scale(1.1); } 90% { transform: rotate(-6deg) scale(1); } }
+@keyframes ill-wiggle { 0%, 100% { transform: rotate(0); } 25% { transform: rotate(-10deg) scale(1.08); } 50% { transform: rotate(8deg) scale(1.08); } 75% { transform: rotate(-4deg); } }
+@media (prefers-reduced-motion: reduce) { .ill { opacity: 1; transform: none; transition: none; animation: none !important; } }
