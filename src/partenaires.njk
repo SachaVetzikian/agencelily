@@ -26,7 +26,7 @@ faqPartenaires:
 {% from "partials/icon.njk" import icon, iconDefs %}
 {% set livre = services | findBySlug("livre-dor-audio-video") %}
 {% set crumbs = [{ nom: "Partenaires" }] %}
-{% set heroImg = "/assets/photos/pt-salon.webp" %}{% set heroImgMobile = "/assets/photos/pt-salon-800.webp" %}{% set heroAlt = "Borne de livre d'or audio installée dans un lieu de réception" %}{% set heroEyebrow = "Programme partenaires · Saison 2027" %}
+{% set heroImg = "/assets/photos/pt-salon.webp" %}{% set heroImgMobile = "/assets/photos/pt-salon-800.webp" %}{% set heroAlt = "Borne de livre d'or audio installée dans un lieu de réception" %}{% set heroClass = "pt-hero" %}
 {% set heroTitle = "Ajoutez le livre d'or audio à votre offre" %}
 {% set heroIntro = "Lieux de réception, wedding planners, photographes : vendez le livre d'or audio et vidéo à votre nom, à votre prix. La logistique, on s'en charge." %}
 {% set heroAside %}<div class="btns"><a class="btn primary" href="#devenir-partenaire" data-track="partenaire-hero">Devenir partenaire</a>{% if site.plaquettePartenaires %}<a class="btn ghost" href="{{ site.plaquettePartenaires }}" target="_blank" rel="noopener" download data-track="plaquette">Télécharger la plaquette</a>{% endif %}</div>
@@ -243,6 +243,15 @@ faqPartenaires:
     document.querySelectorAll(".ill").forEach(function (el, i) { el.style.setProperty("--d", (i % 6) * 70 + "ms"); io.observe(el); });
   } else document.querySelectorAll(".ill").forEach(function (el) { el.classList.add("is-in"); });
   // Simulateur de marge (Signature, prix partenaire 400 €)
+  var calme = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+  // Compteur : le nombre défile jusqu'à sa valeur
+  function countTo(el, to, fmt) {
+    var from = +(el.dataset.v || 0); el.dataset.v = to;
+    if (calme || from === to) { el.textContent = fmt(to); return; }
+    var t0 = performance.now(), d = 600;
+    (function step(t) { var k = Math.min(1, (t - t0) / d), e = 1 - Math.pow(1 - k, 3); el.textContent = fmt(from + (to - from) * e); if (k < 1) requestAnimationFrame(step); })(t0);
+  }
+  window.ptCountTo = countTo;
   var c = document.getElementById("pt-calc");
   if (c) {
     var eur = function (n) { return Math.round(n).toLocaleString("fr-FR") + " €"; };
@@ -251,7 +260,7 @@ faqPartenaires:
       var n = Math.round(m * p / 100), unit = prix - 400;
       c.querySelector('[data-out="mariages"]').textContent = m;
       c.querySelector('[data-out="part"]').textContent = p + " %";
-      c.querySelector('[data-out="marge"]').textContent = eur(n * unit);
+      countTo(c.querySelector('[data-out="marge"]'), n * unit, eur);
       c.querySelector('[data-out="detail"]').textContent = n + " mariage" + (n > 1 ? "s" : "") + " × " + eur(unit) + " par an";
     };
     c.addEventListener("input", maj); maj();
@@ -281,6 +290,79 @@ faqPartenaires:
         err.hidden = false;
       });
   });
+})();
+</script>
+
+<script>
+(function () {
+  // Animations de la page partenaires : apparition au défilement, parallaxe, inclinaison au survol.
+  // Rien ne bouge si le visiteur a demandé moins d'animations.
+  if (!("IntersectionObserver" in window) || (window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches)) return;
+  var root = document.documentElement;
+  root.classList.add("pt-anim");
+
+  // 1. Apparition au défilement (fondu vers le haut, en cascade dans une même rangée)
+  var cibles = ".section-title, .pt-tile, .pt-listen > div:first-child > *, .pt-features li, .pt-ilist li, .pt-mock, .pt-calc-wrap > div > *, .pt-calc, .pt-steps-img li, .pt-profil, .pt-formule, .gavis-brand, .gavis, .pt-join > div > *, .pt-form, main .faq-section details";
+  // Sur mobile, les vignettes et les avis défilent de côté : on anime la rangée entière
+  if (window.innerWidth < 900) cibles = cibles.replace(".pt-tile,", ".pt-tiles,").replace(".gavis,", ".gavis-grid,");
+  var vus = new IntersectionObserver(function (es) {
+    es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("pa-in"); vus.unobserve(e.target); } });
+  }, { threshold: .15, rootMargin: "0px 0px -8% 0px" });
+  document.querySelectorAll(cibles).forEach(function (el) {
+    if (el.closest(".hero-full")) return;
+    var freres = el.parentElement ? [].indexOf.call(el.parentElement.children, el) : 0;
+    el.style.setProperty("--pa-d", Math.min(freres, 6) * 80 + "ms");
+    el.classList.add("pa");
+    vus.observe(el);
+  });
+
+  // 2. Titre du haut : les mots apparaissent un à un
+  var h1 = document.querySelector(".pt-hero h1");
+  if (h1) {
+    h1.innerHTML = h1.textContent.trim().split(/\s+/).map(function (m, i) { return '<span class="pt-mot" style="--i:' + i + '">' + m + "</span>"; }).join(" ");
+    requestAnimationFrame(function () { h1.classList.add("pt-mots-in"); });
+  }
+
+  // 3. Parallaxe douce : photo du haut, collage, bandeau photo
+  var hero = document.querySelector(".pt-hero picture img, .pt-hero > img");
+  var cote = document.querySelector(".pt-collage-side"), carte = document.querySelector(".pt-call"), fond = document.querySelector(".pt-join-bg");
+  var tic = false;
+  function defile() {
+    tic = false;
+    var y = window.scrollY, h = window.innerHeight;
+    if (hero && y < h * 1.2) hero.style.transform = "translate3d(0," + (y * .18).toFixed(1) + "px,0) scale(1.08)";
+    [[cote, -.08], [carte, .06], [fond, -.12]].forEach(function (c) {
+      if (!c[0]) return;
+      var r = c[0].getBoundingClientRect();
+      if (r.bottom < -200 || r.top > h + 200) return;
+      c[0].style.transform = "translate3d(0," + ((r.top + r.height / 2 - h / 2) * c[1]).toFixed(1) + "px,0)";
+    });
+  }
+  window.addEventListener("scroll", function () { if (!tic) { tic = true; requestAnimationFrame(defile); } }, { passive: true });
+  defile();
+
+  // 4. Inclinaison 3D au survol (souris uniquement) : maquette du catalogue, formules, plaquette
+  if (matchMedia("(hover: hover) and (pointer: fine)").matches) {
+    document.querySelectorAll(".pt-mock-body, .pt-formule, .pt-call").forEach(function (el) {
+      el.classList.add("pt-tilt");
+      el.addEventListener("pointermove", function (e) {
+        var r = el.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5;
+        el.style.transform = "perspective(900px) rotateY(" + (x * 6).toFixed(2) + "deg) rotateX(" + (-y * 6).toFixed(2) + "deg) translateY(-4px)";
+        el.style.setProperty("--gx", (x + .5) * 100 + "%"); el.style.setProperty("--gy", (y + .5) * 100 + "%");
+      });
+      el.addEventListener("pointerleave", function () { el.style.transform = ""; });
+    });
+  }
+
+  // 5. La marge de la maquette défile quand elle apparaît
+  var marge = document.querySelector(".pt-mock-foot strong");
+  if (marge && window.ptCountTo) {
+    var cible = parseInt(marge.textContent.replace(/\D/g, ""), 10) || 0;
+    marge.textContent = "+ 0 €";
+    new IntersectionObserver(function (es, o) {
+      if (es[0].isIntersecting) { o.disconnect(); setTimeout(function () { window.ptCountTo(marge, cible, function (n) { return "+ " + Math.round(n) + " €"; }); }, 500); }
+    }, { threshold: .6 }).observe(marge);
+  }
 })();
 </script>
 
