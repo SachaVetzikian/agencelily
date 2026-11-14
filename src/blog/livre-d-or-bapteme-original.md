@@ -3,7 +3,7 @@ title: "Livre d'or de baptême original : idées et messages | Agence Lily"
 h1: "Livre d'or de baptême original : idées et messages pour l'enfant"
 meta: "Idées de livre d'or de baptême original et exemples de messages à laisser à l'enfant : parrain, marraine, grands-parents. Livre d'or audio à Paris et en IDF."
 extrait: "Le bébé ne se souviendra pas de sa journée. Un livre d'or de baptême original lui garde les voix de sa famille, avec des messages qu'il découvrira plus tard."
-enBref: "Pour un baptême, le livre d'or le plus original reste le téléphone vintage, où chaque invité laisse un message vocal adressé à l'enfant. Il l'écoutera quand il sera grand, avec la voix de ses grands-parents, de son parrain et de sa marraine. Les autres idées (lettres à ouvrir plus tard, arbre à empreintes) se combinent bien avec. Chez Agence Lily, le livre d'or audio est livré et installé à Paris et en Île-de-France, dès 200 €."
+enBref: "Pour un baptême, le livre d'or le plus original reste le téléphone vintage, où chaque invité laisse un message vocal adressé à l'enfant. Il l'écoutera quand il sera grand, avec la voix de ses grands-parents, de son parrain et de sa marraine. Les autres idées (lettres à ouvrir plus tard, arbre à empreintes) se combinent bien avec. Chez Agence Lily, le livre d'or audio est livré et installé à Paris et en Île-de-France, dès 300 €."
 image: "/assets/photos/trio-souvenirs.webp"
 banniere: "/assets/photos/occasion-bapteme.webp"
 date: 2026-11-03
@@ -16,7 +16,7 @@ faq:
   - q: "Les enfants peuvent-ils laisser un message ?"
     a: "<strong>Oui, et ce sont souvent les messages les plus attendrissants.</strong> Un cousin qui chante une comptine, une grande sœur qui raconte sa journée, tout est bon à garder."
   - q: "Quelle formule prendre pour un baptême ?"
-    a: "<strong>L'Essentiel à 200 € suffit souvent</strong>, avec la borne pendant 3 h et les messages illimités. La Signature à 500 € ajoute la vidéo et une heure d'animation pendant le cocktail."
+    a: "<strong>L'Essentiel à 300 € suffit souvent</strong>, avec la borne pendant 3 h et les messages illimités. La Signature à 600 € ajoute la vidéo et une heure d'animation pendant le cocktail."
   - q: "Comment garder les messages pour l'enfant ?"
     a: "<strong>Vous les recevez en téléchargement sous 2 semaines.</strong> Avec le coffret souvenir à 50 € (une clé USB dans un écrin), vous les rangez avec les souvenirs de baptême."
 ressources:
@@ -117,9 +117,9 @@ La touche florale, à 50 € également, habille la table du téléphone de fleu
 
 ## 💶 Quelle formule pour un baptême ?
 
-L'Essentiel, à 200 €, convient à la plupart des baptêmes. Le livre d'or audio, la borne pendant 3 h, les messages illimités, la livraison et l'installation. La livraison est offerte à Paris et en petite couronne.
+L'Essentiel, à 300 €, convient à la plupart des baptêmes. Le livre d'or audio, la borne pendant 3 h, les messages illimités, la livraison et l'installation. La livraison est offerte à Paris et en petite couronne.
 
-Si vous attendez beaucoup de monde, ou si vous voulez garder les visages, la Signature à 500 € ajoute le livre d'or vidéo, une heure d'animation pendant le cocktail et la borne toute la journée. L'animateur va chercher les invités un à un, y compris les plus timides.
+Si vous attendez beaucoup de monde, ou si vous voulez garder les visages, la Signature à 600 € ajoute le livre d'or vidéo, une heure d'animation pendant le cocktail et la borne toute la journée. L'animateur va chercher les invités un à un, y compris les plus timides.
 
 Tous les détails sont sur la page [tarifs](/tarifs/).
 

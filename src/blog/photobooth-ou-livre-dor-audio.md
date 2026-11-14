@@ -3,13 +3,13 @@ title: "Photobooth ou livre d'or audio ? Le comparatif honnête | Agence Lily"
 h1: "Photobooth ou livre d'or audio : le comparatif honnête"
 meta: "Photobooth ou livre d'or audio pour un mariage, un anniversaire ou un baptême ? Prix, ambiance, souvenirs, place et conseils d'un loueur des deux."
 extrait: "On loue les deux. Alors on peut vous dire sans détour lequel choisir selon votre événement, votre budget et le souvenir que vous voulez garder dans vingt ans."
-enBref: "Le photobooth anime la soirée et fait repartir vos invités avec des photos. Le livre d'or audio garde la voix de vos proches, pour vous, pendant des années. Le premier sert le moment, le second sert le souvenir. Chez Agence Lily, le livre d'or audio démarre à 200 € et le photobooth à 290 €, livrés et installés à Paris et en Île-de-France."
+enBref: "Le photobooth anime la soirée et fait repartir vos invités avec des photos. Le livre d'or audio garde la voix de vos proches, pour vous, pendant des années. Le premier sert le moment, le second sert le souvenir. Chez Agence Lily, le livre d'or audio démarre à 300 € et le photobooth à 290 €, livrés et installés à Paris et en Île-de-France."
 image: "/assets/photos/trio-souvenirs.webp"
 banniere: "/assets/photos/photobooth.webp"
 date: 2026-10-24
 faq:
   - q: "Lequel coûte le moins cher ?"
-    a: "<strong>Le livre d'or audio, en général.</strong> Chez nous il démarre à 200 €, contre 290 € pour le photobooth. Sur le marché, un photobooth avec impressions tourne souvent entre 400 et 900 €."
+    a: "<strong>Chez nous, ils se valent.</strong> Le livre d'or audio démarre à 300 €, le photobooth à 290 €. Sur le marché, un photobooth avec impressions tourne souvent entre 400 et 900 €."
   - q: "Peut-on prendre les deux le même jour ?"
     a: "<strong>Oui, et ils ne se gênent pas.</strong> Le livre d'or au vin d'honneur, quand les invités ont encore la voix claire, le photobooth en soirée, quand ils ont envie de grimacer."
   - q: "Lequel prend le moins de place ?"
@@ -17,7 +17,7 @@ faq:
   - q: "Lequel marche le mieux avec les personnes âgées ?"
     a: "<strong>Le livre d'or audio, sans hésiter.</strong> Décrocher un téléphone, tout le monde sait faire. Les grands-parents laissent souvent les messages les plus touchants de la soirée."
   - q: "Existe-t-il une version vidéo du livre d'or ?"
-    a: "<strong>Oui, avec la formule Signature à 500 €.</strong> Vos invités parlent au téléphone et sont filmés en même temps, avec une heure d'animation pendant le cocktail. Vous gardez la voix et le visage."
+    a: "<strong>Oui, avec la formule Signature à 600 €.</strong> Vos invités parlent au téléphone et sont filmés en même temps, avec une heure d'animation pendant le cocktail. Vous gardez la voix et le visage."
 ressources:
   - titre: "Livre d'or audio et vidéo sur téléphone vintage"
     url: "/livre-d-or-audio-video/"
@@ -41,7 +41,7 @@ On loue les deux, donc on n'a aucune raison de vous pousser vers l'un plutôt qu
 
 | | Photobooth | Livre d'or audio |
 |---|---|---|
-| Prix chez nous | Dès 290 € | Dès 200 € (500 € avec vidéo et animation) |
+| Prix chez nous | Dès 290 € | Dès 300 € (600 € avec vidéo et animation) |
 | Ce que vous gardez | Des centaines de photos | Des dizaines de messages vocaux |
 | À qui ça profite | Surtout aux invités | Surtout à vous |
 | L'ambiance | Festive, grimaces, fous rires | Émotion, confidences, anecdotes |
@@ -92,9 +92,9 @@ Pour tout comprendre du fonctionnement, lisez notre guide [comment fonctionne un
 
 ## 💶 Le budget, sans langue de bois
 
-Chez nous, le livre d'or audio démarre à 200 € et le photobooth à 290 €, livraison et installation comprises en Île-de-France. Sur le marché, un photobooth avec impressions illimitées se loue souvent entre 400 et 900 € selon les options.
+Chez nous, le livre d'or audio démarre à 300 € et le photobooth à 290 €, livraison et installation comprises en Île-de-France. Sur le marché, un photobooth avec impressions illimitées se loue souvent entre 400 et 900 € selon les options.
 
-Le livre d'or reste donc la solution la plus abordable des deux. Et la formule Signature (500 €) ajoute la vidéo et une heure d'animation, avec une émotion que le photobooth n'atteint pas.
+Les deux se valent donc en prix chez nous, et restent bien en dessous du marché. La formule Signature (600 €) ajoute la vidéo et une heure d'animation, avec une émotion que le photobooth n'atteint pas.
 
 Tous les détails sont sur notre page [tarifs](/tarifs/).
 

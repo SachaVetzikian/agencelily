@@ -3,7 +3,7 @@ title: "Noces d'or : un livre d'or audio pour 50 ans de mariage | Agence Lily"
 h1: "Noces d'or : un livre d'or audio pour 50 ans de mariage"
 meta: "Pour des noces d'or, offrez aux mariés un livre d'or audio sur téléphone vintage : idées de messages, conseils pour les invités âgés et formules à Paris et en IDF."
 extrait: "Cinquante ans de mariage, des enfants, des petits-enfants, parfois des témoins de la première heure. Comment recueillir toutes ces voix pendant la fête, et pourquoi le téléphone vintage s'y prête si bien."
-enBref: "Pour des noces d'or, le livre d'or audio recueille les messages de toute la famille sur un téléphone vintage que les plus âgés savent utiliser sans explication. Enfants, petits-enfants et vieux amis racontent un souvenir, et les mariés peuvent même laisser le leur. Chez Agence Lily, il est livré et installé à Paris et en Île-de-France, dès 200 €."
+enBref: "Pour des noces d'or, le livre d'or audio recueille les messages de toute la famille sur un téléphone vintage que les plus âgés savent utiliser sans explication. Enfants, petits-enfants et vieux amis racontent un souvenir, et les mariés peuvent même laisser le leur. Chez Agence Lily, il est livré et installé à Paris et en Île-de-France, dès 300 €."
 image: "/assets/photos/trio-souvenirs.webp"
 banniere: "/assets/photos/blog-livre-dor-original.webp"
 date: 2026-12-22
@@ -17,7 +17,7 @@ faq:
   - q: "Qui organise le livre d'or pour des noces d'or ?"
     a: "<strong>Le plus souvent, les enfants ou les petits-enfants.</strong> Ils réservent la date, choisissent le message d'accueil et nous indiquent le lieu de la fête."
   - q: "Quelle formule choisir pour des noces d'or ?"
-    a: "<strong>L'Essentiel à 200 € pour un déjeuner de famille</strong>, avec la borne pendant 3 h. La Signature à 500 € ajoute la vidéo, une heure d'animation et la borne toute la soirée, idéale pour une grande fête."
+    a: "<strong>L'Essentiel à 300 € pour un déjeuner de famille</strong>, avec la borne pendant 3 h. La Signature à 600 € ajoute la vidéo, une heure d'animation et la borne toute la soirée, idéale pour une grande fête."
   - q: "Peut-on remettre les messages aux mariés sur un support physique ?"
     a: "<strong>Oui, avec le coffret souvenir à 50 €.</strong> Les messages sont livrés sur une clé USB dans un écrin, en plus du lien de téléchargement."
 ressources:
@@ -110,9 +110,9 @@ Une idée simple pour la suite. Organisez une séance d'écoute en famille, auto
 
 ## 💶 Quelle formule pour des noces d'or ?
 
-**L'Essentiel, à 200 €.** Le livre d'or audio, la borne pendant 3 h, les messages illimités, la livraison et l'installation. Parfait pour un déjeuner de famille au restaurant ou dans une salle.
+**L'Essentiel, à 300 €.** Le livre d'or audio, la borne pendant 3 h, les messages illimités, la livraison et l'installation. Parfait pour un déjeuner de famille au restaurant ou dans une salle.
 
-**La Signature, à 500 €.** L'Essentiel, plus le livre d'or vidéo, une heure d'animation pendant le cocktail et la borne toute la soirée. Pour une grande fête avec beaucoup d'invités, la vidéo permet de garder aussi les visages, et l'animateur s'assure que les plus discrets passent par le téléphone.
+**La Signature, à 600 €.** L'Essentiel, plus le livre d'or vidéo, une heure d'animation pendant le cocktail et la borne toute la soirée. Pour une grande fête avec beaucoup d'invités, la vidéo permet de garder aussi les visages, et l'animateur s'assure que les plus discrets passent par le téléphone.
 
 La touche florale à 50 € habille le téléphone de fleurs blanches. Avec l'Essentiel, une heure d'animation en option coûte 100 €. La livraison est offerte à Paris et en petite couronne, et le paiement intégral à la réservation donne droit à 15 % de remise.
 

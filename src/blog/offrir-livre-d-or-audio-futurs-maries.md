@@ -3,7 +3,7 @@ title: "Offrir un livre d'or audio à des futurs mariés pour Noël | Agence Lil
 h1: "Offrir un livre d'or audio à des futurs mariés : la bonne idée de Noël ?"
 meta: "Témoins, parents ou amis : offrez un livre d'or audio à des futurs mariés pour Noël avec un bon cadeau Essentiel ou Signature, à Paris et en Île-de-France."
 extrait: "Un couple de votre entourage se marie bientôt et vous cherchez quoi glisser sous le sapin ? Le livre d'or audio fait un très joli cadeau. Bon cadeau ou réservation directe, voici comment vous organiser."
-enBref: "Le livre d'or audio fait un beau cadeau de Noël pour des futurs mariés, offert par les témoins, la famille ou à l'occasion des fiançailles. Le plus simple est le bon cadeau Agence Lily, Essentiel à 200 € ou Signature à 500 €, valable 12 mois à partir de l'achat et envoyé en PDF personnalisé. Le couple réserve ensuite sa date selon les disponibilités, à Paris ou en Île-de-France. Vous pouvez aussi nous contacter pour organiser la surprise directement avec nous."
+enBref: "Le livre d'or audio fait un beau cadeau de Noël pour des futurs mariés, offert par les témoins, la famille ou à l'occasion des fiançailles. Le plus simple est le bon cadeau Agence Lily, Essentiel à 300 € ou Signature à 600 €, valable 12 mois à partir de l'achat et envoyé en PDF personnalisé. Le couple réserve ensuite sa date selon les disponibilités, à Paris ou en Île-de-France. Vous pouvez aussi nous contacter pour organiser la surprise directement avec nous."
 image: "/assets/photos/trio-message.webp"
 banniere: "/assets/photos/mariage-soir.webp"
 date: 2026-12-15
@@ -11,7 +11,7 @@ publication: 2026-12-15
 draft: true
 faq:
   - q: "Existe-t-il un bon cadeau pour offrir un livre d'or audio ?"
-    a: "<strong>Oui, pour la formule Essentiel (200 €) ou Signature (500 €).</strong> Vous le commandez via notre formulaire de devis, et Sacha vous envoie le bon personnalisé en PDF, à imprimer ou à offrir par e-mail."
+    a: "<strong>Oui, pour la formule Essentiel (300 €) ou Signature (600 €).</strong> Vous le commandez via notre formulaire de devis, et Sacha vous envoie le bon personnalisé en PDF, à imprimer ou à offrir par e-mail."
   - q: "Combien de temps le bon cadeau est-il valable ?"
     a: "<strong>12 mois à partir de l'achat.</strong> Le mariage doit donc avoir lieu dans ce délai. Pour une date plus lointaine, mieux vaut organiser la réservation directement avec nous."
   - q: "Comment le couple réserve-t-il sa date avec le bon ?"
@@ -53,7 +53,7 @@ Et puis les amis qui se cotisent. Quatre ou cinq personnes, une cagnotte, un seu
 
 ## 🎁 Le bon cadeau, la solution la plus simple
 
-Pour Noël, le plus pratique reste le [bon cadeau](/bon-cadeau/). Il existe pour nos deux formules, l'Essentiel à 200 € et la Signature à 500 €.
+Pour Noël, le plus pratique reste le [bon cadeau](/bon-cadeau/). Il existe pour nos deux formules, l'Essentiel à 300 € et la Signature à 600 €.
 
 La commande passe par notre formulaire de devis. Vous précisez la formule, le prénom des futurs mariés et, si vous le souhaitez, un petit mot. Je vous envoie ensuite le bon personnalisé en PDF. Vous l'imprimez pour le glisser dans une enveloppe sous le sapin, ou vous l'offrez par e-mail si la famille est dispersée aux quatre coins du pays.
 
@@ -94,9 +94,9 @@ Les plus bricoleurs emballeront un vieux combiné trouvé dans un vide-grenier (
 
 ## 💶 Essentiel ou Signature ?
 
-**L'Essentiel, à 200 €.** Le livre d'or audio, la borne pendant 3 h, les messages illimités, la livraison et l'installation sur le lieu de réception. Pour des témoins qui offrent à deux, c'est souvent le bon point d'équilibre.
+**L'Essentiel, à 300 €.** Le livre d'or audio, la borne pendant 3 h, les messages illimités, la livraison et l'installation sur le lieu de réception. Pour des témoins qui offrent à deux, c'est souvent le bon point d'équilibre.
 
-**La Signature, à 500 €.** Tout l'Essentiel, plus le livre d'or vidéo, une heure d'animation pendant le cocktail et la borne toute la soirée. Si vous êtes plusieurs à vous cotiser, c'est la formule que je recommande. L'animateur va chercher les invités un par un, y compris l'oncle qui jure qu'il « n'a rien à dire » et qui finit par parler quatre minutes.
+**La Signature, à 600 €.** Tout l'Essentiel, plus le livre d'or vidéo, une heure d'animation pendant le cocktail et la borne toute la soirée. Si vous êtes plusieurs à vous cotiser, c'est la formule que je recommande. L'animateur va chercher les invités un par un, y compris l'oncle qui jure qu'il « n'a rien à dire » et qui finit par parler quatre minutes.
 
 Côté options, le couple pourra ajouter ce qu'il veut au moment de réserver sa date. Le coffret souvenir (une clé USB dans un écrin) à 50 €, la touche florale à 50 €, une heure d'animation à 100 € avec l'Essentiel ou la livraison express des messages sous 48 h à 30 €. La livraison est offerte à Paris et en petite couronne.
 

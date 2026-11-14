@@ -93,7 +93,7 @@ Attention quand même à ne pas trop attendre. Comme pour le photographe, chaque
 
 **Quand s'y prendre ?** Trois à six mois avant est un bon repère. Plus tôt pour un samedi de belle saison, surtout si vous voulez la formule Signature, avec la vidéo et l'heure d'animation pendant le cocktail. Et si vous lisez ceci à six semaines du mariage, demandez quand même, votre date est peut-être encore libre.
 
-Chez Agence Lily, la formule Essentiel coûte 200 € et la Signature 500 €, livraison et installation comprises. Un acompte de 50 % suffit à bloquer votre date, et le paiement intégral à la réservation donne droit à 15 % de remise. Tout le détail se trouve sur notre page [livre d'or de mariage](/livre-d-or-mariage/).
+Chez Agence Lily, la formule Essentiel coûte 300 € et la Signature 600 €, livraison et installation comprises. Un acompte de 50 % suffit à bloquer votre date, et le paiement intégral à la réservation donne droit à 15 % de remise. Tout le détail se trouve sur notre page [livre d'or de mariage](/livre-d-or-mariage/).
 
 ## 📋 Le récapitulatif
 

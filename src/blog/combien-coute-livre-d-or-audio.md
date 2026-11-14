@@ -3,15 +3,15 @@ title: "Combien coûte un livre d'or audio en 2026 ? Le vrai budget | Agence Lil
 h1: "Combien coûte un livre d'or audio en 2026 ? Le vrai budget"
 meta: "Prix d'un livre d'or audio en 2026 : location installée, location par colis, options, remise et ce qui fait varier la facture. Le budget détaillé par un loueur à Paris."
 extrait: "Location installée, location par colis, options, livraison, remise. Voici ce que coûte vraiment un livre d'or audio en 2026, ligne par ligne, sans mauvaise surprise sur le devis."
-enBref: "La location par colis d'un livre d'or audio se situe en général entre 89 et 249 €, installation à votre charge. Chez Agence Lily, la formule Essentiel coûte 200 € avec livraison, installation et messages illimités, et la formule Signature 500 € avec la vidéo et une heure d'animation. Les options vont de 30 à 100 €. Payer la totalité à la réservation donne 15 % de remise."
+enBref: "La location par colis d'un livre d'or audio se situe en général entre 89 et 249 €, installation à votre charge. Chez Agence Lily, la formule Essentiel coûte 300 € avec livraison, installation et messages illimités, et la formule Signature 600 € avec la vidéo et une heure d'animation. Les options vont de 30 à 100 €. Payer la totalité à la réservation donne 15 % de remise."
 image: "/assets/photos/formule-video.webp"
 banniere: "/assets/photos/hero-tarifs.webp"
 date: 2026-11-10
 publication: 2026-11-10
 faq:
   - q: "Quel est le prix d'un livre d'or audio en location ?"
-    a: "<strong>200 € avec la formule Essentiel chez Agence Lily</strong>, livraison et installation comprises. Les offres par colis, sans installation, tournent en général entre 89 et 249 €."
-  - q: "Que comprend la formule Signature à 500 € ?"
+    a: "<strong>300 € avec la formule Essentiel chez Agence Lily</strong>, livraison et installation comprises. Les offres par colis, sans installation, tournent en général entre 89 et 249 €."
+  - q: "Que comprend la formule Signature à 600 € ?"
     a: "<strong>Tout l'Essentiel, plus la vidéo et l'animation.</strong> Vous avez le livre d'or vidéo, une heure d'animation pendant le cocktail et la borne toute la soirée au lieu de 3 h."
   - q: "La livraison est-elle payante ?"
     a: "<strong>Elle est offerte à Paris et en petite couronne.</strong> Pour le reste de l'Île-de-France, le devis vous indique le montant exact avant toute réservation."
@@ -52,15 +52,15 @@ Si vous aimez la technique et que votre fête a lieu loin de chez nous, c'est un
 
 C'est notre métier chez Agence Lily. Deux formules, pas de frais cachés.
 
-**La formule Essentiel coûte 200 €.** Elle comprend le livre d'or audio sur téléphone vintage, la borne pendant 3 h, les messages illimités, la livraison et l'installation. On arrive avant vos invités, on branche, on teste, on repart avec le téléphone à la fin. Vous n'avez rien à porter.
+**La formule Essentiel coûte 300 €.** Elle comprend le livre d'or audio sur téléphone vintage, la borne pendant 3 h, les messages illimités, la livraison et l'installation. On arrive avant vos invités, on branche, on teste, on repart avec le téléphone à la fin. Vous n'avez rien à porter.
 
-**La formule Signature coûte 500 €.** Elle reprend tout l'Essentiel et ajoute le livre d'or vidéo, une heure d'animation pendant le cocktail et la borne toute la soirée. Vos invités parlent au combiné et sont filmés en même temps, ce qui vous laisse la voix et le visage.
+**La formule Signature coûte 600 €.** Elle reprend tout l'Essentiel et ajoute le livre d'or vidéo, une heure d'animation pendant le cocktail et la borne toute la soirée. Vos invités parlent au combiné et sont filmés en même temps, ce qui vous laisse la voix et le visage.
 
 La différence de 300 € se justifie surtout par l'humain. Un animateur qui passe une heure à aller chercher les invités, table par table, change franchement la quantité et la qualité des messages (j'y reviendrai dans un autre article, parce que le sujet mérite plus qu'un paragraphe).
 
 | | Location par colis | Essentiel | Signature |
 |---|---|---|---|
-| Prix | 89 à 249 € | 200 € | 500 € |
+| Prix | 89 à 249 € | 300 € | 600 € |
 | Livraison | Par transporteur | Offerte à Paris et petite couronne | Offerte à Paris et petite couronne |
 | Installation et tests | Par vous | Par nous | Par nous |
 | Durée de la borne | Selon l'offre | 3 h | Toute la soirée |
@@ -103,7 +103,7 @@ Le nombre d'invités, en revanche, ne change rien au prix. Les messages sont ill
 
 Pour rendre tout ça concret, voici des combinaisons que l'on voit souvent.
 
-**Le budget serré.** Formule Essentiel seule, 200 €. Un anniversaire, un baptême, un pot de départ. Le téléphone tourne pendant 3 h et vous recevez vos messages sous 2 semaines.
+**Le budget serré.** Formule Essentiel seule, 300 €. Un anniversaire, un baptême, un pot de départ. Le téléphone tourne pendant 3 h et vous recevez vos messages sous 2 semaines.
 
 **Le juste milieu.** Formule Essentiel avec le coffret souvenir, soit 250 €. Vous gardez un objet physique, ce qui compte beaucoup quand on veut offrir les messages à une grand-mère qui n'a jamais ouvert un lien de téléchargement de sa vie.
 

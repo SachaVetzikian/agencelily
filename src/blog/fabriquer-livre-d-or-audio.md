@@ -3,7 +3,7 @@ title: "Fabriquer son livre d'or audio avec un vieux téléphone | Agence Lily"
 h1: "Fabriquer son livre d'or audio avec un vieux téléphone : est-ce que ça vaut le coup ?"
 meta: "Fabriquer un livre d'or audio avec un vieux téléphone et une carte SD : matériel, combiné, interrupteur, alimentation, tests. Le guide DIY honnête."
 extrait: "Un téléphone de brocante, un module d'enregistrement, une carte SD et un fer à souder. Faisable, oui. Voici le chemin complet, avec les endroits où ça coince."
-enBref: "Fabriquer son livre d'or audio est faisable avec un vieux téléphone, un module d'enregistrement sur carte SD et une alimentation fiable. Il faut relier l'interrupteur de crochet, souvent remplacer le micro du combiné, régler les volumes et tester en conditions réelles. Comptez plusieurs soirées de travail. Si votre date approche, la location d'un téléphone livré et installé, dès 200 € chez Agence Lily à Paris et en Île-de-France, évite ce stress."
+enBref: "Fabriquer son livre d'or audio est faisable avec un vieux téléphone, un module d'enregistrement sur carte SD et une alimentation fiable. Il faut relier l'interrupteur de crochet, souvent remplacer le micro du combiné, régler les volumes et tester en conditions réelles. Comptez plusieurs soirées de travail. Si votre date approche, la location d'un téléphone livré et installé, dès 300 € chez Agence Lily à Paris et en Île-de-France, évite ce stress."
 image: "/assets/photos/trio-message.webp"
 banniere: "/assets/photos/hero-livre-dor.webp"
 date: 2026-10-30
@@ -18,7 +18,7 @@ faq:
   - q: "Le son d'un livre d'or fait maison est-il bon ?"
     a: "<strong>Il peut l'être, avec un bon micro et des réglages soignés.</strong> Écoutez toujours vos essais au casque, avec du bruit autour, avant le jour J."
   - q: "Combien coûte la location d'un livre d'or audio ?"
-    a: "<strong>200 € avec la formule Essentiel chez Agence Lily</strong>, livraison et installation comprises à Paris et en Île-de-France. La formule Signature, avec vidéo et animation, coûte 500 €."
+    a: "<strong>300 € avec la formule Essentiel chez Agence Lily</strong>, livraison et installation comprises à Paris et en Île-de-France. La formule Signature, avec vidéo et animation, coûte 600 €."
 ressources:
   - titre: "Livre d'or audio et vidéo sur téléphone vintage"
     url: "/livre-d-or-audio-video/"
@@ -101,7 +101,7 @@ Côté budget, le calcul n'est pas toujours favorable non plus. Entre le télép
 
 Chez Agence Lily, le téléphone arrive prêt. On le livre, on l'installe, on configure votre message d'accueil et on teste tout sur place avant l'arrivée des invités. Puis on le récupère.
 
-La formule Essentiel coûte 200 €, avec la borne pendant 3 h, les messages illimités, la livraison et l'installation. La Signature, à 500 €, ajoute le livre d'or vidéo, une heure d'animation pendant le cocktail et la borne toute la soirée. La livraison est offerte à Paris et en petite couronne.
+La formule Essentiel coûte 300 €, avec la borne pendant 3 h, les messages illimités, la livraison et l'installation. La Signature, à 600 €, ajoute le livre d'or vidéo, une heure d'animation pendant le cocktail et la borne toute la soirée. La livraison est offerte à Paris et en petite couronne.
 
 Les messages arrivent en téléchargement sous 2 semaines, ou sous 48 h avec l'option express à 30 €. Et si vous voulez un objet à ranger avec vos photos, le coffret souvenir (une clé USB dans un écrin) coûte 50 €.
 

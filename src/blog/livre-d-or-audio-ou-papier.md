@@ -3,7 +3,7 @@ title: "Livre d'or audio ou papier : que choisir ? | Agence Lily"
 h1: "Livre d'or audio ou papier : que choisir ?"
 meta: "Livre d'or audio ou livre d'or papier pour votre mariage ? Messages, souvenir, invités, budget et conservation. Le comparatif franc d'un loueur de téléphone vintage."
 extrait: "Le carnet relié ou le téléphone vintage ? Les deux ont leurs qualités, et leurs faiblesses aussi. Voici comment choisir selon vos invités et le souvenir que vous voulez garder."
-enBref: "Le livre d'or papier garde l'écriture de vos proches et se feuillette sans aucun appareil. Le livre d'or audio garde leur voix, avec des messages souvent plus longs et plus spontanés. Le papier coûte moins cher, l'audio demande moins d'effort aux invités. Chez Agence Lily, le livre d'or audio démarre à 200 €, livré et installé à Paris et en Île-de-France, et rien ne vous empêche de garder aussi un carnet."
+enBref: "Le livre d'or papier garde l'écriture de vos proches et se feuillette sans aucun appareil. Le livre d'or audio garde leur voix, avec des messages souvent plus longs et plus spontanés. Le papier coûte moins cher, l'audio demande moins d'effort aux invités. Chez Agence Lily, le livre d'or audio démarre à 300 €, livré et installé à Paris et en Île-de-France, et rien ne vous empêche de garder aussi un carnet."
 image: "/assets/photos/trio-souvenirs.webp"
 banniere: "/assets/photos/hero-carnet.webp"
 date: 2026-11-17
@@ -19,7 +19,7 @@ faq:
   - q: "Comment conserver les messages audio dans le temps ?"
     a: "<strong>Gardez plusieurs copies des fichiers.</strong> Sur un disque dur et dans un espace en ligne. Le coffret souvenir, avec sa clé USB dans un écrin, est aussi proposé à 50 €."
   - q: "Combien coûte un livre d'or audio ?"
-    a: "<strong>200 € avec la formule Essentiel</strong>, livraison et installation comprises. La formule Signature, à 500 €, ajoute la vidéo, une heure d'animation et la borne toute la soirée."
+    a: "<strong>300 € avec la formule Essentiel</strong>, livraison et installation comprises. La formule Signature, à 600 €, ajoute la vidéo, une heure d'animation et la borne toute la soirée."
 ressources:
   - titre: "Livre d'or audio et vidéo de mariage"
     url: "/livre-d-or-mariage/"
@@ -87,7 +87,7 @@ Bref, l'un ressemble à un exercice, l'autre à un jeu.
 
 Pour un mariage, la question se pose avec plus de force. Vous avez déjà un photographe, souvent un vidéaste, et les deux captent votre journée de l'extérieur. Ce que vos proches avaient envie de vous dire, en revanche, personne ne l'enregistre.
 
-Le carnet en recueille une petite partie. Le téléphone, posé au vin d'honneur, en recueille beaucoup plus, avec le ton et les rires en prime. Et si vous voulez aussi les visages, la formule Signature à 500 € ajoute le livre d'or vidéo et une heure d'animation pendant le cocktail.
+Le carnet en recueille une petite partie. Le téléphone, posé au vin d'honneur, en recueille beaucoup plus, avec le ton et les rires en prime. Et si vous voulez aussi les visages, la formule Signature à 600 € ajoute le livre d'or vidéo et une heure d'animation pendant le cocktail.
 
 ## 📊 Audio ou papier, côte à côte
 
@@ -100,7 +100,7 @@ Le carnet en recueille une petite partie. Le téléphone, posé au vin d'honneur
 | Enfants | Dessins bienvenus | Messages souvent hilarants |
 | Bruit ambiant | Aucun problème | Un coin un peu calme aide |
 | Conservation | Un objet à protéger de l'humidité | Des fichiers à sauvegarder en plusieurs copies |
-| Prix | Celui d'un carnet | Dès 200 € chez nous, livraison et installation comprises |
+| Prix | Celui d'un carnet | Dès 300 € chez nous, livraison et installation comprises |
 
 ## 🤝 Et si vous gardiez les deux ?
 

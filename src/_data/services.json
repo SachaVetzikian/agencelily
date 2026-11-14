@@ -197,10 +197,10 @@
     "nom": "Livre d'or audio & vidéo",
     "court": "Les messages de vos proches, à réécouter pour toujours",
     "title": "Livre d'or audio et vidéo sur téléphone vintage | Agence Lily",
-    "meta": "Livre d'or audio et vidéo sur téléphone vintage : message d'accueil personnalisé, installé à Paris et en Île-de-France. Dès 200 €. Devis gratuit.",
+    "meta": "Livre d'or audio et vidéo sur téléphone vintage : message d'accueil personnalisé, installé à Paris et en Île-de-France. Dès 300 €. Devis gratuit.",
     "h1": "Livre d'or audio et vidéo à Paris et en Île-de-France",
     "accroche": "Vos invités décrochent un téléphone vintage et vous laissent un message. Avec la vidéo, vous gardez aussi leurs visages. Dans dix ans, c'est ce que vous réécouterez.",
-    "prix": 200,
+    "prix": 300,
     "prixDetail": "formule Essentiel, livraison et installation comprises",
     "description": [
       "Le principe est simple : un téléphone rétro trône sur une table, vos invités décrochent, écoutent votre message d'accueil personnalisé et laissent le leur après le bip. Aucun smartphone, aucune appli : même les grands-parents s'en servent.",
@@ -209,7 +209,7 @@
     "formules": [
       {
         "nom": "Essentiel",
-        "prix": 200,
+        "prix": 300,
         "detail": [
           "Téléphone d'époque et décor",
           "Message d'accueil personnalisé",
@@ -224,7 +224,7 @@
       },
       {
         "nom": "Signature",
-        "prix": 500,
+        "prix": 600,
         "detail": [
           "Tout l'Essentiel",
           "Livre d'or vidéo, la voix et le visage",

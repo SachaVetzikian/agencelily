@@ -19,7 +19,7 @@ faq:
   - q: "Combien de temps dure une animation de mariage ?"
     a: "<strong>De 10 minutes à toute la soirée.</strong> Un jeu de la chaussure tient en 10 minutes, un quiz entre deux plats en 20. Un livre d'or ou un photobooth restent en libre-service plusieurs heures."
   - q: "Combien coûte une animation de mariage ?"
-    a: "<strong>De 0 à plusieurs centaines d'euros.</strong> Les jeux de table sont gratuits. Chez Agence Lily, le livre d'or audio démarre à 200 €, le photobooth à 290 € et le bar à crêpes à 400 € pour 50 invités, livraison et installation comprises à Paris et en Île-de-France."
+    a: "<strong>De 0 à plusieurs centaines d'euros.</strong> Les jeux de table sont gratuits. Chez Agence Lily, le livre d'or audio démarre à 300 €, le photobooth à 290 € et le bar à crêpes à 400 € pour 50 invités, livraison et installation comprises à Paris et en Île-de-France."
   - q: "Combien d'animations prévoir pour un mariage ?"
     a: "<strong>Deux ou trois, réparties dans la journée.</strong> Une au vin d'honneur, une pendant le dîner, une en soirée. Au-delà, les invités se dispersent et chaque animation perd en impact."
   - q: "Qui organise les animations, les mariés ou les témoins ?"
@@ -178,15 +178,15 @@ La plupart des animations s'arrêtent avec la fête. Ces trois-là continuent ap
 
 « Au début, personne n'osait trop se lancer et finalement tout le monde voulait laisser son petit message. » Assad, invité à un mariage, dans son avis Google.
 
-*Durée toute la soirée · Tous les invités · 200 € · Écrire le message d'accueil*
+*Durée toute la soirée · Tous les invités · 300 € · Écrire le message d'accueil*
 
-Comptez 200 € pour une [location de livre d'or audio](/location-livre-d-or-audio/) livrée et installée sur place à Paris et en Île-de-France.
+Comptez 300 € pour une [location de livre d'or audio](/location-livre-d-or-audio/) livrée et installée sur place à Paris et en Île-de-France.
 
 ### 17. Le livre d'or filmé
 
 **Même principe, avec une caméra discrète qui filme l'invité pendant qu'il parle au téléphone.** Vous gardez la voix et le visage. Les invités parlent à un proche, pas à un objectif, alors les visages restent naturels.
 
-*Durée toute la soirée · Tous les invités · 500 € avec 1 h d'animation · Aucune préparation*
+*Durée toute la soirée · Tous les invités · 600 € avec 1 h d'animation · Aucune préparation*
 
 La version filmée du [livre d'or vidéo mariage](/livre-d-or-video/) comprend une heure d'animation pendant le cocktail, pour aller chercher les plus timides.
 
@@ -215,8 +215,8 @@ La version filmée du [livre d'or vidéo mariage](/livre-d-or-video/) comprend u
 | Étincelles froides | Soirée | 5 min | Spectateurs | 150 à 300 € | Accord du lieu |
 | Karaoké | Fin de soirée | 1 h | Une dizaine | 150 à 300 € | Aucune |
 | Chorégraphie | Ouverture de bal | 5 min | Spectateurs | 0 € ou cours | Semaines |
-| [Livre d'or audio](/location-livre-d-or-audio/) | Vin d'honneur, soirée | Soirée | Tous | 200 € | Message d'accueil |
-| [Livre d'or vidéo](/livre-d-or-video/) | Vin d'honneur, soirée | Soirée | Tous | 500 € | Aucune |
+| [Livre d'or audio](/location-livre-d-or-audio/) | Vin d'honneur, soirée | Soirée | Tous | 300 € | Message d'accueil |
+| [Livre d'or vidéo](/livre-d-or-video/) | Vin d'honneur, soirée | Soirée | Tous | 600 € | Aucune |
 | Capsule temporelle | Soirée | Libre | Tous | Faible | Papier, stylos |
 
 ## 🤝 Vous êtes témoin ? Le plan en 7 étapes

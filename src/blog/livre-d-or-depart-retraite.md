@@ -3,7 +3,7 @@ title: "Livre d'or de départ à la retraite : idées et messages | Agence Lily"
 h1: "Livre d'or de départ à la retraite : idées originales et messages"
 meta: "Idées de livre d'or retraite original pour un pot de départ : téléphone vintage, vidéo, carnet d'anecdotes, messages drôles ou émouvants. Paris et Île-de-France."
 extrait: "La carte signée par tout l'étage, on connaît. Pour un départ à la retraite, un livre d'or original garde les voix des collègues, leurs anecdotes et leurs blagues."
-enBref: "Pour un départ à la retraite, le livre d'or le plus original est un téléphone vintage installé pendant le pot de départ. Chaque collègue décroche et laisse un message vocal, drôle ou émouvant, au futur retraité. La version vidéo garde aussi les visages. Chez Agence Lily, le livre d'or audio est livré et installé dans vos locaux ou dans la salle de réception, à Paris et en Île-de-France, dès 200 €."
+enBref: "Pour un départ à la retraite, le livre d'or le plus original est un téléphone vintage installé pendant le pot de départ. Chaque collègue décroche et laisse un message vocal, drôle ou émouvant, au futur retraité. La version vidéo garde aussi les visages. Chez Agence Lily, le livre d'or audio est livré et installé dans vos locaux ou dans la salle de réception, à Paris et en Île-de-France, dès 300 €."
 image: "/assets/photos/formule-animateur.webp"
 banniere: "/assets/photos/occasion-entreprise.webp"
 date: 2026-11-06
@@ -119,9 +119,9 @@ Le coffret souvenir, à 50 €, contient une clé USB dans un écrin. Un vrai ca
 
 ## 💶 Quelle formule pour un pot de départ ?
 
-L'Essentiel, à 200 €, couvre la plupart des pots de départ. Le livre d'or audio, la borne pendant 3 h, les messages illimités, la livraison et l'installation.
+L'Essentiel, à 300 €, couvre la plupart des pots de départ. Le livre d'or audio, la borne pendant 3 h, les messages illimités, la livraison et l'installation.
 
-Pour une vraie soirée de départ, avec dîner et discours, la Signature à 500 € ajoute le livre d'or vidéo, une heure d'animation pendant le cocktail et la borne toute la soirée. L'animateur va chercher les collègues un par un, y compris ceux qui jurent qu'ils n'ont « rien d'intéressant à raconter ». Et avec l'Essentiel, une heure d'animation en option coûte 100 €.
+Pour une vraie soirée de départ, avec dîner et discours, la Signature à 600 € ajoute le livre d'or vidéo, une heure d'animation pendant le cocktail et la borne toute la soirée. L'animateur va chercher les collègues un par un, y compris ceux qui jurent qu'ils n'ont « rien d'intéressant à raconter ». Et avec l'Essentiel, une heure d'animation en option coûte 100 €.
 
 Tous les détails sont sur notre page [tarifs](/tarifs/).
 

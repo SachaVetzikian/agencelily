@@ -3,7 +3,7 @@ title: "Livre d'or vidéo de mariage : comment ça marche ? | Agence Lily"
 h1: "Livre d'or vidéo de mariage : comment ça marche ?"
 meta: "Téléphone vintage, caméra, animation, fichiers reçus après la fête : le livre d'or vidéo de mariage expliqué étape par étape, avec son prix à Paris et en Île-de-France."
 extrait: "Un téléphone vintage, une caméra discrète, et vos invités qui vous parlent les yeux dans le vague, comme au téléphone. Voici comment se déroule un livre d'or vidéo, de la réservation jusqu'aux fichiers."
-enBref: "Le livre d'or vidéo associe un téléphone vintage et une caméra. Vos invités décrochent, écoutent votre message d'accueil et vous parlent après le bip, pendant que la caméra filme leur visage. Chez Agence Lily, il fait partie de la formule Signature à 500 €, avec une heure d'animation pendant le cocktail et la borne toute la soirée. Vous recevez l'audio et la vidéo séparément, en téléchargement sous 2 semaines, ou sous 48 h avec l'option express à 30 €."
+enBref: "Le livre d'or vidéo associe un téléphone vintage et une caméra. Vos invités décrochent, écoutent votre message d'accueil et vous parlent après le bip, pendant que la caméra filme leur visage. Chez Agence Lily, il fait partie de la formule Signature à 600 €, avec une heure d'animation pendant le cocktail et la borne toute la soirée. Vous recevez l'audio et la vidéo séparément, en téléchargement sous 2 semaines, ou sous 48 h avec l'option express à 30 €."
 image: "/assets/photos/formule-video.webp"
 banniere: "/assets/photos/hero-video.webp"
 date: 2026-12-01
@@ -11,7 +11,7 @@ publication: 2026-12-01
 draft: true
 faq:
   - q: "Combien coûte un livre d'or vidéo de mariage ?"
-    a: "<strong>500 € avec la formule Signature</strong>, qui comprend aussi le livre d'or audio, une heure d'animation pendant le cocktail, la borne toute la soirée, la livraison et l'installation."
+    a: "<strong>600 € avec la formule Signature</strong>, qui comprend aussi le livre d'or audio, une heure d'animation pendant le cocktail, la borne toute la soirée, la livraison et l'installation."
   - q: "Les invités doivent-ils parler face caméra ?"
     a: "<strong>Non, ils parlent au téléphone.</strong> La caméra filme pendant qu'ils s'adressent à vous dans le combiné, ce qui donne des visages beaucoup plus naturels qu'un face-à-face avec un objectif."
   - q: "Le livre d'or vidéo remplace-t-il le vidéaste ?"
@@ -19,7 +19,7 @@ faq:
   - q: "Sous quel format reçoit-on les messages ?"
     a: "<strong>En téléchargement, avec l'audio et la vidéo séparés</strong>, sous 2 semaines. L'option express à 30 € réduit ce délai à 48 h."
   - q: "Peut-on avoir seulement l'audio ?"
-    a: "<strong>Oui, avec la formule Essentiel à 200 €.</strong> Le téléphone reste 3 heures et vous recevez les messages vocaux, sans la vidéo ni l'animation."
+    a: "<strong>Oui, avec la formule Essentiel à 300 €.</strong> Le téléphone reste 3 heures et vous recevez les messages vocaux, sans la vidéo ni l'animation."
 ressources:
   - titre: "Location de livre d'or vidéo à Paris et en Île-de-France"
     url: "/livre-d-or-video/"
@@ -115,7 +115,7 @@ Et puis il y a les messages à plusieurs, ces petites bandes serrées autour du 
 
 ## 💶 Le prix, et ce qu'il comprend
 
-Chez nous, le livre d'or vidéo fait partie de la formule Signature, à 500 €.
+Chez nous, le livre d'or vidéo fait partie de la formule Signature, à 600 €.
 
 <ul class="post-check">
 <li>✅ Le livre d'or audio et vidéo <span>→ messages illimités, voix et visage</span></li>
@@ -124,7 +124,7 @@ Chez nous, le livre d'or vidéo fait partie de la formule Signature, à 500 €.
 <li>✅ La livraison et l'installation <span>→ offerte à Paris et en petite couronne</span></li>
 </ul>
 
-Au-delà de la petite couronne, les frais de déplacement figurent sur le devis. Si vous voulez prolonger l'animation, l'heure supplémentaire coûte 100 €. Et si la vidéo ne vous parle pas, la formule Essentiel à 200 € garde le livre d'or audio seul, pendant 3 h.
+Au-delà de la petite couronne, les frais de déplacement figurent sur le devis. Si vous voulez prolonger l'animation, l'heure supplémentaire coûte 100 €. Et si la vidéo ne vous parle pas, la formule Essentiel à 300 € garde le livre d'or audio seul, pendant 3 h.
 
 ## 🏁 En résumé
 

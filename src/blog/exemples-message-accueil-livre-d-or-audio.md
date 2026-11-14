@@ -3,7 +3,7 @@ title: "15 exemples de message d'accueil pour livre d'or audio | Agence Lily"
 h1: "15 exemples de message d'accueil pour livre d'or audio"
 meta: "15 exemples de message d'accueil pour livre d'or audio : mariage, anniversaire, baptême, retraite, ton drôle ou ému. Plus la durée idéale et les erreurs à éviter."
 extrait: "Mariage, anniversaire, baptême ou pot de départ, drôle ou ému. Quinze messages d'accueil prêts à enregistrer pour votre livre d'or audio, avec les conseils pour les adapter à votre voix."
-enBref: "Un bon message d'accueil de livre d'or audio tient en quelques phrases. Il dit à qui l'invité parle et ce qu'on attend de lui, avant le bip. Le ton suit l'événement, tendre pour un baptême, plus taquin pour un anniversaire ou une retraite. Chez Agence Lily, le message d'accueil est personnalisé dans les deux formules, dès 200 €."
+enBref: "Un bon message d'accueil de livre d'or audio tient en quelques phrases. Il dit à qui l'invité parle et ce qu'on attend de lui, avant le bip. Le ton suit l'événement, tendre pour un baptême, plus taquin pour un anniversaire ou une retraite. Chez Agence Lily, le message d'accueil est personnalisé dans les deux formules, dès 300 €."
 image: "/assets/photos/trio-message.webp"
 banniere: "/assets/photos/hero-livre-dor.webp"
 date: 2026-11-13

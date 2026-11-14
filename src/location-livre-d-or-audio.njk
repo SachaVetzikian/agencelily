@@ -2,10 +2,10 @@
 layout: layouts/base.njk
 permalink: /location-livre-d-or-audio/
 title: "Location livre d'or audio, téléphone vintage installé | Agence Lily"
-meta: "Location de livre d'or audio à Paris et en Île-de-France : téléphone vintage livré, installé et récupéré par nos soins. Dès 200 €, devis sous 24 h."
+meta: "Location de livre d'or audio à Paris et en Île-de-France : téléphone vintage livré, installé et récupéré par nos soins. Dès 300 €, devis sous 24 h."
 faqLocation:
   - q: "Combien coûte la location d'un livre d'or audio ?"
-    a: "À partir de 200 €, livraison et installation comprises à Paris et en Île-de-France. Le prix exact dépend de la formule, de la durée et du lieu : vous le recevez sur devis sous 24 h."
+    a: "À partir de 300 €, livraison et installation comprises à Paris et en Île-de-France. Le prix exact dépend de la formule, de la durée et du lieu : vous le recevez sur devis sous 24 h."
   - q: "Intervenez-vous en dehors de l'Île-de-France ?"
     a: "Nous intervenons à Paris et dans toute l'Île-de-France. Pour un événement ailleurs, demandez-nous un devis."
   - q: "Faut-il une prise électrique ?"
@@ -34,7 +34,7 @@ faqLocation:
 {% set heroImg = livre.image %}{% set heroImgMobile = livre.imageMobile %}{% set heroAlt = "Location de livre d'or audio" %}{% set heroEyebrow = "Location · Paris & Île-de-France" %}
 {% set heroTitle = "Location de livre d'or audio en Île-de-France" %}
 {% set heroIntro = "Nous livrons, installons et reprenons le téléphone. Vous gardez les souvenirs." %}
-{% set heroAside %}<div class="price-box"><strong>Dès 200 €</strong><span>livraison et installation comprises</span></div>{% include "partials/hero-date.njk" %}{% endset %}
+{% set heroAside %}<div class="price-box"><strong>Dès 300 €</strong><span>livraison et installation comprises</span></div>{% include "partials/hero-date.njk" %}{% endset %}
 {% include "partials/hero-full.njk" %}
 
 <section class="section"><div class="wrap split-lead">
@@ -80,7 +80,7 @@ faqLocation:
 {% include "partials/cta.njk" %}
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Service","name":"Location de livre d'or audio et vidéo","serviceType":"Location de livre d'or audio","url":"{{ site.url }}{{ page.url }}","areaServed":{"@type":"AdministrativeArea","name":"Île-de-France"},"provider":{"@id":"{{ site.url }}/#business"},"offers":{"@type":"AggregateOffer","lowPrice":"200","priceCurrency":"EUR","offerCount":"2","highPrice":"500"}}
+{"@context":"https://schema.org","@type":"Service","name":"Location de livre d'or audio et vidéo","serviceType":"Location de livre d'or audio","url":"{{ site.url }}{{ page.url }}","areaServed":{"@type":"AdministrativeArea","name":"Île-de-France"},"provider":{"@id":"{{ site.url }}/#business"},"offers":{"@type":"AggregateOffer","lowPrice":"300","priceCurrency":"EUR","offerCount":"2","highPrice":"600"}}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{% for f in faqLocation %}{"@type":"Question","name":{{ f.q | json | safe }},"acceptedAnswer":{"@type":"Answer","text":{{ f.a | json | safe }}}}{% if not loop.last %},{% endif %}{% endfor %}]}

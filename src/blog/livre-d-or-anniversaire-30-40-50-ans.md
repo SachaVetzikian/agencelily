@@ -3,7 +3,7 @@ title: "Livre d'or d'anniversaire 30, 40 ou 50 ans : idées et messages | Agence
 h1: "Livre d'or d'anniversaire pour 30, 40 ou 50 ans : idées et messages"
 meta: "Livre d'or pour un anniversaire de 30, 40 ou 50 ans : idées selon l'âge, messages d'accueil, phrases à souffler aux invités et conseils pour un livre d'or audio."
 extrait: "On ne fête pas ses 30 ans comme ses 50 ans, et on ne laisse pas le même message non plus. Idées de livre d'or, messages d'accueil et phrases à souffler aux invités, décennie par décennie."
-enBref: "Un livre d'or d'anniversaire marche d'autant mieux qu'il colle à l'âge fêté. À 30 ans, on mise sur l'humour et les souvenirs d'études. À 40 ans, sur les bilans et les vœux pour la suite. À 50 ans, sur les grandes histoires et les plus vieux amis. Le livre d'or audio d'Agence Lily s'adapte aux trois, dès 200 €, livré et installé à Paris et en Île-de-France."
+enBref: "Un livre d'or d'anniversaire marche d'autant mieux qu'il colle à l'âge fêté. À 30 ans, on mise sur l'humour et les souvenirs d'études. À 40 ans, sur les bilans et les vœux pour la suite. À 50 ans, sur les grandes histoires et les plus vieux amis. Le livre d'or audio d'Agence Lily s'adapte aux trois, dès 300 €, livré et installé à Paris et en Île-de-France."
 image: "/assets/photos/formule-audio.webp"
 banniere: "/assets/photos/occasion-anniversaire.webp"
 date: 2026-12-18
@@ -15,7 +15,7 @@ faq:
   - q: "Que dire dans un livre d'or pour des 50 ans ?"
     a: "<strong>Un souvenir précis, plutôt qu'un vœu général.</strong> Le jour de la rencontre, une galère partagée, une phrase culte. C'est ce qui touche le plus à l'écoute."
   - q: "Combien coûte un livre d'or audio pour un anniversaire ?"
-    a: "<strong>200 € avec la formule Essentiel</strong>, livraison et installation comprises, avec la borne pendant 3 h et les messages illimités. La Signature à 500 € ajoute la vidéo, une heure d'animation et la borne toute la soirée."
+    a: "<strong>300 € avec la formule Essentiel</strong>, livraison et installation comprises, avec la borne pendant 3 h et les messages illimités. La Signature à 600 € ajoute la vidéo, une heure d'animation et la borne toute la soirée."
   - q: "Peut-on personnaliser le message d'accueil selon l'âge ?"
     a: "<strong>Oui, il est entièrement personnalisé.</strong> Vous l'écrivez, ou on vous aide à le formuler, et il donne le ton dès que l'invité décroche."
   - q: "Quand reçoit-on les messages ?"
@@ -119,9 +119,9 @@ Nous avons consacré un article entier à la question de [l'emplacement du tél�
 
 ## 💶 Quelle formule pour un anniversaire ?
 
-**L'Essentiel, à 200 €**, convient à la plupart des anniversaires. Le livre d'or audio, la borne pendant 3 h, les messages illimités, la livraison et l'installation. Trois heures couvrent largement un apéritif dînatoire et le début de la soirée.
+**L'Essentiel, à 300 €**, convient à la plupart des anniversaires. Le livre d'or audio, la borne pendant 3 h, les messages illimités, la livraison et l'installation. Trois heures couvrent largement un apéritif dînatoire et le début de la soirée.
 
-**La Signature, à 500 €**, prend tout son sens pour une grande fête de 40 ou 50 ans. Vous gardez la voix et le visage grâce au livre d'or vidéo, un animateur passe une heure à aller chercher les invités pendant le cocktail, et la borne reste en place toute la soirée.
+**La Signature, à 600 €**, prend tout son sens pour une grande fête de 40 ou 50 ans. Vous gardez la voix et le visage grâce au livre d'or vidéo, un animateur passe une heure à aller chercher les invités pendant le cocktail, et la borne reste en place toute la soirée.
 
 En option, le coffret souvenir (une clé USB dans un écrin) à 50 € fait un joli cadeau à remettre ensuite à la personne fêtée. La touche florale, également à 50 €, habille le téléphone. Avec l'Essentiel, une heure d'animation en option coûte 100 €.
 

@@ -3,7 +3,7 @@ title: "Anniversaire surprise : récolter les messages des proches | Agence Lily
 h1: "Anniversaire surprise : comment récolter les messages des proches"
 meta: "Organiser un anniversaire surprise et récolter les messages des proches sans vendre la mèche : groupe secret, proches éloignés, livre d'or audio le jour J à Paris et en IDF."
 extrait: "Garder le secret, réunir les messages de ceux qui viennent et de ceux qui ne pourront pas venir, puis tout offrir le jour J. Le mode d'emploi d'un anniversaire surprise réussi, côté souvenirs."
-enBref: "Pour un anniversaire surprise, on récolte les messages en deux temps. Avant la fête, les proches éloignés envoient un mémo vocal ou une vidéo à un seul organisateur, dans un groupe dont la personne fêtée ignore l'existence. Le jour J, un livre d'or audio sur téléphone vintage recueille les messages des invités présents. Agence Lily le livre et l'installe en toute discrétion à Paris et en Île-de-France, dès 200 €."
+enBref: "Pour un anniversaire surprise, on récolte les messages en deux temps. Avant la fête, les proches éloignés envoient un mémo vocal ou une vidéo à un seul organisateur, dans un groupe dont la personne fêtée ignore l'existence. Le jour J, un livre d'or audio sur téléphone vintage recueille les messages des invités présents. Agence Lily le livre et l'installe en toute discrétion à Paris et en Île-de-France, dès 300 €."
 image: "/assets/photos/formule-animateur.webp"
 banniere: "/assets/photos/hero-blog.webp"
 date: 2026-12-29
@@ -17,7 +17,7 @@ faq:
   - q: "Le livre d'or audio peut-il être installé avant l'arrivée de la personne fêtée ?"
     a: "<strong>Oui, c'est même tout l'intérêt.</strong> Nous livrons et installons le téléphone avant l'arrivée des invités, en nous organisant avec vous en toute discrétion."
   - q: "Combien coûte un livre d'or audio pour un anniversaire surprise ?"
-    a: "<strong>200 € avec la formule Essentiel</strong>, livraison et installation comprises, avec la borne pendant 3 h. La Signature à 500 € ajoute la vidéo, une heure d'animation et la borne toute la soirée."
+    a: "<strong>300 € avec la formule Essentiel</strong>, livraison et installation comprises, avec la borne pendant 3 h. La Signature à 600 € ajoute la vidéo, une heure d'animation et la borne toute la soirée."
   - q: "Quand la personne fêtée peut-elle écouter ses messages ?"
     a: "<strong>Sous 2 semaines, par lien de téléchargement.</strong> Avec l'option express à 30 €, ils arrivent sous 48 h, de quoi prolonger la surprise quelques jours après."
 ressources:
@@ -111,9 +111,9 @@ Avec la formule Signature, le livre d'or vidéo filme les invités pendant qu'il
 
 ## 💶 Les formules, en bref
 
-**L'Essentiel, à 200 €.** Le livre d'or audio, la borne pendant 3 h, les messages illimités, la livraison et l'installation.
+**L'Essentiel, à 300 €.** Le livre d'or audio, la borne pendant 3 h, les messages illimités, la livraison et l'installation.
 
-**La Signature, à 500 €.** L'Essentiel, plus le livre d'or vidéo, une heure d'animation pendant le cocktail et la borne toute la soirée.
+**La Signature, à 600 €.** L'Essentiel, plus le livre d'or vidéo, une heure d'animation pendant le cocktail et la borne toute la soirée.
 
 En option, la livraison express des messages sous 48 h coûte 30 €. Pratique pour réunir la famille quelques jours après et tout réécouter ensemble, en ajoutant les mémos des absents. Le coffret souvenir, une clé USB dans un écrin, coûte 50 €. La livraison est offerte à Paris et en petite couronne.
 

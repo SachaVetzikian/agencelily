@@ -2,7 +2,7 @@
 layout: layouts/base.njk
 permalink: /livre-d-or-audio-paris/
 title: "Livre d'or audio à Paris : location de téléphone livre d'or | Agence Lily"
-meta: "Location de livre d'or audio et vidéo à Paris : téléphone vintage livré, installé et animé dans les 20 arrondissements. Livraison offerte. Dès 200 €, réponse sous 24 h."
+meta: "Location de livre d'or audio et vidéo à Paris : téléphone vintage livré, installé et animé dans les 20 arrondissements. Livraison offerte. Dès 300 €, réponse sous 24 h."
 faqParis:
   - q: "La livraison est-elle vraiment offerte dans Paris ?"
     a: "Oui, dans les 20 arrondissements et en petite couronne (92, 93, 94). Livraison, installation et reprise du téléphone sont comprises dans le prix."
@@ -11,7 +11,7 @@ faqParis:
   - q: "Vous intervenez sur une péniche ou un rooftop ?"
     a: "Oui. Il faut seulement une prise électrique et un coin abrité du vent et de la musique, pour que les invités s'entendent."
   - q: "Combien coûte un livre d'or audio à Paris ?"
-    a: "200 € avec la formule Essentiel (audio, 3 heures), 500 € avec la formule Signature (audio et vidéo, une heure d'animation, toute la soirée)."
+    a: "300 € avec la formule Essentiel (audio, 3 heures), 600 € avec la formule Signature (audio et vidéo, une heure d'animation, toute la soirée)."
   - q: "Peut-on réserver pour un mariage à la mairie ?"
     a: "Le téléphone s'installe sur le lieu de réception plutôt qu'en mairie, où le temps est compté. C'est au vin d'honneur qu'il recueille le plus de messages."
 ---
@@ -20,7 +20,7 @@ faqParis:
 {% set heroImg = "/assets/photos/hero-paris.webp" %}{% set heroAlt = "Jeunes mariés dans une rue de Paris, la tour Eiffel au loin" %}{% set heroEyebrow = "Paris · 20 arrondissements" %}
 {% set heroTitle = "Le livre d'or audio à Paris" %}
 {% set heroIntro = "Un téléphone vintage livré, installé et animé chez vous, de la péniche à l'hôtel particulier." %}
-{% set heroAside %}<div class="price-box"><strong>Dès 200 €</strong><span>livraison offerte dans Paris</span></div>{% include "partials/hero-date.njk" %}{% endset %}
+{% set heroAside %}<div class="price-box"><strong>Dès 300 €</strong><span>livraison offerte dans Paris</span></div>{% include "partials/hero-date.njk" %}{% endset %}
 {% include "partials/hero-full.njk" %}
 
 <section class="section"><div class="wrap split-lead">
@@ -73,7 +73,7 @@ faqParis:
 {% include "partials/cta.njk" %}
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Service","name":"Location de livre d'or audio à Paris","serviceType":"Location de livre d'or audio","url":"{{ site.url }}{{ page.url }}","areaServed":{"@type":"City","name":"Paris"},"provider":{"@id":"{{ site.url }}/#business"},"offers":{"@type":"AggregateOffer","lowPrice":"200","highPrice":"500","priceCurrency":"EUR","offerCount":"2"}}
+{"@context":"https://schema.org","@type":"Service","name":"Location de livre d'or audio à Paris","serviceType":"Location de livre d'or audio","url":"{{ site.url }}{{ page.url }}","areaServed":{"@type":"City","name":"Paris"},"provider":{"@id":"{{ site.url }}/#business"},"offers":{"@type":"AggregateOffer","lowPrice":"300","highPrice":"600","priceCurrency":"EUR","offerCount":"2"}}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{% for f in faqParis %}{"@type":"Question","name":{{ f.q | json | safe }},"acceptedAnswer":{"@type":"Answer","text":{{ f.a | json | safe }}}}{% if not loop.last %},{% endif %}{% endfor %}]}

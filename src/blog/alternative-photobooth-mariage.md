@@ -3,7 +3,7 @@ title: "Quelle alternative au photobooth pour un mariage ? | Agence Lily"
 h1: "Quelle alternative au photobooth pour un mariage ?"
 meta: "Envie d'autre chose qu'un photobooth à votre mariage ? Livre d'or vidéo, livre d'or audio, appareils jetables, portraitiste, animation gourmande. Le panorama d'un loueur."
 extrait: "Le photobooth ne vous fait plus rêver, ou vous l'avez vu à chaque mariage cette année ? Voici les alternatives qui marchent vraiment, en commençant par celle qui laisse le plus beau souvenir."
-enBref: "La meilleure alternative au photobooth pour un mariage est le livre d'or vidéo sur téléphone vintage. Vos invités vous parlent au combiné pendant qu'une caméra les filme, et vous gardez leur voix et leur visage. Le livre d'or audio seul, les appareils jetables ou un portraitiste sont d'autres pistes. Chez Agence Lily, le livre d'or vidéo coûte 500 € avec une heure d'animation, et l'audio seul 200 €."
+enBref: "La meilleure alternative au photobooth pour un mariage est le livre d'or vidéo sur téléphone vintage. Vos invités vous parlent au combiné pendant qu'une caméra les filme, et vous gardez leur voix et leur visage. Le livre d'or audio seul, les appareils jetables ou un portraitiste sont d'autres pistes. Chez Agence Lily, le livre d'or vidéo coûte 600 € avec une heure d'animation, et l'audio seul 300 €."
 image: "/assets/photos/formule-audio.webp"
 banniere: "/assets/photos/mariage-soir.webp"
 date: 2026-11-20
@@ -13,9 +13,9 @@ faq:
   - q: "Quelle est la meilleure alternative au photobooth ?"
     a: "<strong>Le livre d'or vidéo, à notre avis.</strong> Il anime le cocktail comme un photobooth, et il vous laisse en plus ce que vos invités avaient vraiment à vous dire, avec leur voix et leur visage."
   - q: "Combien coûte un livre d'or vidéo ?"
-    a: "<strong>500 € avec la formule Signature</strong>, qui comprend aussi une heure d'animation pendant le cocktail et la borne toute la soirée. La livraison est offerte à Paris et en petite couronne."
+    a: "<strong>600 € avec la formule Signature</strong>, qui comprend aussi une heure d'animation pendant le cocktail et la borne toute la soirée. La livraison est offerte à Paris et en petite couronne."
   - q: "Existe-t-il une alternative moins chère ?"
-    a: "<strong>Le livre d'or audio, avec la formule Essentiel à 200 €.</strong> Le téléphone vintage reste 3 h, les messages sont illimités et nous l'installons pour vous."
+    a: "<strong>Le livre d'or audio, avec la formule Essentiel à 300 €.</strong> Le téléphone vintage reste 3 h, les messages sont illimités et nous l'installons pour vous."
   - q: "Le livre d'or vidéo intimide-t-il les invités ?"
     a: "<strong>Beaucoup moins qu'une caméra classique.</strong> Les invités parlent au téléphone, comme à un proche, et oublient vite qu'ils sont filmés."
   - q: "Peut-on garder un photobooth en plus ?"
@@ -51,11 +51,11 @@ Ce qui en fait une vraie alternative au photobooth, c'est l'attroupement. Comme 
 
 Ce genre de phrase, on l'entend en boucle autour du téléphone.
 
-Avec la formule Signature à 500 €, vous avez la vidéo, une heure d'animation pendant le cocktail et la borne toute la soirée. L'animateur va chercher les invités, y compris ceux qui juraient qu'ils ne parleraient jamais dans un combiné. Tout est détaillé sur notre page [livre d'or vidéo](/livre-d-or-video/).
+Avec la formule Signature à 600 €, vous avez la vidéo, une heure d'animation pendant le cocktail et la borne toute la soirée. L'animateur va chercher les invités, y compris ceux qui juraient qu'ils ne parleraient jamais dans un combiné. Tout est détaillé sur notre page [livre d'or vidéo](/livre-d-or-video/).
 
 ## 📞 Le livre d'or audio, la version sobre
 
-Même téléphone, sans caméra. La formule Essentiel coûte 200 €, avec la borne pendant 3 h, les messages illimités, la livraison et l'installation.
+Même téléphone, sans caméra. La formule Essentiel coûte 300 €, avec la borne pendant 3 h, les messages illimités, la livraison et l'installation.
 
 C'est l'alternative idéale si votre budget animation est serré, ou si vos proches sont du genre pudique. Sans objectif braqué sur eux, certains se livrent davantage. La voix suffit à faire revenir quelqu'un, des années après.
 

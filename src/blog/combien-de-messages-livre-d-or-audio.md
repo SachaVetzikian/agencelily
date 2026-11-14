@@ -3,7 +3,7 @@ title: "Combien de messages sur un livre d'or audio ? Ce qui fait (vraiment) la 
 h1: "Combien de messages sur un livre d'or audio ? Ce qui fait (vraiment) la différence"
 meta: "Combien de messages espérer sur un livre d'or audio ? Nombre d'invités, emplacement, moment, message d'accueil et surtout animation. Ce qui fait varier le résultat, expliqué par un loueur."
 extrait: "Certains livres d'or audio débordent de messages, d'autres restent étonnamment silencieux. La taille de la fête compte moins qu'on ne le croit. Voici ce qui fait vraiment la différence."
-enBref: "Le nombre de messages sur un livre d'or audio dépend moins du nombre d'invités que de quatre leviers, l'emplacement du téléphone, le moment choisi, le message d'accueil et l'animation. Un animateur qui va chercher les invités change nettement le résultat. Chez Agence Lily, la formule Signature à 500 € comprend une heure d'animation pendant le cocktail et la borne toute la soirée."
+enBref: "Le nombre de messages sur un livre d'or audio dépend moins du nombre d'invités que de quatre leviers, l'emplacement du téléphone, le moment choisi, le message d'accueil et l'animation. Un animateur qui va chercher les invités change nettement le résultat. Chez Agence Lily, la formule Signature à 600 € comprend une heure d'animation pendant le cocktail et la borne toute la soirée."
 image: "/assets/photos/formule-animateur.webp"
 banniere: "/assets/photos/blog-animation-mariage.webp"
 date: 2026-11-24
@@ -13,7 +13,7 @@ faq:
   - q: "Combien de messages peut-on espérer sur un livre d'or audio ?"
     a: "<strong>Cela dépend surtout de l'organisation, plus que du nombre d'invités.</strong> Un téléphone bien placé, annoncé au micro et animé recueille bien plus de messages qu'un téléphone oublié dans un coin."
   - q: "Y a-t-il une limite de messages ?"
-    a: "<strong>Non, les messages sont illimités</strong> dans nos deux formules, l'Essentiel à 200 € comme la Signature à 500 €."
+    a: "<strong>Non, les messages sont illimités</strong> dans nos deux formules, l'Essentiel à 300 € comme la Signature à 600 €."
   - q: "Un message correspond-il à un invité ?"
     a: "<strong>Rarement.</strong> Les invités viennent souvent à deux ou en bande, et se passent le combiné. Un seul message peut donc réunir plusieurs voix."
   - q: "L'animation change-t-elle vraiment le nombre de messages ?"
@@ -97,7 +97,7 @@ Un animateur va les chercher.
 
 Il fait le tour des groupes pendant le cocktail, explique en deux mots, tend le combiné, rassure. Il propose une idée quand l'invité sèche (« Racontez-leur comment vous les avez rencontrés »). Il sent aussi quand un groupe est prêt à y aller ensemble. Sans pression, avec le sourire, il transforme un objet de décoration en vraie animation.
 
-La formule Signature, à 500 €, comprend cette heure d'animation pendant le cocktail, ainsi que le livre d'or vidéo et la borne toute la soirée. Avec l'Essentiel, vous pouvez ajouter une heure d'animation à 100 €. Tout le fonctionnement est décrit sur notre page [livre d'or vidéo](/livre-d-or-video/).
+La formule Signature, à 600 €, comprend cette heure d'animation pendant le cocktail, ainsi que le livre d'or vidéo et la borne toute la soirée. Avec l'Essentiel, vous pouvez ajouter une heure d'animation à 100 €. Tout le fonctionnement est décrit sur notre page [livre d'or vidéo](/livre-d-or-video/).
 
 <div class="post-callout"><p class="post-callout-title">💡 Bon à savoir</p><p><strong>Les messages recueillis grâce à l'animateur sont souvent les plus précieux.</strong> L'invité qui disait « Ah non, pas moi » finit parfois par parler plusieurs minutes.</p></div>
 

@@ -3,7 +3,7 @@ title: "Acheter ou louer un livre d'or audio ? Le vrai calcul | Agence Lily"
 h1: "Acheter ou louer un livre d'or audio ?"
 meta: "Livre d'or audio en achat sur Amazon, d'occasion ou en location : prix, installation, revente et risques. Le calcul honnête d'un loueur à Paris."
 extrait: "Kit sur Amazon, téléphone d'occasion, location par colis ou location installée ? Voici ce que coûte vraiment chaque option, en euros et en tranquillité le jour J."
-enBref: "Un kit de livre d'or audio à acheter coûte souvent entre 100 et 300 €, et vous gérez ensuite la configuration, les tests, l'installation et la revente. La location par colis tourne entre 89 et 249 €, avec l'installation à votre charge. Chez Agence Lily, la location démarre à 200 € avec livraison, installation et récupération des messages à Paris et en Île-de-France. L'achat se justifie surtout si vous comptez resservir le téléphone plusieurs fois."
+enBref: "Un kit de livre d'or audio à acheter coûte souvent entre 100 et 300 €, et vous gérez ensuite la configuration, les tests, l'installation et la revente. La location par colis tourne entre 89 et 249 €, avec l'installation à votre charge. Chez Agence Lily, la location démarre à 300 € avec livraison, installation et récupération des messages à Paris et en Île-de-France. L'achat se justifie surtout si vous comptez resservir le téléphone plusieurs fois."
 image: "/assets/photos/formule-audio.webp"
 banniere: "/assets/photos/hero-tarifs.webp"
 date: 2026-10-27
@@ -14,7 +14,7 @@ faq:
   - q: "Peut-on acheter un livre d'or audio d'occasion ?"
     a: "<strong>Oui, sur les sites de petites annonces.</strong> Demandez un enregistrement récent, écoutez-le au casque et vérifiez que l'alimentation et la carte mémoire sont bien fournies."
   - q: "Combien coûte la location d'un livre d'or audio ?"
-    a: "<strong>200 € avec la formule Essentiel chez Agence Lily</strong>, livraison et installation comprises. La formule Signature, avec la vidéo et une heure d'animation, coûte 500 €."
+    a: "<strong>300 € avec la formule Essentiel chez Agence Lily</strong>, livraison et installation comprises. La formule Signature, avec la vidéo et une heure d'animation, coûte 600 €."
   - q: "La livraison est-elle comprise dans la location ?"
     a: "<strong>Oui, et elle est offerte à Paris et en petite couronne.</strong> Nous installons et testons le téléphone sur place avant l'arrivée des invités."
   - q: "Comment réserver une date ?"
@@ -76,7 +76,7 @@ Le revers tient en peu de mots. Vous dépendez du transporteur (un colis en reta
 
 C'est ce que nous faisons chez Agence Lily. On apporte le téléphone vintage sur le lieu de votre événement, on l'installe, on le teste avant l'arrivée des invités et on repart avec à la fin. Vous n'avez rien à brancher.
 
-La formule Essentiel coûte 200 €. Elle comprend le livre d'or audio, la borne pendant 3 h, les messages illimités, la livraison et l'installation. La formule Signature, à 500 €, ajoute le livre d'or vidéo, une heure d'animation pendant le cocktail et la borne toute la soirée.
+La formule Essentiel coûte 300 €. Elle comprend le livre d'or audio, la borne pendant 3 h, les messages illimités, la livraison et l'installation. La formule Signature, à 600 €, ajoute le livre d'or vidéo, une heure d'animation pendant le cocktail et la borne toute la soirée.
 
 La livraison est offerte à Paris et en petite couronne. Les messages arrivent en téléchargement sous 2 semaines, ou sous 48 h avec l'option express à 30 €. Et si vous tenez à garder un objet, le coffret souvenir (une clé USB dans un écrin) coûte 50 €.
 
@@ -90,7 +90,7 @@ Tout le détail se trouve sur notre page [location de livre d'or audio](/locatio
 
 | | Kit neuf | Occasion | Location par colis | Location installée |
 |---|---|---|---|---|
-| Prix | Souvent 100 à 300 € | Variable | 89 à 249 € | 200 € ou 500 € |
+| Prix | Souvent 100 à 300 € | Variable | 89 à 249 € | 300 € ou 600 € |
 | Installation | Par vous | Par vous | Par vous | Par nous |
 | Tests avant la fête | Par vous | Par vous | Par vous | Par nous |
 | Version vidéo | Selon le modèle | Selon le modèle | Selon l'offre | Avec la Signature |

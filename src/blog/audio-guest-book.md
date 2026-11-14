@@ -3,7 +3,7 @@ title: "Audio guest book : le livre d'or audio venu des États-Unis | Agence Lil
 h1: "Audio guest book : tout savoir sur le livre d'or audio venu des États-Unis"
 meta: "Audio guest book, phone guest book, greeting, beep : définition, origine de la tendance, vocabulaire et différences avec le livre d'or audio à la française."
 extrait: "Vous avez vu passer « audio guest book » sur Pinterest ou Instagram sans être sûr de ce que ça désigne ? Définition, origine de la tendance, petit lexique franco-anglais et ce qui change quand on le loue en France."
-enBref: "Un audio guest book est un livre d'or audio, un téléphone vintage transformé en enregistreur sur lequel les invités laissent un message après le bip. La tendance s'est popularisée dans les mariages anglo-saxons avant d'arriver en France, où on parle de livre d'or audio ou sonore. Chez Agence Lily, il est livré, installé et récupéré à Paris et en Île-de-France, dès 200 €."
+enBref: "Un audio guest book est un livre d'or audio, un téléphone vintage transformé en enregistreur sur lequel les invités laissent un message après le bip. La tendance s'est popularisée dans les mariages anglo-saxons avant d'arriver en France, où on parle de livre d'or audio ou sonore. Chez Agence Lily, il est livré, installé et récupéré à Paris et en Île-de-France, dès 300 €."
 image: "/assets/photos/formule-video.webp"
 banniere: "/assets/photos/hero-livre-dor.webp"
 date: 2026-12-25
@@ -17,7 +17,7 @@ faq:
   - q: "D'où vient la mode de l'audio guest book ?"
     a: "<strong>Des mariages anglo-saxons, surtout américains.</strong> L'idée s'est diffusée par les réseaux sociaux, où les vidéos de mariés écoutant leurs messages ont beaucoup circulé, avant d'arriver en France."
   - q: "Peut-on louer un audio guest book en France ?"
-    a: "<strong>Oui, à l'achat, par colis ou livré et installé.</strong> Chez Agence Lily, nous l'installons sur place à Paris et en Île-de-France, dès 200 € avec la formule Essentiel."
+    a: "<strong>Oui, à l'achat, par colis ou livré et installé.</strong> Chez Agence Lily, nous l'installons sur place à Paris et en Île-de-France, dès 300 € avec la formule Essentiel."
   - q: "Le message d'accueil peut-il être en anglais ?"
     a: "<strong>Oui, il est entièrement personnalisé.</strong> Pour un mariage franco-américain ou une fête internationale, vous pouvez même le faire en deux langues."
 ressources:
@@ -102,9 +102,9 @@ Petite digression, puisqu'on parle d'importation. Les Américains disent volonti
 
 ## 💶 Combien coûte un audio guest book chez nous ?
 
-**L'Essentiel, à 200 €.** Le livre d'or audio, la borne pendant 3 h, les messages illimités, la livraison et l'installation.
+**L'Essentiel, à 300 €.** Le livre d'or audio, la borne pendant 3 h, les messages illimités, la livraison et l'installation.
 
-**La Signature, à 500 €.** L'Essentiel, plus le livre d'or vidéo, une heure d'animation pendant le cocktail et la borne toute la soirée.
+**La Signature, à 600 €.** L'Essentiel, plus le livre d'or vidéo, une heure d'animation pendant le cocktail et la borne toute la soirée.
 
 Les messages arrivent en téléchargement sous 2 semaines, ou sous 48 h avec l'option express à 30 €. Le coffret souvenir, une clé USB dans un écrin, coûte 50 €, tout comme la touche florale. La livraison est offerte à Paris et en petite couronne.
 

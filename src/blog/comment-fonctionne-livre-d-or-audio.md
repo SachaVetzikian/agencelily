@@ -3,7 +3,7 @@ title: "Comment fonctionne un livre d'or audio ? Guide complet"
 h1: "Comment fonctionne un livre d'or audio ? Le guide complet"
 meta: "Comment fonctionne un livre d'or audio (audio guest book) : téléphone vintage, message d'accueil, enregistrement, récupération des messages."
 extrait: "Un téléphone vintage, un message d'accueil, un bip : le livre d'or audio est simple à utiliser. Voici comment il fonctionne, de l'installation à la récupération des messages."
-enBref: "Un livre d'or audio, ou audio guest book, est un téléphone vintage transformé en enregistreur. Vos invités décrochent le combiné, écoutent votre message d'accueil personnalisé et laissent témoignage, vœux ou anecdote drôle après le bip. Après la fête, vous recevez tous les messages par lien en ligne. Chez Agence Lily, il est livré et installé à Paris et en Île-de-France, dès 200 €."
+enBref: "Un livre d'or audio, ou audio guest book, est un téléphone vintage transformé en enregistreur. Vos invités décrochent le combiné, écoutent votre message d'accueil personnalisé et laissent témoignage, vœux ou anecdote drôle après le bip. Après la fête, vous recevez tous les messages par lien en ligne. Chez Agence Lily, il est livré et installé à Paris et en Île-de-France, dès 300 €."
 image: "/assets/photos/trio-message.webp"
 banniere: "/assets/photos/hero-livre-dor.webp"
 date: 2026-09-26
@@ -19,7 +19,7 @@ faq:
   - q: "Quand récupère-t-on les messages ?"
     a: "<strong>Sous 2 semaines, par lien de téléchargement</strong> (48 h avec l'option express). Avec le coffret souvenir (clé USB dans un écrin), vous les avez aussi sur un support à ranger avec vos photos."
   - q: "Combien coûte un livre d'or audio ?"
-    a: "<strong>À partir de 200 €</strong>, livraison et installation comprises à Paris et en Île-de-France. Le prix exact dépend de la formule et de la durée : vous le recevez sur devis sous 24 h."
+    a: "<strong>À partir de 300 €</strong>, livraison et installation comprises à Paris et en Île-de-France. Le prix exact dépend de la formule et de la durée : vous le recevez sur devis sous 24 h."
 ressources:
   - titre: "Livre d'or audio et vidéo sur téléphone vintage"
     url: "/livre-d-or-audio-video/"
@@ -75,8 +75,8 @@ ressources:
 
 | Formule | Ce que vous gardez | Pour qui |
 |---|---|---|
-| Essentiel (200 €) | Les voix de vos invités, pendant 3 h | Petits comités, anniversaires, baptêmes |
-| Signature (500 €) | Les voix et les visages, toute la soirée, avec 1 h d'animation | La plupart des mariages et grandes fêtes |
+| Essentiel (300 €) | Les voix de vos invités, pendant 3 h | Petits comités, anniversaires, baptêmes |
+| Signature (600 €) | Les voix et les visages, toute la soirée, avec 1 h d'animation | La plupart des mariages et grandes fêtes |
 
 Besoin de plus de messages encore ? Ajoutez une heure d'animation (100 €) à la Signature.
 
