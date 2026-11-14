@@ -1164,3 +1164,33 @@ h2.eyebrow { font-family: var(--font); font-size: var(--fs-label); line-height: 
 @media (max-width: 900px) { .gavis-head { grid-template-columns: 1fr; text-align: left; } .gavis-title { text-align: left; order: -1; } .gavis-btn { justify-self: start; } }
 @media (max-width: 700px) { .gavis-grid { grid-auto-flow: column; grid-template-columns: none; grid-auto-columns: 85%; overflow-x: auto; scroll-snap-type: x mandatory; } .gavis { scroll-snap-align: start; } }
 .gavis-avatar { color: #fff !important; font-size: 16px; }
+/* Page partenaires : icônes */
+.ico { width: 20px; height: 20px; flex: none; display: block; }
+.pt-badges { list-style: none; padding: 0; margin: var(--s4) 0 0; display: flex; flex-wrap: wrap; gap: var(--s2); }
+.pt-badges li { display: inline-flex; align-items: center; gap: var(--s2); padding: 8px 14px; font-size: var(--fs-small); color: var(--white); background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.28); backdrop-filter: blur(6px); }
+.pt-badges .ico { width: 16px; height: 16px; }
+.pt-tile figcaption { display: flex; align-items: center; gap: var(--s2); }
+.pt-tile-ico { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: rgba(255,255,255,.18); border: 1px solid rgba(255,255,255,.35); flex: none; }
+.pt-tile-ico .ico { width: 17px; height: 17px; }
+.pt-ico { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; background: var(--surface); color: var(--accent); flex: none; }
+.alt .pt-ico, .pt-deal-col .pt-ico { background: var(--white); }
+.pt-ico-lg { width: 52px; height: 52px; margin-bottom: var(--s4); }
+.pt-ico-lg .ico { width: 24px; height: 24px; }
+.pt-features { list-style: none; padding: 0; margin: var(--s6) 0; display: grid; gap: var(--s4); }
+.pt-features li { display: flex; align-items: center; gap: var(--s4); }
+.pt-features .pt-ico { background: var(--white); width: 48px; height: 48px; }
+.pt-features strong { display: block; font-size: 17px; font-weight: 600; }
+.pt-features span span, .pt-features div span { font-size: var(--fs-small); color: var(--muted); }
+.pt-ilist { list-style: none; padding: 0; margin: 0; display: grid; gap: var(--s4); }
+.pt-ilist li { display: flex; align-items: center; gap: var(--s4); line-height: 1.5; }
+.pt-ilist .pt-ico { width: 36px; height: 36px; }
+.pt-ilist .ico { width: 18px; height: 18px; }
+.pt-step-n { display: flex; align-items: center; gap: var(--s3); }
+.pt-step-ico { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; background: var(--ink); color: var(--white); font-style: normal; }
+.pt-step-ico .ico { width: 20px; height: 20px; }
+.pt-steps-img li { position: relative; }
+.pt-formule .pt-ilist .pt-ico { background: var(--surface); }
+.pt-join-sec .pt-ico { background: rgba(255,255,255,.14); color: #e7d6c9; border: 1px solid rgba(255,255,255,.25); }
+.pt-join-sec .pt-ilist li { color: var(--white); }
+.pt-profil .pt-ico { background: var(--surface); }
+.pt-deal-col .pt-ilist + h3 { margin-top: var(--s7); }
