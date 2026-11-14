@@ -23,21 +23,22 @@ faqPartenaires:
   - q: "Comment devenir partenaire ?"
     a: "Remplissez le formulaire de cette page ou écrivez-nous sur WhatsApp. Nous vous rappelons sous 24 h pour un échange de 10 minutes, puis nous vous envoyons la plaquette à transmettre à vos couples."
 ---
-{% from "partials/icon.njk" import icon %}
+{% from "partials/icon.njk" import icon, iconDefs %}
 {% set livre = services | findBySlug("livre-dor-audio-video") %}
 {% set crumbs = [{ nom: "Partenaires" }] %}
 {% set heroImg = "/assets/photos/pt-salon.webp" %}{% set heroImgMobile = "/assets/photos/pt-salon-800.webp" %}{% set heroAlt = "Borne de livre d'or audio installée dans un lieu de réception" %}{% set heroEyebrow = "Programme partenaires · Saison 2027" %}
 {% set heroTitle = "Ajoutez le livre d'or audio à votre offre" %}
 {% set heroIntro = "Lieux de réception, wedding planners, photographes : vendez le livre d'or audio et vidéo à votre nom, à votre prix. La logistique, on s'en charge." %}
 {% set heroAside %}<div class="btns"><a class="btn primary" href="#devenir-partenaire" data-track="partenaire-hero">Devenir partenaire</a>{% if site.plaquettePartenaires %}<a class="btn ghost" href="{{ site.plaquettePartenaires }}" target="_blank" rel="noopener" download data-track="plaquette">Télécharger la plaquette</a>{% endif %}</div>
-<ul class="pt-badges"><li>{{ icon("euro") }}Sans frais d'entrée</li><li>{{ icon("tag") }}Votre prix</li><li>{{ icon("truck") }}Zéro logistique</li></ul>{% endset %}
+<ul class="pt-badges"><li>Sans frais d'entrée</li><li>Votre prix</li><li>Zéro logistique</li></ul>{% endset %}
 {% include "partials/hero-full.njk" %}
+{{ iconDefs() }}
 
 <section class="section pt-for"><div class="wrap">
 <div class="section-title"><span class="eyebrow">Pour qui</span><h2>Pour tous ceux qui font les mariages</h2></div>
 <div class="pt-tiles">
 <figure class="pt-tile"><img src="/assets/photos/pt-salon-800.webp" alt="Salon de réception haussmannien avec un téléphone vintage sur un guéridon" loading="lazy"><figcaption><span class="pt-tile-ico">{{ icon("castle") }}</span>Lieux de réception</figcaption></figure>
-<figure class="pt-tile"><img src="/assets/photos/hero-carnet-800.webp" alt="Salle de réception dressée pour un dîner de mariage" loading="lazy"><figcaption><span class="pt-tile-ico">{{ icon("heart") }}</span>Châteaux et domaines</figcaption></figure>
+<figure class="pt-tile"><img src="/assets/photos/hero-carnet-800.webp" alt="Salle de réception dressée pour un dîner de mariage" loading="lazy"><figcaption><span class="pt-tile-ico">{{ icon("rings") }}</span>Châteaux et domaines</figcaption></figure>
 <figure class="pt-tile"><img src="/assets/photos/pt-jardin-800.webp" alt="Mariés dans un jardin pendant la réception" loading="lazy"><figcaption><span class="pt-tile-ico">{{ icon("clipboard") }}</span>Wedding planners</figcaption></figure>
 <figure class="pt-tile"><img src="/assets/photos/formule-video-800.webp" alt="Invitée au téléphone devant un vidéaste" loading="lazy"><figcaption><span class="pt-tile-ico">{{ icon("camera") }}</span>Photographes et vidéastes</figcaption></figure>
 <figure class="pt-tile"><img src="/assets/photos/pt-grange-800.webp" alt="Invités qui dansent dans une grange en soirée" loading="lazy"><figcaption><span class="pt-tile-ico">{{ icon("music") }}</span>Traiteurs et DJ</figcaption></figure>
@@ -50,9 +51,9 @@ faqPartenaires:
 <h2>Une voix que l'on réécoute toute une vie</h2>
 <p class="pt-lead">Les invités décrochent un téléphone d'époque et laissent quelques mots aux mariés. Sur le papier, deux lignes. Au bout du fil, une confidence, un fou rire, la voix d'une grand-mère. Avec la Signature, les visages en plus.</p>
 <ul class="pt-features">
-<li><span class="pt-ico">{{ icon("phone") }}</span><div><strong>Sans application</strong><span>On décroche, on parle.</span></div></li>
-<li><span class="pt-ico">{{ icon("message") }}</span><div><strong>Messages illimités</strong><span>Toute la soirée.</span></div></li>
-<li><span class="pt-ico">{{ icon("star") }}</span><div><strong>{{ site.avis.note | noteFr }} sur Google</strong><span>{{ site.avis.nombre }} avis clients.</span></div></li>
+<li><div><strong>Sans application</strong><span>On décroche, on parle.</span></div></li>
+<li><div><strong>Messages illimités</strong><span>Toute la soirée.</span></div></li>
+<li><div><strong>{{ site.avis.note | noteFr }} sur Google</strong><span>{{ site.avis.nombre }} avis clients.</span></div></li>
 </ul>
 <a class="pt-link" href="{{ livre.url }}">Tout le détail du livre d'or audio et vidéo →</a>
 </div>
@@ -201,10 +202,10 @@ faqPartenaires:
 <span class="eyebrow">Saison 2027</span>
 <h2>Devenez partenaire</h2>
 <p class="pt-lead">Laissez-nous vos coordonnées : on vous rappelle sous {{ site.delaiReponse }} pour un échange de 10 minutes.</p>
-<ul class="pt-ilist">
-<li><span class="pt-ico">{{ icon("euro") }}</span><span>Sans frais d'entrée</span></li>
-<li><span class="pt-ico">{{ icon("tag") }}</span><span>Vous fixez votre prix</span></li>
-<li><span class="pt-ico">{{ icon("truck") }}</span><span>Zéro logistique pour vos équipes</span></li>
+<ul class="pt-checks">
+<li>Sans frais d'entrée</li>
+<li>Vous fixez votre prix</li>
+<li>Zéro logistique pour vos équipes</li>
 </ul>
 {% if site.whatsapp %}<p class="u-mt5"><a class="btn ghost" href="https://wa.me/{{ site.whatsapp }}?text={{ 'Bonjour, je souhaite en savoir plus sur le partenariat livre d\'or.' | urlencode }}" rel="noopener" target="_blank" data-track="whatsapp">Écrire sur WhatsApp</a></p>{% endif %}
 </div>

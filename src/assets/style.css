@@ -1215,3 +1215,19 @@ li:hover > .pt-ico .ill, .pt-tile:hover .ill, .pt-profil:hover .ill, .pt-badges 
 @keyframes ill-twinkle { 0%, 70%, 100% { transform: rotate(0) scale(1); } 80% { transform: rotate(14deg) scale(1.1); } 90% { transform: rotate(-6deg) scale(1); } }
 @keyframes ill-wiggle { 0%, 100% { transform: rotate(0); } 25% { transform: rotate(-10deg) scale(1.08); } 50% { transform: rotate(8deg) scale(1.08); } 75% { transform: rotate(-4deg); } }
 @media (prefers-reduced-motion: reduce) { .ill { opacity: 1; transform: none; transition: none; animation: none !important; } }
+/* Icônes v2 : trait noir, blanc, accent marron brillant animé */
+.ill, .ill.is-in { animation: none; }
+.pt-tile-ico .ill { width: 30px; height: 30px; }
+.pt-ilist .ill { width: 44px; height: 44px; }
+.pt-ico-lg .ill { width: 72px; height: 72px; }
+.pt-formule .pt-ilist .ill { width: 38px; height: 38px; }
+.ill .acc { transform-box: fill-box; transform-origin: 50% 100%; opacity: 0; }
+.ill.is-in .acc { animation: acc-pop .7s cubic-bezier(.34, 1.56, .64, 1) calc(var(--d, 0ms) + 250ms) forwards, acc-float 4s ease-in-out calc(var(--d, 0ms) + 1.4s) infinite; }
+.ill.is-in .acc-lift { transform-origin: 30% 100%; animation: acc-pop .7s cubic-bezier(.34, 1.56, .64, 1) calc(var(--d, 0ms) + 250ms) forwards, acc-lift 3.6s ease-in-out calc(var(--d, 0ms) + 1.2s) infinite; }
+@keyframes acc-pop { from { opacity: 0; transform: translateY(6px) scale(.4); } to { opacity: 1; transform: none; } }
+@keyframes acc-float { 0%, 100% { opacity: 1; transform: none; } 50% { opacity: 1; transform: translateY(-3px); } }
+@keyframes acc-lift { 0%, 55%, 100% { opacity: 1; transform: none; } 63% { opacity: 1; transform: translate(-2px, -8px) rotate(-10deg); } 72% { opacity: 1; transform: translate(-1px, -6px) rotate(-6deg); } 82% { opacity: 1; transform: translate(-2px, -8px) rotate(-9deg); } 92% { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .ill .acc, .ill.is-in .acc { opacity: 1; animation: none !important; transform: none; } }
+.pt-features { gap: var(--s3); }
+.pt-features li { border-top: 1px solid var(--line); padding-top: var(--s3); }
+.pt-badges li { padding: 8px 14px; }
