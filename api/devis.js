@@ -32,6 +32,57 @@ function lireCorps(req) {
 const nettoyer = (v) => String(v == null ? "" : v).trim().slice(0, 2000);
 const echapper = (s) => s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
 
+// Accusé de réception envoyé au client juste après sa demande (au nom de Sacha)
+const TEL = "06 65 70 42 20";
+function accuse(d, cadeau, partenaire) {
+  const prenom = d.prenom;
+  if (partenaire) {
+    return {
+      objet: "Votre demande de partenariat est bien arrivée",
+      texte: `Bonjour ${prenom},
+
+Merci pour votre message. Je vous rappelle sous 24 h pour voir comment on peut travailler ensemble.
+
+Si vous voulez y jeter un œil avant, notre plaquette partenaires est ici :
+https://www.agencelily.fr/assets/agence-lily-plaquette-partenaires.pdf
+
+Et si c'est plus simple pour vous, appelez-moi directement au ${TEL}.
+
+À très vite,
+Sacha
+Agence Lily`,
+    };
+  }
+  if (cadeau) {
+    return {
+      objet: "Votre bon cadeau Agence Lily",
+      texte: `Bonjour ${prenom},
+
+Merci, c'est une très jolie idée de cadeau. Je vous envoie le bon et les modalités de paiement sous 24 h.
+
+Une question en attendant, pour personnaliser le bon. Quels prénoms voulez-vous qu'on y écrive ? Répondez simplement à ce mail.
+
+Sacha
+Agence Lily
+${TEL}`,
+    };
+  }
+  return {
+    objet: `Votre demande pour le ${d.date}, c'est bien reçu`,
+    texte: `Bonjour ${prenom},
+
+Merci pour votre message. Je regarde tout de suite si le ${d.date} est encore libre et je reviens vers vous sous 24 h avec un devis précis.
+
+En attendant, une petite question qui m'aide beaucoup. Avez-vous déjà une idée de l'endroit où sera le livre d'or pendant la fête (près du bar, dans l'entrée, sur le passage du vin d'honneur…) ? Répondez simplement à ce mail, c'est moi qui lis.
+
+Vous pouvez aussi m'appeler ou m'écrire sur WhatsApp au ${TEL}, c'est souvent plus rapide.
+
+À très vite,
+Sacha
+Agence Lily`,
+  };
+}
+
 module.exports = async function handler(req, res) {
   const json = /application\/json/.test(req.headers["accept"] || "") || /application\/json/.test(req.headers["content-type"] || "");
   const repondre = (code, data) => {
@@ -89,6 +140,42 @@ module.exports = async function handler(req, res) {
       console.error("Resend", r.status, await r.text());
       return repondre(502, { ok: false, erreur: "envoi" });
     }
+
+    // Annexes : un échec ne bloque jamais le client
+    const annexes = [];
+    // 1. Accusé de réception au client (désactivable avec ACCUSE_RECEPTION=off)
+    if (process.env.ACCUSE_RECEPTION !== "off") {
+      const ar = accuse(d, cadeau, partenaire);
+      annexes.push(
+        fetch("https://api.resend.com/emails", {
+          method: "POST",
+          headers: { Authorization: `Bearer ${cle}`, "Content-Type": "application/json" },
+          body: JSON.stringify({
+            from: process.env.DEVIS_FROM || "Agence Lily <onboarding@resend.dev>",
+            to: [d.email],
+            reply_to: destinataire.split(",")[0].trim(),
+            subject: ar.objet,
+            text: ar.texte,
+          }),
+        })
+      );
+    }
+    // 2. Ligne dans le CRM Google Sheet (Apps Script, voir docs/CRM-DEVIS.md)
+    if (process.env.CRM_WEBHOOK_URL) {
+      annexes.push(
+        fetch(process.env.CRM_WEBHOOK_URL, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ token: process.env.CRM_TOKEN || "", type: cadeau ? "Bon cadeau" : partenaire ? "Partenariat" : "Devis", ...d }),
+          redirect: "follow",
+        })
+      );
+    }
+    const resultats = await Promise.allSettled(annexes);
+    resultats.forEach((x, i) => {
+      if (x.status === "rejected") console.error("annexe", i, x.reason);
+      else if (!x.value.ok) x.value.text().then((t) => console.error("annexe", i, x.value.status, t));
+    });
     return repondre(200, { ok: true });
   } catch (e) {
     console.error(e);
