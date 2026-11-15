@@ -1275,3 +1275,23 @@ li:hover > .pt-ico .ill, .pt-tile:hover .ill, .pt-profil:hover .ill, .pt-badges 
 .card { transition: transform .4s cubic-bezier(.2, .7, .2, 1), box-shadow .4s ease; }
 .card:hover { transform: translateY(-5px); box-shadow: 0 22px 46px rgba(42,36,32,.12); }
 @media (prefers-reduced-motion: reduce) { .card { transition: none; } .card:hover { transform: none; } }
+/* Partenaires : rythme resserré, textes plus sobres, notes en italique */
+main:has(.pt-hero) .section-title { margin-bottom: var(--s5); }
+.pt-tiles, .pt-deal, .pt-steps-img, .pt-profils, .pt-formules { margin-top: 0; }
+.pt-lead { font-size: var(--fs-body); font-weight: 400; line-height: 1.65; color: var(--muted); }
+.pt-listen h2, .pt-calc-wrap h2, .pt-join h2 { margin-bottom: var(--s3); }
+.pt-note { margin: var(--s4) 0 0; font-size: var(--fs-small); font-style: italic; color: var(--muted); }
+.pt-join-sec .pt-note, .pt-join-sec .pt-lead { color: rgba(255,255,255,.8); }
+.pt-form .pt-note { color: var(--muted); }
+.pt-features .pt-ico .ill { width: 44px; height: 44px; }
+/* Maquette de catalogue simplifiée */
+.pt-mock { padding: var(--s6); }
+.pt-mock-body { box-shadow: 0 16px 40px rgba(42,36,32,.08); padding: var(--s5) var(--s5) var(--s4); }
+.pt-mock-lieu { font-size: 22px; padding-right: 0; }
+.pt-mock-foot { background: none; color: var(--ink); padding: var(--s4) 0 0; border-top: 1px solid var(--line); margin-top: var(--s3); align-items: baseline; }
+.pt-mock-foot span { color: var(--muted); }
+.pt-mock-foot strong { font-size: 30px; color: var(--accent-dark); }
+.pt-mock-new { outline: 0; border-left: 2px solid var(--accent); background: #f7f1ea; animation: none; }
+.pt-mock .pt-note { text-align: center; }
+/* Titres h2 : plus grands sur mobile */
+:root { --fs-h2: clamp(36px, 4vw, 52px); }

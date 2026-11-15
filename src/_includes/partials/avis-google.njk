@@ -11,7 +11,7 @@
 <span class="gavis-count">{{ site.avis.nombre }} avis · Agence Lily</span></div>
 </div>
 <div class="gavis-title"><span class="eyebrow">{{ avisEyebrow or "Ils l'ont vécu" }}</span><h2>{{ avisTitre or "Ce qu'en disent les invités" }}</h2></div>
-{% if site.avis.lien %}<a class="btn ghost gavis-btn" href="{{ site.avis.lien }}" rel="noopener" target="_blank" data-track="avis-google">Voir sur Google Maps</a>{% endif %}
+{% if site.avis.lien and not avisSansBouton %}<a class="btn ghost gavis-btn" href="{{ site.avis.lien }}" rel="noopener" target="_blank" data-track="avis-google">Voir sur Google Maps</a>{% endif %}
 </div>
 <div class="gavis-grid">
 {% for a in listeG %}<figure class="gavis">
