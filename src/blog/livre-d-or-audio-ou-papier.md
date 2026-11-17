@@ -8,7 +8,6 @@ image: "/assets/photos/trio-souvenirs.webp"
 banniere: "/assets/photos/hero-carnet.webp"
 date: 2026-11-17
 publication: 2026-11-17
-draft: true
 faq:
   - q: "Le livre d'or papier est-il démodé ?"
     a: "<strong>Pas du tout.</strong> Un beau carnet garde l'écriture de vos proches, et beaucoup de couples y tiennent. Il recueille simplement des messages plus courts qu'un téléphone."
