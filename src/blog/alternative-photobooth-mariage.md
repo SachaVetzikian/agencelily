@@ -8,7 +8,6 @@ image: "/assets/photos/formule-audio.webp"
 banniere: "/assets/photos/mariage-soir.webp"
 date: 2026-11-20
 publication: 2026-11-20
-draft: true
 faq:
   - q: "Quelle est la meilleure alternative au photobooth ?"
     a: "<strong>Le livre d'or vidéo, à notre avis.</strong> Il anime le cocktail comme un photobooth, et il vous laisse en plus ce que vos invités avaient vraiment à vous dire, avec leur voix et leur visage."
