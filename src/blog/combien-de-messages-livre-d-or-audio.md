@@ -8,7 +8,6 @@ image: "/assets/photos/formule-animateur.webp"
 banniere: "/assets/photos/blog-animation-mariage.webp"
 date: 2026-11-24
 publication: 2026-11-24
-draft: true
 faq:
   - q: "Combien de messages peut-on espérer sur un livre d'or audio ?"
     a: "<strong>Cela dépend surtout de l'organisation, plus que du nombre d'invités.</strong> Un téléphone bien placé, annoncé au micro et animé recueille bien plus de messages qu'un téléphone oublié dans un coin."
