@@ -8,7 +8,6 @@ image: "/assets/photos/trio-message.webp"
 banniere: "/assets/photos/hero-livre-dor.webp"
 date: 2026-11-27
 publication: 2026-11-27
-draft: true
 faq:
   - q: "De combien de place a besoin un téléphone livre d'or ?"
     a: "<strong>Une petite table suffit</strong>, avec un peu d'espace devant pour qu'un groupe de trois ou quatre invités puisse se serrer autour du combiné."
